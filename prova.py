@@ -18,11 +18,11 @@ def search_camere(numero=0, letti_doppi=0, letti_singoli=0, prezzo=0, check_in=N
         if numero != 0:
             query += "camere.numero = "+str(numero)+" and "
         if letti_doppi != 0:
-            query += "letti_doppi >= "+str(letti_doppi)+"and "
+            query += "letti_doppi >= "+str(letti_doppi)+" and "
         if letti_singoli != 0:
-            query += "letti_singoli >= "+str(letti_singoli)+"and "
+            query += "letti_singoli >= "+str(letti_singoli)+" and "
         if prezzo != 0:
-            query += "prezzo <="+str(prezzo)+"and"
+            query += "prezzo <="+str(prezzo)+" and"
         if check_in != None or check_out != None:
             query += "camere.numero NOT IN ( SELECT prenotazioni.numero_camera from prenotazioni WHERE NOT("
             if check_in != None and check_out != None:
@@ -87,5 +87,5 @@ def prenota(camera, check_in, check_out):
 #print(search_camere(check_in="2021-03-10", check_out="2021-03-15"))
 check_in = "2021-03-10"
 check_out = "2021-03-15"
-#print_table(search_camere(check_in=check_in, check_out=check_out))
-prenota(3, check_in, check_out)
+print_table(search_camere(check_in=check_in,check_out=check_out, letti_singoli=1))
+#prenota(3, check_in, check_out)
