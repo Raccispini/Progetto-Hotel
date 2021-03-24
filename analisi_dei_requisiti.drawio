@@ -1,22 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2021-03-24T18:20:35.527Z" agent="5.0 (Windows)" etag="a1WR-IPX-Gg59dF8VFl_" version="14.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-24T18:22:25.020Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="H6LF5d4yr9CXa-BIFuFb" version="14.5.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1422" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-6" value="Analisi dei Requisiti" style="html=1;shape=mxgraph.sysml.package;overflow=fill;labelX=140;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-6" value="Analisi dei Requisiti" style="html=1;shape=mxgraph.sysml.package;overflow=fill;labelX=140;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="80" y="40" width="670" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-10" value="&lt;div&gt;Funzionali&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="html=1;shape=mxgraph.sysml.package;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;labelX=67;html=1;overflow=fill;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-10" value="&lt;div&gt;Funzionali&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="html=1;shape=mxgraph.sysml.package;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;labelX=67;html=1;overflow=fill;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="120" y="90" width="250" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-11" value="Non Funzionali" style="html=1;shape=mxgraph.sysml.package;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;labelX=105;html=1;overflow=fill;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-11" value="Non Funzionali" style="html=1;shape=mxgraph.sysml.package;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;labelX=105;html=1;overflow=fill;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="440" y="90" width="250" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-12" value="&lt;ul&gt;&lt;li&gt;Gestione camere&lt;/li&gt;&lt;li&gt;Gestione ristorante&lt;/li&gt;&lt;li&gt;Autenticazione&lt;/li&gt;&lt;li&gt;Attivita modulari&lt;/li&gt;&lt;li&gt;Database relazionali&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-12" value="&lt;ul&gt;&lt;li&gt;Gestione camere&lt;/li&gt;&lt;li&gt;Gestione ristorante&lt;/li&gt;&lt;li&gt;Autenticazione&lt;/li&gt;&lt;li&gt;Attivita modulari&lt;/li&gt;&lt;li&gt;Database relazionali&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="110" y="115" width="220" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-14" value="&lt;ul&gt;&lt;li&gt;Interfaccia grafica semplice,leggera e intuitiva&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-14" value="&lt;ul&gt;&lt;li&gt;Requisiti non funzionali&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="460" y="115" width="210" height="80" as="geometry" />
         </mxCell>
       </root>
