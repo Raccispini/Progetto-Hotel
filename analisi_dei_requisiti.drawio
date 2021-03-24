@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-24T18:23:04.401Z" agent="5.0 (Windows)" etag="lHXZVTT7lEZMpj9Yv6y-" version="14.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-24T18:23:21.305Z" agent="5.0 (Windows)" etag="1XP8oujqEjKsEK-utie_" version="14.5.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -16,7 +16,7 @@
         <mxCell id="Pwwx5OgXnvk-JeBYDkTg-12" value="&lt;ul&gt;&lt;li&gt;Gestione camere&lt;/li&gt;&lt;li&gt;Gestione ristorante&lt;/li&gt;&lt;li&gt;Autenticazione&lt;/li&gt;&lt;li&gt;Attivita modulari&lt;/li&gt;&lt;li&gt;Database relazionali&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="110" y="115" width="220" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-14" value="&lt;ul&gt;&lt;li&gt;Requisiti non funzionali&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ciao&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="Pwwx5OgXnvk-JeBYDkTg-14" value="&lt;ul&gt;&lt;li&gt;Requisiti non funzionali&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="460" y="115" width="210" height="80" as="geometry" />
         </mxCell>
       </root>
