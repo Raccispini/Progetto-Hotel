@@ -77,6 +77,9 @@ class attivita(object):
             print('Modifica avvenuta con successo !')
         except :
             print('Errore modifica riga!')
+            
+
+            
 
 
 
