@@ -89,3 +89,5 @@ check_in = "2021-03-10"
 check_out = "2021-03-15"
 print_table(search_camere(check_in=check_in,check_out=check_out, letti_singoli=1))
 #prenota(3, check_in, check_out)
+
+
