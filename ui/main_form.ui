@@ -5,6 +5,14 @@
   <property name="windowModality">
    <enum>Qt::NonModal</enum>
   </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>655</height>
+   </rect>
+  </property>
   <property name="minimumSize">
    <size>
     <width>1200</width>
@@ -25,6 +33,10 @@
   </property>
   <property name="windowTitle">
    <string>Hotel Management</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources/logo/Resource_logo.qrc">
+    <normaloff>:/resource_logo/logo_small_icon_only.png</normaloff>:/resource_logo/logo_small_icon_only.png</iconset>
   </property>
   <property name="iconSize">
    <size>
@@ -80,7 +92,7 @@
   </widget>
   <action name="actionGruppi">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_gruppi.png</normaloff>:/sources/Icona_gruppi.png</iconset>
    </property>
    <property name="text">
@@ -95,7 +107,7 @@
   </action>
   <action name="actionAnagrafiche">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_anagrafiche.png</normaloff>:/sources/Icona_anagrafiche.png</iconset>
    </property>
    <property name="text">
@@ -110,7 +122,7 @@
   </action>
   <action name="actionMagazzino">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_magazzino.png</normaloff>:/sources/Icona_magazzino.png</iconset>
    </property>
    <property name="text">
@@ -125,7 +137,7 @@
   </action>
   <action name="actionBar">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_bar.png</normaloff>:/sources/Icona_bar.png</iconset>
    </property>
    <property name="text">
@@ -140,7 +152,7 @@
   </action>
   <action name="actionOmbrelloni">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_ombrelloni.png</normaloff>:/sources/Icona_ombrelloni.png</iconset>
    </property>
    <property name="text">
@@ -155,7 +167,7 @@
   </action>
   <action name="actionRistorante">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_ristorante.png</normaloff>:/sources/Icona_ristorante.png</iconset>
    </property>
    <property name="text">
@@ -170,7 +182,7 @@
   </action>
   <action name="actionAmministrativo">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_amministrativo.png</normaloff>:/sources/Icona_amministrativo.png</iconset>
    </property>
    <property name="text">
@@ -185,7 +197,7 @@
   </action>
   <action name="actionStrumenti">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_strumenti.png</normaloff>:/sources/Icona_strumenti.png</iconset>
    </property>
    <property name="text">
@@ -200,7 +212,7 @@
   </action>
   <action name="actionRicerca">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_ricerca.png</normaloff>:/sources/Icona_ricerca.png</iconset>
    </property>
    <property name="text">
@@ -215,7 +227,7 @@
   </action>
   <action name="actionMeteo">
    <property name="icon">
-    <iconset resource="resources/Resource files.qrc">
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
      <normaloff>:/sources/Icona_Meteo.png</normaloff>:/sources/Icona_Meteo.png</iconset>
    </property>
    <property name="text">
@@ -230,8 +242,8 @@
   </action>
   <action name="actionUscita">
    <property name="icon">
-    <iconset>
-     <normaloff>resources/Icona_uscita.png</normaloff>resources/Icona_uscita.png</iconset>
+    <iconset resource="resources/Tab_Admin/Resource files.qrc">
+     <normaloff>:/sources/Icona_uscita.png</normaloff>:/sources/Icona_uscita.png</iconset>
    </property>
    <property name="text">
     <string>Uscita</string>
@@ -245,7 +257,8 @@
   </action>
  </widget>
  <resources>
-  <include location="resources/Resource files.qrc"/>
+  <include location="resources/Tab_Admin/Resource files.qrc"/>
+  <include location="resources/logo/Resource_logo.qrc"/>
  </resources>
  <connections/>
 </ui>

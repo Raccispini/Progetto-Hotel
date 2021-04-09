@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="resource_logo">
+    <file>logo_large.png</file>
+    <file>logo_small.png</file>
+    <file>logo_small_icon_only.png</file>
+    <file>logo_small_icon_only_inverted.png</file>
+  </qresource>
+</RCC>
