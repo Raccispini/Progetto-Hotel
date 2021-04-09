@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="resource_login">
+    <file>acquardens.png</file>
+    <file>Icona_PW.png</file>
+    <file>Icona_PW_arancio.png</file>
+    <file>Icona_PW_nera.png</file>
+    <file>Icona_titolo.png</file>
+    <file>Icona_user.png</file>
+    <file>Icona_user_arancio.png</file>
+    <file>Icona_user_nera.png</file>
+  </qresource>
+</RCC>
