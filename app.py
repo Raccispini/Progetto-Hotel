@@ -2,8 +2,8 @@ import sys
 
 import PyQt5
 from PyQt5 import QtCore, QtGui, QtWidgets
-from interfaces import *
-from interfaces.login_window import Ui_Dialog_Login
+from interfacce import *
+from interfacce.login_window_ui import Ui_Dialog_Login
 
 class Window(QtWidgets.QMainWindow, Ui_Dialog_Login):
     def __init__(self, parent=None):
