@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_Error_Login</class>
- <widget class="QDialog" name="Dialog_Error_Login">
+ <class>Dialog_Permission_Allert</class>
+ <widget class="QDialog" name="Dialog_Permission_Allert">
   <property name="windowModality">
    <enum>Qt::NonModal</enum>
   </property>
@@ -10,30 +10,30 @@
     <x>0</x>
     <y>0</y>
     <width>300</width>
-    <height>131</height>
+    <height>140</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>300</width>
-    <height>131</height>
+    <height>140</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>300</width>
-    <height>131</height>
+    <height>140</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>Error</string>
+   <string>Allert</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources/logo/Resource_logo.qrc">
     <normaloff>:/resource_logo/logo_small_icon_only_inverted.png</normaloff>:/resource_logo/logo_small_icon_only_inverted.png</iconset>
   </property>
   <property name="whatsThis">
-   <string>Errore di accesso</string>
+   <string>Non hai permessi a sufficienza per accedere alla seguente scheda. Chiedi ad un admin.</string>
   </property>
   <property name="accessibleName">
    <string/>
@@ -53,10 +53,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>50</x>
      <y>10</y>
-     <width>186</width>
-     <height>39</height>
+     <width>210</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
@@ -68,49 +68,49 @@
     </font>
    </property>
    <property name="text">
-    <string>ACCESSO NEGATO!</string>
+    <string>PERMESSO NEGATO!</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>40</x>
      <y>50</y>
-     <width>291</width>
-     <height>41</height>
+     <width>220</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>12</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Username o Password errati. Riprovare.</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Non hai i permessi per accedere&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>-30</x>
+     <x>5</x>
      <y>10</y>
-     <width>81</width>
-     <height>41</height>
+     <width>210</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="resources/Error and Allert/Resource_Error.qrc">:/resource_error/cross_error_rosso.png</pixmap>
+    <pixmap resource="resources/Error and Allert/Resource_Error.qrc">:/resource_error/Allert_Giallo.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_OK_Error">
    <property name="geometry">
     <rect>
-     <x>105</x>
-     <y>90</y>
+     <x>100</x>
+     <y>100</y>
      <width>90</width>
      <height>30</height>
     </rect>
@@ -128,6 +128,25 @@
     <string>Return</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>70</y>
+     <width>150</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;alla seguente scheda.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="resources/Error and Allert/Resource_Error.qrc"/>
@@ -138,7 +157,7 @@
   <connection>
    <sender>pushButton_OK_Error</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_Error_Login</receiver>
+   <receiver>Dialog_Permission_Allert</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

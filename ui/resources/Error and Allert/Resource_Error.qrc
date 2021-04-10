@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="resource_error">
     <file>cross_error_rosso.png</file>
-    <file>Error_rosso.png</file>
+    <file>Allert_Giallo.png</file>
   </qresource>
 </RCC>
