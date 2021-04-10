@@ -68,5 +68,4 @@ class Ui_Dialog_Error_Login(object):
         self.label_3.setText(_translate("Dialog_Error_Login", "Username o Password errati. Riprovare."))
         self.pushButton_OK_Error.setText(_translate("Dialog_Error_Login", "OK"))
         self.pushButton_OK_Error.setShortcut(_translate("Dialog_Error_Login", "Return"))
-import Resource_Error_rc
-import Resource_logo_rc
+
