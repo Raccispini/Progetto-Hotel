@@ -53,7 +53,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>70</x>
      <y>10</y>
      <width>210</width>
      <height>40</height>
@@ -93,9 +93,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>5</x>
-     <y>10</y>
-     <width>210</width>
+     <x>20</x>
+     <y>5</y>
+     <width>41</width>
      <height>40</height>
     </rect>
    </property>
@@ -151,7 +151,6 @@
  <resources>
   <include location="resources/Error and Allert/Resource_Error.qrc"/>
   <include location="resources/logo/Resource_logo.qrc"/>
-  <include location="resources/Error/Resource_Error.qrc"/>
  </resources>
  <connections>
   <connection>
