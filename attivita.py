@@ -1,6 +1,6 @@
 import sqlite3
 
-class attivita(object):
+class Attivita(object):
 
     #params is a dict that contains the name of the property and his type es: {'id','INT'}
     def __init__(self,nome,params):
