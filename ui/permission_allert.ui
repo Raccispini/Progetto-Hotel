@@ -29,8 +29,8 @@
    <string>Allert</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources/logo/Resource_logo.qrc">
-    <normaloff>:/resource_logo/logo_small_icon_only_inverted.png</normaloff>:/resource_logo/logo_small_icon_only_inverted.png</iconset>
+   <iconset>
+    <normaloff>resources/logo/logo_small_icon_only_inverted.png</normaloff>resources/logo/logo_small_icon_only_inverted.png</iconset>
   </property>
   <property name="whatsThis">
    <string>Non hai permessi a sufficienza per accedere alla seguente scheda. Chiedi ad un admin.</string>
@@ -63,7 +63,6 @@
     <font>
      <family>Arial</family>
      <pointsize>14</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -103,7 +102,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="resources/Error and Allert/Resource_Error.qrc">:/resource_error/Allert_Giallo.png</pixmap>
+    <pixmap>resources/Error and Allert/Allert_Giallo.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_OK_Error">

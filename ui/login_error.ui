@@ -29,8 +29,8 @@
    <string>Error</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources/logo/Resource_logo.qrc">
-    <normaloff>:/resource_logo/logo_small_icon_only_inverted.png</normaloff>:/resource_logo/logo_small_icon_only_inverted.png</iconset>
+   <iconset>
+    <normaloff>resources/logo/logo_small_icon_only_inverted.png</normaloff>resources/logo/logo_small_icon_only_inverted.png</iconset>
   </property>
   <property name="whatsThis">
    <string>Errore di autentificazione. Controllare Username e Password, o consultare l'admin per la loro reimpostazione.</string>
@@ -53,7 +53,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>70</x>
      <y>10</y>
      <width>186</width>
      <height>39</height>
@@ -63,7 +63,6 @@
     <font>
      <family>Arial</family>
      <pointsize>14</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -74,10 +73,10 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>291</width>
-     <height>41</height>
+     <x>55</x>
+     <y>40</y>
+     <width>208</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -87,13 +86,13 @@
     </font>
    </property>
    <property name="text">
-    <string>Username o Password errati. Riprovare.</string>
+    <string>Username o Password errati.</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>-10</x>
+     <x>-20</x>
      <y>10</y>
      <width>81</width>
      <height>41</height>
@@ -106,7 +105,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="resources/Error and Allert/Resource_Error.qrc">:/resource_error/cross_error_rosso.png</pixmap>
+    <pixmap>resources/Error and Allert/cross_error_rosso.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_OK_Error">
