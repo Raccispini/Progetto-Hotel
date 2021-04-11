@@ -1,0 +1,1656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>servizio_bar</class>
+ <widget class="QWidget" name="servizio_bar">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1090</width>
+    <height>859</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1090</width>
+    <height>859</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1090</width>
+    <height>859</height>
+   </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>240</red>
+        <green>91</green>
+        <blue>65</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="LinearGradientPattern">
+       <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+        <gradientstop position="0.000000000000000">
+         <color alpha="255">
+          <red>255</red>
+          <green>178</green>
+          <blue>102</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="0.550000000000000">
+         <color alpha="255">
+          <red>235</red>
+          <green>148</green>
+          <blue>61</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="0.980000000000000">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="1.000000000000000">
+         <color alpha="0">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </gradientstop>
+       </gradient>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>240</red>
+        <green>91</green>
+        <blue>65</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="LinearGradientPattern">
+       <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+        <gradientstop position="0.000000000000000">
+         <color alpha="255">
+          <red>255</red>
+          <green>178</green>
+          <blue>102</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="0.550000000000000">
+         <color alpha="255">
+          <red>235</red>
+          <green>148</green>
+          <blue>61</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="0.980000000000000">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="1.000000000000000">
+         <color alpha="0">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </gradientstop>
+       </gradient>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>240</red>
+        <green>91</green>
+        <blue>65</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="LinearGradientPattern">
+       <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+        <gradientstop position="0.000000000000000">
+         <color alpha="255">
+          <red>255</red>
+          <green>178</green>
+          <blue>102</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="0.550000000000000">
+         <color alpha="255">
+          <red>235</red>
+          <green>148</green>
+          <blue>61</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="0.980000000000000">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </gradientstop>
+        <gradientstop position="1.000000000000000">
+         <color alpha="0">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </gradientstop>
+       </gradient>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Bar</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>resources/logo/logo_small_icon_only_inverted.png</normaloff>resources/logo/logo_small_icon_only_inverted.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">selection-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>395</x>
+     <y>10</y>
+     <width>301</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Monotype Corsiva</family>
+     <pointsize>48</pointsize>
+     <weight>50</weight>
+     <italic>true</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Servizio Bar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB_alcolici">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>90</y>
+     <width>92</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB_analcolici">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>187</y>
+     <width>91</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB_caffetteria">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>282</y>
+     <width>91</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>376</y>
+     <width>91</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB_pasticceria">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>760</y>
+     <width>91</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB_liquori">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>664</y>
+     <width>91</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB_vini">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>568</y>
+     <width>91</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB_aperitivi">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>473</y>
+     <width>91</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tW_scontrino">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>120</y>
+     <width>721</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+   </property>
+   <property name="showGrid">
+    <bool>true</bool>
+   </property>
+   <property name="sortingEnabled">
+    <bool>false</bool>
+   </property>
+   <property name="rowCount">
+    <number>5</number>
+   </property>
+   <property name="columnCount">
+    <number>4</number>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>173</number>
+   </attribute>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>40</number>
+   </attribute>
+   <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>22</number>
+   </attribute>
+   <attribute name="verticalHeaderHighlightSections">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>24</number>
+   </attribute>
+   <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderStretchLastSection">
+    <bool>false</bool>
+   </attribute>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <column>
+    <property name="text">
+     <string>Consumazione</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Quantità</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Importo</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Importo TOT</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+   <item row="0" column="0">
+    <property name="text">
+     <string>Vodka</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+   </item>
+   <item row="0" column="1">
+    <property name="text">
+     <string>3</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+   </item>
+   <item row="0" column="2">
+    <property name="text">
+     <string>5</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+   </item>
+   <item row="0" column="3">
+    <property name="text">
+     <string>15</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+   </item>
+   <item row="3" column="3">
+    <property name="text">
+     <string/>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="cB_metodopagamento">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>650</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>Contanti</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Carta di debito o credito</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Acconto</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>610</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Metodo di pagamento:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>610</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Camera:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>610</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>TOTALE:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lE_totaleconto">
+   <property name="geometry">
+    <rect>
+     <x>920</x>
+     <y>650</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cB_camera">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>650</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>Vuoto</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pB_salva">
+   <property name="geometry">
+    <rect>
+     <x>920</x>
+     <y>790</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Salva</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB_elimina">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>790</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Elimina</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>221</width>
+     <height>771</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <item>
+     <spacer name="verticalSpacer_9">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Expanding</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Alcolici</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cB_alcolici">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string notr="true"/>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cuba Libre</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gin Lemon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gin Tonic</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>London Mule</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mojito</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vodka Cola</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vodka Lemon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Moscow Mule</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vodka Redbull</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="sB_alcolici">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::PlusMinus</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Expanding</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Analcolici</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cB_analcolici">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string> All Shook Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Anita</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Banshee</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bar Vienna</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Caffè Astoria</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Carrot Cream</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cool Passion</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Frozen Mela Kiwi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Iced Mint Tea</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="sB_analcolici">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Bibite</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bibita alla spina</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bibita in lattina</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Birra piccola</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Birra media</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Birra grande</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spremuta</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Succo di frutta</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="sb_caffetteria">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Caffetteria</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cB_caffetteria">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Caffè corretto</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Caffè decaffeinato</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Caffè d'orzo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Caffè espresso</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cappuccino</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cappuccino decaffeinato</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cioccolata calda</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Latte</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Latte macchiato</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Thè</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Thè caldo</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="spinBox_4">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_6">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Aperitivi</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cB_aperitivi">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aperitivo completo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aperol</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Campari</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Crodino</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Martini</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="sB_aperitivi">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_7">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Vini</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cB_vini">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bottiglia bianco</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bottiglia prosecco</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bottiglia rosso</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Calice bianco</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Calice prosecco</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Calice rosso</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Champagne</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="sB_vini">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_6">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_8">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Liquori</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cB_liquori">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Amaretto</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Baileys</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gin</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ginger Ale</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jack Daniel's</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Malibù</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Marsala</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vodka</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="sB_liquori">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_7">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_9">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pasticceria</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cB_pasticceria">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Brioches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ciambellone</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pasta grande</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pasta piccola</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Torta della casa</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="sB_pasticceria">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_8">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1090</width>
+     <height>859</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>resources/Bar/b94d4f336d6cdbbc9332bd15027fd3bc.png</pixmap>
+   </property>
+  </widget>
+  <zorder>label_13</zorder>
+  <zorder>label</zorder>
+  <zorder>pB_alcolici</zorder>
+  <zorder>pB_analcolici</zorder>
+  <zorder>pB_caffetteria</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>pB_pasticceria</zorder>
+  <zorder>pB_liquori</zorder>
+  <zorder>pB_vini</zorder>
+  <zorder>pB_aperitivi</zorder>
+  <zorder>tW_scontrino</zorder>
+  <zorder>cB_metodopagamento</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_12</zorder>
+  <zorder>lE_totaleconto</zorder>
+  <zorder>cB_camera</zorder>
+  <zorder>pB_salva</zorder>
+  <zorder>pB_elimina</zorder>
+  <zorder>layoutWidget</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>cB_alcolici</tabstop>
+  <tabstop>sB_alcolici</tabstop>
+  <tabstop>pB_alcolici</tabstop>
+  <tabstop>cB_analcolici</tabstop>
+  <tabstop>sB_analcolici</tabstop>
+  <tabstop>pB_analcolici</tabstop>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>sb_caffetteria</tabstop>
+  <tabstop>pB_caffetteria</tabstop>
+  <tabstop>cB_caffetteria</tabstop>
+  <tabstop>spinBox_4</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>cB_aperitivi</tabstop>
+  <tabstop>sB_aperitivi</tabstop>
+  <tabstop>pB_aperitivi</tabstop>
+  <tabstop>cB_vini</tabstop>
+  <tabstop>sB_vini</tabstop>
+  <tabstop>pB_vini</tabstop>
+  <tabstop>cB_liquori</tabstop>
+  <tabstop>sB_liquori</tabstop>
+  <tabstop>pB_liquori</tabstop>
+  <tabstop>cB_pasticceria</tabstop>
+  <tabstop>sB_pasticceria</tabstop>
+  <tabstop>pB_pasticceria</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
