@@ -7,6 +7,7 @@ from interfacce import *
 from interfacce.login_window_ui import Ui_Dialog_Login
 from PyQt5 import uic
 
+#prova
     
 username="admin"
 password="admin"
