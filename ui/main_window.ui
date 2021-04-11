@@ -98,8 +98,8 @@
   </widget>
   <action name="actionGruppi">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_gruppi.png</normaloff>:/sources/Icona_gruppi.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_gruppi.png</normaloff>resources/Toolbar_main/Icona_gruppi.png</iconset>
    </property>
    <property name="text">
     <string>Gruppi</string>
@@ -113,8 +113,8 @@
   </action>
   <action name="actionAnagrafiche">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_anagrafiche.png</normaloff>:/sources/Icona_anagrafiche.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_anagrafiche.png</normaloff>resources/Toolbar_main/Icona_anagrafiche.png</iconset>
    </property>
    <property name="text">
     <string>Anagrafiche</string>
@@ -128,8 +128,8 @@
   </action>
   <action name="actionMagazzino">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_magazzino.png</normaloff>:/sources/Icona_magazzino.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_magazzino.png</normaloff>resources/Toolbar_main/Icona_magazzino.png</iconset>
    </property>
    <property name="text">
     <string>Magazzino</string>
@@ -143,8 +143,8 @@
   </action>
   <action name="actionBar">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_bar.png</normaloff>:/sources/Icona_bar.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_bar.png</normaloff>resources/Toolbar_main/Icona_bar.png</iconset>
    </property>
    <property name="text">
     <string>Bar</string>
@@ -158,8 +158,8 @@
   </action>
   <action name="actionOmbrelloni">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_ombrelloni.png</normaloff>:/sources/Icona_ombrelloni.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_ombrelloni.png</normaloff>resources/Toolbar_main/Icona_ombrelloni.png</iconset>
    </property>
    <property name="text">
     <string>Ombrelloni</string>
@@ -173,8 +173,8 @@
   </action>
   <action name="actionRistorante">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_ristorante.png</normaloff>:/sources/Icona_ristorante.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_ristorante.png</normaloff>resources/Toolbar_main/Icona_ristorante.png</iconset>
    </property>
    <property name="text">
     <string>Ristorante</string>
@@ -188,8 +188,8 @@
   </action>
   <action name="actionAmministrativo">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_amministrativo.png</normaloff>:/sources/Icona_amministrativo.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_amministrativo.png</normaloff>resources/Toolbar_main/Icona_amministrativo.png</iconset>
    </property>
    <property name="text">
     <string>Amministrativo</string>
@@ -203,8 +203,8 @@
   </action>
   <action name="actionStrumenti">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_strumenti.png</normaloff>:/sources/Icona_strumenti.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_strumenti.png</normaloff>resources/Toolbar_main/Icona_strumenti.png</iconset>
    </property>
    <property name="text">
     <string>Strumenti</string>
@@ -218,8 +218,8 @@
   </action>
   <action name="actionRicerca">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_ricerca.png</normaloff>:/sources/Icona_ricerca.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_ricerca.png</normaloff>resources/Toolbar_main/Icona_ricerca.png</iconset>
    </property>
    <property name="text">
     <string>Ricerca</string>
@@ -233,8 +233,8 @@
   </action>
   <action name="actionMeteo">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_Meteo.png</normaloff>:/sources/Icona_Meteo.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_Meteo.png</normaloff>resources/Toolbar_main/Icona_Meteo.png</iconset>
    </property>
    <property name="text">
     <string>Meteo</string>
@@ -248,8 +248,8 @@
   </action>
   <action name="actionUscita">
    <property name="icon">
-    <iconset resource="resources/Toolbar_main/Resource files.qrc">
-     <normaloff>:/sources/Icona_uscita.png</normaloff>:/sources/Icona_uscita.png</iconset>
+    <iconset>
+     <normaloff>resources/Toolbar_main/Icona_uscita.png</normaloff>resources/Toolbar_main/Icona_uscita.png</iconset>
    </property>
    <property name="text">
     <string>Uscita</string>
