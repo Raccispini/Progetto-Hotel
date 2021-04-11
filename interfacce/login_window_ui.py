@@ -470,7 +470,7 @@ class Ui_Dialog_Login(object):
         self.lineEdit_User_2.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_User_2.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
         self.lineEdit_User_2.setClearButtonEnabled(True)
-        self.lineEdit_User_2.setObjectName("lineEdit_User_2")
+        self.lineEdit_User_2.setObjectName("lineEdit_Pass")
         self.label_4.raise_()
         self.lineEdit_User.raise_()
         self.label.raise_()
