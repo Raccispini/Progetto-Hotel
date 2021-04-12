@@ -3,7 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtWidgets import QApplication, QDialog, QWidget, QPushButton
 from interfacce import *
 from interfacce.login_window_ui import Ui_Dialog_Login
-from interfacce.main_window import Ui_MainWindow
+from interfacce.main_window_ui import Ui_MainWindow
 
 
 #prova
@@ -43,6 +43,5 @@ if __name__ == "__main__":
     app = QApplication([])
     win = Window_Login()
     win.show()
-    sys.exit(app.exec())
-
+    app.exec()
      

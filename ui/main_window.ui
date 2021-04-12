@@ -74,7 +74,7 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionGruppi"/>
+   <addaction name="actionCamere"/>
    <addaction name="separator"/>
    <addaction name="actionAnagrafiche"/>
    <addaction name="separator"/>
@@ -96,13 +96,13 @@
    <addaction name="separator"/>
    <addaction name="actionUscita"/>
   </widget>
-  <action name="actionGruppi">
+  <action name="actionCamere">
    <property name="icon">
     <iconset>
-     <normaloff>resources/Toolbar_main/Icona_gruppi.png</normaloff>resources/Toolbar_main/Icona_gruppi.png</iconset>
+     <normaloff>resources/Toolbar_main/Icona_Camere.png</normaloff>resources/Toolbar_main/Icona_Camere.png</iconset>
    </property>
    <property name="text">
-    <string>Gruppi</string>
+    <string>Camere</string>
    </property>
    <property name="toolTip">
     <string>Apre il gestore dei gruppi</string>
