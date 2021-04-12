@@ -6,19 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>915</width>
+    <width>998</width>
     <height>610</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="logo">
         <property name="maximumSize">
          <size>
           <width>200</width>
@@ -40,7 +43,18 @@
           <item row="0" column="4">
            <layout class="QGridLayout" name="gridLayout_7">
             <item row="0" column="1">
-             <widget class="QDateEdit" name="dateEdit"/>
+             <widget class="QDateEdit" name="date_dal">
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+              <property name="date">
+               <date>
+                <year>2021</year>
+                <month>4</month>
+                <day>15</day>
+               </date>
+              </property>
+             </widget>
             </item>
             <item row="0" column="2">
              <widget class="QLabel" name="label_7">
@@ -64,15 +78,26 @@
              </widget>
             </item>
             <item row="0" column="3">
-             <widget class="QDateEdit" name="dateEdit_2"/>
+             <widget class="QDateEdit" name="date_al">
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+              <property name="date">
+               <date>
+                <year>2021</year>
+                <month>4</month>
+                <day>17</day>
+               </date>
+              </property>
+             </widget>
             </item>
             <item row="2" column="1" colspan="3">
-             <widget class="QComboBox" name="comboBox"/>
+             <widget class="QComboBox" name="combo_tipo"/>
             </item>
            </layout>
           </item>
           <item row="0" column="1">
-           <widget class="QSpinBox" name="spinBox">
+           <widget class="QSpinBox" name="spin_singoli">
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::PlusMinus</enum>
             </property>
@@ -93,7 +118,7 @@
            </widget>
           </item>
           <item row="0" column="3">
-           <widget class="QSpinBox" name="spinBox_2">
+           <widget class="QSpinBox" name="spin_matrim">
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::PlusMinus</enum>
             </property>
@@ -104,86 +129,86 @@
         <item>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="1">
-           <widget class="QCheckBox" name="checkBox_5">
+           <widget class="QCheckBox" name="cb_internet">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Internet</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="checkBox_2">
+           <widget class="QCheckBox" name="cb_televisione">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Televisione</string>
             </property>
            </widget>
           </item>
           <item row="2" column="2">
-           <widget class="QCheckBox" name="checkBox_9">
+           <widget class="QCheckBox" name="cb_cassaforte">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Cassaforte</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QCheckBox" name="checkBox">
+           <widget class="QCheckBox" name="cb_satellite">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Satellite</string>
             </property>
            </widget>
           </item>
           <item row="0" column="2">
-           <widget class="QCheckBox" name="checkBox_7">
+           <widget class="QCheckBox" name="cb_doccia">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Doccia</string>
             </property>
            </widget>
           </item>
           <item row="0" column="0">
-           <widget class="QCheckBox" name="checkBox_6">
+           <widget class="QCheckBox" name="cb_ariaCondizionata">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Aria Condizionata</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QCheckBox" name="checkBox_4">
+           <widget class="QCheckBox" name="cb_minibar">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Minibar</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QCheckBox" name="checkBox_3">
+           <widget class="QCheckBox" name="cb_cucina">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Cucina</string>
             </property>
            </widget>
           </item>
           <item row="1" column="2">
-           <widget class="QCheckBox" name="checkBox_8">
+           <widget class="QCheckBox" name="cb_vascaDaBagno">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Vasca da bagno</string>
             </property>
            </widget>
           </item>
           <item row="0" column="3">
-           <widget class="QCheckBox" name="checkBox_10">
+           <widget class="QCheckBox" name="cb_culla">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Culla</string>
             </property>
            </widget>
           </item>
           <item row="1" column="3">
-           <widget class="QCheckBox" name="checkBox_11">
+           <widget class="QCheckBox" name="cb_balcone">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Balcone</string>
             </property>
            </widget>
           </item>
           <item row="2" column="3">
-           <widget class="QCheckBox" name="checkBox_12">
+           <widget class="QCheckBox" name="cb_panorama">
             <property name="text">
-             <string>CheckBox</string>
+             <string>Panorama</string>
             </property>
            </widget>
           </item>
@@ -201,7 +226,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>123</width>
+          <width>180</width>
           <height>20</height>
          </size>
         </property>
@@ -210,37 +235,37 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QPushButton" name="pushButton_5">
+         <widget class="QPushButton" name="pb_ricerca">
           <property name="text">
-           <string>PushButton</string>
+           <string>Ricerca</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="pb_azzera">
           <property name="text">
-           <string>PushButton</string>
+           <string>Azzera</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_7">
+         <widget class="QPushButton" name="pb_preventivo">
           <property name="text">
-           <string>PushButton</string>
+           <string>Preventivo</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_8">
+         <widget class="QPushButton" name="pb_prenota">
           <property name="text">
-           <string>PushButton</string>
+           <string>Prenota</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="pb_chiudi">
           <property name="text">
-           <string>PushButton</string>
+           <string>Chiudi</string>
           </property>
          </widget>
         </item>
@@ -251,14 +276,50 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="labelCamere">
         <property name="text">
          <string> Camere Disponibili</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QTableWidget" name="tableWidget"/>
+       <widget class="QTableWidget" name="tabellaCamere">
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+       </widget>
       </item>
      </layout>
     </item>
