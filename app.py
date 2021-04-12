@@ -7,10 +7,6 @@ from interfacce.main_window_ui import Ui_MainWindow
 
 
 #prova
-    
-username="admin"
-password="admin"
-
 class Window_Login(QtWidgets.QMainWindow, Ui_Dialog_Login):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -22,10 +18,8 @@ class Window_Login(QtWidgets.QMainWindow, Ui_Dialog_Login):
         pw=self.lineEdit_User_2.text()
         if((user=="admin")&(pw=="admin")):
             print ("Accesso eseguito")
-            self.main_window = QtWidgets.QMainWindow()
-            self.ui = Ui_MainWindow()
-            self.ui.setupUi(self.main_window)
-            self.main_window.show()
+            self.main = Window_Main()
+            self.main.show()
             self.hide()
         else: 
             print("Accesso fallito")
@@ -38,10 +32,28 @@ class Ui_Login_Error(QtWidgets.QDialog):
         super().__init__(parent)
         uic.loadUi('ui\login_error.ui', self)
 
+class Window_Main(QtWidgets.QMainWindow, Ui_MainWindow):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setupUi(self)
+        self.connectSignalSlot()
+
+    def connectSignalSlot(self):
+        self.actionAmministrativo.triggered.connect(lambda: print("Finestra Amministrativo Aperta"))
+        self.actionCamere.triggered.connect(lambda: print("Finestra Camere Aperta"))
+        self.actionAnagrafiche.triggered.connect(lambda: print("Finestra Anagrafiche Aperta"))
+        self.actionMagazzino.triggered.connect(lambda: print("Finestra Magazzino Aperta"))
+        self.actionMeteo.triggered.connect(lambda: print("Finestra Meteo Aperta"))
+        self.actionOmbrelloni.triggered.connect(lambda: print("Finestra Ombrelloni Aperta"))
+        self.actionRicerca.triggered.connect(lambda: print("Finestra Ricerca Aperta"))
+        self.actionRistorante.triggered.connect(lambda: print("Finestra Ristorante Aperta"))
+        self.actionStrumenti.triggered.connect(lambda: print("Finestra Strumenti Aperta"))
+        self.actionBar.triggered.connect(lambda: print("Finestra Bar Aperta"))
+        self.actionUscita.triggered.connect(self.close)
+        
 
 if __name__ == "__main__":
     app = QApplication([])
     win = Window_Login()
     win.show()
     app.exec()
-     

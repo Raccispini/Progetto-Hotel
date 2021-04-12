@@ -12,12 +12,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_servizio_bar(object):
+
     def setupUi(self, servizio_bar):
         servizio_bar.setObjectName("servizio_bar")
         servizio_bar.setWindowModality(QtCore.Qt.ApplicationModal)
-        servizio_bar.resize(1090, 859)
-        servizio_bar.setMinimumSize(QtCore.QSize(1090, 859))
-        servizio_bar.setMaximumSize(QtCore.QSize(1090, 859))
+        servizio_bar.resize(900, 700)
+        servizio_bar.setMinimumSize(QtCore.QSize(900, 700))
+        servizio_bar.setMaximumSize(QtCore.QSize(900, 700))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(240, 91, 65))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -665,6 +666,7 @@ class Ui_servizio_bar(object):
         servizio_bar.setTabOrder(self.pB_liquori, self.cB_pasticceria)
         servizio_bar.setTabOrder(self.cB_pasticceria, self.sB_pasticceria)
         servizio_bar.setTabOrder(self.sB_pasticceria, self.pB_pasticceria)
+        return servizio_bar
 
     def retranslateUi(self, servizio_bar):
         _translate = QtCore.QCoreApplication.translate

@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Dialog_Login(object):
+    
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(600, 300)
@@ -484,6 +485,7 @@ class Ui_Dialog_Login(object):
         QtCore.QMetaObject.connectSlotsByName(Dialog)
         Dialog.setTabOrder(self.lineEdit_User, self.lineEdit_User_2)
         Dialog.setTabOrder(self.lineEdit_User_2, self.pushButton_Login)
+        return Dialog
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
