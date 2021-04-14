@@ -12,12 +12,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_servizio_bar(object):
+
     def setupUi(self, servizio_bar):
         servizio_bar.setObjectName("servizio_bar")
         servizio_bar.setWindowModality(QtCore.Qt.ApplicationModal)
-        servizio_bar.resize(1090, 859)
-        servizio_bar.setMinimumSize(QtCore.QSize(1090, 859))
-        servizio_bar.setMaximumSize(QtCore.QSize(1090, 859))
+        servizio_bar.resize(900, 1100)
+        servizio_bar.setMinimumSize(QtCore.QSize(1100, 800))
+        servizio_bar.setMaximumSize(QtCore.QSize(1100, 800))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(240, 91, 65))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -154,8 +155,8 @@ class Ui_servizio_bar(object):
         self.tW_scontrino.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.tW_scontrino.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));")
         self.tW_scontrino.setShowGrid(True)
-        self.tW_scontrino.setRowCount(5)
-        self.tW_scontrino.setColumnCount(4)
+        self.tW_scontrino.setRowCount(5)   #######Agire qui per impostare le righe della tabella
+        self.tW_scontrino.setColumnCount(4)  #############Agire qui per impostare il numero di colonne
         self.tW_scontrino.setObjectName("tW_scontrino")
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
@@ -200,7 +201,7 @@ class Ui_servizio_bar(object):
         self.tW_scontrino.setItem(0, 2, item)
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
-        self.tW_scontrino.setItem(0, 3, item)
+        self.tW_scontrino.setItem(1, 3, item) ###############Agire qui per selezionare la casella
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
         font = QtGui.QFont()
@@ -665,6 +666,7 @@ class Ui_servizio_bar(object):
         servizio_bar.setTabOrder(self.pB_liquori, self.cB_pasticceria)
         servizio_bar.setTabOrder(self.cB_pasticceria, self.sB_pasticceria)
         servizio_bar.setTabOrder(self.sB_pasticceria, self.pB_pasticceria)
+        return servizio_bar
 
     def retranslateUi(self, servizio_bar):
         _translate = QtCore.QCoreApplication.translate
@@ -695,7 +697,7 @@ class Ui_servizio_bar(object):
         item.setText(_translate("servizio_bar", "3"))
         item = self.tW_scontrino.item(0, 2)
         item.setText(_translate("servizio_bar", "5"))
-        item = self.tW_scontrino.item(0, 3)
+        item = self.tW_scontrino.item(1, 3)
         item.setText(_translate("servizio_bar", "15"))
         self.tW_scontrino.setSortingEnabled(__sortingEnabled)
         self.cB_metodopagamento.setItemText(0, _translate("servizio_bar", "Contanti"))
@@ -776,3 +778,12 @@ class Ui_servizio_bar(object):
         self.cB_pasticceria.setItemText(3, _translate("servizio_bar", "Pasta grande"))
         self.cB_pasticceria.setItemText(4, _translate("servizio_bar", "Pasta piccola"))
         self.cB_pasticceria.setItemText(5, _translate("servizio_bar", "Torta della casa"))
+
+class Window_Bar(QtWidgets.QMainWindow, Ui_servizio_bar):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setupUi(self)
+
+    
+
+
