@@ -25,6 +25,7 @@ class Gestore_permessi(object):
                 return True
             else:
                 print("Non Idoneo!")
+                return False
 
 a = Gestore_permessi()
-a.check_permission('schiavo01','bar',3)
+a.check_permission('schiavo01','bar',2)
