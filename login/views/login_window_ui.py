@@ -1,4 +1,5 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
+from PyQt5 import QtCore, QtGui, QtWidgets
+from interfacce.main_window_ui import Window_Main
 from login.model.Login_Model import Login_Model
 
 
@@ -9,12 +10,9 @@ class Ui_Dialog_Login(object):
         Dialog.resize(600, 300)
         Dialog.setMinimumSize(QtCore.QSize(600, 300))
         Dialog.setMaximumSize(QtCore.QSize(600, 300))
-        palette = QtGui.QPalette()
-        Dialog.setPalette(palette)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources\logo\logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
-        Dialog.setAutoFillBackground(False)
         self.label_2 = QtWidgets.QLabel(Dialog)
         self.label_2.setGeometry(QtCore.QRect(160, 170, 51, 41))
         self.label_2.setText("")
@@ -503,11 +501,13 @@ class Window_Login(QtWidgets.QMainWindow, Ui_Dialog_Login):
         self.pushButton_Login.clicked.connect(self.accesso)
 
     def accesso(self):
-        Og = Login_Model()
-        if Og.is_utente(self.lineEdit_User.text(),self.lineEdit_User_2.text()):
-            print("Esiste")
+        if Login_Model.is_utente(self.lineEdit_User.text(), self.lineEdit_User_2.text()):
+            self.main = Window_Main()
+            self.main.show()
+            self.hide()
         else:
-            print("Non esiste")
+            print("####################ERRORE############################")
+
 '''
         user=self.lineEdit_User.text()
         pw=self.lineEdit_User_2.text()
