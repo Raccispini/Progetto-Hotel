@@ -7,7 +7,7 @@ class Login_Model():
 
     def is_utente(self, username, password):
         print("Sono di qua")
-        connection = sqlite3.connect("../../database.db")
+        connection = sqlite3.connect("..//..//database.db")
         print("Ho letto il db")
         database_utenti = connection.execute("SELECT * FROM Utenti")
         print("Ho trovato la tabela Utenti")
