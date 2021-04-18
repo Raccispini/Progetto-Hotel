@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from interfacce.main_window_ui import Window_Main
+from login.model.Login_Model import Login_Model
 
 
 class Ui_Dialog_Login(object):
@@ -503,21 +503,28 @@ class Window_Login(QtWidgets.QMainWindow, Ui_Dialog_Login):
         self.pushButton_Login.clicked.connect(self.accesso)
 
     def accesso(self):
+        Og = Login_Model()
+        if Og.is_utente(self.lineEdit_User.text(),self.lineEdit_User_2.text()) == True:
+            print("Esiste")
+        else:
+            print("Non esiste")
+'''
         user=self.lineEdit_User.text()
         pw=self.lineEdit_User_2.text()
-        if((user=="admin")&(pw=="admin")):
-            print ("Accesso eseguito")
-            self.main = Window_Main()
-            self.main.show()
-            self.hide()
-        else: 
-            print("Accesso fallito")
-            window_error = Ui_Login_Error(self)
-            window_error.exec()
-
+        for x in lista:
+            print(lista[x])
+            if((user==lista[x][0])&(pw==lista[x][1])):
+                print ("Accesso eseguito")
+                self.main = Window_Main()
+                self.main.show()
+                self.hide()
+            else:
+                print("Accesso fallito")
+                window_error = Ui_Login_Error(self)
+                window_error.exec()
+'''
 
 class Ui_Login_Error(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         uic.loadUi('ui\login_error.ui', self)
-
