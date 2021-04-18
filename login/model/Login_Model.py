@@ -7,17 +7,15 @@ class Login_Model():
 
     def is_utente(self, username, password):
         print("Sono di qua")
-        connection = sqlite3.connect("..//..//database.db")
+        connection = sqlite3.connect("database.db")
         print("Ho letto il db")
-        database_utenti = connection.execute("SELECT * FROM Utenti")
+        query = "SELECT * FROM Utenti WHERE Utenti.username=\'"+str(username)+"\' AND Utenti.password=\'"+password+"\';"
+        database_utenti = connection.execute(query).fetchall()
         print("Ho trovato la tabela Utenti")
-        for account in database_utenti:
-            if username == str(account[0]) and password == str(account[1]):
-                print("Eseguito")
-                return True
-            else:
-                print("Non eseguito")
-        return False
+        if len(database_utenti) == 0:
+            return False
+        else:
+            return True
         connection.close()
 
 

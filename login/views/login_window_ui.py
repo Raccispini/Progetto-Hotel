@@ -504,7 +504,7 @@ class Window_Login(QtWidgets.QMainWindow, Ui_Dialog_Login):
 
     def accesso(self):
         Og = Login_Model()
-        if Og.is_utente(self.lineEdit_User.text(),self.lineEdit_User_2.text()) == True:
+        if Og.is_utente(self.lineEdit_User.text(),self.lineEdit_User_2.text()):
             print("Esiste")
         else:
             print("Non esiste")
