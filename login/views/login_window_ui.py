@@ -501,7 +501,8 @@ class Window_Login(QtWidgets.QMainWindow, Ui_Dialog_Login):
         self.pushButton_Login.clicked.connect(self.accesso)
 
     def accesso(self):
-        if Login_Model.is_utente(self.lineEdit_User.text(), self.lineEdit_User_2.text()):
+        login_model = Login_Model(self.lineEdit_User.text(), self.lineEdit_User_2.text())
+        if login_model.accedi:
             self.main = Window_Main()
             self.main.show()
             self.hide()
