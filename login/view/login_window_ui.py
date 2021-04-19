@@ -1,6 +1,4 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from interfacce.main_window_ui import Window_Main
-from login.model.Login_Model import Login_Model
 
 
 class Ui_Dialog_Login(object):
@@ -484,7 +482,6 @@ class Ui_Dialog_Login(object):
         QtCore.QMetaObject.connectSlotsByName(Dialog)
         Dialog.setTabOrder(self.lineEdit_User, self.lineEdit_User_2)
         Dialog.setTabOrder(self.lineEdit_User_2, self.pushButton_Login)
-        return Dialog
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
@@ -493,39 +490,9 @@ class Ui_Dialog_Login(object):
         self.pushButton_Login.setShortcut(_translate("Dialog", "Return"))
         self.lineEdit_User.setPlaceholderText(_translate("Dialog", "Username"))
         self.lineEdit_User_2.setPlaceholderText(_translate("Dialog", "Password"))
-
-class Window_Login(QtWidgets.QMainWindow, Ui_Dialog_Login):
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.setupUi(self)
-        self.pushButton_Login.clicked.connect(self.accesso)
-
-    def accesso(self):
-        login_model = Login_Model(self.lineEdit_User.text(), self.lineEdit_User_2.text())
-        if login_model.accedi:
-            self.main = Window_Main()
-            self.main.show()
-            self.hide()
-        else:
-            print("####################ERRORE############################")
-
 '''
-        user=self.lineEdit_User.text()
-        pw=self.lineEdit_User_2.text()
-        for x in lista:
-            print(lista[x])
-            if((user==lista[x][0])&(pw==lista[x][1])):
-                print ("Accesso eseguito")
-                self.main = Window_Main()
-                self.main.show()
-                self.hide()
-            else:
-                print("Accesso fallito")
-                window_error = Ui_Login_Error(self)
-                window_error.exec()
-'''
-
 class Ui_Login_Error(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         uic.loadUi('ui\login_error.ui', self)
+'''
