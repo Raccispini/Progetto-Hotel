@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Anagrafiche_Window</class>
+ <widget class="QMainWindow" name="Anagrafiche_Window">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>996</width>
-    <height>638</height>
+    <width>1198</width>
+    <height>677</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Anagrafiche</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>resources/logo/logo_small_icon_only_inverted.png</normaloff>resources/logo/logo_small_icon_only_inverted.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_6">
+    <item row="0" column="1">
      <widget class="QTabWidget" name="tabWidget_Anagrafiche">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="sizePolicy">
        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
         <horstretch>0</horstretch>
@@ -35,14 +42,29 @@
         <height>16777215</height>
        </size>
       </property>
-      <property name="currentIndex">
-       <number>1</number>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
-      <widget class="QWidget" name="tab_Anag_Utenti">
-       <attribute name="title">
-        <string>Utenti</string>
-       </attribute>
-      </widget>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
       <widget class="QWidget" name="tab_Anag_Clienti">
        <attribute name="title">
         <string>Clienti</string>
@@ -93,7 +115,7 @@
           <item>
            <widget class="QPushButton" name="PB_salva_Cliente">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
@@ -106,7 +128,7 @@
           <item>
            <widget class="QPushButton" name="PB_AnnullaMod_Cliente">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
@@ -142,6 +164,36 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectItems</enum>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::DashLine</enum>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>100</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
           <row>
            <property name="text">
             <string>Cliente_00</string>
@@ -261,6 +313,12 @@
            <property name="text">
             <string>0000000001</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -271,6 +329,12 @@
           <item row="0" column="1">
            <property name="text">
             <string>Pretini</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -283,6 +347,12 @@
            <property name="text">
             <string>Federico</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -293,6 +363,12 @@
           <item row="0" column="3">
            <property name="text">
             <string>M</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -305,6 +381,12 @@
            <property name="text">
             <string>06/07/2000</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -315,6 +397,12 @@
           <item row="0" column="5">
            <property name="text">
             <string>Jesi</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -327,6 +415,12 @@
            <property name="text">
             <string>Serra dè Conti</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -337,6 +431,12 @@
           <item row="0" column="7">
            <property name="text">
             <string>AN</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -349,6 +449,12 @@
            <property name="text">
             <string>Via Trionfi Honorati</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -359,6 +465,12 @@
           <item row="0" column="9">
            <property name="text">
             <string>60030</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -371,6 +483,12 @@
            <property name="text">
             <string>CCC</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -381,6 +499,12 @@
           <item row="0" column="11">
            <property name="text">
             <string>UNIVPM</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -393,6 +517,12 @@
            <property name="text">
             <string>IT</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -403,6 +533,12 @@
           <item row="0" column="13">
            <property name="text">
             <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -415,6 +551,12 @@
            <property name="text">
             <string>CCC</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -425,6 +567,12 @@
           <item row="0" column="15">
            <property name="text">
             <string>Pretini</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -437,6 +585,12 @@
            <property name="text">
             <string>Carta d'Identità</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -447,6 +601,12 @@
           <item row="0" column="17">
            <property name="text">
             <string>ccc</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -459,6 +619,12 @@
            <property name="text">
             <string>ccc</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -469,6 +635,12 @@
           <item row="0" column="19">
            <property name="text">
             <string>22/12/2018</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -481,6 +653,12 @@
            <property name="text">
             <string>Carta</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
@@ -491,6 +669,12 @@
           <item row="0" column="21">
            <property name="text">
             <string>Il cliente ha richiesto di un aiuto per il trasporto dei bagagli in camera</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -508,10 +692,16 @@
             <property name="enabled">
              <bool>false</bool>
             </property>
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="editable">
              <bool>false</bool>
             </property>
-            <property name="placeholderText">
+            <property name="placeholderText" stdset="0">
              <string>Aziende</string>
             </property>
             <item>
@@ -533,6 +723,12 @@
           </item>
           <item row="4" column="5">
            <widget class="QDateEdit" name="dateEdit_Doc_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -543,6 +739,12 @@
           </item>
           <item row="6" column="3">
            <widget class="QLineEdit" name="lineEdit_Cellulare_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -550,6 +752,12 @@
           </item>
           <item row="4" column="3">
            <widget class="QLineEdit" name="lineEdit_num_Doc">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -567,6 +775,12 @@
           </item>
           <item row="6" column="5">
            <widget class="QLineEdit" name="lineEdit_Tel_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -574,6 +788,12 @@
           </item>
           <item row="0" column="1">
            <widget class="QLineEdit" name="lineEdit_Cognome_Cliente">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -601,6 +821,12 @@
           </item>
           <item row="3" column="5">
            <widget class="QLineEdit" name="lineEdit_Nazione_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -618,6 +844,12 @@
           </item>
           <item row="6" column="1">
            <widget class="QLineEdit" name="lineEdit_Email_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -646,6 +878,12 @@ il</string>
           </item>
           <item row="0" column="5">
            <widget class="QComboBox" name="comboBox_sesso_cliente">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="contextMenuPolicy">
              <enum>Qt::DefaultContextMenu</enum>
             </property>
@@ -661,14 +899,14 @@ il</string>
             <property name="sizeAdjustPolicy">
              <enum>QComboBox::AdjustToContents</enum>
             </property>
-            <property name="placeholderText">
-             <string>Genere</string>
-            </property>
             <property name="duplicatesEnabled">
              <bool>false</bool>
             </property>
             <property name="frame">
              <bool>true</bool>
+            </property>
+            <property name="placeholderText" stdset="0">
+             <string>Genere</string>
             </property>
             <item>
              <property name="text">
@@ -689,6 +927,12 @@ il</string>
           </item>
           <item row="1" column="5">
            <widget class="QComboBox" name="comboBox_Residenza_Cliente">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="editable">
              <bool>true</bool>
             </property>
@@ -734,6 +978,12 @@ il</string>
           </item>
           <item row="2" column="1">
            <widget class="QLineEdit" name="lineEdit_Prov_Cliente">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -754,6 +1004,12 @@ il</string>
             <property name="enabled">
              <bool>true</bool>
             </property>
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -761,6 +1017,12 @@ il</string>
           </item>
           <item row="1" column="3">
            <widget class="QDateEdit" name="dateEdit_nascita_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -782,6 +1044,12 @@ il</string>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
              <widget class="QLineEdit" name="lineEdit_CodFis_Cliente">
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
@@ -845,6 +1113,8 @@ Convenzionata</string>
             <property name="font">
              <font>
               <family>Arial</family>
+              <weight>50</weight>
+              <bold>false</bold>
              </font>
             </property>
             <property name="layoutDirection">
@@ -859,7 +1129,7 @@ Convenzionata</string>
             <property name="sizeAdjustPolicy">
              <enum>QComboBox::AdjustToContents</enum>
             </property>
-            <property name="placeholderText">
+            <property name="placeholderText" stdset="0">
              <string/>
             </property>
             <item>
@@ -886,6 +1156,12 @@ Convenzionata</string>
           </item>
           <item row="2" column="5">
            <widget class="QLineEdit" name="lineEdit_CAP_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -913,7 +1189,13 @@ Convenzionata</string>
           </item>
           <item row="4" column="1">
            <widget class="QComboBox" name="comboBox_Doc_Cliente">
-            <property name="placeholderText">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="placeholderText" stdset="0">
              <string>Scegli Documento</string>
             </property>
             <item>
@@ -942,7 +1224,7 @@ Documeto</string>
           <item row="6" column="0">
            <widget class="QLabel" name="label_10">
             <property name="text">
-             <string>EMail</string>
+             <string>E-Mail</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -974,6 +1256,12 @@ Documeto</string>
           </item>
           <item row="2" column="3">
            <widget class="QLineEdit" name="lineEdit_Via_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -992,6 +1280,12 @@ da </string>
           </item>
           <item row="5" column="1">
            <widget class="QLineEdit" name="_RilascioDoc_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
@@ -1012,10 +1306,16 @@ da </string>
           </item>
           <item row="5" column="3">
            <widget class="QComboBox" name="comboBox_Agen_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="insertPolicy">
              <enum>QComboBox::InsertAtTop</enum>
             </property>
-            <property name="placeholderText">
+            <property name="placeholderText" stdset="0">
              <string>Agenzia di prenotazione</string>
             </property>
             <item>
@@ -1053,10 +1353,16 @@ Pagamento</string>
           </item>
           <item row="5" column="5">
            <widget class="QComboBox" name="comboBox_ModPag_Clienti">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="insertPolicy">
              <enum>QComboBox::InsertAtTop</enum>
             </property>
-            <property name="placeholderText">
+            <property name="placeholderText" stdset="0">
              <string>Scegli una modalità</string>
             </property>
             <item>
@@ -1102,6 +1408,12 @@ CheckIn</string>
         </item>
         <item>
          <widget class="QLineEdit" name="_InfoCheckIn_Clienti">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
           </property>
@@ -1131,7 +1443,7 @@ CheckIn</string>
            <property name="editable">
             <bool>false</bool>
            </property>
-           <property name="placeholderText">
+           <property name="placeholderText" stdset="0">
             <string>Aziende</string>
            </property>
            <item>
@@ -1281,14 +1593,14 @@ il</string>
            <property name="sizeAdjustPolicy">
             <enum>QComboBox::AdjustToContents</enum>
            </property>
-           <property name="placeholderText">
-            <string>Genere</string>
-           </property>
            <property name="duplicatesEnabled">
             <bool>false</bool>
            </property>
            <property name="frame">
             <bool>true</bool>
+           </property>
+           <property name="placeholderText" stdset="0">
+            <string>Genere</string>
            </property>
            <item>
             <property name="text">
@@ -1479,7 +1791,7 @@ Convenzionata</string>
            <property name="sizeAdjustPolicy">
             <enum>QComboBox::AdjustToContents</enum>
            </property>
-           <property name="placeholderText">
+           <property name="placeholderText" stdset="0">
             <string/>
            </property>
            <item>
@@ -1533,7 +1845,7 @@ Convenzionata</string>
          </item>
          <item row="4" column="1">
           <widget class="QComboBox" name="comboBox_Doc_Cliente_2">
-           <property name="placeholderText">
+           <property name="placeholderText" stdset="0">
             <string>Scegli Documento</string>
            </property>
            <item>
@@ -1635,7 +1947,7 @@ da </string>
            <property name="insertPolicy">
             <enum>QComboBox::InsertAtTop</enum>
            </property>
-           <property name="placeholderText">
+           <property name="placeholderText" stdset="0">
             <string>Agenzia di prenotazione</string>
            </property>
            <item>
@@ -1676,7 +1988,7 @@ Pagamento</string>
            <property name="insertPolicy">
             <enum>QComboBox::InsertAtTop</enum>
            </property>
-           <property name="placeholderText">
+           <property name="placeholderText" stdset="0">
             <string>Scegli una modalità</string>
            </property>
            <item>
@@ -1716,6 +2028,577 @@ Pagamento</string>
        <attribute name="whatsThis">
         <string>r</string>
        </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_Anag_Utenti">
+       <attribute name="title">
+        <string>Utenti</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QPushButton" name="pB_Aggiungi_Utenti">
+            <property name="text">
+             <string>Aggiungi</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_Modifica_Utenti">
+            <property name="text">
+             <string>Modifica</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_Elimina_Utenti">
+            <property name="text">
+             <string>Elimina</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_Salva_Utenti">
+            <property name="text">
+             <string>Salva</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_Annulla_Utenti">
+            <property name="text">
+             <string>Annulla</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="1">
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>15</number>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <property name="bottomMargin">
+           <number>15</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>25</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_42">
+            <property name="text">
+             <string>Username:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lE_username">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_43">
+            <property name="text">
+             <string>Password:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lE_password">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_44">
+            <property name="text">
+             <string>Nome:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="lE_cognomeUtente">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_45">
+            <property name="text">
+             <string>Cognome:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="lE_nomeUtente">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_91">
+            <property name="text">
+             <string>Ambito:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="lE_ambito">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QComboBox" name="cB_permessi">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="currentText">
+             <string>Admin</string>
+            </property>
+            <property name="maxVisibleItems">
+             <number>10</number>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAlphabetically</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>Admin</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Responsabile</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dipendente</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLabel" name="label_92">
+            <property name="text">
+             <string>Permessi:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="1">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="1">
+         <widget class="QTableWidget" name="tableWidget_Utenti">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::PreventContextMenu</enum>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="verticalScrollMode">
+           <enum>QAbstractItemView::ScrollPerItem</enum>
+          </property>
+          <property name="horizontalScrollMode">
+           <enum>QAbstractItemView::ScrollPerItem</enum>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::DashLine</enum>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>160</number>
+          </attribute>
+          <attribute name="horizontalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>Utente_00</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Username</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Password</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nome</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Cognome</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Ambito</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Permessi</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>admin</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>admin</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>Fabrizio</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>Corona</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string>Drogato</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="5">
+           <property name="text">
+            <string>Admin</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
