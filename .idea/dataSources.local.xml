@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
+<<<<<<< HEAD
     <data-source name="database" uuid="2ea76282-eba8-48e0-abbe-001091ac1dad">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+=======
+    <data-source name="identifier.sqlite" uuid="0f0d6b94-74fd-43f1-b693-0ddd010074b1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+>>>>>>> e4ecc76e0ab66f2dd8f01f7326a2b708c0190c18
       <auth-provider>no-auth</auth-provider>
       <schema-mapping />
     </data-source>
