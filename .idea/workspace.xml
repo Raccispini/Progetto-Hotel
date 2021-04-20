@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56b43b1b-d3c1-466f-830d-feb84f29723a" name="Default Changelist" comment="prova">
-      <change afterPath="$PROJECT_DIR$/login/controller/LoginController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/view/LoginView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Progetto-Hotel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Progetto-Hotel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/model/Login_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/model/LoginModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views/login_window_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/view/login_window_ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/view/LoginView.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/view/LoginView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,9 +199,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Progetto_Hotel$main.coverage" NAME="main Coverage Results" MODIFIED="1618764825920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Progetto_Hotel$Login_Model.coverage" NAME="Login_Model Coverage Results" MODIFIED="1618764838939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/login/model" />
-    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1618838657200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Progetto_Hotel$Generatore.coverage" NAME="Generatore Coverage Results" MODIFIED="1618822595373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Progetto_Hotel$login_window_ui.coverage" NAME="login_window_ui Coverage Results" MODIFIED="1618764727575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/login/views" />
+    <SUITE FILE_PATH="coverage/Progetto_Hotel$main.coverage" NAME="main Coverage Results" MODIFIED="1618764825920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1618930942864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

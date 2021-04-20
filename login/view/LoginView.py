@@ -18,6 +18,7 @@ class LoginView(QtWidgets.QMainWindow, Ui_Dialog_Login):
             main_window.show()
             self.hide()
         else:
+            # da mettere la finestra di errore
             print("errore")
 
 
