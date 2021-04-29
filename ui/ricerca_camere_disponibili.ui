@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>998</width>
-    <height>610</height>
+    <height>609</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -129,37 +129,37 @@
         <item>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="1">
-           <widget class="QCheckBox" name="cb_internet">
+           <widget class="QCheckBox" name="cb_animaledomestico">
             <property name="text">
-             <string>Internet</string>
+             <string>Animale Domestico</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="cb_fumatori">
+            <property name="text">
+             <string>Fumatori</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="cb_televisione">
+           <widget class="QCheckBox" name="cb_vascaidromassaggio">
             <property name="text">
-             <string>Televisione</string>
+             <string>Vasca Idromassaggio</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="2">
-           <widget class="QCheckBox" name="cb_cassaforte">
+          <item row="1" column="2">
+           <widget class="QCheckBox" name="cb_vistapanoramica">
             <property name="text">
-             <string>Cassaforte</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QCheckBox" name="cb_satellite">
-            <property name="text">
-             <string>Satellite</string>
+             <string>Vista Panoramica</string>
             </property>
            </widget>
           </item>
           <item row="0" column="2">
-           <widget class="QCheckBox" name="cb_doccia">
+           <widget class="QCheckBox" name="cb_saunainterna">
             <property name="text">
-             <string>Doccia</string>
+             <string>Sauna Interna</string>
             </property>
            </widget>
           </item>
@@ -170,45 +170,24 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
-           <widget class="QCheckBox" name="cb_minibar">
-            <property name="text">
-             <string>Minibar</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="cb_cucina">
-            <property name="text">
-             <string>Cucina</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QCheckBox" name="cb_vascaDaBagno">
-            <property name="text">
-             <string>Vasca da bagno</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="QCheckBox" name="cb_culla">
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="cb_culla_2">
             <property name="text">
              <string>Culla</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="3">
-           <widget class="QCheckBox" name="cb_balcone">
+          <item row="2" column="2">
+           <widget class="QCheckBox" name="cb_cassaforte">
             <property name="text">
-             <string>Balcone</string>
+             <string>Cassaforte</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="3">
-           <widget class="QCheckBox" name="cb_panorama">
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="cb_minibar">
             <property name="text">
-             <string>Panorama</string>
+             <string>Minibar</string>
             </property>
            </widget>
           </item>
