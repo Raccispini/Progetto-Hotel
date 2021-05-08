@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56b43b1b-d3c1-466f-830d-feb84f29723a" name="Default Changelist" comment="prova">
-      <change beforePath="$PROJECT_DIR$/.idea/Progetto-Hotel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Progetto-Hotel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/view/HomeView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/view/LoginView.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/view/LoginView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/anagrafiche_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/anagrafiche_window.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/main_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/main_window.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/resources/Toolbar_main/Resource files.qrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/scelta_camere_prenotazione.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/scelta_camere_prenotazione.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/servizio_bar.ui" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +158,8 @@
       <workItem from="1619170714578" duration="63000" />
       <workItem from="1620426073652" duration="1368000" />
       <workItem from="1620467396286" duration="232000" />
+      <workItem from="1620467667467" duration="79000" />
+      <workItem from="1620467910776" duration="4564000" />
     </task>
     <task id="LOCAL-00001" summary="prova">
       <created>1618586411767</created>
@@ -205,6 +213,6 @@
     <SUITE FILE_PATH="coverage/Progetto_Hotel$main.coverage" NAME="main Coverage Results" MODIFIED="1618764825920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Progetto_Hotel$Generatore.coverage" NAME="Generatore Coverage Results" MODIFIED="1618822595373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Progetto_Hotel$Login_Model.coverage" NAME="Login_Model Coverage Results" MODIFIED="1618764838939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/login/model" />
-    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1620426810444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1620472336907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

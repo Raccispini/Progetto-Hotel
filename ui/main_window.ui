@@ -9,21 +9,9 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>655</height>
+    <width>1279</width>
+    <height>750</height>
    </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>1200</width>
-    <height>655</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>1200</width>
-    <height>655</height>
-   </size>
   </property>
   <property name="sizeIncrement">
    <size>
@@ -35,8 +23,11 @@
    <string>Hotel Management</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources/logo/Resource_logo.qrc">
-    <normaloff>:/resource_logo/logo_small_icon_only.png</normaloff>:/resource_logo/logo_small_icon_only.png</iconset>
+   <iconset>
+    <normaloff>resources/logo/logo_small_icon_only_inverted.png</normaloff>resources/logo/logo_small_icon_only_inverted.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <property name="iconSize">
    <size>
@@ -44,57 +35,386 @@
     <height>45</height>
    </size>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QToolBar" name="toolBar">
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
-   </property>
-   <property name="cursor">
-    <cursorShape>PointingHandCursor</cursorShape>
-   </property>
-   <property name="mouseTracking">
-    <bool>false</bool>
-   </property>
-   <property name="windowTitle">
-    <string>toolBar</string>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>250</width>
-     <height>45</height>
-    </size>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>LeftToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-   <addaction name="actionCamere"/>
-   <addaction name="separator"/>
-   <addaction name="actionAnagrafiche"/>
-   <addaction name="separator"/>
-   <addaction name="actionMagazzino"/>
-   <addaction name="separator"/>
-   <addaction name="actionBar"/>
-   <addaction name="separator"/>
-   <addaction name="actionOmbrelloni"/>
-   <addaction name="separator"/>
-   <addaction name="actionRistorante"/>
-   <addaction name="separator"/>
-   <addaction name="actionAmministrativo"/>
-   <addaction name="separator"/>
-   <addaction name="actionStrumenti"/>
-   <addaction name="separator"/>
-   <addaction name="actionRicerca"/>
-   <addaction name="separator"/>
-   <addaction name="actionMeteo"/>
-   <addaction name="separator"/>
-   <addaction name="actionUscita"/>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>resources/Toolbar_main/clock_2 (1).png</pixmap>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="orario">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>25</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>12:54:45</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_Camere">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Toolbar_main/Icona_Camere.png</normaloff>resources/Toolbar_main/Icona_Camere.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>280</width>
+            <height>75</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_Ristorante">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Toolbar_main/Icona_ristorante.png</normaloff>resources/Toolbar_main/Icona_ristorante.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>280</width>
+            <height>75</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_Bar">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Toolbar_main/Icona_bar.png</normaloff>resources/Toolbar_main/Icona_bar.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>280</width>
+            <height>75</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_Anagrafiche">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Toolbar_main/Icona_anagrafiche.png</normaloff>resources/Toolbar_main/Icona_anagrafiche.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>280</width>
+            <height>75</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_Ombrelloni">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Toolbar_main/Icona_ombrelloni.png</normaloff>resources/Toolbar_main/Icona_ombrelloni.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>280</width>
+            <height>75</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Toolbar_main/Icona_magazzino.png</normaloff>resources/Toolbar_main/Icona_magazzino.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>280</width>
+            <height>75</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_Meteo">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Toolbar_main/Icona_Meteo.png</normaloff>resources/Toolbar_main/Icona_Meteo.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>280</width>
+            <height>75</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_Uscita">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Toolbar_main/Icona_uscita.png</normaloff>resources/Toolbar_main/Icona_uscita.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>280</width>
+            <height>75</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCalendarWidget" name="calendarWidget">
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="minimumDate">
+         <date>
+          <year>2000</year>
+          <month>5</month>
+          <day>18</day>
+         </date>
+        </property>
+        <property name="maximumDate">
+         <date>
+          <year>3000</year>
+          <month>7</month>
+          <day>6</day>
+         </date>
+        </property>
+        <property name="gridVisible">
+         <bool>true</bool>
+        </property>
+        <property name="horizontalHeaderFormat">
+         <enum>QCalendarWidget::ShortDayNames</enum>
+        </property>
+        <property name="verticalHeaderFormat">
+         <enum>QCalendarWidget::NoVerticalHeader</enum>
+        </property>
+        <property name="navigationBarVisible">
+         <bool>true</bool>
+        </property>
+        <property name="dateEditEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <action name="actionCamere">
    <property name="icon">
@@ -263,7 +583,6 @@
   </action>
  </widget>
  <resources>
-  <include location="resources/Toolbar_main/Resource files.qrc"/>
   <include location="resources/logo/Resource_logo.qrc"/>
  </resources>
  <connections/>

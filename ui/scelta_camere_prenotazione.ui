@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>scelta_camere</class>
+ <widget class="QMainWindow" name="scelta_camere">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>504</width>
-    <height>242</height>
+    <width>707</width>
+    <height>438</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -16,13 +16,34 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>707</width>
+    <height>438</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>707</width>
+    <height>438</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Lista Camere</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QTableWidget" name="tabella_camere">
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>170</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>39</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
       <column>
        <property name="text">
         <string>New Column</string>

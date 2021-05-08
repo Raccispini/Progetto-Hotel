@@ -57,7 +57,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="documentMode">
        <bool>false</bool>
@@ -1425,593 +1425,339 @@ CheckIn</string>
        <attribute name="title">
         <string>Fornitori</string>
        </attribute>
-       <widget class="QWidget" name="gridLayoutWidget_3">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>230</y>
-          <width>961</width>
-          <height>281</height>
+          <x>270</x>
+          <y>60</y>
+          <width>563</width>
+          <height>28</height>
          </rect>
         </property>
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="3" column="3">
-          <widget class="QComboBox" name="comboBox_2">
-           <property name="enabled">
-            <bool>false</bool>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="PB_add_Fornitore">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
-           <property name="editable">
-            <bool>false</bool>
+           <property name="text">
+            <string>Aggiungi</string>
            </property>
-           <property name="placeholderText" stdset="0">
-            <string>Aziende</string>
-           </property>
-           <item>
-            <property name="text">
-             <string>Loccioni Group</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>New Item</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>New Item</string>
-            </property>
-           </item>
           </widget>
          </item>
-         <item row="4" column="5">
-          <widget class="QDateEdit" name="dateEdit_Doc_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+         <item>
+          <widget class="QPushButton" name="PB_modifica_Fornitore">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
-           <property name="calendarPopup">
+           <property name="text">
+            <string>Modifica</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="PB_Elimina_Fornitore">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Elimina</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="PB_ricerca_Fornitore">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Ricerca</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="PB_salva_Fornitore">
+           <property name="enabled">
             <bool>true</bool>
            </property>
-          </widget>
-         </item>
-         <item row="6" column="3">
-          <widget class="QLineEdit" name="lineEdit_Cellulare_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
-          </widget>
-         </item>
-         <item row="4" column="3">
-          <widget class="QLineEdit" name="lineEdit_num_Doc_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="4">
-          <widget class="QLabel" name="label_23">
            <property name="text">
-            <string>Nazione</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Salva</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="5">
-          <widget class="QLineEdit" name="lineEdit_Tel_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+         <item>
+          <widget class="QPushButton" name="PB_AnnullaMod_Fornitore">
+           <property name="enabled">
+            <bool>true</bool>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_Cognome_Cliente_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_19">
            <property name="text">
-            <string>Codice Fiscale</string>
+            <string>Annulla</string>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
-         <item row="6" column="2">
-          <widget class="QLabel" name="label_24">
+         <item>
+          <widget class="QPushButton" name="PB_CreaPDF_Fornitore">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
-            <string>Cellulare</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>CreaPDF</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="5">
-          <widget class="QLineEdit" name="lineEdit_Nazione_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>340</y>
+          <width>261</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
           <widget class="QLabel" name="label_25">
            <property name="text">
-            <string>Cognome</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Telefono rif. :</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
-          <widget class="QLineEdit" name="lineEdit_Email_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
+         <item>
+          <widget class="QLineEdit" name="lineEdit"/>
          </item>
-         <item row="6" column="4">
-          <widget class="QLabel" name="label_26">
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>370</y>
+          <width>246</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_24">
            <property name="text">
-            <string>Telefono</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Partita IVA:</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="4">
-          <widget class="QLabel" name="label_27">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_3"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>250</y>
+          <width>305</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_32">
            <property name="text">
-            <string>Rilasciato 
-il</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Tempo pagamento:</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="5">
-          <widget class="QComboBox" name="comboBox_sesso_cliente_2">
-           <property name="contextMenuPolicy">
-            <enum>Qt::DefaultContextMenu</enum>
-           </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="inputMethodHints">
-            <set>Qt::ImhNone</set>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <property name="sizeAdjustPolicy">
-            <enum>QComboBox::AdjustToContents</enum>
-           </property>
-           <property name="duplicatesEnabled">
-            <bool>false</bool>
-           </property>
-           <property name="frame">
-            <bool>true</bool>
-           </property>
-           <property name="placeholderText" stdset="0">
-            <string>Genere</string>
-           </property>
-           <item>
-            <property name="text">
-             <string>Maschio</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Femmina</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Altro</string>
-            </property>
-           </item>
-          </widget>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_5"/>
          </item>
-         <item row="1" column="5">
-          <widget class="QComboBox" name="comboBox_Residenza_Cliente_2">
-           <property name="editable">
-            <bool>true</bool>
-           </property>
-           <property name="insertPolicy">
-            <enum>QComboBox::InsertAtTop</enum>
-           </property>
-           <item>
-            <property name="text">
-             <string>Serra de' Conti</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Fermo</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Jesi</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Senigalli</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Ancona</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="1" column="4">
-          <widget class="QLabel" name="label_28">
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>300</y>
+          <width>317</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_23">
            <property name="text">
-            <string>Residente a</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Modalità pagamento:</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEdit_Prov_Cliente_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_4"/>
          </item>
-         <item row="4" column="2">
-          <widget class="QLabel" name="label_29">
-           <property name="text">
-            <string>n°</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QLineEdit" name="lineEdit_nome_Cliente_2">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <widget class="QDateEdit" name="dateEdit_nascita_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::UpDownArrows</enum>
-           </property>
-           <property name="correctionMode">
-            <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-           </property>
-           <property name="displayFormat">
-            <string>dd/MM/yyyy</string>
-           </property>
-           <property name="calendarPopup">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <item>
-            <widget class="QLineEdit" name="lineEdit_CodFis_Cliente_2">
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_CodFis_2">
-             <property name="text">
-              <string>Calcola</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item row="3" column="2">
-          <widget class="QCheckBox" name="checkBox_2">
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="text">
-            <string>     Azienda 
-Convenzionata</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_30">
-           <property name="text">
-            <string>Prov</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>330</y>
+          <width>219</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
           <widget class="QLabel" name="label_31">
            <property name="text">
-            <string>Sesso</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>E-Mail:</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="2">
-          <widget class="QLabel" name="label_32">
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_6"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>430</y>
+          <width>236</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QLabel" name="label_26">
            <property name="text">
-            <string>il</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Indirizzo:</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QComboBox" name="comboBox_nascita_Cliente_2">
-           <property name="font">
-            <font>
-             <family>Arial</family>
-            </font>
-           </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="editable">
-            <bool>true</bool>
-           </property>
-           <property name="insertPolicy">
-            <enum>QComboBox::InsertAtTop</enum>
-           </property>
-           <property name="sizeAdjustPolicy">
-            <enum>QComboBox::AdjustToContents</enum>
-           </property>
-           <property name="placeholderText" stdset="0">
-            <string/>
-           </property>
-           <item>
-            <property name="text">
-             <string>Serra dè Conti</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Jesi</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Senigallia</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Ancona</string>
-            </property>
-           </item>
-          </widget>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_11"/>
          </item>
-         <item row="2" column="5">
-          <widget class="QLineEdit" name="lineEdit_CAP_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="label_33">
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>480</y>
+          <width>258</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_19">
            <property name="text">
-            <string>Nome</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Riferimento:</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
-          <widget class="QLabel" name="label_34">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_10"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>410</y>
+          <width>272</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <widget class="QLabel" name="label_27">
            <property name="text">
-            <string>Via</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Tipo fornitura:</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="1">
-          <widget class="QComboBox" name="comboBox_Doc_Cliente_2">
-           <property name="placeholderText" stdset="0">
-            <string>Scegli Documento</string>
-           </property>
-           <item>
-            <property name="text">
-             <string>Carta d'Identità</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Patente</string>
-            </property>
-           </item>
-          </widget>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2"/>
          </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_35">
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>470</y>
+          <width>284</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_30">
            <property name="text">
-            <string>Tipo 
-Documeto</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Tipo fornitura 2:</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_36">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_9"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>320</y>
+          <width>238</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <widget class="QLabel" name="label_28">
            <property name="text">
-            <string>EMail</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Telefono:</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_37">
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_8"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>400</y>
+          <width>200</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <item>
+          <widget class="QLabel" name="label_29">
            <property name="text">
-            <string>Nato a</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string>Fax:</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="4">
-          <widget class="QLabel" name="label_38">
-           <property name="text">
-            <string>CAP</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="3">
-          <widget class="QLineEdit" name="lineEdit_Via_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_39">
-           <property name="text">
-            <string>Rilasciato 
-da </string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="1">
-          <widget class="QLineEdit" name="_RilascioDoc_Clienti_2">
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-           <property name="placeholderText">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="2">
-          <widget class="QLabel" name="label_40">
-           <property name="text">
-            <string>Agenzia</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="3">
-          <widget class="QComboBox" name="comboBox_Agen_Clienti_2">
-           <property name="insertPolicy">
-            <enum>QComboBox::InsertAtTop</enum>
-           </property>
-           <property name="placeholderText" stdset="0">
-            <string>Agenzia di prenotazione</string>
-           </property>
-           <item>
-            <property name="text">
-             <string>AirBnB</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Booking.com</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Expedia</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Trivago</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="5" column="4">
-          <widget class="QLabel" name="label_41">
-           <property name="text">
-            <string>Modalità di 
-Pagamento</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="5">
-          <widget class="QComboBox" name="comboBox_ModPag_Clienti_2">
-           <property name="insertPolicy">
-            <enum>QComboBox::InsertAtTop</enum>
-           </property>
-           <property name="placeholderText" stdset="0">
-            <string>Scegli una modalità</string>
-           </property>
-           <item>
-            <property name="text">
-             <string>Assegno</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Bancomat</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Carta</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Contanti</string>
-            </property>
-           </item>
-          </widget>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_7"/>
          </item>
         </layout>
        </widget>
@@ -2021,20 +1767,12 @@ Pagamento</string>
         <string>Aziende</string>
        </attribute>
       </widget>
-      <widget class="QWidget" name="tab_Anag_Agenzie">
-       <attribute name="title">
-        <string>Agenzie</string>
-       </attribute>
-       <attribute name="whatsThis">
-        <string>r</string>
-       </attribute>
-      </widget>
       <widget class="QWidget" name="tab_Anag_Utenti">
        <attribute name="title">
         <string>Utenti</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_7">
-        <item row="1" column="1">
+        <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <item>
            <widget class="QPushButton" name="pB_Aggiungi_Utenti">
@@ -2073,7 +1811,7 @@ Pagamento</string>
           </item>
          </layout>
         </item>
-        <item row="4" column="1">
+        <item row="2" column="0">
          <layout class="QGridLayout" name="gridLayout_5">
           <property name="leftMargin">
            <number>15</number>
@@ -2251,71 +1989,7 @@ Pagamento</string>
           </item>
          </layout>
         </item>
-        <item row="2" column="2">
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="0" column="1">
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="5" column="1">
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="2" column="0">
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="2" column="1">
+        <item row="1" column="0">
          <widget class="QTableWidget" name="tableWidget_Utenti">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -2581,22 +2255,6 @@ Pagamento</string>
            </property>
           </item>
          </widget>
-        </item>
-        <item row="3" column="1">
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
         </item>
        </layout>
       </widget>
