@@ -6,18 +6,416 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1207</width>
-    <height>850</height>
+    <width>1100</width>
+    <height>664</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Servizio Bar</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(70, 190, 255, 255), stop:1 rgba(255, 142, 142, 255));</string>
+   <string notr="true">
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
+    <item row="2" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QTableWidget" name="tW_scontrino">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+        </property>
+        <property name="autoScrollMargin">
+         <number>16</number>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+        <property name="showGrid">
+         <bool>true</bool>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="rowCount">
+         <number>5</number>
+        </property>
+        <property name="columnCount">
+         <number>4</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>40</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>175</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>24</number>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>24</number>
+        </attribute>
+        <attribute name="verticalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column>
+         <property name="text">
+          <string>Consumazione</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Quantità</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Importo</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Importo TOT</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>Vodka</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string>3</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="0" column="2">
+         <property name="text">
+          <string>5</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="0" column="3">
+         <property name="text">
+          <string>15</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="3" column="3">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>25</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>32</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>58</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>18</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="cB_metodopagamento">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <item>
+           <property name="text">
+            <string>Contanti</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Carta di debito o credito</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acconto</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cB_camera">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+</string>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>Vuoto</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Metodo di pagamento:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_12">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>TOTALE:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_11">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+</string>
+          </property>
+          <property name="text">
+           <string>Camera:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="lE_totaleconto">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>18</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="label_13">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>28</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));</string>
+          </property>
+          <property name="text">
+           <string>€</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pB_salva">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Salva</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_elimina">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Elimina</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
     <item row="2" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
@@ -31,12 +429,11 @@
            <font>
             <family>Arial</family>
             <pointsize>12</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Alcolici</string>
@@ -61,7 +458,8 @@
            <bool>false</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true">
+</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -133,7 +531,8 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true">
+</string>
           </property>
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -146,12 +545,12 @@
            <font>
             <family>Arial</family>
             <pointsize>12</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true">
+</string>
           </property>
           <property name="text">
            <string>Analcolici</string>
@@ -170,7 +569,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -242,7 +641,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -255,12 +654,11 @@
            <font>
             <family>Arial</family>
             <pointsize>12</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Bibite</string>
@@ -279,7 +677,8 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true">
+</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -341,7 +740,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -354,12 +753,11 @@
            <font>
             <family>Arial</family>
             <pointsize>12</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Caffetteria</string>
@@ -384,7 +782,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -466,7 +864,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -479,12 +877,11 @@
            <font>
             <family>Arial</family>
             <pointsize>12</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Aperitivi</string>
@@ -503,7 +900,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -555,7 +952,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -568,12 +965,11 @@
            <font>
             <family>Arial</family>
             <pointsize>12</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Vini</string>
@@ -592,7 +988,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -654,7 +1050,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -667,12 +1063,11 @@
            <font>
             <family>Arial</family>
             <pointsize>12</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Liquori</string>
@@ -691,7 +1086,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -761,7 +1156,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -774,12 +1169,12 @@
            <font>
             <family>Arial</family>
             <pointsize>12</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true">
+</string>
           </property>
           <property name="text">
            <string>Pasticceria</string>
@@ -798,7 +1193,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -843,6 +1238,12 @@
         </item>
         <item>
          <widget class="QSpinBox" name="sB_pasticceria">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
@@ -850,7 +1251,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -880,12 +1281,12 @@
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true">
+</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -911,12 +1312,11 @@
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -942,12 +1342,11 @@
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -973,12 +1372,12 @@
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true">
+</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1004,12 +1403,11 @@
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1035,12 +1433,11 @@
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1066,12 +1463,11 @@
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1097,12 +1493,11 @@
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1112,432 +1507,6 @@
        </layout>
       </item>
      </layout>
-    </item>
-    <item row="2" column="1">
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QTableWidget" name="tW_scontrino">
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-        </property>
-        <property name="autoScrollMargin">
-         <number>16</number>
-        </property>
-        <property name="alternatingRowColors">
-         <bool>true</bool>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::MultiSelection</enum>
-        </property>
-        <property name="showGrid">
-         <bool>true</bool>
-        </property>
-        <property name="sortingEnabled">
-         <bool>false</bool>
-        </property>
-        <property name="rowCount">
-         <number>5</number>
-        </property>
-        <property name="columnCount">
-         <number>4</number>
-        </property>
-        <attribute name="horizontalHeaderVisible">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>175</number>
-        </attribute>
-        <attribute name="horizontalHeaderHighlightSections">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="horizontalHeaderMinimumSectionSize">
-         <number>40</number>
-        </attribute>
-        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="horizontalHeaderStretchLastSection">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="verticalHeaderVisible">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="verticalHeaderCascadingSectionResizes">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="verticalHeaderDefaultSectionSize">
-         <number>22</number>
-        </attribute>
-        <attribute name="verticalHeaderHighlightSections">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="verticalHeaderMinimumSectionSize">
-         <number>24</number>
-        </attribute>
-        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="verticalHeaderStretchLastSection">
-         <bool>false</bool>
-        </attribute>
-        <row/>
-        <row/>
-        <row/>
-        <row/>
-        <row/>
-        <column>
-         <property name="text">
-          <string>Consumazione</string>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial</family>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Quantità</string>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial</family>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Importo</string>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial</family>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Importo TOT</string>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial</family>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <item row="0" column="0">
-         <property name="text">
-          <string>Vodka</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item row="0" column="1">
-         <property name="text">
-          <string>3</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item row="0" column="2">
-         <property name="text">
-          <string>5</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item row="0" column="3">
-         <property name="text">
-          <string>15</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item row="3" column="3">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial</family>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item>
-       <layout class="QGridLayout" name="gridLayout">
-        <property name="leftMargin">
-         <number>25</number>
-        </property>
-        <property name="topMargin">
-         <number>10</number>
-        </property>
-        <property name="rightMargin">
-         <number>32</number>
-        </property>
-        <property name="bottomMargin">
-         <number>10</number>
-        </property>
-        <property name="horizontalSpacing">
-         <number>58</number>
-        </property>
-        <property name="verticalSpacing">
-         <number>18</number>
-        </property>
-        <item row="1" column="0">
-         <widget class="QComboBox" name="cB_metodopagamento">
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-          </property>
-          <item>
-           <property name="text">
-            <string>Contanti</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Carta di debito o credito</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Acconto</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QComboBox" name="cB_camera">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-          </property>
-          <property name="editable">
-           <bool>true</bool>
-          </property>
-          <item>
-           <property name="text">
-            <string>Vuoto</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_10">
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>16</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-          </property>
-          <property name="text">
-           <string>Metodo di pagamento:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="3">
-         <widget class="QLabel" name="label_12">
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>16</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-          </property>
-          <property name="text">
-           <string>TOTALE:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLabel" name="label_11">
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>16</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-          </property>
-          <property name="text">
-           <string>Camera:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="3">
-         <widget class="QLineEdit" name="lE_totaleconto">
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>18</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-          <property name="placeholderText">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="4">
-         <widget class="QLabel" name="label_13">
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>28</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));</string>
-          </property>
-          <property name="text">
-           <string>€</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QPushButton" name="pB_elimina">
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>16</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-          </property>
-          <property name="text">
-           <string>Elimina</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pB_salva">
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>16</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
-          </property>
-          <property name="text">
-           <string>Salva</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="0" colspan="2">
-     <widget class="QLabel" name="label">
-      <property name="font">
-       <font>
-        <family>Monotype Corsiva</family>
-        <pointsize>48</pointsize>
-        <weight>50</weight>
-        <italic>true</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));</string>
-      </property>
-      <property name="text">
-       <string>Servizio Bar</string>
-      </property>
-     </widget>
     </item>
    </layout>
   </widget>
