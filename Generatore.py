@@ -1,4 +1,6 @@
 import random
+import sqlite3
+
 class Generatore(object):
 
     def genera(self,numero_camere,max_plane=10):
@@ -30,7 +32,21 @@ class Generatore(object):
         return query+";"
 
 gen = Generatore()
-print(gen.genera(10))
+while 1==1:
+    query = gen.genera(10)
+    print(query)
+    question = input("va bene come query?(Si/No) ")
+    if question == 'Si' or question == 'si':
+        con =sqlite3.connect('database.db')
+        con.execute(query)
+        con.commit()
+        break
+    else:
+        print('Rigenero ...')
+
+
+
+
 
 
 
