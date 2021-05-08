@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>1279</width>
-    <height>750</height>
+    <height>864</height>
    </rect>
   </property>
   <property name="sizeIncrement">
@@ -77,7 +77,7 @@
            <number>0</number>
           </property>
           <property name="bottomMargin">
-           <number>10</number>
+           <number>0</number>
           </property>
           <item>
            <widget class="QLabel" name="label">
@@ -282,7 +282,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="pB_Magazzino">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -416,171 +416,6 @@
     </item>
    </layout>
   </widget>
-  <action name="actionCamere">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_Camere.png</normaloff>resources/Toolbar_main/Icona_Camere.png</iconset>
-   </property>
-   <property name="text">
-    <string>Camere</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre il gestore dei gruppi</string>
-   </property>
-   <property name="shortcut">
-    <string>F1</string>
-   </property>
-  </action>
-  <action name="actionAnagrafiche">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_anagrafiche.png</normaloff>resources/Toolbar_main/Icona_anagrafiche.png</iconset>
-   </property>
-   <property name="text">
-    <string>Anagrafiche</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre il gestore delle anagrafiche</string>
-   </property>
-   <property name="shortcut">
-    <string>F2</string>
-   </property>
-  </action>
-  <action name="actionMagazzino">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_magazzino.png</normaloff>resources/Toolbar_main/Icona_magazzino.png</iconset>
-   </property>
-   <property name="text">
-    <string>Magazzino</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre il gestore del magazzino</string>
-   </property>
-   <property name="shortcut">
-    <string>F3</string>
-   </property>
-  </action>
-  <action name="actionBar">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_bar.png</normaloff>resources/Toolbar_main/Icona_bar.png</iconset>
-   </property>
-   <property name="text">
-    <string>Bar</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre il gestore dei bar</string>
-   </property>
-   <property name="shortcut">
-    <string>F4</string>
-   </property>
-  </action>
-  <action name="actionOmbrelloni">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_ombrelloni.png</normaloff>resources/Toolbar_main/Icona_ombrelloni.png</iconset>
-   </property>
-   <property name="text">
-    <string>Ombrelloni</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre il gestore degli Ombrelloni</string>
-   </property>
-   <property name="shortcut">
-    <string>F5</string>
-   </property>
-  </action>
-  <action name="actionRistorante">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_ristorante.png</normaloff>resources/Toolbar_main/Icona_ristorante.png</iconset>
-   </property>
-   <property name="text">
-    <string>Ristorante</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre il gestore del ristornate</string>
-   </property>
-   <property name="shortcut">
-    <string>F6</string>
-   </property>
-  </action>
-  <action name="actionAmministrativo">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_amministrativo.png</normaloff>resources/Toolbar_main/Icona_amministrativo.png</iconset>
-   </property>
-   <property name="text">
-    <string>Amministrativo</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre il gestore dell'amministrativo</string>
-   </property>
-   <property name="shortcut">
-    <string>F7</string>
-   </property>
-  </action>
-  <action name="actionStrumenti">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_strumenti.png</normaloff>resources/Toolbar_main/Icona_strumenti.png</iconset>
-   </property>
-   <property name="text">
-    <string>Strumenti</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre il gestore degli Strumenti</string>
-   </property>
-   <property name="shortcut">
-    <string>F8</string>
-   </property>
-  </action>
-  <action name="actionRicerca">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_ricerca.png</normaloff>resources/Toolbar_main/Icona_ricerca.png</iconset>
-   </property>
-   <property name="text">
-    <string>Ricerca</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre una finestra per la ricerca di un cliente</string>
-   </property>
-   <property name="shortcut">
-    <string>F9</string>
-   </property>
-  </action>
-  <action name="actionMeteo">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_Meteo.png</normaloff>resources/Toolbar_main/Icona_Meteo.png</iconset>
-   </property>
-   <property name="text">
-    <string>Meteo</string>
-   </property>
-   <property name="toolTip">
-    <string>Apre una finestra che mostra il meteo</string>
-   </property>
-   <property name="shortcut">
-    <string>F10</string>
-   </property>
-  </action>
-  <action name="actionUscita">
-   <property name="icon">
-    <iconset>
-     <normaloff>resources/Toolbar_main/Icona_uscita.png</normaloff>resources/Toolbar_main/Icona_uscita.png</iconset>
-   </property>
-   <property name="text">
-    <string>Uscita</string>
-   </property>
-   <property name="toolTip">
-    <string>Arresta l'esecuzione del programma</string>
-   </property>
-   <property name="shortcut">
-    <string>F11</string>
-   </property>
-  </action>
  </widget>
  <resources>
   <include location="resources/logo/Resource_logo.qrc"/>
