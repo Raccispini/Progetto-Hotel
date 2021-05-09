@@ -1,27 +1,23 @@
-from PyQt5 import QtWidgets
-
-from home.view.Ui_HomeWindow import Window_Home
-from login.model.LoginModel import LoginModel
+from PyQt5.QtWidgets import QMessageBox, QMainWindow
+from home.view.HomeView import HomeView
+from login.controller.LoginController import LoginController
 from login.view.login_window_ui import Ui_Dialog_Login
 
-
-class LoginView(QtWidgets.QMainWindow, Ui_Dialog_Login):
+class LoginView(QMainWindow, Ui_Dialog_Login):
     def __init__(self, parent=None):
         super(LoginView, self).__init__(parent)
+        self.controller = LoginController()
         self.setupUi(self)
         self.show()
         self.pushButton_Login.clicked.connect(self.accesso)
 
     def accesso(self):
-        login_model = LoginModel(self.lineEdit_User.text(),self.lineEdit_User_2.text())
-        if login_model.accedi:
-            main_window = Window_Home()
+        if self.controller.accesso(self.LE_Username.text(), self.LE_Password.text()):
+            main_window = HomeView()
             main_window.show()
-            self.hide()
+            self.close()
         else:
-            # da mettere la finestra di errore
-            print("errore")
-
+            QMessageBox.critical(self, 'Errore', 'I dati inseriti non sono corretti oppure\n sono stati lasciati dei campi vuoti,\n per favore ritenta.', QMessageBox.Ok, QMessageBox.Ok)
 
 
 
