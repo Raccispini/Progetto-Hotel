@@ -3,10 +3,9 @@ import webbrowser
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer, QTime
 
-from interfacce.servizio_bar import Window_Bar
 
 
-class Ui_MainWindow(object):
+class Ui_HomeWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setMinimumSize(1200, 650)
@@ -38,10 +37,11 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.orario.sizePolicy().hasHeightForWidth())
         self.orario.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setFamily("Arial")
+        font.setFamily("Palatino")
         font.setPointSize(40)
         font.setBold(True)
         font.setWeight(100)
+        self.orario.setStyleSheet("color: rgb(221,34,24);")
         self.orario.setFont(font)
         self.orario.setAlignment(QtCore.Qt.AlignCenter)
         self.orario.setObjectName("orario")
@@ -178,15 +178,14 @@ class Ui_MainWindow(object):
         displayText = currentTime.toString("    hh:mm:ss")
         self.orario.setText(displayText)
 
-class Window_Main(QtWidgets.QMainWindow, Ui_MainWindow):
+class Window_Home(QtWidgets.QMainWindow, Ui_HomeWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)
         self.connectSignalSlot()
 
     def openBar(self):
-        self.bar = Window_Bar()
-        self.bar.show()
+        print("Finestra Bar aperta")
 
     def connectSignalSlot(self):
         self.pB_Camere.clicked.connect(lambda: print("Finestra Camere Aperta"))
