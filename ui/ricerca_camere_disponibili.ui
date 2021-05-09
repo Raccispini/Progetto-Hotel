@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1433</width>
+    <width>1264</width>
     <height>787</height>
    </rect>
   </property>
@@ -156,12 +156,52 @@
               </property>
               <item>
                <property name="text">
-                <string>Single</string>
+                <string>Singola</string>
                </property>
               </item>
               <item>
                <property name="text">
                 <string>Deluxe</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Honey Moon</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Luxury</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Studio</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Executive</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Suite</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Superior</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Bilocale</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Trilocale</string>
                </property>
               </item>
              </widget>

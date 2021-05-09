@@ -46,12 +46,12 @@
       </attribute>
       <column>
        <property name="text">
-        <string>New Column</string>
+        <string>N° Camera</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>New Column</string>
+        <string>Allestimento</string>
        </property>
       </column>
       <column>
