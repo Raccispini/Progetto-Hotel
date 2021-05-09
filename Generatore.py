@@ -5,9 +5,9 @@ class Generatore(object):
 
     def genera(self,numero_camere,max_plane=10):
         allestimento = ["bilocale","deluxe","executive","honey_moon","luxury","studio","suite","superior","trilocale","singola"]
-        #print("id\tallestimento\tmatrimoniale\tnumeroSingoli\tpiano\taria condizionata\tidromassaggio\tculla\tanimale\tfumatori\tminiBar\tsauna\tvista\ttavolo")
+        #print("id\tallestimento\tmatrimoniale\tnumeroSingoli\tpiano\taria condizionata\tidromassaggio\tculla\tanimale\tfumatori\tminiBar\tsauna\tvista\tcassa\ttavolo")
         piano = 1
-        query = "INSERT INTO Camere(allestimento,matrimoniale,numeroSingoli,piano,ariaCondizionata,vascaIdromassaggio,culla,animaleDomestico,fumatori,miniBar,saunaInterna,vistamPanoramica,prenotazioneTavolo,extra,prezzo) VALUES "
+        query = "INSERT INTO Camere(piano,numeroCamere,allestimento,matrimoniale,numeroSingoli,ariaCondizionata,vascaIdromassaggio,culla,animaleDomestico,fumatori,miniBar,saunaInterna,vistaPanoramica,cassaforte,prenotazioneTavolo,prezzo,extra) VALUES "
         for i in range(numero_camere):
             letti_singoli=random.randint(0,4)
             letti_matrimoniali = random.randint(0,2)
@@ -24,25 +24,27 @@ class Generatore(object):
             minbar = True if random.randint(0,1) == 1 else False
             sauna = True if random.randint(0,1) == 1 else False
             vista = True if random.randint(0,1) == 1 else False
+            cassa = True if random.randint(0, 1) == 1 else False
             tavolo = True if random.randint(0,1) == 1 else False
             prezzo = letti_singoli*30+letti_matrimoniali*60
-            query += "(\'"+str(allestimento[random.randint(0,len(allestimento)-1)])+"\',"+str(letti_matrimoniali)+","+str(letti_singoli)+","+str(piano)+","+str(aria_condizionata)+","+str(idromassaggio)+","+str(idromassaggio)+","+str(culla)+","+str(animale)+","+str(fumatori)+","+str(minbar)+","+str(sauna)+","+str(vista)+","+str(tavolo)+","+str(prezzo)+"),"
+            #extra = 0
+            query += "(\'"+str(allestimento[random.randint(0,len(allestimento)-1)])+"\',"+str(letti_matrimoniali)+","+str(letti_singoli)+","+str(piano)+","+str(aria_condizionata)+","+str(idromassaggio)+","+str(idromassaggio)+","+str(culla)+","+str(animale)+","+str(fumatori)+","+str(minbar)+","+str(sauna)+","+str(vista)+","+str(cassa)+","+str(tavolo)+","+str(prezzo)+"),"
             #print(str(i+1)+"\t"+str(allestimento[random.randint(0,len(allestimento)-1)])+"\t\t\t"+str(letti_matrimoniali)+"\t"+str(letti_singoli)+"\t"+str(piano)+"\t"+str(aria_condizionata)+"\t"+str(idromassaggio)+"\t"+str(idromassaggio)+"\t"+str(culla)+"\t"+str(animale)+"\t"+str(fumatori)+"\t"+str(minbar)+"\t"+str(sauna)+"\t"+str(vista)+"\t"+str(tavolo))
         query = query[:-1]
         return query+";"
 
 gen = Generatore()
 while 1==1:
-    query = gen.genera(10)
+    query = gen.genera(20)
     print(query)
-    question = input("va bene come query?(Si/No) ")
-    if question == 'Si' or question == 'si':
-        con =sqlite3.connect('database.db')
-        con.execute(query)
-        con.commit()
-        break
-    else:
-        print('Rigenero ...')
+    #question = input("va bene come query?(Si/No) ")
+    #if question == 'Si' or question == 'si':
+    con =sqlite3.connect('database.db')
+    con.execute(query)
+    con.commit()
+    break
+    #else:
+     #   print('Rigenero ...')
 
 
 
