@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+import sqlite3
 
 class Ui_BarView(object):
     def setupUi(self, MainWindow):
@@ -658,6 +659,67 @@ class Ui_BarView(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+#Funzione che aggiorna gli item nelle combo box
+    def update_data(self,MainWindow):
+        con = sqlite3.connect('database.db')
+        query = 'select * from Bar GROUP BY Bar.categoria;'
+        cose = con.execute(query).fetchall()
+        self.alcolici = []
+        self.analcolici = []
+        self.bibite = []
+        self.caffetteria= []
+        self.aperitivi = []
+        self.vini = []
+        self.liquori = []
+        self.pasticceria = []
+
+        for i in cose:
+            if i[2]=='Alcolici':
+                self.alcolici.append(i)
+            if i[2] == 'Analcolici':
+                self.analcolici.append(i)
+            if i[2] == 'Aperitivi':
+                self.aperitivi.append(i)
+            if i[2] == 'Bibite':
+                self.bibite.append(i)
+            if i[2] == 'Caffetteria':
+                self.caffetteria.append(i)
+            if i[2] == 'Vini':
+                self.vini.append(i)
+            if i[2] == 'Liquori':
+                self.liquori.append(i)
+            if i[2] == 'Pasticceria':
+                self.pasticceria.append(i)
+        _translate = QtCore.QtCoreApplication.translate
+        self.cB_alcolici.clear()
+        for i in range(0,len(self.alcolici)):
+                self.cB_alcolici.setItemText(i+1, _translate("MainWindow",self.alcolici[i][1]))
+        self.cB_analcolici.clear()
+        for i in range(0, len(self.analcolici)):
+                self.cB_analcolici.setItemText(i + 1, _translate("MainWindow", self.analcolici[i][1]))
+        self.cB_aperitivi.clear()
+        for i in range(0, len(self.aperitivi)):
+                self.cB_aperitivi.setItemText(i + 1, _translate("MainWindow", self.aperitivi[i][1]))
+        self.cB_bibite.clear()
+        for i in range(0, len(self.bibite)):
+                self.cB_bibite.setItemText(i + 1, _translate("MainWindow",self.bibite[i][1]))
+        self.cB_caffetteria.clear()
+        for i in range(0, len(self.caffetteria)):
+                self.cB_caffetteria.setItemText(i + 1, _translate("MainWindow", self.caffetteria[i][1]))
+        self.cB_liquori.clear()
+        for i in range(0, len(self.liquori)):
+                self.cB_liquori.setItemText(i + 1, _translate("MainWindow", self.liquori[i][1]))
+
+        self.cB_pasticceria.clear()
+        for i in range(0, len(self.pasticceria)):
+                self.cB_pasticceria.setItemText(i + 1, _translate("MainWindow", self.pasticceria[i][1]))
+        self.cB_vini.clear()
+        for i in range(0, len(self.vini)):
+                self.cB_vini.setItemText(i + 1, _translate("MainWindow", self.vini[i][1]))
+
+
+
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Servizio Bar"))
@@ -768,4 +830,45 @@ class Ui_BarView(object):
         self.label_12.setText(_translate("MainWindow", "TOTALE:"))
         self.pB_salva.setText(_translate("MainWindow", "Salva"))
         self.pB_elimina.setText(_translate("MainWindow", "Elimina"))
+
+    #metodo che aggiunge l'item alla tabella a destra
+    def aggiungi_tabella(self,item):
+
+
+
+    def get_item(self,button,category):
+        item = str(button.currentText())
+        if category == 'Alcolici':
+                for i in self.alcolici:
+                      if i[1] == item:
+                              return i
+        if category == 'Analcolici':
+                for i in self.analcolici:
+                        if i[1] == item:
+                                return i
+        if category == 'Aperitivi':
+                for i in self.aperitivi:
+                        if i[1] == item:
+                                return i
+        if category == 'Bibite':
+                for i in self.bibite:
+                        if i[1] == item:
+                                return i
+        if category == 'Caffetteria':
+                for i in self.caffetteria:
+                        if i[1] == item:
+                                return i
+        if category == 'Liquori':
+                for i in self.liquori:
+                        if i[1] == item:
+                                return i
+        if category == 'Pasticceria':
+                for i in self.analcolici:
+                        if i[1] == item:
+                                return i
+        if category == 'Vini':
+                for i in self.analcolici:
+                        if i[1] == item:
+                                return i
+
 
