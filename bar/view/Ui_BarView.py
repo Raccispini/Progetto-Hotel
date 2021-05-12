@@ -800,6 +800,7 @@ class Ui_BarView(object):
         self.pB_vini.setText(_translate("MainWindow", "Aggiungi"))
         self.pB_liquori.setText(_translate("MainWindow", "Aggiungi"))
         self.pB_pasticceria.setText(_translate("MainWindow", "Aggiungi"))
+        self.lista = []
         self.tW_scontrino.setSortingEnabled(False)
         item = self.tW_scontrino.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Consumazione"))
@@ -832,43 +833,67 @@ class Ui_BarView(object):
         self.pB_elimina.setText(_translate("MainWindow", "Elimina"))
 
     #metodo che aggiunge l'item alla tabella a destra
-    def aggiungi_tabella(self,item):
+    def update_table(self):
+            _translate = QtCore.QCoreApplication.translate
+            self.tW_scontrino.setSortingEnabled(False)
+            for i in range(0,len(self.lista)):
+                        item = self.tW_scontrino.item(i,0)
+                        item.setText(_translate("MainWindow", str(self.lista[i][0])))
+                        item = self.tW_scontrino.item(i, 1)
+                        item.setText(_translate("MainWindow", str(self.lista[i][1])))
+                        item = self.tW_scontrino.item(i, 2)
+                        item.setText(_translate("MainWindow", str(self.lista[i][2])))
+                        item = self.tW_scontrino.item(i, 3)
+                        item.setText(_translate("MainWindow", str(self.lista[i][3])))
 
 
 
-    def get_item(self,button,category):
-        item = str(button.currentText())
+
+    def get_item(self,combo,text,category):
+        item = str(combo.currentText())
+
         if category == 'Alcolici':
+                qt = int(self.sB_alcolici.text())
                 for i in self.alcolici:
-                      if i[1] == item:
-                              return i
+                        if i[1] == item:
+                                return (i,qt)
         if category == 'Analcolici':
+                qt = int(self.sB_analcolici.text())
                 for i in self.analcolici:
                         if i[1] == item:
-                                return i
+                                return (i,qt)
         if category == 'Aperitivi':
+                qt = int(self.sB_aperitivi.text())
                 for i in self.aperitivi:
                         if i[1] == item:
-                                return i
+                                return (i,qt)
         if category == 'Bibite':
+                qt = int(self.sB_bibite.text())
                 for i in self.bibite:
                         if i[1] == item:
-                                return i
+                                return (i,qt)
         if category == 'Caffetteria':
+                qt = int(self.sB_caffetteria.text())
                 for i in self.caffetteria:
                         if i[1] == item:
-                                return i
+                                return (i,qt)
         if category == 'Liquori':
+                qt = int(self.sB_liquori.text())
                 for i in self.liquori:
                         if i[1] == item:
-                                return i
+                                return (i,qt)
         if category == 'Pasticceria':
-                for i in self.analcolici:
+                qt = int(self.sB_pasticceria.text())
+                for i in self.pasticceria:
                         if i[1] == item:
-                                return i
+                                return (i,qt)
         if category == 'Vini':
-                for i in self.analcolici:
+                qt = int(self.sB_vini.text())
+                for i in self.vini:
                         if i[1] == item:
-                                return i
+                                return (i,qt)
 
-
+    def action(self, combo, category):
+        item = self.get_item(combo, category)
+        self.list.append((item[0][2],item[1],item[0][3],int(item[1])*int(item[0][3])))
+        self.update_table()
