@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>973</width>
+    <height>484</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0" colspan="12">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="9">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="12" column="0" colspan="7">
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="10">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Metodo di pagamento</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="7">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="13" column="3" rowspan="3" colspan="3">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="text">
+         <string>Totale per persona</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="text">
+         <string>Totale</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_7">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>0,00 €</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_8">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>0,00 €</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="7" rowspan="14" colspan="5">
+     <widget class="QTableWidget" name="tableWidget">
+      <column>
+       <property name="text">
+        <string>Ordine</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Quantità</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Importo</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Totale</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="3" column="0" rowspan="4" colspan="6">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="3" column="4">
+       <widget class="QPushButton" name="pushButton_11">
+        <property name="text">
+         <string>Cancella</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="4">
+       <widget class="QPushButton" name="pushButton_12">
+        <property name="text">
+         <string>Cancella</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="4">
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="text">
+         <string>Cancella</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="4">
+       <widget class="QPushButton" name="pushButton_14">
+        <property name="text">
+         <string>Cancella</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="4">
+       <widget class="QPushButton" name="pushButton_13">
+        <property name="text">
+         <string>Cancella</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="2">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="4">
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="text">
+         <string>Cancella</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1">
+       <widget class="QComboBox" name="comboBox_3"/>
+      </item>
+      <item row="9" column="1">
+       <widget class="QComboBox" name="comboBox_4"/>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="text">
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="1">
+       <widget class="QComboBox" name="comboBox"/>
+      </item>
+      <item row="7" column="1">
+       <widget class="QComboBox" name="comboBox_7"/>
+      </item>
+      <item row="7" column="2">
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="4">
+       <widget class="QPushButton" name="pushButton_10">
+        <property name="text">
+         <string>Cancella</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QComboBox" name="comboBox_2">
+        <item>
+         <property name="text">
+          <string>Raviolini ai frutti di mare</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="10" column="1">
+       <widget class="QComboBox" name="comboBox_6"/>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboBox_5"/>
+      </item>
+      <item row="9" column="2">
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="2">
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="text">
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Antipasti</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Primi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="2">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Secondi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Dolci</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Contorni</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Bevande</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Frutta</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="13" column="1">
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>0,00 €</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0" colspan="12">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>Totale ordini</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="2" rowspan="3">
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>Coperto</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0" colspan="7">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="15" column="1">
+     <widget class="QLineEdit" name="lineEdit_6">
+      <property name="text">
+       <string>0,00</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>1,50 €</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>Sconto</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Tavolo </string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLineEdit" name="lineEdit_5">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>Persone</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="7">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Nominativo</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="11">
+     <widget class="QComboBox" name="comboBox_9">
+      <item>
+       <property name="text">
+        <string>Contanti</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Assegno</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Carta</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bonifico</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="8">
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="17" column="0" colspan="12">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_15">
+        <property name="text">
+         <string>Salva ordini</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_16">
+        <property name="text">
+         <string>Preconto</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="text">
+         <string>Stampa scontrino</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_18">
+        <property name="text">
+         <string>Chiudi tavolo</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
