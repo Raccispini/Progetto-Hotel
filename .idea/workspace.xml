@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="853c399c-59f8-47d2-bc06-b31ed928608e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/utente/model/UserModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bar/view/BarView.py" beforeDir="false" afterPath="$PROJECT_DIR$/bar/view/BarView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bar/view/Ui_BarView.py" beforeDir="false" afterPath="$PROJECT_DIR$/bar/view/Ui_BarView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/view/HomeView.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/view/HomeView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/model/LoginModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/model/LoginModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/view/LoginView.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/view/LoginView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/view/login_window_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/view/login_window_ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_2.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_2.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_apri_cancella_prenotazione.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_apri_cancella_prenotazione.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_ordinazioni.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_ordinazioni.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_prenota_apri.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_prenota_apri.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_prenota_apri_pt2.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_prenota_apri_pt2.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_prenotazione_cancellata.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_prenotazione_cancellata.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_prenotazione_effettuata.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_prenotazione_effettuata.ui" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sUCRU8wwdPNUzmnGho9fqOePzt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\aless\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="853c399c-59f8-47d2-bc06-b31ed928608e" name="Default Changelist" comment="" />
+      <created>1620917778426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620917778426</updated>
+      <workItem from="1620917783735" duration="100000" />
+      <workItem from="1620917886575" duration="22000" />
+      <workItem from="1620918241179" duration="3797000" />
+      <workItem from="1620977768975" duration="2156000" />
+      <workItem from="1621099698147" duration="4951000" />
+      <workItem from="1621104795575" duration="1555000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1621104962013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

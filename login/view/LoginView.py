@@ -6,9 +6,9 @@ from login.view.login_window_ui import Ui_Dialog_Login
 class LoginView(QMainWindow, Ui_Dialog_Login):
     def __init__(self, parent=None):
         super(LoginView, self).__init__(parent)
-        self.controller = LoginController()
         self.setupUi(self)
-        self.show()
+        self.utente = Utente(self.LE_Username.text(), self.LE_Password.text())
+        self.controller = LoginController()
         self.pushButton_Login.clicked.connect(self.accesso)
 
     def accesso(self):
@@ -17,7 +17,7 @@ class LoginView(QMainWindow, Ui_Dialog_Login):
             main_window.show()
             self.close()
         else:
-            QMessageBox.critical(self, 'Errore', 'I dati inseriti non sono corretti oppure\n sono stati lasciati dei campi vuoti,\n per favore ritenta.', QMessageBox.Ok, QMessageBox.Ok)
+            QMessageBox.critical(self, 'Errore', '''I dati inseriti non sono corretti oppure\n sono stati lasciati dei campi vuoti,\n per favore ritenta.''', QMessageBox.Ok, QMessageBox.Ok)
 
 
 

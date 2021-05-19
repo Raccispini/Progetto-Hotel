@@ -6,8 +6,7 @@ class BarView(QMainWindow, Ui_BarView):
         super(BarView, self).__init__(parent)
         self.setupUi(self)
 
-    def closeEvent(self):
-        print("Chiudi")
+
         
 
 

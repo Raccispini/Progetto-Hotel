@@ -490,9 +490,3 @@ class Ui_Dialog_Login(object):
         self.pushButton_Login.setShortcut(_translate("Dialog", "Return"))
         self.LE_Username.setPlaceholderText(_translate("Dialog", "Username"))
         self.LE_Password.setPlaceholderText(_translate("Dialog", "Password"))
-'''
-class Ui_Login_Error(QtWidgets.QDialog):
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        uic.loadUi('ui\login_error.ui', self)
-'''
