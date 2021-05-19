@@ -662,7 +662,7 @@ class Ui_BarView(object):
 #Funzione che aggiorna gli item nelle combo box
     def update_data(self,MainWindow):
         con = sqlite3.connect('database.db')
-        query = 'select * from Bar GROUP BY Bar.categoria;'
+        query = 'select * from Bar;'
         cose = con.execute(query).fetchall()
         self.alcolici = []
         self.analcolici = []
@@ -690,32 +690,32 @@ class Ui_BarView(object):
                 self.liquori.append(i)
             if i[2] == 'Pasticceria':
                 self.pasticceria.append(i)
-        _translate = QtCore.QtCoreApplication.translate
+        print(self.alcolici)
+        #_translate = QtCore.QtCoreApplication.translate
         self.cB_alcolici.clear()
         for i in range(0,len(self.alcolici)):
-                self.cB_alcolici.setItemText(i+1, _translate("MainWindow",self.alcolici[i][1]))
+                self.cB_alcolici.addItem(self.alcolici[i][1])
         self.cB_analcolici.clear()
         for i in range(0, len(self.analcolici)):
-                self.cB_analcolici.setItemText(i + 1, _translate("MainWindow", self.analcolici[i][1]))
+                self.cB_analcolici.addItem(self.analcolici[i][1])
         self.cB_aperitivi.clear()
         for i in range(0, len(self.aperitivi)):
-                self.cB_aperitivi.setItemText(i + 1, _translate("MainWindow", self.aperitivi[i][1]))
+                self.cB_aperitivi.addItem(self.aperitivi[i][1])
         self.cB_bibite.clear()
         for i in range(0, len(self.bibite)):
-                self.cB_bibite.setItemText(i + 1, _translate("MainWindow",self.bibite[i][1]))
+                self.cB_bibite.addItem(self.bibite[i][1])
         self.cB_caffetteria.clear()
         for i in range(0, len(self.caffetteria)):
-                self.cB_caffetteria.setItemText(i + 1, _translate("MainWindow", self.caffetteria[i][1]))
+                self.cB_caffetteria.addItem(self.caffetteria[i][1])
         self.cB_liquori.clear()
         for i in range(0, len(self.liquori)):
-                self.cB_liquori.setItemText(i + 1, _translate("MainWindow", self.liquori[i][1]))
-
+                self.cB_liquori.addItem(self.liquori[i][1])
         self.cB_pasticceria.clear()
         for i in range(0, len(self.pasticceria)):
-                self.cB_pasticceria.setItemText(i + 1, _translate("MainWindow", self.pasticceria[i][1]))
+                self.cB_pasticceria.addItem(self.pasticceria[i][1])
         self.cB_vini.clear()
         for i in range(0, len(self.vini)):
-                self.cB_vini.setItemText(i + 1, _translate("MainWindow", self.vini[i][1]))
+                self.cB_vini.addItem(self.vini[i][1])
 
 
 
@@ -811,7 +811,7 @@ class Ui_BarView(object):
         item = self.tW_scontrino.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "Importo TOT"))
         __sortingEnabled = self.tW_scontrino.isSortingEnabled()
-        self.tW_scontrino.setSortingEnabled(False)
+        '''self.tW_scontrino.setSortingEnabled(False)
         item = self.tW_scontrino.item(0, 0)
         item.setText(_translate("MainWindow", "Vodka"))
         item = self.tW_scontrino.item(0, 1)
@@ -819,7 +819,7 @@ class Ui_BarView(object):
         item = self.tW_scontrino.item(0, 2)
         item.setText(_translate("MainWindow", "5"))
         item = self.tW_scontrino.item(0, 3)
-        item.setText(_translate("MainWindow", "15"))
+        item.setText(_translate("MainWindow", "15"))'''
         self.tW_scontrino.setSortingEnabled(__sortingEnabled)
         self.label_10.setText(_translate("MainWindow", "Metodo di pagamento:"))
         self.cB_metodopagamento.setItemText(0, _translate("MainWindow", "Contanti"))
@@ -834,24 +834,38 @@ class Ui_BarView(object):
 
     #metodo che aggiunge l'item alla tabella a destra
     def update_table(self):
-            _translate = QtCore.QCoreApplication.translate
-            self.tW_scontrino.setSortingEnabled(False)
-            for i in range(0,len(self.lista)):
-                        item = self.tW_scontrino.item(i,0)
-                        item.setText(_translate("MainWindow", str(self.lista[i][0])))
-                        item = self.tW_scontrino.item(i, 1)
-                        item.setText(_translate("MainWindow", str(self.lista[i][1])))
-                        item = self.tW_scontrino.item(i, 2)
-                        item.setText(_translate("MainWindow", str(self.lista[i][2])))
-                        item = self.tW_scontrino.item(i, 3)
-                        item.setText(_translate("MainWindow", str(self.lista[i][3])))
+        row_position = self.tW_scontrino.rowCount()
+        if row_position <= len(self.lista)+1:
+                self.tW_scontrino.insertRow(len(self.lista)+1)
+        for i in range(0, len(self.lista)):
+
+            '''self.tW_scontrino.item(i,0).setText(self.lista[i][0])
+            self.tW_scontrino.item(i,1).setText(self.lista[i][1])
+            self.tW_scontrino.item(i,2).setText(self.lista[i][2])
+            self.tW_scontrino.item(i,3).setText(self.lista[i][3])'''
+            self.tW_scontrino.setItem(i, 0, QtWidgets.QTableWidgetItem(str(self.lista[i][0])))
+            self.tW_scontrino.setItem(i, 1, QtWidgets.QTableWidgetItem(str(self.lista[i][1])))
+            self.tW_scontrino.setItem(i, 2, QtWidgets.QTableWidgetItem(str(self.lista[i][2])))
+            self.tW_scontrino.setItem(i, 3, QtWidgets.QTableWidgetItem(str(self.lista[i][3])))
+            #item = self.tW_scontrino.item(i,0)
+            #item.setText(str(self.lista[0][0]))
+            '''item = self.tW_scontrino.item(i, 1)
+            item.setText(str(self.lista[i][1]))
+            item = self.tW_scontrino.item(i, 2)
+            item.setText(str(self.lista[i][2]))
+            item = self.tW_scontrino.item(i, 3)
+            item.setText(str(self.lista[i][3]))'''
 
 
 
 
-    def get_item(self,combo,text,category):
+
+
+
+    def get_item(self,combo,category):
         item = str(combo.currentText())
-
+        print(item)
+        print(self.alcolici)
         if category == 'Alcolici':
                 qt = int(self.sB_alcolici.text())
                 for i in self.alcolici:

@@ -13,18 +13,47 @@ class HomeView(QMainWindow, Ui_HomeWindow):
     def openBar(self):
         self.bar_window = BarView()
         self.bar_window.show()
-        self.hide()
+
+    def openCamere(self):
+        #self.camere_window = CamereView()
+        #self.camere_window.show()
+        print("Finestra Camere Aperta")
+
+    def openAnagrafiche(self):
+        #self.anagrafiche_window = AnagraficheView()
+        #self.anagrafiche_window.show()
+        print("Finestra Anagrafiche Aperta")
+
+    def openMagazzino(self):
+        #self.magazzino_window = MagazzinoView()
+        #self.magazzino_window.show()
+        print("Finestra Magazzino Aperta")
+
+    def openMeteo(self):
+        webbrowser.open("https://www.ilmeteo.it/meteo/Cagliari", new=1)
+
+    def openOmbrelloni(self):
+        #self.ombrelloni_window = OmbrelloniView()
+        #self.ombrelloni_window.show()
+        print("Finestra Ombrelloni Aperta")
+
+    def openRistorante(self):
+        #self.ristorante_window = RistoranteView()
+        #self.ristorante_window.show()
+        print("Finestra Ristorante Aperta")
+
+
 
 
     def connectButton(self):
-        self.pB_Camere.clicked.connect(lambda: print("Finestra Camere Aperta"))
-        self.pB_Anagrafiche.clicked.connect(lambda: print("Finestra Anagrafiche Aperta"))
-        self.pB_Magazzino.clicked.connect(lambda: print("Finestra Magazzino Aperta"))
-        self.pB_Meteo.clicked.connect(lambda: webbrowser.open("https://www.ilmeteo.it/meteo/Cagliari", new=1))
-        self.pB_Ombrelloni.clicked.connect(lambda: print("Finestra Ombrelloni Aperta"))
-        self.pB_Ristorante.clicked.connect(lambda: print("Finestra Ristorante Aperta"))
+        self.pB_Camere.clicked.connect(lambda: self.openCamere())
+        self.pB_Anagrafiche.clicked.connect(lambda: self.openAnagrafiche())
+        self.pB_Magazzino.clicked.connect(lambda: self.openMagazzino())
+        self.pB_Meteo.clicked.connect(lambda: self.openMeteo())
+        self.pB_Ombrelloni.clicked.connect(lambda: self.openOmbrelloni())
+        self.pB_Ristorante.clicked.connect(lambda: self.openRistorante())
         self.pB_Bar.clicked.connect(lambda: self.openBar())
-        self.pB_Uscita.clicked.connect(self.close)
+        self.pB_Uscita.clicked.connect(lambda: self.close())
 
 
 

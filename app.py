@@ -4,6 +4,6 @@ from login.view.LoginView import LoginView
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    win = LoginView()
-    win.show()
+    login_window = LoginView()
+    login_window.show()
     sys.exit(app.exec())
