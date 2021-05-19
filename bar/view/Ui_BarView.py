@@ -859,6 +859,8 @@ class Ui_BarView(object):
 
 
 
+    def get_item(self,combo,category):
+        item = str(combo.currentText())
 
 
 
@@ -911,3 +913,4 @@ class Ui_BarView(object):
         item = self.get_item(combo, category)
         self.list.append((item[0][2],item[1],item[0][3],int(item[1])*int(item[0][3])))
         self.update_table()
+

@@ -12,6 +12,8 @@ class BarView(QMainWindow, Ui_BarView):
     def closeEvent(self):
         print("Chiudi")
 
+        
+
     def button_add_action(self,combo,category):
         item = self.get_item(combo,category)
         #print(self.cB_alcolici.currentText())
