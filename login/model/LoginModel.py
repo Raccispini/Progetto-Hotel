@@ -5,7 +5,9 @@ class LoginModel:
 
     def __init__(self, username, password):
         super(LoginModel, self).__init__()
-        Utente(username, password)
+        #Utente(username, password)
+        self.username=username
+        self.password=password
         self.is_utente()
 
     def is_utente(self):

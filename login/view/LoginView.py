@@ -2,12 +2,13 @@ from PyQt5.QtWidgets import QMessageBox, QMainWindow
 from home.view.HomeView import HomeView
 from login.controller.LoginController import LoginController
 from login.view.login_window_ui import Ui_Dialog_Login
-
+import Utente
 class LoginView(QMainWindow, Ui_Dialog_Login):
     def __init__(self, parent=None):
         super(LoginView, self).__init__(parent)
         self.setupUi(self)
-        self.utente = Utente(self.LE_Username.text(), self.LE_Password.text())
+        #e' sbagliato salvare in chiaro le password, comunque ho creato una classe Utente.py solo per poter far funzionare il programma, poi vediamo
+        #self.utente = Utente(self.LE_Username.text(), self.LE_Password.text())
         self.controller = LoginController()
         self.pushButton_Login.clicked.connect(self.accesso)
 
