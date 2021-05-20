@@ -914,3 +914,9 @@ class Ui_BarView(object):
         self.list.append((item[0][2],item[1],item[0][3],int(item[1])*int(item[0][3])))
         self.update_table()
 
+    def update_tot(self):
+        tot = 0
+        if not len(self.lista) == 0:       
+                for i in range(0,len(self.lista)):
+                        tot += float(self.lista[i][3])
+        self.LE_totaleconto.setText(str(tot))
