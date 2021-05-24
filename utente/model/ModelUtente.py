@@ -1,4 +1,4 @@
-class ModelUtente(Object):
+class ModelUtente(object):
     def __init__(self, nome, cognome, email, cellulare, data_di_nascita):
         self.nome = nome
         self.cognome = cognome

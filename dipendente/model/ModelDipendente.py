@@ -1,4 +1,4 @@
-
+from utente.model.ModelUtente import ModelUtente
 
 class ModelDipendente(ModelUtente):
     def __init__(self, username, password, nome, cognome, ambito, permessi, email, cellulare, data_di_nascita):

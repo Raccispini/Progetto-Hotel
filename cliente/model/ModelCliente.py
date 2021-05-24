@@ -1,3 +1,4 @@
+from utente.model.ModelUtente import ModelUtente
 
 class ModelCliente(ModelUtente):
     def __init__(self, id, nome, cognome, sesso, data_di_nascita, luogo_di_nascita, residenza, provincia, via, cap, cf, nazione, telefono, cellulare, email, tipo_documento, numero_documento, ente_rilascio, data_rilascio, modalita_pagamento, info_check_in):
