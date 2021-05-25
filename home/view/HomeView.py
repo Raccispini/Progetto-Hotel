@@ -3,6 +3,7 @@ from bar.view.BarView import BarView
 from home.view.Ui_HomeWindow import Ui_HomeWindow
 from magazzino.view.MagazzinoView import MagazzinoView
 from meteo.view.MeteoView import MeteoView
+from ombrellone.view.OmbrelloneView import OmbrelloneView
 from ristorante.view.RistoranteView import RistoranteView
 
 
@@ -17,8 +18,8 @@ class HomeView(QMainWindow, Ui_HomeWindow):
         self.bar_window.show()
 
     def openCamere(self):
-        #self.camere_window = CamereView()
-        #self.camere_window.show()
+        self.camere_window = CamereView()
+        self.camere_window.show()
         print("Finestra Camere Aperta")
 
     def openAnagrafiche(self):
@@ -35,7 +36,7 @@ class HomeView(QMainWindow, Ui_HomeWindow):
         self.meteo_window.show()
 
     def openOmbrelloni(self):
-        self.ombrelloni_window = OmbrelloniView()
+        self.ombrelloni_window = OmbrelloneView()
         self.ombrelloni_window.show()
 
     def openRistorante(self):
