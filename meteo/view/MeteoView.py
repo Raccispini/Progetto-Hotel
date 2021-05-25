@@ -1,4 +1,5 @@
 import sys
+import webbrowser
 
 from PyQt5.QtWidgets import QDialog, QLineEdit, QWidget, QVBoxLayout, QLabel, QApplication, QDialogButtonBox, \
     QPushButton, QHBoxLayout
@@ -10,40 +11,22 @@ class MeteoView(QDialog):
 
         v_layout = QVBoxLayout()
         h_layout = QHBoxLayout()
-        lB_message = QLabel("Inserisci la città della quale vuoi conoscere il meteo:")
+        lB_message = QLabel("Inserisci il nome della città da cercare:")
         font_label= lB_message.font()
         font_label.setPointSize(15)
         font_label.setBold(True)
-
         lB_message.setFont(font_label)
-        le_citta = QLineEdit()
-        font_lineEdit = le_citta.font()
+        self.le_citta = QLineEdit()
+        font_lineEdit = self.le_citta.font()
         font_lineEdit.setPointSize(15)
-        pulsante_Continua=QPushButton()
-        pulsante_Annulla=QPushButton()
-
-        pulsante_Continua.setText("Continua")
-        pulsante_Annulla.setText("Annulla")
-
-        font_button_C=pulsante_Continua.font()
-        font_button_A = pulsante_Annulla.font()
-        font_button_A.setPointSize(11)
-        font_button_C.setPointSize(11)
-        font_button_C.setBold(True)
-        font_button_A.setBold(True)
-        pulsante_Continua.setFont(font_button_C)
-        pulsante_Annulla.setFont(font_button_A)
-        pulsante_Continua.setMaximumSize(250,30)
-        pulsante_Continua.setMinimumSize(250,30)
-        pulsante_Annulla.setMaximumSize(271, 30)
-        pulsante_Annulla.setMinimumSize(271, 30)
-        le_citta.setFont(font_lineEdit)
-        h_layout.addWidget(pulsante_Continua)
-        h_layout.addWidget(pulsante_Annulla)
+        self.pB_Continua = self.get_generic_button("Continua")
+        self.pB_Annulla = self.get_generic_button("Annulla")
+        self.le_citta.setFont(font_lineEdit)
+        h_layout.addWidget(self.pB_Continua)
+        h_layout.addWidget(self.pB_Annulla)
         v_layout.addWidget(lB_message)
-        v_layout.addWidget(le_citta)
+        v_layout.addWidget(self.le_citta)
         v_layout.addLayout(h_layout)
-
         self.setLayout(v_layout)
         self.setWindowTitle("Ricerca")
         self.setMinimumSize((QtCore.QSize(550,120)))
@@ -51,12 +34,25 @@ class MeteoView(QDialog):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal)
         self.setWindowIcon(icon)
+        self.pB_Continua.clicked.connect(lambda: self.ricerca())
+        self.pB_Annulla.clicked.connect(lambda: self.close())
+
     def ricerca(self):
+        webbrowser.open("https://www.ilmeteo.it/meteo/" + self.le_citta.text(), new=1)
+
+    def get_generic_button(self, testo):
+        button = QPushButton()
+        button.setText(testo)
+        font = button.font()
+        font.setPointSize(11)
+        font.setBold(True)
+        button.setFont(font)
+        button.setMaximumSize(250, 30)
+        button.setMinimumSize(250, 30)
+        return button
 
 
-if __name__ == '__main__':
-    app=QApplication(sys.argv)
-    meteo=MeteoView()
-    meteo.show()
-    sys.exit(app.exec())
+
+
+
 

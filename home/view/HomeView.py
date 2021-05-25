@@ -2,6 +2,7 @@ import webbrowser
 from PyQt5.QtWidgets import QMainWindow
 from bar.view.BarView import BarView
 from home.view.Ui_HomeWindow import Ui_HomeWindow
+from meteo.view.MeteoView import MeteoView
 
 
 class HomeView(QMainWindow, Ui_HomeWindow):
@@ -30,7 +31,8 @@ class HomeView(QMainWindow, Ui_HomeWindow):
         print("Finestra Magazzino Aperta")
 
     def openMeteo(self):
-        webbrowser.open("https://www.ilmeteo.it/meteo/Cagliari", new=1)
+        self.meteo_window = MeteoView()
+        self.meteo_window.show()
 
     def openOmbrelloni(self):
         #self.ombrelloni_window = OmbrelloniView()
