@@ -146,7 +146,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>resources/Toolbar_main/Icona_Camere.png</normaloff>resources/Toolbar_main/Icona_Camere.png</iconset>
+            <normaloff>resources/main/Icona_camere.png</normaloff>resources/main/Icona_camere.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -184,7 +184,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>resources/Toolbar_main/Icona_ristorante.png</normaloff>resources/Toolbar_main/Icona_ristorante.png</iconset>
+            <normaloff>resources/main/Icona_ristorante.png</normaloff>resources/main/Icona_ristorante.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -213,7 +213,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>resources/Toolbar_main/Icona_bar.png</normaloff>resources/Toolbar_main/Icona_bar.png</iconset>
+            <normaloff>resources/main/Icona_bar.png</normaloff>resources/main/Icona_bar.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -242,7 +242,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>resources/Toolbar_main/Icona_anagrafiche.png</normaloff>resources/Toolbar_main/Icona_anagrafiche.png</iconset>
+            <normaloff>resources/main/Icona_anagrafiche.png</normaloff>resources/main/Icona_anagrafiche.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -271,7 +271,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>resources/Toolbar_main/Icona_ombrelloni.png</normaloff>resources/Toolbar_main/Icona_ombrelloni.png</iconset>
+            <normaloff>resources/main/Icona_ombrelloni.png</normaloff>resources/main/Icona_ombrelloni.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -300,7 +300,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>resources/Toolbar_main/Icona_magazzino.png</normaloff>resources/Toolbar_main/Icona_magazzino.png</iconset>
+            <normaloff>resources/main/Icona_magazzino.png</normaloff>resources/main/Icona_magazzino.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -335,7 +335,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>resources/Toolbar_main/Icona_Meteo.png</normaloff>resources/Toolbar_main/Icona_Meteo.png</iconset>
+            <normaloff>resources/main/Icona_meteo.png</normaloff>resources/main/Icona_meteo.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -364,7 +364,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>resources/Toolbar_main/Icona_uscita.png</normaloff>resources/Toolbar_main/Icona_uscita.png</iconset>
+            <normaloff>resources/main/Icona_uscita.png</normaloff>resources/main/Icona_uscita.png</iconset>
           </property>
           <property name="iconSize">
            <size>
