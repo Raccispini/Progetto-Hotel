@@ -663,7 +663,7 @@ class Ui_BarView(object):
     def update_data(self,MainWindow):
         con = sqlite3.connect('database.db')
         query = 'select * from Bar;'
-        cose = con.execute(query).fetchall()
+        bar = con.execute(query).fetchall()
         self.alcolici = []
         self.analcolici = []
         self.bibite = []
@@ -673,49 +673,49 @@ class Ui_BarView(object):
         self.liquori = []
         self.pasticceria = []
 
-        for i in cose:
-            if i[2]=='Alcolici':
-                self.alcolici.append(i)
-            if i[2] == 'Analcolici':
-                self.analcolici.append(i)
-            if i[2] == 'Aperitivi':
-                self.aperitivi.append(i)
-            if i[2] == 'Bibite':
-                self.bibite.append(i)
-            if i[2] == 'Caffetteria':
-                self.caffetteria.append(i)
-            if i[2] == 'Vini':
-                self.vini.append(i)
-            if i[2] == 'Liquori':
-                self.liquori.append(i)
-            if i[2] == 'Pasticceria':
-                self.pasticceria.append(i)
+        for categoria in bar:
+            if categoria[2]=='Alcolici':
+                self.alcolici.append(categoria)
+            if categoria[2] == 'Analcolici':
+                self.analcolici.append(categoria)
+            if categoria[2] == 'Aperitivi':
+                self.aperitivi.append(categoria)
+            if categoria[2] == 'Bibite':
+                self.bibite.append(categoria)
+            if categoria[2] == 'Caffetteria':
+                self.caffetteria.append(categoria)
+            if categoria[2] == 'Vini':
+                self.vini.append(categoria)
+            if categoria[2] == 'Liquori':
+                self.liquori.append(categoria)
+            if categoria[2] == 'Pasticceria':
+                self.pasticceria.append(categoria)
         print(self.alcolici)
         #_translate = QtCore.QtCoreApplication.translate
         self.cB_alcolici.clear()
-        for i in range(0,len(self.alcolici)):
-                self.cB_alcolici.addItem(self.alcolici[i][1])
+        for categoria in range(0,len(self.alcolici)):
+                self.cB_alcolici.addItem(self.alcolici[categoria][1])
         self.cB_analcolici.clear()
-        for i in range(0, len(self.analcolici)):
-                self.cB_analcolici.addItem(self.analcolici[i][1])
+        for categoria in range(0, len(self.analcolici)):
+                self.cB_analcolici.addItem(self.analcolici[categoria][1])
         self.cB_aperitivi.clear()
-        for i in range(0, len(self.aperitivi)):
-                self.cB_aperitivi.addItem(self.aperitivi[i][1])
+        for categoria in range(0, len(self.aperitivi)):
+                self.cB_aperitivi.addItem(self.aperitivi[categoria][1])
         self.cB_bibite.clear()
-        for i in range(0, len(self.bibite)):
-                self.cB_bibite.addItem(self.bibite[i][1])
+        for categoria in range(0, len(self.bibite)):
+                self.cB_bibite.addItem(self.bibite[categoria][1])
         self.cB_caffetteria.clear()
-        for i in range(0, len(self.caffetteria)):
-                self.cB_caffetteria.addItem(self.caffetteria[i][1])
+        for categoria in range(0, len(self.caffetteria)):
+                self.cB_caffetteria.addItem(self.caffetteria[categoria][1])
         self.cB_liquori.clear()
-        for i in range(0, len(self.liquori)):
-                self.cB_liquori.addItem(self.liquori[i][1])
+        for categoria in range(0, len(self.liquori)):
+                self.cB_liquori.addItem(self.liquori[categoria][1])
         self.cB_pasticceria.clear()
-        for i in range(0, len(self.pasticceria)):
-                self.cB_pasticceria.addItem(self.pasticceria[i][1])
+        for categoria in range(0, len(self.pasticceria)):
+                self.cB_pasticceria.addItem(self.pasticceria[categoria][1])
         self.cB_vini.clear()
-        for i in range(0, len(self.vini)):
-                self.cB_vini.addItem(self.vini[i][1])
+        for categoria in range(0, len(self.vini)):
+                self.cB_vini.addItem(self.vini[categoria][1])
 
 
 
@@ -919,4 +919,4 @@ class Ui_BarView(object):
         if not len(self.lista) == 0:       
                 for i in range(0,len(self.lista)):
                         tot += float(self.lista[i][3])
-        self.LE_totaleconto.setText(str(tot))
+        self.LE_totaleconto.setText(str(tot) + ' €')

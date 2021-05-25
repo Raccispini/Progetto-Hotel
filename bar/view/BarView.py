@@ -19,9 +19,6 @@ class BarView(QMainWindow, Ui_BarView):
         self.pB_pasticceria.clicked.connect(lambda :self.button_add_action(self.cB_pasticceria,"Pasticceria"))
         self.cB_metodopagamento.currentTextChanged.connect(lambda: self.on_combobox_changed())
         self.update_camere()
-    def closeEvent(self):
-        print("Chiudi")
-
         
 
     def button_add_action(self,combo,category):
@@ -57,9 +54,8 @@ class BarView(QMainWindow, Ui_BarView):
 
     def update_camere(self):
         con = sqlite3.connect('database.db')
-        camere = con.execute('Select Camere.numeroCamera from Camere Order by Camere.numeroCamera;').fetchall()
+        camere = con.execute('SELECT * FROM Camere ORDER BY Camere.numeroCamera;').fetchall()
+        print(camere)
         self.cB_camera.clear()
-        for i in camere:
-            self.cB_camera.addItem(str(i[0]))
-
-
+        for camera in camere:
+            self.cB_camera.addItem(str(camera[0]) + str(camera[1]) + " " + camera[2])

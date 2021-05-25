@@ -1,4 +1,3 @@
-import webbrowser
 from PyQt5.QtWidgets import QMainWindow
 from bar.view.BarView import BarView
 from home.view.Ui_HomeWindow import Ui_HomeWindow
