@@ -132,47 +132,8 @@
     </item>
     <item row="3" column="0" rowspan="4" colspan="6">
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="3" column="4">
-       <widget class="QPushButton" name="button_cancella_antipasti">
-        <property name="text">
-         <string>Cancella</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="4">
-       <widget class="QPushButton" name="button_cancella_primi">
-        <property name="text">
-         <string>Cancella</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="4">
-       <widget class="QPushButton" name="button_cancella_contorni">
-        <property name="text">
-         <string>Cancella</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="2">
-       <widget class="QPushButton" name="button_aggiungi_dolci">
-        <property name="text">
-         <string>Aggiungi</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="4">
-       <widget class="QPushButton" name="button_cancella_secondi">
-        <property name="text">
-         <string>Cancella</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="4">
-       <widget class="QPushButton" name="button_cancella_dolci">
-        <property name="text">
-         <string>Cancella</string>
-        </property>
-       </widget>
+      <item row="10" column="1">
+       <widget class="QComboBox" name="comboBox_6"/>
       </item>
       <item row="12" column="1">
        <widget class="QComboBox" name="comboBox_3"/>
@@ -180,10 +141,48 @@
       <item row="11" column="1">
        <widget class="QComboBox" name="comboBox"/>
       </item>
-      <item row="5" column="2">
-       <widget class="QPushButton" name="button_aggiungi_primi">
+      <item row="3" column="1">
+       <widget class="QComboBox" name="cb_antipasti"/>
+      </item>
+      <item row="12" column="2">
+       <widget class="QPushButton" name="button_aggiungi_bevande">
         <property name="text">
          <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Frutta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Primi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="2">
+       <widget class="QPushButton" name="button_aggiungi_contorni">
+        <property name="text">
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Secondi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Bevande</string>
         </property>
        </widget>
       </item>
@@ -194,24 +193,42 @@
         </property>
        </widget>
       </item>
-      <item row="11" column="4">
-       <widget class="QPushButton" name="button_cancella_frutta">
+      <item row="11" column="2">
+       <widget class="QPushButton" name="button_aggiungi_frutta">
         <property name="text">
-         <string>Cancella</string>
+         <string>Aggiungi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Dolci</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="2">
+       <widget class="QPushButton" name="button_aggiungi_secondi">
+        <property name="text">
+         <string>Aggiungi</string>
         </property>
        </widget>
       </item>
       <item row="9" column="1">
        <widget class="QComboBox" name="comboBox_4"/>
       </item>
-      <item row="3" column="1">
-       <widget class="QComboBox" name="cb_antipasti"/>
-      </item>
       <item row="7" column="1">
        <widget class="QComboBox" name="comboBox_7"/>
       </item>
-      <item row="7" column="2">
-       <widget class="QPushButton" name="button_aggiungi_secondi">
+      <item row="9" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Contorni</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="button_aggiungi_primi">
         <property name="text">
          <string>Aggiungi</string>
         </property>
@@ -226,16 +243,6 @@
         </item>
        </widget>
       </item>
-      <item row="12" column="4">
-       <widget class="QPushButton" name="button_cancella_bevande">
-        <property name="text">
-         <string>Cancella</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="1">
-       <widget class="QComboBox" name="comboBox_6"/>
-      </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
@@ -243,64 +250,8 @@
         </property>
        </widget>
       </item>
-      <item row="11" column="2">
-       <widget class="QPushButton" name="button_aggiungi_frutta">
-        <property name="text">
-         <string>Aggiungi</string>
-        </property>
-       </widget>
-      </item>
-      <item row="12" column="2">
-       <widget class="QPushButton" name="button_aggiungi_bevande">
-        <property name="text">
-         <string>Aggiungi</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Primi</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0">
-       <widget class="QLabel" name="label_6">
-        <property name="text">
-         <string>Contorni</string>
-        </property>
-       </widget>
-      </item>
-      <item row="12" column="0">
-       <widget class="QLabel" name="label_8">
-        <property name="text">
-         <string>Bevande</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="0">
-       <widget class="QLabel" name="label_5">
-        <property name="text">
-         <string>Dolci</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>Secondi</string>
-        </property>
-       </widget>
-      </item>
-      <item row="11" column="0">
-       <widget class="QLabel" name="label_7">
-        <property name="text">
-         <string>Frutta</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="2">
-       <widget class="QPushButton" name="button_aggiungi_contorni">
+      <item row="10" column="2">
+       <widget class="QPushButton" name="button_aggiungi_dolci">
         <property name="text">
          <string>Aggiungi</string>
         </property>
@@ -499,6 +450,13 @@
        <widget class="QPushButton" name="button_salva_ordini">
         <property name="text">
          <string>Salva ordini</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_cancella_ordine">
+        <property name="text">
+         <string>Cancella ordine</string>
         </property>
        </widget>
       </item>

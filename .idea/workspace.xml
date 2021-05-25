@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f66907-8408-4976-a069-cddacc31aaf5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ristorante/view/RistoranteView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anagrafiche/view/AnagraficheView.py" beforeDir="false" afterPath="$PROJECT_DIR$/anagrafiche/view/AnagraficheView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bar/view/BarView.py" beforeDir="false" afterPath="$PROJECT_DIR$/bar/view/BarView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bar/view/Ui_BarView.py" beforeDir="false" afterPath="$PROJECT_DIR$/bar/view/Ui_BarView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/view/HomeView.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/view/HomeView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/view/LoginView.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/view/LoginView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/view/Ui_HomeWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/view/Ui_HomeWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/view/main_window_ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ristorante/view/Ui_RistoranteView_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ristorante/view/Ui_RistoranteView_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ristorante/view/Ui_RistoranteView_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/ristorante/view/Ui_RistoranteView_7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_1.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_1.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ristorante_7.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ristorante_7.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +100,7 @@
       <updated>1621889233468</updated>
       <workItem from="1621889250773" duration="3208000" />
       <workItem from="1621925382151" duration="2775000" />
+      <workItem from="1621949487937" duration="1359000" />
     </task>
     <servers />
   </component>
@@ -106,6 +109,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Progetto_Hotel$BarView.coverage" NAME="BarView Coverage Results" MODIFIED="1621927473997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar/view" />
-    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1621928001706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1621950864473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -10,10 +10,7 @@ class Ui_HomeWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setMinimumSize(1200, 650)
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-<<<<<<< HEAD:home/view/Ui_HomeWindow.py
-=======
         MainWindow.resize(1279, 750)
->>>>>>> parent of 605e376 (interfacce goliardiche):interfacce/main_window.py
         MainWindow.setSizeIncrement(QtCore.QSize(0, 0))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -122,11 +119,10 @@ class Ui_HomeWindow(object):
         self.pB_Ombrelloni.setIconSize(QtCore.QSize(280, 75))
         self.pB_Ombrelloni.setObjectName("pB_Ombrelloni")
         self.verticalLayout.addWidget(self.pB_Ombrelloni)
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Magazzino = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-<<<<<<< HEAD:home/view/Ui_HomeWindow.py
         sizePolicy.setHeightForWidth(self.pB_Magazzino.sizePolicy().hasHeightForWidth())
         self.pB_Magazzino.setSizePolicy(sizePolicy)
         self.pB_Magazzino.setMaximumSize(QtCore.QSize(400, 16777215))
@@ -136,18 +132,6 @@ class Ui_HomeWindow(object):
         self.pB_Magazzino.setIconSize(QtCore.QSize(280, 75))
         self.pB_Magazzino.setObjectName("pB_Magazzino")
         self.verticalLayout.addWidget(self.pB_Magazzino)
-=======
-        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy)
-        self.pushButton.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.pushButton.setText("")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("resources/Toolbar_main/Icona_magazzino.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton.setIcon(icon6)
-        self.pushButton.setIconSize(QtCore.QSize(280, 75))
-        self.pushButton.setObjectName("pushButton")
-        self.verticalLayout.addWidget(self.pushButton)
->>>>>>> parent of 605e376 (interfacce goliardiche):interfacce/main_window.py
         self.pB_Meteo = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -233,10 +217,7 @@ class Ui_HomeWindow(object):
         currentTime = QTime.currentTime()
         displayText = currentTime.toString("    hh:mm:ss")
         self.orario.setText(displayText)
-
-
-<<<<<<< HEAD:home/view/Ui_HomeWindow.py
-=======
+'''
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Hotel Management"))
@@ -274,5 +255,4 @@ class Ui_HomeWindow(object):
         self.actionUscita.setText(_translate("MainWindow", "Uscita"))
         self.actionUscita.setToolTip(_translate("MainWindow", "Arresta l\'esecuzione del programma"))
         self.actionUscita.setShortcut(_translate("MainWindow", "F11"))
-import Resource_logo_rc
->>>>>>> parent of 605e376 (interfacce goliardiche):interfacce/main_window.py
+'''
