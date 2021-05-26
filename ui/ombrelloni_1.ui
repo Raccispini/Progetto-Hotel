@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1102</width>
-    <height>649</height>
+    <width>1287</width>
+    <height>734</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1102</width>
-    <height>649</height>
+    <width>1287</width>
+    <height>726</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -23,15 +23,132 @@
    <iconset>
     <normaloff>resources/logo/logo_small_icon_only_inverted.png</normaloff>resources/logo/logo_small_icon_only_inverted.png</iconset>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/ombrelloni/thumb-1920-325895.jpg);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>53</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#c20a0d;&quot;&gt;Ombrelloni disponibili&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="0">
      <layout class="QGridLayout" name="gridLayout_3">
       <property name="bottomMargin">
        <number>30</number>
       </property>
-      <item row="4" column="2">
+      <item row="3" column="2">
        <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_21">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_19">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;8&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+          </property>
+         </widget>
+        </item>
         <item row="1" column="1">
          <widget class="QPushButton" name="pB_A7">
           <property name="sizePolicy">
@@ -59,6 +176,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -103,80 +224,11 @@
             <bold>true</bold>
            </font>
           </property>
-          <property name="text">
-           <string>7</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QLabel" name="label_19">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>25</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
           </property>
           <property name="text">
-           <string>8</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="4">
-         <widget class="QLabel" name="label_21">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>25</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>10</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -210,6 +262,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -254,44 +310,11 @@
             <bold>true</bold>
            </font>
           </property>
-          <property name="text">
-           <string>6</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="3">
-         <widget class="QLabel" name="label_20">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>25</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
           </property>
           <property name="text">
-           <string>9</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -326,48 +349,9 @@
             <bold>true</bold>
            </font>
           </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="pB_B6">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>9</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -412,6 +396,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -455,6 +443,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -470,8 +462,8 @@
           </property>
          </widget>
         </item>
-        <item row="4" column="4">
-         <widget class="QPushButton" name="pB_D10">
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pB_B6">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -497,6 +489,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -541,6 +537,57 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <widget class="QPushButton" name="pB_D10">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -583,6 +630,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string notr="true"/>
@@ -627,6 +678,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -669,6 +724,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -713,134 +772,9 @@
             <bold>true</bold>
            </font>
           </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="3">
-         <widget class="QPushButton" name="pB_D9">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>9</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="2">
-         <widget class="QPushButton" name="pB_D8">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>9</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="3">
-         <widget class="QPushButton" name="pB_A9">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>9</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -885,6 +819,151 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pB_A9">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QPushButton" name="pB_D9">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="pB_D8">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -928,48 +1007,9 @@
             <bold>true</bold>
            </font>
           </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QPushButton" name="pB_B7">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>9</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -1014,48 +1054,9 @@
             <bold>true</bold>
            </font>
           </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="QPushButton" name="pB_B8">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>9</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -1100,11 +1101,108 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>D</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pB_B7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pB_B8">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</normaloff>resources/Ombrelloni/LogoMakr-6DfgeR.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -1136,44 +1234,11 @@
             <bold>true</bold>
            </font>
           </property>
-          <property name="text">
-           <string>C</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="5">
-         <widget class="QLabel" name="label_23">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>150</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial</family>
-            <pointsize>25</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
           </property>
           <property name="text">
-           <string>B</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1208,15 +1273,171 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>A</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;A&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
+        <item row="2" column="5">
+         <widget class="QLabel" name="label_23">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;B&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_20">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;9&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+          </property>
+         </widget>
+        </item>
        </layout>
+      </item>
+      <item row="4" column="0">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="2">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(229, 22, 50);background-image: url(:/ombrelloni/tpg.png);</string>
+        </property>
+        <property name="text">
+         <string>SELEZIONA DATA PRENOTAZIONE</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>13</width>
+          <height>28</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item row="2" column="1">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1242,6 +1463,10 @@
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+color: rgb(229, 22, 50);</string>
               </property>
               <property name="text">
                <string>DA:</string>
@@ -1296,6 +1521,9 @@
                 <bold>true</bold>
                </font>
               </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/ombrelloni/tpg.png);color: rgb(229, 22, 50);</string>
+              </property>
               <property name="text">
                <string>A:</string>
               </property>
@@ -1343,14 +1571,59 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string>Ricerca</string>
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string>Lista Prenotazioni</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string notr="true">Costi</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
-      <item row="4" column="0">
+      <item row="3" column="0">
        <layout class="QGridLayout" name="gridLayout">
         <item row="4" column="1">
          <widget class="QPushButton" name="pB_D1">
@@ -1379,6 +1652,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -1423,6 +1700,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -1465,6 +1746,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -1509,6 +1794,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -1551,6 +1840,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -1595,8 +1888,11 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>A</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;A&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1631,8 +1927,11 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>B</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;B&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1667,8 +1966,11 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>C</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1703,8 +2005,11 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>D</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b51013;&quot;&gt;D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1738,6 +2043,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -1782,6 +2091,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -1824,6 +2137,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -1868,8 +2185,11 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>1</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -1904,8 +2224,11 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>2</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -1940,8 +2263,12 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+</string>
+          </property>
           <property name="text">
-           <string>4</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -1976,8 +2303,11 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>5</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -2012,8 +2342,11 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);</string>
+          </property>
           <property name="text">
-           <string>3</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#b81114;&quot;&gt;3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -2047,6 +2380,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -2091,6 +2428,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -2133,6 +2474,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -2177,6 +2522,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -2219,6 +2568,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -2263,6 +2616,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -2305,6 +2662,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -2349,6 +2710,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -2391,6 +2756,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -2435,6 +2804,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -2477,6 +2850,10 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
           </property>
           <property name="text">
            <string/>
@@ -2521,6 +2898,10 @@
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ombrelloni/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -2538,107 +2919,13 @@
         </item>
        </layout>
       </item>
-      <item row="5" column="0">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="5" column="2">
-       <spacer name="verticalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>SELEZIONA DATA PRENOTAZIONE</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <spacer name="verticalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>5</width>
-          <height>28</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
      </layout>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_13">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>53</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Ombrelloni disponibili</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
     </item>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources/Ombrelloni/ombrelloni.qrc"/>
+ </resources>
  <connections/>
 </ui>
