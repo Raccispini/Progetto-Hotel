@@ -7,14 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>1100</width>
-    <height>680</height>
+    <height>755</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-image: url(:/resource_bar/Bar-bottles-alcohol-drinks_1920x1080.jpg);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -45,17 +45,38 @@
         </property>
         <item>
          <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>34</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(221, 34, 24);
-font: 700 14pt &quot;Arial&quot;;</string>
+font: 700 14pt &quot;Arial&quot;;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Alcolici</string>
@@ -67,10 +88,25 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QComboBox" name="cB_alcolici">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>13</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="layoutDirection">
@@ -80,7 +116,10 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <bool>false</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+font: 13pt &quot;Arial&quot;;
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -145,6 +184,18 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QSpinBox" name="sB_alcolici">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
@@ -161,17 +212,37 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="label_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>34</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(221, 34, 24);
-font: 700 14pt &quot;Arial&quot;;</string>
+font: 700 14pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Analcolici</string>
@@ -186,11 +257,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>13</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 13pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -271,16 +347,36 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="label_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>34</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -296,11 +392,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>13</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 13pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -371,16 +472,36 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="label_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>34</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -402,11 +523,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>13</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 13pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -497,16 +623,36 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="label_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>34</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -522,11 +668,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>13</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 13pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -587,16 +738,36 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="label_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>34</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -612,11 +783,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>13</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 13pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -687,16 +863,36 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="label_8">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>34</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -712,11 +908,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>13</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 13pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -795,16 +996,36 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="label_9">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>34</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -820,11 +1041,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>13</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 13pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -911,6 +1137,12 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item>
          <widget class="QPushButton" name="pB_alcolici">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="maximumSize">
            <size>
             <width>100</width>
@@ -921,11 +1153,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -957,11 +1191,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -993,11 +1229,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1029,11 +1267,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1065,11 +1305,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1101,11 +1343,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1137,11 +1381,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1173,11 +1419,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>10</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Aggiungi</string>
@@ -1204,16 +1452,11 @@ font: 700 14pt &quot;Arial&quot;;</string>
       </property>
       <item>
        <widget class="QTableWidget" name="tW_scontrino">
-        <property name="maximumSize">
-         <size>
-          <width>750</width>
-          <height>550</height>
-         </size>
-        </property>
         <property name="font">
          <font>
           <family>Arial</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <bold>false</bold>
          </font>
         </property>
@@ -1221,7 +1464,8 @@ font: 700 14pt &quot;Arial&quot;;</string>
          <enum>Qt::LeftToRight</enum>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994, y1:0.00563636, x2:0, y2:1, stop:0 rgba(255, 255, 255, 234), stop:1 rgba(255, 255, 255, 97));</string>
+         <string notr="true">background-image: url(:/resource_bar/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));</string>
         </property>
         <property name="autoScrollMargin">
          <number>16</number>
@@ -1250,14 +1494,14 @@ font: 700 14pt &quot;Arial&quot;;</string>
         <attribute name="horizontalHeaderVisible">
          <bool>true</bool>
         </attribute>
-        <attribute name="horizontalHeaderMinimumSectionSize">
-         <number>40</number>
-        </attribute>
         <attribute name="horizontalHeaderDefaultSectionSize">
          <number>175</number>
         </attribute>
         <attribute name="horizontalHeaderHighlightSections">
          <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>40</number>
         </attribute>
         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
          <bool>false</bool>
@@ -1271,14 +1515,14 @@ font: 700 14pt &quot;Arial&quot;;</string>
         <attribute name="verticalHeaderCascadingSectionResizes">
          <bool>false</bool>
         </attribute>
-        <attribute name="verticalHeaderMinimumSectionSize">
-         <number>24</number>
-        </attribute>
         <attribute name="verticalHeaderDefaultSectionSize">
          <number>24</number>
         </attribute>
         <attribute name="verticalHeaderHighlightSections">
          <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>24</number>
         </attribute>
         <attribute name="verticalHeaderShowSortIndicator" stdset="0">
          <bool>false</bool>
@@ -1299,6 +1543,7 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <font>
            <family>Arial</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -1311,6 +1556,7 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <font>
            <family>Arial</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -1323,6 +1569,7 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <font>
            <family>Arial</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -1335,6 +1582,7 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <font>
            <family>Arial</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -1379,6 +1627,7 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <font>
            <family>Arial</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -1414,12 +1663,14 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -1435,11 +1686,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>18</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 18pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <item>
            <property name="text">
@@ -1464,12 +1720,14 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -1498,11 +1756,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>20</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>18.00 €</string>
@@ -1526,11 +1786,16 @@ font: 700 14pt &quot;Arial&quot;;</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>18</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 18pt &quot;Arial&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -1548,12 +1813,14 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>14</pointsize>
+            <weight>87</weight>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(221, 34, 24);
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);color: rgb(221, 34, 24);
 font: 700 14pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
@@ -1577,11 +1844,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Salva</string>
@@ -1597,11 +1866,13 @@ font: 700 14pt &quot;Arial&quot;;</string>
            <font>
             <family>Arial</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+background-image: url(:/resource_bar/tpg.png);</string>
           </property>
           <property name="text">
            <string>Elimina</string>

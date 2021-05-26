@@ -6,22 +6,45 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1264</width>
-    <height>787</height>
-    <width>998</width>
-    <height>609</height>
+    <width>1223</width>
+    <height>665</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1223</width>
+    <height>665</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Ricerca Camere</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>resources/logo/logo_small_icon_only_inverted.png</normaloff>resources/logo/logo_small_icon_only_inverted.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+   <string notr="true">background-image: url(:/camere/Grand-Hotel-Fleming-2.jpg);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
       <item>
        <widget class="QLabel" name="logo">
         <property name="maximumSize">
@@ -29,6 +52,9 @@
           <width>200</width>
           <height>260</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/camere/tpg.png);</string>
         </property>
         <property name="text">
          <string/>
@@ -46,6 +72,12 @@
            <layout class="QGridLayout" name="gridLayout_7">
             <item row="0" column="1">
              <widget class="QDateEdit" name="date_dal">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
               <property name="calendarPopup">
                <bool>true</bool>
               </property>
@@ -60,6 +92,18 @@
             </item>
             <item row="0" column="2">
              <widget class="QLabel" name="label_7">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+              </property>
               <property name="text">
                <string>Al</string>
               </property>
@@ -67,6 +111,18 @@
             </item>
             <item row="0" column="0">
              <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+              </property>
               <property name="text">
                <string>Dal</string>
               </property>
@@ -74,6 +130,18 @@
             </item>
             <item row="2" column="0">
              <widget class="QLabel" name="label_5">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+              </property>
               <property name="text">
                <string>Tipo</string>
               </property>
@@ -81,6 +149,12 @@
             </item>
             <item row="0" column="3">
              <widget class="QDateEdit" name="date_al">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
               <property name="calendarPopup">
                <bool>true</bool>
               </property>
@@ -98,12 +172,16 @@
               <property name="font">
                <font>
                 <family>Arial</family>
-                <pointsize>11</pointsize>
+                <pointsize>14</pointsize>
                </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
               </property>
               <item>
                <property name="text">
-                <string>Singola</string>
+                <string>Single</string>
                </property>
               </item>
               <item>
@@ -113,51 +191,21 @@
               </item>
               <item>
                <property name="text">
-                <string>Honey Moon</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Luxury</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Studio</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Executive</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Suite</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Superior</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
                 <string>Bilocale</string>
                </property>
               </item>
-              <item>
-               <property name="text">
-                <string>Trilocale</string>
-               </property>
-              </item>
              </widget>
-             <widget class="QComboBox" name="combo_tipo"/>
             </item>
            </layout>
           </item>
           <item row="0" column="1">
            <widget class="QSpinBox" name="spin_singoli">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::PlusMinus</enum>
             </property>
@@ -165,6 +213,18 @@
           </item>
           <item row="0" column="2">
            <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Letti matrimoniali</string>
             </property>
@@ -172,6 +232,18 @@
           </item>
           <item row="0" column="0">
            <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Letti singoli</string>
             </property>
@@ -179,6 +251,12 @@
           </item>
           <item row="0" column="3">
            <widget class="QSpinBox" name="spin_matrim">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::PlusMinus</enum>
             </property>
@@ -190,6 +268,18 @@
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="1">
            <widget class="QCheckBox" name="cb_animaledomestico">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Animale Domestico</string>
             </property>
@@ -197,6 +287,18 @@
           </item>
           <item row="1" column="1">
            <widget class="QCheckBox" name="cb_fumatori">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Fumatori</string>
             </property>
@@ -204,6 +306,18 @@
           </item>
           <item row="1" column="0">
            <widget class="QCheckBox" name="cb_vascaidromassaggio">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Vasca Idromassaggio</string>
             </property>
@@ -211,6 +325,18 @@
           </item>
           <item row="1" column="2">
            <widget class="QCheckBox" name="cb_vistapanoramica">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Vista Panoramica</string>
             </property>
@@ -218,6 +344,18 @@
           </item>
           <item row="0" column="2">
            <widget class="QCheckBox" name="cb_saunainterna">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Sauna Interna</string>
             </property>
@@ -225,6 +363,18 @@
           </item>
           <item row="0" column="0">
            <widget class="QCheckBox" name="cb_ariaCondizionata">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Aria Condizionata</string>
             </property>
@@ -232,6 +382,18 @@
           </item>
           <item row="2" column="0">
            <widget class="QCheckBox" name="cb_culla_2">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Culla</string>
             </property>
@@ -239,6 +401,18 @@
           </item>
           <item row="2" column="2">
            <widget class="QCheckBox" name="cb_cassaforte">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Cassaforte</string>
             </property>
@@ -246,6 +420,18 @@
           </item>
           <item row="2" column="1">
            <widget class="QCheckBox" name="cb_minibar">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>13</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
             <property name="text">
              <string>Minibar</string>
             </property>
@@ -275,6 +461,18 @@
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <widget class="QPushButton" name="pb_ricerca">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string>Ricerca</string>
           </property>
@@ -282,6 +480,18 @@
         </item>
         <item>
          <widget class="QPushButton" name="pb_azzera">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string>Azzera</string>
           </property>
@@ -289,6 +499,18 @@
         </item>
         <item>
          <widget class="QPushButton" name="pb_preventivo">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string>Preventivo</string>
           </property>
@@ -296,6 +518,18 @@
         </item>
         <item>
          <widget class="QPushButton" name="pb_prenota">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string>Prenota</string>
           </property>
@@ -303,6 +537,18 @@
         </item>
         <item>
          <widget class="QPushButton" name="pb_chiudi">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
           <property name="text">
            <string>Chiudi</string>
           </property>
@@ -316,13 +562,49 @@
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QLabel" name="labelCamere">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>20</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+        </property>
         <property name="text">
          <string> Camere Disponibili</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QTableWidget" name="tabellaCamere">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/camere/tpg.png);
+font: 11pt &quot;Arial&quot;;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));</string>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>170</number>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
         <column>
          <property name="text">
           <string>New Column</string>
@@ -365,6 +647,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources/Camere/camere.qrc"/>
+ </resources>
  <connections/>
 </ui>
