@@ -1,8 +1,6 @@
 <RCC>
   <qresource prefix="ombrelloni">
     <file>tpg.png</file>
-    <file>361914.jpg</file>
-    <file>nature-sky-clouds-sea-beach-palm-scenery.jpg</file>
     <file>thumb-1920-325895.jpg</file>
   </qresource>
 </RCC>
