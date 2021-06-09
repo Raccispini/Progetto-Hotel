@@ -690,7 +690,7 @@ class Ui_BarView(object):
                 self.liquori.append(categoria)
             if categoria[2] == 'Pasticceria':
                 self.pasticceria.append(categoria)
-        print(self.alcolici)
+        #print(self.alcolici)
         #_translate = QtCore.QtCoreApplication.translate
         self.cB_alcolici.clear()
         for categoria in range(0,len(self.alcolici)):
@@ -835,8 +835,8 @@ class Ui_BarView(object):
     #metodo che aggiunge l'item alla tabella a destra
     def update_table(self):
         row_position = self.tW_scontrino.rowCount()
-        if row_position <= len(self.lista)+1:
-                self.tW_scontrino.insertRow(len(self.lista)+1)
+        if row_position <= len(self.lista):
+                self.tW_scontrino.insertRow(len(self.lista))
         for i in range(0, len(self.lista)):
 
             '''self.tW_scontrino.item(i,0).setText(self.lista[i][0])
@@ -866,8 +866,8 @@ class Ui_BarView(object):
 
     def get_item(self,combo,category):
         item = str(combo.currentText())
-        print(item)
-        print(self.alcolici)
+        #print(item)
+        #print(self.alcolici)
         if category == 'Alcolici':
                 qt = int(self.sB_alcolici.text())
                 for i in self.alcolici:
