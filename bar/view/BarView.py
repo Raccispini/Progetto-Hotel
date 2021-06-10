@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow
 from bar.view.Ui_BarView import Ui_BarView
 import sqlite3
+import Scontrini
 
 class BarView(QMainWindow, Ui_BarView):
     def __init__(self, parent=None):
@@ -19,11 +20,19 @@ class BarView(QMainWindow, Ui_BarView):
         self.pB_pasticceria.clicked.connect(lambda :self.button_add_action(self.cB_pasticceria,"Pasticceria"))
         self.cB_metodopagamento.currentTextChanged.connect(lambda: self.on_combobox_changed())
         self.update_camere()
-
+        self.pB_salva.setEnabled(True)
+        self.pB_salva.connect.clicked(lambda : self.stampa())
         self.tW_scontrino.itemSelectionChanged.connect(lambda : self.on_table_click())
         self.tW_scontrino.clear()
 
         self.pB_elimina.clicked.connect(lambda : self.on_elimina_clicked())
+    
+    def stampa(self):
+        lista = []
+        for i in self.lista:
+            lista.append((i[0,i[1],i[3]]))
+        tot = self.LE_totaleconto.text()
+        Scontrini.getScontrino(lista,tot)
 
     def on_elimina_clicked(self):
         #cerca le righe selezionate
@@ -73,6 +82,7 @@ class BarView(QMainWindow, Ui_BarView):
         #print(self.lista)
         self.update_table()
         self.update_tot()
+        self.on_table_click()
 
 
     def on_combobox_changed(self):
