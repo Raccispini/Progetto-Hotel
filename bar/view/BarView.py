@@ -26,11 +26,23 @@ class BarView(QMainWindow, Ui_BarView):
         self.pB_elimina.clicked.connect(lambda : self.on_elimina_clicked())
 
     def on_elimina_clicked(self):
-        rows = self.tW_scontrino.selectionModel().selectedRows()
-        print(rows)
-        #for i in self.tW_scontrino.rowCount():
-        #    if self.tW_scontrino
+        #cerca le righe selezionate
+        indexes = self.tW_scontrino.selectionModel().selectedRows()
+        selected_rows = []
+        for index in sorted(indexes):
+            selected_rows.append(index.row())
+            #print('Row %d is selected' % index.row())
 
+        #elimina la riga
+        for i in range(len(selected_rows)):
+            try:
+                print("Elimina : "+str(self.lista[selected_rows[i]]))
+                self.lista.remove(self.lista[selected_rows[i]])
+            except :
+                pass
+        print(self.lista)
+        self.update_table()
+        self.update_tot()
 
     def on_table_click(self):
         if len(self.tW_scontrino.selectionModel().selectedRows()) > 0 :

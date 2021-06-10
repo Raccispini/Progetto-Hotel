@@ -62,6 +62,7 @@ class Ui_BarView(object):
         self.sB_alcolici.setStyleSheet("")
         self.sB_alcolici.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.sB_alcolici.setObjectName("sB_alcolici")
+        self.sB_alcolici.setValue(1)
         self.verticalLayout.addWidget(self.sB_alcolici)
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -105,6 +106,7 @@ class Ui_BarView(object):
         self.sB_analcolici.setStyleSheet("")
         self.sB_analcolici.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.sB_analcolici.setObjectName("sB_analcolici")
+        self.sB_analcolici.setValue(1)
         self.verticalLayout.addWidget(self.sB_analcolici)
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -146,6 +148,7 @@ class Ui_BarView(object):
         self.sB_bibite.setStyleSheet("")
         self.sB_bibite.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.sB_bibite.setObjectName("sB_bibite")
+        self.sB_bibite.setValue(1)
         self.verticalLayout.addWidget(self.sB_bibite)
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -196,6 +199,7 @@ class Ui_BarView(object):
         self.sB_caffetteria.setStyleSheet("")
         self.sB_caffetteria.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.sB_caffetteria.setObjectName("sB_caffetteria")
+        self.sB_caffetteria.setValue(1)
         self.verticalLayout.addWidget(self.sB_caffetteria)
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -235,6 +239,7 @@ class Ui_BarView(object):
         self.sB_aperitivi.setStyleSheet("")
         self.sB_aperitivi.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.sB_aperitivi.setObjectName("sB_aperitivi")
+        self.sB_aperitivi.setValue(1)
         self.verticalLayout.addWidget(self.sB_aperitivi)
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -276,6 +281,7 @@ class Ui_BarView(object):
         self.sB_vini.setStyleSheet("")
         self.sB_vini.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.sB_vini.setObjectName("sB_vini")
+        self.sB_vini.setValue(1)
         self.verticalLayout.addWidget(self.sB_vini)
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -319,6 +325,7 @@ class Ui_BarView(object):
         self.sB_liquori.setStyleSheet("")
         self.sB_liquori.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.sB_liquori.setObjectName("sB_liquori")
+        self.sB_liquori.setValue(1)
         self.verticalLayout.addWidget(self.sB_liquori)
         self.label_9 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -363,6 +370,7 @@ class Ui_BarView(object):
         self.sB_pasticceria.setStyleSheet("")
         self.sB_pasticceria.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.sB_pasticceria.setObjectName("sB_pasticceria")
+        self.sB_pasticceria.setValue(1)
         self.verticalLayout.addWidget(self.sB_pasticceria)
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
@@ -834,27 +842,30 @@ class Ui_BarView(object):
 
     #metodo che aggiunge l'item alla tabella a destra
     def update_table(self):
-        row_position = self.tW_scontrino.rowCount()
-        if row_position <= len(self.lista):
-                self.tW_scontrino.insertRow(len(self.lista))
+        #while self.tW_scontrino.rowCount() > len(self.lista):
+        #        self.tW_scontrino.removeRow(0)
+        self.tW_scontrino.setRowCount(0)
+        #row_position = self.tW_scontrino.rowCount()
+        #if row_position <= len(self.lista):
+        #        self.tW_scontrino.insertRow(len(self.lista))
         for i in range(0, len(self.lista)):
-
-            '''self.tW_scontrino.item(i,0).setText(self.lista[i][0])
-            self.tW_scontrino.item(i,1).setText(self.lista[i][1])
-            self.tW_scontrino.item(i,2).setText(self.lista[i][2])
-            self.tW_scontrino.item(i,3).setText(self.lista[i][3])'''
-            self.tW_scontrino.setItem(i, 0, QtWidgets.QTableWidgetItem(str(self.lista[i][0])))
-            self.tW_scontrino.setItem(i, 1, QtWidgets.QTableWidgetItem(str(self.lista[i][1])))
-            self.tW_scontrino.setItem(i, 2, QtWidgets.QTableWidgetItem(str(self.lista[i][2])))
-            self.tW_scontrino.setItem(i, 3, QtWidgets.QTableWidgetItem(str(self.lista[i][3])))
-            #item = self.tW_scontrino.item(i,0)
-            #item.setText(str(self.lista[0][0]))
-            '''item = self.tW_scontrino.item(i, 1)
-            item.setText(str(self.lista[i][1]))
-            item = self.tW_scontrino.item(i, 2)
-            item.setText(str(self.lista[i][2]))
-            item = self.tW_scontrino.item(i, 3)
-            item.setText(str(self.lista[i][3]))'''
+                self.tW_scontrino.insertRow(i)
+                '''self.tW_scontrino.item(i,0).setText(self.lista[i][0])
+                self.tW_scontrino.item(i,1).setText(self.lista[i][1])
+                self.tW_scontrino.item(i,2).setText(self.lista[i][2])
+                self.tW_scontrino.item(i,3).setText(self.lista[i][3])'''
+                self.tW_scontrino.setItem(i, 0, QtWidgets.QTableWidgetItem(str(self.lista[i][0])))
+                self.tW_scontrino.setItem(i, 1, QtWidgets.QTableWidgetItem(str(self.lista[i][1])))
+                self.tW_scontrino.setItem(i, 2, QtWidgets.QTableWidgetItem(str(self.lista[i][2])))
+                self.tW_scontrino.setItem(i, 3, QtWidgets.QTableWidgetItem(str(self.lista[i][3])))
+                #item = self.tW_scontrino.item(i,0)
+                #item.setText(str(self.lista[0][0]))
+                '''item = self.tW_scontrino.item(i, 1)
+                item.setText(str(self.lista[i][1]))
+                item = self.tW_scontrino.item(i, 2)
+                item.setText(str(self.lista[i][2]))
+                item = self.tW_scontrino.item(i, 3)
+                item.setText(str(self.lista[i][3]))'''
 
 
 
