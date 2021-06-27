@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>474</width>
-    <height>257</height>
+    <width>1145</width>
+    <height>622</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Ristorante</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/ristorante/50-504378_restaurant-hd-wallpaper-restaurant-hd.jpg);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -29,23 +46,64 @@
          <layout class="QGridLayout" name="gridLayout_4">
           <item row="0" column="2">
            <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
-             <string>Orario</string>
+             <string>Orario:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
           <item row="0" column="0">
            <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));</string>
+            </property>
             <property name="text">
-             <string>Data</string>
+             <string>Data:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QDateEdit" name="de_data"/>
+           <widget class="QDateEdit" name="de_data">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item row="0" column="3">
            <widget class="QComboBox" name="cb_orario">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
             <item>
              <property name="text">
               <string>12:00 - 14:00</string>
@@ -84,8 +142,24 @@
         </item>
         <item>
          <layout class="QGridLayout" name="gridLayout_2">
+          <property name="horizontalSpacing">
+           <number>45</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>60</number>
+          </property>
           <item row="1" column="1">
            <widget class="QPushButton" name="button_t2">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 2</string>
             </property>
@@ -93,6 +167,16 @@
           </item>
           <item row="1" column="3">
            <widget class="QPushButton" name="button_t4">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 4</string>
             </property>
@@ -100,6 +184,16 @@
           </item>
           <item row="4" column="3">
            <widget class="QPushButton" name="button_t16">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 16</string>
             </property>
@@ -107,6 +201,16 @@
           </item>
           <item row="2" column="0">
            <widget class="QPushButton" name="button_t5">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 5</string>
             </property>
@@ -114,6 +218,16 @@
           </item>
           <item row="2" column="2">
            <widget class="QPushButton" name="button_t7">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 7</string>
             </property>
@@ -121,6 +235,16 @@
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="button_t1">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 1</string>
             </property>
@@ -128,6 +252,16 @@
           </item>
           <item row="3" column="3">
            <widget class="QPushButton" name="button_t12">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 12</string>
             </property>
@@ -135,6 +269,16 @@
           </item>
           <item row="4" column="2">
            <widget class="QPushButton" name="button_t15">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 15</string>
             </property>
@@ -142,6 +286,16 @@
           </item>
           <item row="2" column="3">
            <widget class="QPushButton" name="button_t8">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 8</string>
             </property>
@@ -149,6 +303,16 @@
           </item>
           <item row="3" column="2">
            <widget class="QPushButton" name="button_t11">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 11</string>
             </property>
@@ -156,6 +320,16 @@
           </item>
           <item row="2" column="1">
            <widget class="QPushButton" name="button_t6">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 6</string>
             </property>
@@ -163,6 +337,16 @@
           </item>
           <item row="3" column="1">
            <widget class="QPushButton" name="button_t10">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 10</string>
             </property>
@@ -170,6 +354,16 @@
           </item>
           <item row="1" column="2">
            <widget class="QPushButton" name="button_t3">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 3</string>
             </property>
@@ -177,6 +371,16 @@
           </item>
           <item row="3" column="0">
            <widget class="QPushButton" name="button_t9">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 9</string>
             </property>
@@ -184,6 +388,16 @@
           </item>
           <item row="4" column="1">
            <widget class="QPushButton" name="button_t14">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 14</string>
             </property>
@@ -191,6 +405,16 @@
           </item>
           <item row="4" column="0">
            <widget class="QPushButton" name="button_t13">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
              <string>Tavolo 13</string>
             </property>
@@ -209,13 +433,33 @@
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));</string>
+            </property>
             <property name="text">
-             <string>Tavolo</string>
+             <string>Tavolo:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QComboBox" name="cb_tavolo">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <item>
              <property name="text">
               <string>Tutti</string>
@@ -315,13 +559,34 @@
           </item>
           <item>
            <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
-             <string>Giorno</string>
+             <string>Giorno:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QDateEdit" name="de_data_2"/>
+           <widget class="QDateEdit" name="de_data_2">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="Line" name="line_4">
@@ -335,13 +600,33 @@
           </item>
           <item>
            <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));background-image: url(:/ristorante/tpg.png);</string>
+            </property>
             <property name="text">
-             <string>Orario</string>
+             <string>Orario:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QComboBox" name="cb_orario_2">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <item>
              <property name="text">
               <string>Tutti</string>
@@ -388,37 +673,92 @@
         </item>
         <item>
          <widget class="QTableWidget" name="tabella_prenotazioni">
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));</string>
+          </property>
           <property name="frameShadow">
            <enum>QFrame::Sunken</enum>
           </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>125</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
           <column>
            <property name="text">
             <string>Nominativo</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </column>
           <column>
            <property name="text">
             <string>Camera</string>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>Persone</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </column>
           <column>
            <property name="text">
             <string>Data</string>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>Ora</string>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>Tavolo</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </column>
          </widget>
@@ -430,6 +770,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources/ristorante/ristorante.qrc"/>
+ </resources>
  <connections/>
 </ui>
