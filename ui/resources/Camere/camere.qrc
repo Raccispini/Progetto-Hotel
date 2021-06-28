@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="camere">
+    <file>8-85556_silver-mat-color.jpg</file>
+    <file>blanco.jpg</file>
     <file>Grand-Hotel-Fleming-2.jpg</file>
     <file>tpg.png</file>
   </qresource>

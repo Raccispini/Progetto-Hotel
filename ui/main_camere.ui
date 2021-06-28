@@ -63,6 +63,10 @@
                 <pointsize>13</pointsize>
                </font>
               </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/camere/8-85556_silver-mat-color.jpg);
+</string>
+              </property>
               <property name="calendarPopup">
                <bool>true</bool>
               </property>
@@ -139,6 +143,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
                 <family>Arial</family>
                 <pointsize>13</pointsize>
                </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/camere/8-85556_silver-mat-color.jpg);</string>
               </property>
               <property name="calendarPopup">
                <bool>true</bool>
