@@ -1,8 +1,6 @@
 <RCC>
   <qresource prefix="resource_bar">
-    <file>50-504527_cocktails-wallpaper-hd.jpg</file>
     <file>Bar-bottles-alcohol-drinks_1920x1080.jpg</file>
     <file>tpg.png</file>
-    <file>b94d4f336d6cdbbc9332bd15027fd3bc.jpg</file>
   </qresource>
 </RCC>

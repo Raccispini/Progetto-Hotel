@@ -1,5 +1,4 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from ui.resources.Camere import camere_rc
 
 
 class Ui_CamereView(object):
@@ -499,4 +498,6 @@ class Ui_CamereView(object):
         item.setText(_translate("MainWindow", "PRENOTAZIONE TAVOLO"))
         item = self.tabellaCamere.horizontalHeaderItem(14)
         item.setText(_translate("MainWindow", "PREZZO"))
+
+
 

@@ -86,8 +86,10 @@ class BarView(QMainWindow, Ui_BarView):
         if not flag:
             self.lista.append((item[0][1], item[1], item[0][3], int(item[1])*float(item[0][3])))
         #print(self.lista)
-        self.update_table()
-        self.update_tot()
+        #Aggiorna solo se la quantità è diversa da 0
+        if int(item[1]) != 0:
+            self.update_table()
+            self.update_tot()
         self.on_table_click()
 
 
