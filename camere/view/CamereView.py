@@ -1,9 +1,9 @@
 from PyQt5.QtWidgets import QMainWindow
+from camere.view.Ui_CamereView import Ui_CamereView
 
-from ristorante.view.Ui_RistoranteView_1 import Ui_RistoranteView_1
 
 
-class RistoranteView(QMainWindow, Ui_RistoranteView_1):
+class CamereView(QMainWindow, Ui_CamereView):
     def __init__(self, parent = None):
-        super(RistoranteView, self).__init__(parent)
+        super(CamereView, self).__init__(parent)
         self.setupUi(self)

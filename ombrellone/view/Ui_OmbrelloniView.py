@@ -3,7 +3,7 @@ from ui.resources.Ombrelloni import ombrellone_rc
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_OmbrelloniView_1(object):
+class Ui_OmbrelloniView(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1287, 734)

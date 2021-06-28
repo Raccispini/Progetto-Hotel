@@ -1,5 +1,8 @@
 from PyQt5.QtWidgets import QMainWindow
+
+from anagrafiche.view.AnagraficheView import AnagraficheView
 from bar.view.BarView import BarView
+from camere.view.CamereView import CamereView
 from home.view.Ui_HomeWindow import Ui_HomeWindow
 from magazzino.view.MagazzinoView import MagazzinoView
 from meteo.view.MeteoView import MeteoView
@@ -14,8 +17,9 @@ class HomeView(QMainWindow, Ui_HomeWindow):
         self.connectButton()
 
     def openBar(self):
-        self.bar_window = BarView()
-        self.bar_window.show()
+       self.bar_window = BarView()
+       self.bar_window.show()
+       print("Finestra bar aperta")
 
     def openCamere(self):
         self.camere_window = CamereView()
@@ -23,8 +27,8 @@ class HomeView(QMainWindow, Ui_HomeWindow):
         print("Finestra Camere Aperta")
 
     def openAnagrafiche(self):
-        #self.anagrafiche_window = AnagraficheView()
-        #self.anagrafiche_window.show()
+        self.anagrafiche_window = AnagraficheView()
+        self.anagrafiche_window.show()
         print("Finestra Anagrafiche Aperta")
 
     def openMagazzino(self):
