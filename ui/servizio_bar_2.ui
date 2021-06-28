@@ -1740,6 +1740,9 @@ font: 700 14pt &quot;Arial&quot;;</string>
         </item>
         <item row="1" column="3">
          <widget class="QLineEdit" name="LE_totaleconto">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -1781,7 +1784,7 @@ background-image: url(:/resource_bar/tpg.png);</string>
         <item row="1" column="1">
          <widget class="QComboBox" name="cB_camera">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <property name="font">
            <font>
@@ -1798,7 +1801,7 @@ background-image: url(:/resource_bar/tpg.png);
 background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="editable">
-           <bool>true</bool>
+           <bool>false</bool>
           </property>
           <item>
            <property name="text">
