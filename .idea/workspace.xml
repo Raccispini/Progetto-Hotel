@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f66907-8408-4976-a069-cddacc31aaf5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ui/resources/Bar/resource_bar_rc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/servizio_bar.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Progetto-Hotel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Progetto-Hotel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bar/view/BarView.py" beforeDir="false" afterPath="$PROJECT_DIR$/bar/view/BarView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bar/view/Ui_BarView.py" beforeDir="false" afterPath="$PROJECT_DIR$/bar/view/Ui_BarView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camere/view/Ui_CamereView.py" beforeDir="false" afterPath="$PROJECT_DIR$/camere/view/Ui_CamereView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/resources/Bar/50-504527_cocktails-wallpaper-hd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/resources/Bar/b94d4f336d6cdbbc9332bd15027fd3bc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/resources/Bar/b94d4f336d6cdbbc9332bd15027fd3bc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/resources/Bar/resource_bar.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/ui/resources/Bar/resource_bar.qrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/servizio_bar_2.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camere/view/CamereView.py" beforeDir="false" afterPath="$PROJECT_DIR$/camere/view/CamereView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/model/LoginModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/model/LoginModel.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +137,7 @@
       <workItem from="1624886364138" duration="3225000" />
       <workItem from="1624891044905" duration="4576000" />
       <workItem from="1624897978992" duration="6277000" />
+      <workItem from="1624978080480" duration="4165000" />
     </task>
     <servers />
   </component>
@@ -167,6 +162,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Progetto_Hotel$Scontrini.coverage" NAME="Scontrini Coverage Results" MODIFIED="1624615888568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Progetto_Hotel$BarView.coverage" NAME="BarView Coverage Results" MODIFIED="1621927473997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar/view" />
-    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1624904183690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Progetto_Hotel$app.coverage" NAME="app Coverage Results" MODIFIED="1624981674717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

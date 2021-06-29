@@ -10,7 +10,7 @@ class CamereView(QMainWindow, Ui_CamereView):
         self.setupUi(self)
         self.update_table()
     
-    def search_camere(self,numero=0, letti_doppi=False, letti_singoli=0, prezzo=0, check_in=None, check_out=None):
+    def get_camere(self,numero=0, letti_doppi=False, letti_singoli=0, prezzo=0, check_in=None, check_out=None):
         con = sqlite3.connect("database.db")
         query = "select * from Camere"
         if numero != 0 or letti_doppi != 0 or letti_singoli != 0 or prezzo != 0 or check_in != None or check_out != None:
@@ -37,18 +37,20 @@ class CamereView(QMainWindow, Ui_CamereView):
                         query += "Prenotazioni_camere.check_in>'"+str(check_out)+"'"
                     query += "))   "
             query = query[:-3]
-        query += " ORDER BY camere.numero;"
+        query += " ORDER BY Camere.numeroCamera;"
         print(query)
         camere = con.execute(query)
         return camere.fetchall()
     
     def update_table(self):
-        camere = self.search_camere()
-        
+        camere = self.get_camere()
+        print(len(camere[0]))
         self.tabellaCamere.setRowCount(0)
         for i in range(0, len(camere)):
-                self.tabellaCamere.insertRow(i)
-                self.tabellaCamere.setItem(i, 0, QtWidgets.QTableWidgetItem(str(camere[i][0])))
-                self.tabellaCamere.setItem(i, 1, QtWidgets.QTableWidgetItem(str(camere[i][1])))
-                self.tabellaCamere.setItem(i, 2, QtWidgets.QTableWidgetItem(str(camere[i][2])))
-                self.tabellaCamere.setItem(i, 3, QtWidgets.QTableWidgetItem(str(camere[i][3])))
+            self.tabellaCamere.insertRow(i)
+            for j in range(15):
+                if j > 2 and j != 14:
+                    self.tabellaCamere.setItem(i, j, QtWidgets.QTableWidgetItem("Si" if camere[i][j] == 1 else "No"))
+                else:
+                    self.tabellaCamere.setItem(i, j , QtWidgets.QTableWidgetItem(str(camere[i][j])))
+
