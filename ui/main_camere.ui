@@ -85,7 +85,6 @@
                <font>
                 <family>Arial</family>
                 <pointsize>14</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -104,7 +103,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
                <font>
                 <family>Arial</family>
                 <pointsize>14</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -123,7 +121,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
                <font>
                 <family>Arial</family>
                 <pointsize>14</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -209,7 +206,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>14</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -228,7 +224,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>14</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -264,7 +259,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -283,7 +277,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -302,7 +295,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -321,7 +313,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -340,7 +331,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -359,7 +349,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -378,7 +367,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -397,7 +385,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -416,7 +403,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <font>
               <family>Arial</family>
               <pointsize>13</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -457,7 +443,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            <font>
             <family>Arial</family>
             <pointsize>16</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -476,7 +461,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            <font>
             <family>Arial</family>
             <pointsize>16</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -495,7 +479,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            <font>
             <family>Arial</family>
             <pointsize>16</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -514,7 +497,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            <font>
             <family>Arial</family>
             <pointsize>16</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -533,7 +515,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            <font>
             <family>Arial</family>
             <pointsize>16</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -558,7 +539,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
          <font>
           <family>Arial</family>
           <pointsize>20</pointsize>
-          <weight>75</weight>
           <italic>false</italic>
           <bold>true</bold>
          </font>
@@ -581,7 +561,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
          <font>
           <family>Arial</family>
           <pointsize>11</pointsize>
-          <weight>50</weight>
           <italic>false</italic>
           <bold>false</bold>
          </font>
@@ -613,7 +592,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -625,7 +603,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -637,7 +614,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -649,7 +625,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -661,7 +636,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -673,7 +647,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -685,7 +658,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -697,7 +669,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -709,7 +680,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -721,7 +691,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -733,7 +702,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -745,7 +713,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -757,7 +724,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>CASSAFORTE</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
            <bold>true</bold>
           </font>
          </property>
@@ -769,7 +746,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -781,7 +757,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          <property name="font">
           <font>
            <pointsize>12</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>

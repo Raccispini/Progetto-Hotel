@@ -1,13 +1,12 @@
-import webbrowser
-
+from PyQt5.QtGui import QCursor
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer, QTime
-
 
 
 class Ui_HomeWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
+        MainWindow.setWindowTitle("MainWindow")
         MainWindow.setMinimumSize(1200, 650)
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(1279, 750)
@@ -15,7 +14,19 @@ class Ui_HomeWindow(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("")
+        MainWindow.setStyleSheet("""
+                                    QMainWindow{background-image: url(ui/resources/main/2690549.jpg);}
+                                    QPushButton{
+                                                 background-image: url(ui/resources/button/button.jpg);
+                                                 border-style: outset;
+                                                 border-width: 5px;
+                                                 border-radius: 20px;
+                                                 border-color: rgb(221,34,24);
+                                                 }
+                                    QPushButton:pressed{
+                                                border-style: inset;
+                                                }   
+                                 """)
         MainWindow.setIconSize(QtCore.QSize(200, 45))
         MainWindow.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -48,9 +59,10 @@ class Ui_HomeWindow(object):
         self.orario.setObjectName("orario")
         timer = QTimer(self)
         timer.timeout.connect(self.displayTime)
-        timer.start(1000)
+        timer.start()
         self.verticalLayout.addWidget(self.orario)
         self.pB_Camere = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Camere.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -68,6 +80,7 @@ class Ui_HomeWindow(object):
         self.pB_Camere.setObjectName("pB_Camere")
         self.verticalLayout.addWidget(self.pB_Camere)
         self.pB_Ristorante = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Ristorante.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -81,6 +94,7 @@ class Ui_HomeWindow(object):
         self.pB_Ristorante.setObjectName("pB_Ristorante")
         self.verticalLayout.addWidget(self.pB_Ristorante)
         self.pB_Bar = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Bar.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -94,6 +108,7 @@ class Ui_HomeWindow(object):
         self.pB_Bar.setObjectName("pB_Bar")
         self.verticalLayout.addWidget(self.pB_Bar)
         self.pB_Anagrafiche = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Anagrafiche.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -107,6 +122,7 @@ class Ui_HomeWindow(object):
         self.pB_Anagrafiche.setObjectName("pB_Anagrafiche")
         self.verticalLayout.addWidget(self.pB_Anagrafiche)
         self.pB_Ombrelloni = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Ombrelloni.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -120,6 +136,7 @@ class Ui_HomeWindow(object):
         self.pB_Ombrelloni.setObjectName("pB_Ombrelloni")
         self.verticalLayout.addWidget(self.pB_Ombrelloni)
         self.pB_Magazzino = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Magazzino.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -133,6 +150,7 @@ class Ui_HomeWindow(object):
         self.pB_Magazzino.setObjectName("pB_Magazzino")
         self.verticalLayout.addWidget(self.pB_Magazzino)
         self.pB_Meteo = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Meteo.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -147,6 +165,7 @@ class Ui_HomeWindow(object):
         self.pB_Meteo.setObjectName("pB_Meteo")
         self.verticalLayout.addWidget(self.pB_Meteo)
         self.pB_Uscita = QtWidgets.QPushButton(self.centralwidget)
+        self.pB_Uscita.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -173,86 +192,9 @@ class Ui_HomeWindow(object):
         self.horizontalLayout.addWidget(self.calendarWidget)
         self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.actionCamere = QtWidgets.QAction(MainWindow)
-        self.actionCamere.setIcon(icon1)
-        self.actionCamere.setObjectName("actionCamere")
-        self.actionAnagrafiche = QtWidgets.QAction(MainWindow)
-        self.actionAnagrafiche.setIcon(icon4)
-        self.actionAnagrafiche.setObjectName("actionAnagrafiche")
-        self.actionMagazzino = QtWidgets.QAction(MainWindow)
-        self.actionMagazzino.setIcon(icon6)
-        self.actionMagazzino.setObjectName("actionMagazzino")
-        self.actionBar = QtWidgets.QAction(MainWindow)
-        self.actionBar.setIcon(icon3)
-        self.actionBar.setObjectName("actionBar")
-        self.actionOmbrelloni = QtWidgets.QAction(MainWindow)
-        self.actionOmbrelloni.setIcon(icon5)
-        self.actionOmbrelloni.setObjectName("actionOmbrelloni")
-        self.actionRistorante = QtWidgets.QAction(MainWindow)
-        self.actionRistorante.setIcon(icon2)
-        self.actionRistorante.setObjectName("actionRistorante")
-        self.actionAmministrativo = QtWidgets.QAction(MainWindow)
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("resources/Toolbar_main/Icona_amministrativo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.actionAmministrativo.setIcon(icon9)
-        self.actionAmministrativo.setObjectName("actionAmministrativo")
-        self.actionStrumenti = QtWidgets.QAction(MainWindow)
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("resources/Toolbar_main/Icona_strumenti.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.actionStrumenti.setIcon(icon10)
-        self.actionStrumenti.setObjectName("actionStrumenti")
-        self.actionRicerca = QtWidgets.QAction(MainWindow)
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap("resources/Toolbar_main/Icona_ricerca.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.actionRicerca.setIcon(icon11)
-        self.actionRicerca.setObjectName("actionRicerca")
-        self.actionMeteo = QtWidgets.QAction(MainWindow)
-        self.actionMeteo.setIcon(icon7)
-        self.actionMeteo.setObjectName("actionMeteo")
-        self.actionUscita = QtWidgets.QAction(MainWindow)
-        self.actionUscita.setIcon(icon8)
-        self.actionUscita.setObjectName("actionUscita")
 
+    #Funzione per aggiornare l'orario e mostrarlo secondon un determinato layout
     def displayTime(self):
         currentTime = QTime.currentTime()
         displayText = currentTime.toString("    hh:mm:ss")
         self.orario.setText(displayText)
-'''
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Hotel Management"))
-        self.orario.setText(_translate("MainWindow", "12:54:45"))
-        self.actionCamere.setText(_translate("MainWindow", "Camere"))
-        self.actionCamere.setToolTip(_translate("MainWindow", "Apre il gestore dei gruppi"))
-        self.actionCamere.setShortcut(_translate("MainWindow", "F1"))
-        self.actionAnagrafiche.setText(_translate("MainWindow", "Anagrafiche"))
-        self.actionAnagrafiche.setToolTip(_translate("MainWindow", "Apre il gestore delle anagrafiche"))
-        self.actionAnagrafiche.setShortcut(_translate("MainWindow", "F2"))
-        self.actionMagazzino.setText(_translate("MainWindow", "Magazzino"))
-        self.actionMagazzino.setToolTip(_translate("MainWindow", "Apre il gestore del magazzino"))
-        self.actionMagazzino.setShortcut(_translate("MainWindow", "F3"))
-        self.actionBar.setText(_translate("MainWindow", "Bar"))
-        self.actionBar.setToolTip(_translate("MainWindow", "Apre il gestore dei bar"))
-        self.actionBar.setShortcut(_translate("MainWindow", "F4"))
-        self.actionOmbrelloni.setText(_translate("MainWindow", "Ombrelloni"))
-        self.actionOmbrelloni.setToolTip(_translate("MainWindow", "Apre il gestore degli Ombrelloni"))
-        self.actionOmbrelloni.setShortcut(_translate("MainWindow", "F5"))
-        self.actionRistorante.setText(_translate("MainWindow", "Ristorante"))
-        self.actionRistorante.setToolTip(_translate("MainWindow", "Apre il gestore del ristornate"))
-        self.actionRistorante.setShortcut(_translate("MainWindow", "F6"))
-        self.actionAmministrativo.setText(_translate("MainWindow", "Amministrativo"))
-        self.actionAmministrativo.setToolTip(_translate("MainWindow", "Apre il gestore dell\'amministrativo"))
-        self.actionAmministrativo.setShortcut(_translate("MainWindow", "F7"))
-        self.actionStrumenti.setText(_translate("MainWindow", "Strumenti"))
-        self.actionStrumenti.setToolTip(_translate("MainWindow", "Apre il gestore degli Strumenti"))
-        self.actionStrumenti.setShortcut(_translate("MainWindow", "F8"))
-        self.actionRicerca.setText(_translate("MainWindow", "Ricerca"))
-        self.actionRicerca.setToolTip(_translate("MainWindow", "Apre una finestra per la ricerca di un cliente"))
-        self.actionRicerca.setShortcut(_translate("MainWindow", "F9"))
-        self.actionMeteo.setText(_translate("MainWindow", "Meteo"))
-        self.actionMeteo.setToolTip(_translate("MainWindow", "Apre una finestra che mostra il meteo"))
-        self.actionMeteo.setShortcut(_translate("MainWindow", "F10"))
-        self.actionUscita.setText(_translate("MainWindow", "Uscita"))
-        self.actionUscita.setToolTip(_translate("MainWindow", "Arresta l\'esecuzione del programma"))
-        self.actionUscita.setShortcut(_translate("MainWindow", "F11"))
-'''
