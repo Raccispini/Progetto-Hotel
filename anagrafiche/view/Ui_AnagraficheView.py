@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Anagrafiche_Window(object):
+class Ui_AnagraficheView(object):
     def setupUi(self, Anagrafiche_Window):
         Anagrafiche_Window.setObjectName("Anagrafiche_Window")
         Anagrafiche_Window.resize(1315, 821)
