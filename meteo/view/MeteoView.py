@@ -1,8 +1,6 @@
-import sys
 import webbrowser
-
-from PyQt5.QtWidgets import QDialog, QLineEdit, QWidget, QVBoxLayout, QLabel, QApplication, QDialogButtonBox, \
-    QPushButton, QHBoxLayout
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QDialog, QLineEdit, QVBoxLayout, QLabel, QPushButton, QHBoxLayout
 from PyQt5 import QtGui, QtCore
 
 class MeteoView(QDialog):
@@ -20,7 +18,9 @@ class MeteoView(QDialog):
         font_lineEdit = self.le_citta.font()
         font_lineEdit.setPointSize(15)
         self.pB_Continua = self.get_generic_button("Continua")
+        self.pB_Continua.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.pB_Annulla = self.get_generic_button("Annulla")
+        self.pB_Annulla.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.le_citta.setFont(font_lineEdit)
         h_layout.addWidget(self.pB_Continua)
         h_layout.addWidget(self.pB_Annulla)
