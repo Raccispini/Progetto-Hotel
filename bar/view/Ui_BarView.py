@@ -1,5 +1,4 @@
 import sqlite3
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui.resources.Bar import resource_bar_rc
 
@@ -10,7 +9,7 @@ class Ui_BarView(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_large.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("QMainWindow {background-image: url(:/resource_bar/Bar-bottles-alcohol-drinks_1920x1080.jpg)}")
+        MainWindow.setStyleSheet("QMainWindow {border-image: url(:/resource_bar/Bar-bottles-alcohol-drinks_1920x1080.jpg) 0 0 0 0 stretch stretch}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
