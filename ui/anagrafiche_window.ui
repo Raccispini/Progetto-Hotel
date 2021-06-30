@@ -95,7 +95,7 @@
              </font>
             </property>
             <property name="cursor">
-             <cursorShape>BlankCursor</cursorShape>
+             <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
              <string>Aggiungi</string>

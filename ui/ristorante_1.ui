@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1145</width>
-    <height>622</height>
+    <width>1722</width>
+    <height>914</height>
    </rect>
   </property>
   <property name="font">
@@ -20,6 +20,10 @@
   <property name="windowTitle">
    <string>Ristorante</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>resources/logo/logo_small_icon_only_inverted.png</normaloff>resources/logo/logo_small_icon_only_inverted.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/ristorante/50-504378_restaurant-hd-wallpaper-restaurant-hd.jpg);</string>
   </property>
@@ -29,10 +33,13 @@
      <widget class="QTabWidget" name="tabWidget">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <pointsize>20</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
        <number>0</number>
@@ -44,23 +51,18 @@
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <layout class="QGridLayout" name="gridLayout_4">
-          <item row="0" column="2">
-           <widget class="QLabel" name="label_2">
+          <item row="0" column="1">
+           <widget class="QDateEdit" name="de_data">
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/8-85556_silver-mat-color.jpg);</string>
             </property>
-            <property name="text">
-             <string>Orario:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <property name="calendarPopup">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -68,7 +70,7 @@
            <widget class="QLabel" name="label">
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>30</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
@@ -81,22 +83,27 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
              <string>Data:</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QDateEdit" name="de_data">
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_2">
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>30</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/8-85556_silver-mat-color.jpg);</string>
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));background-image: url(:/ristorante/tpg.png);</string>
             </property>
-            <property name="calendarPopup">
-             <bool>true</bool>
+            <property name="text">
+             <string>Orario:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -104,7 +111,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
            <widget class="QComboBox" name="cb_orario">
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="styleSheet">
@@ -147,282 +154,786 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="font">
+           <font>
+            <pointsize>35</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+          </property>
+          <property name="text">
+           <string>Ricerca</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>30</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>50</number>
+          </property>
           <property name="horizontalSpacing">
-           <number>45</number>
+           <number>20</number>
           </property>
           <property name="verticalSpacing">
-           <number>60</number>
+           <number>30</number>
           </property>
           <item row="1" column="1">
            <widget class="QPushButton" name="button_t2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
             </property>
-            <property name="text">
-             <string>Tavolo 2</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QPushButton" name="button_t4">
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
+            <property name="autoFillBackground">
+             <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 4</string>
+             <string>2</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
           <item row="4" column="3">
            <widget class="QPushButton" name="button_t16">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 16</string>
+             <string>16</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
-           <widget class="QPushButton" name="button_t5">
+          <item row="1" column="3">
+           <widget class="QPushButton" name="button_t4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
             </property>
-            <property name="text">
-             <string>Tavolo 5</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="QPushButton" name="button_t7">
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
+            <property name="autoFillBackground">
+             <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 7</string>
+             <string>4</string>
             </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QPushButton" name="button_t1">
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
             </property>
-            <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
-            </property>
-            <property name="text">
-             <string>Tavolo 1</string>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
           <item row="3" column="3">
            <widget class="QPushButton" name="button_t12">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 12</string>
+             <string>12</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
-          <item row="4" column="2">
-           <widget class="QPushButton" name="button_t15">
+          <item row="2" column="0">
+           <widget class="QPushButton" name="button_t5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 15</string>
+             <string>5</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
-          <item row="2" column="3">
-           <widget class="QPushButton" name="button_t8">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="button_t1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
+              <stylestrategy>NoAntialias</stylestrategy>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 8</string>
+             <string>1</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
-          <item row="3" column="2">
-           <widget class="QPushButton" name="button_t11">
+          <item row="2" column="2">
+           <widget class="QPushButton" name="button_t7">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 11</string>
+             <string>7</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
            <widget class="QPushButton" name="button_t6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 6</string>
+             <string>6</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
-           <widget class="QPushButton" name="button_t10">
+          <item row="4" column="2">
+           <widget class="QPushButton" name="button_t15">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 10</string>
+             <string>15</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
-           <widget class="QPushButton" name="button_t3">
+          <item row="3" column="2">
+           <widget class="QPushButton" name="button_t11">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 3</string>
+             <string>11</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="button_t8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>45</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
+            <property name="text">
+             <string>8</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
           <item row="3" column="0">
            <widget class="QPushButton" name="button_t9">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
             </property>
             <property name="text">
-             <string>Tavolo 9</string>
+             <string>9</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="button_t3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>45</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
+            <property name="text">
+             <string>3</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="button_t10">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>45</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
+            <property name="text">
+             <string>10</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
           <item row="4" column="1">
            <widget class="QPushButton" name="button_t14">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));background-image: url(:/ristorante/tpg.png);</string>
             </property>
             <property name="text">
-             <string>Tavolo 14</string>
+             <string>14</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
           <item row="4" column="0">
            <widget class="QPushButton" name="button_t13">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
+              <pointsize>45</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));background-image: url(:/ristorante/tpg.png);</string>
             </property>
             <property name="text">
-             <string>Tavolo 13</string>
+             <string>13</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>resources/ristorante/LogoMakr-2rm3uC.png</normaloff>resources/ristorante/LogoMakr-2rm3uC.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -453,7 +964,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
              <string>Tavolo:</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -582,7 +1093,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
              <string>Giorno:</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -629,7 +1140,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
              <string>Orario:</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -702,7 +1213,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
            <set>QAbstractItemView::NoEditTriggers</set>
           </property>
           <attribute name="horizontalHeaderDefaultSectionSize">
-           <number>180</number>
+           <number>280</number>
           </attribute>
           <attribute name="horizontalHeaderStretchLastSection">
            <bool>true</bool>

@@ -11,12 +11,12 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Anagrafiche_Window(object):
+class Ui_AnagraficheView(object):
     def setupUi(self, Anagrafiche_Window):
         Anagrafiche_Window.setObjectName("Anagrafiche_Window")
         Anagrafiche_Window.resize(1315, 821)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Anagrafiche_Window.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(Anagrafiche_Window)
         self.centralwidget.setObjectName("centralwidget")
@@ -55,7 +55,7 @@ class Ui_Anagrafiche_Window(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.PB_add_Cliente.setFont(font)
-        self.PB_add_Cliente.setCursor(QtGui.QCursor(QtCore.Qt.BlankCursor))
+        self.PB_add_Cliente.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.PB_add_Cliente.setObjectName("PB_add_Cliente")
         self.horizontalLayout_2.addWidget(self.PB_add_Cliente)
         self.PB_modifica_Cliente = QtWidgets.QPushButton(self.tab_Anag_Clienti)
