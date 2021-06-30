@@ -1,7 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
-class Ui_Dialog_Login(object):
+class Ui_LoginView(object):
     
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")

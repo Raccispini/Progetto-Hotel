@@ -2,11 +2,25 @@ from PyQt5.QtGui import QCursor
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer, QTime
 
+#Setto manualmente alcune particolarità dell'interfaccia e le salvo in una variabile
+stylesheet = """QMainWindow{border-image: url(ui/resources/main/2690549.jpg) 0 0 0 0 stretch stretch;}
+                QPushButton{
+                            background-image: url(ui/resources/button/button.jpg);
+                            border-style: outset;
+                            border-width: 5px;
+                            border-color: rgb(221,34,24);
+                            border-radius: 20px;                            
+                            }
+                QPushButton:pressed{
+                            border-style: inset;
+                            }   
+            """
+
 
 class Ui_HomeWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.setWindowTitle("MainWindow")
+        MainWindow.setWindowTitle("Hotel Management")
         MainWindow.setMinimumSize(1200, 650)
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(1279, 750)
@@ -14,19 +28,7 @@ class Ui_HomeWindow(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("""
-                                    QMainWindow{background-image: url(ui/resources/main/2690549.jpg);}
-                                    QPushButton{
-                                                 background-image: url(ui/resources/button/button.jpg);
-                                                 border-style: outset;
-                                                 border-width: 5px;
-                                                 border-radius: 20px;
-                                                 border-color: rgb(221,34,24);
-                                                 }
-                                    QPushButton:pressed{
-                                                border-style: inset;
-                                                }   
-                                 """)
+        MainWindow.setStyleSheet(stylesheet)
         MainWindow.setIconSize(QtCore.QSize(200, 45))
         MainWindow.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
