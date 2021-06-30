@@ -1,12 +1,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 class Ui_LoginView(object):
     
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(600, 300)
-        Dialog.setMinimumSize(QtCore.QSize(600, 300))
-        Dialog.setMaximumSize(QtCore.QSize(600, 300))
+        Dialog.setMinimumSize(QtCore.QSize(600,300))
+        Dialog.setMaximumSize(QtCore.QSize(600,300))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources\logo\logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)

@@ -198,5 +198,5 @@ class Ui_HomeWindow(object):
     #Funzione per aggiornare l'orario e mostrarlo secondon un determinato layout
     def displayTime(self):
         currentTime = QTime.currentTime()
-        displayText = currentTime.toString("    hh:mm:ss")
+        displayText = currentTime.toString("   hh:mm:ss")
         self.orario.setText(displayText)
