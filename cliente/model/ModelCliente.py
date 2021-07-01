@@ -115,6 +115,3 @@ class ModelCliente(ModelUtente):
 
     def set_info_check_in(self, info_check_in):
         self.info_check_in = info_check_in
-
-    def __str__(self):
-        return (f' Cliente {self.id} '.center(100, '-') + f'\nID: {self.id} |  ')

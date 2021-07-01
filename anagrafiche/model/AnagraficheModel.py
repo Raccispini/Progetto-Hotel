@@ -1,5 +1,6 @@
 import sqlite3
 from cliente.model.ModelCliente import ModelCliente
+from GeneratorePDF_Clienti import GeneratorePDF_Clienti
 
 
 class AnagraficheModel():
@@ -19,7 +20,11 @@ class AnagraficheModel():
                                                   cliente[10], cliente[11], cliente[12], cliente[13], cliente[14],
                                                   cliente[15], cliente[16], cliente[17], cliente[18], cliente[19],
                                                   cliente[20]))
-        print(self.listaclienti[0])
+
+        gen = GeneratorePDF_Clienti()
+        gen.stampa(self.listaclienti)
+
+
 
 if __name__=="__main__":
     AnagraficheModel()
