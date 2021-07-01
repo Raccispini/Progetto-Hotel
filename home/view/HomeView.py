@@ -3,14 +3,14 @@ from PyQt5.QtWidgets import QMainWindow
 from anagrafiche.view.AnagraficheView import AnagraficheView
 from bar.view.BarView import BarView
 from camere.view.CamereView import CamereView
-from home.view.Ui_HomeWindow import Ui_HomeWindow
+from home.view.Ui_HomeView import Ui_HomeView
 from magazzino.view.MagazzinoView import MagazzinoView
 from meteo.view.MeteoView import MeteoView
 from ombrellone.view.OmbrelloneView import OmbrelloneView
 from ristorante.view.RistoranteView import RistoranteView
 
 
-class HomeView(QMainWindow, Ui_HomeWindow):
+class HomeView(QMainWindow, Ui_HomeView):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)

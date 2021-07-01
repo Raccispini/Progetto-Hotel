@@ -17,7 +17,7 @@ stylesheet = """QMainWindow{border-image: url(ui/resources/main/2690549.jpg) 0 0
             """
 
 
-class Ui_HomeWindow(object):
+class Ui_HomeView(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowTitle("Hotel Management")
@@ -198,5 +198,5 @@ class Ui_HomeWindow(object):
     #Funzione per aggiornare l'orario e mostrarlo secondon un determinato layout
     def displayTime(self):
         currentTime = QTime.currentTime()
-        displayText = currentTime.toString("    hh:mm:ss")
+        displayText = currentTime.toString("   hh:mm:ss")
         self.orario.setText(displayText)

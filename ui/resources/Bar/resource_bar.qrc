@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="resource_bar">
-    <file>Bar-bottles-alcohol-drinks_1920x1080.jpg</file>
     <file>tpg.png</file>
+    <file>bar.jpg</file>
   </qresource>
 </RCC>
