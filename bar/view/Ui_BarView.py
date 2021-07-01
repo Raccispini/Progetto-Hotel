@@ -737,7 +737,11 @@ class Ui_BarView(object):
         self.tW_scontrino.verticalHeader().setMinimumSectionSize(24)
         self.tW_scontrino.verticalHeader().setSortIndicatorShown(False)
         self.tW_scontrino.verticalHeader().setStretchLastSection(False)
+<<<<<<< Updated upstream
         #self.tW_scontrino.setHorizontalHeaderLabels("Consumazione;Quantità;Costo Unitario;Costo Totale").split(";")
+=======
+
+>>>>>>> Stashed changes
         self.verticalLayout_4.addWidget(self.tW_scontrino)
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setContentsMargins(25, 10, 32, 10)
@@ -1074,8 +1078,8 @@ class Ui_BarView(object):
                 self.tW_scontrino.setItem(i, 3, QtWidgets.QTableWidgetItem(str(self.lista[i][3])))
 
 
-    def get_item(self, combo, category):
-        item = str(combo.currentText())
+    '''def get_item(self, combo, category):
+        item = str(combo.currentText())'''
 
     def get_item(self, combo, category):
         item = str(combo.currentText())
