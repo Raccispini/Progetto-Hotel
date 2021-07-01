@@ -1,6 +1,5 @@
 import sqlite3
 from cliente.model.ModelCliente import ModelCliente
-from GeneratorePDF_Clienti import GeneratorePDF_Clienti
 
 
 class AnagraficheModel():
@@ -11,7 +10,7 @@ class AnagraficheModel():
         self.get_listaclienti()
 
     def get_listaclienti(self):
-        con = sqlite3.connect("../../database.db")
+        con = sqlite3.connect("database.db")
         cursor = con.cursor()
         tab_clienti = cursor.execute('SELECT * FROM Clienti;').fetchall()
         for cliente in tab_clienti:
@@ -21,10 +20,3 @@ class AnagraficheModel():
                                                   cliente[15], cliente[16], cliente[17], cliente[18], cliente[19],
                                                   cliente[20]))
 
-        gen = GeneratorePDF_Clienti()
-        gen.stampa(self.listaclienti)
-
-
-
-if __name__=="__main__":
-    AnagraficheModel()

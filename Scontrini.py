@@ -9,11 +9,17 @@ class Scontrini(object):
             html += "<tr><td class = \"leftColumn\">"+ str(i[0])+"x"+str(i[1])+"</td>"
             html += "<td class = \"rightColumn\">"+str(i[2])+" €</td></tr>"
         html += "<tr><td class = \"rightColumn\"><b>Totale</b></td><td class = \"rightColumn\">"+str(tot)+"</td></tr></table></body></html>"
-        file = open("test.html","w")
-        file.write(html)
-        file.close()
+        options = {
+            'page-size': 'A4',
+            'margin-top': '0.75in',
+            'margin-right': '0.75in',
+            'margin-bottom': '0.75in',
+            'margin-left': '0.75in',
+            'zoom': '1.2',
+            'encoding': "UTF-8",
+        }
         title = "PDF/Scontrini/"+str(datetime.now().strftime("%d-%m-%Y_%H-%M-%S"))+".pdf"
-        pdfkit.from_string(html, title, configuration=config)
+        pdfkit.from_string(html, title, configuration=config, options=options)
 
 
 

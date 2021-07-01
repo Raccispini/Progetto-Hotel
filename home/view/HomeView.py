@@ -47,10 +47,6 @@ class HomeView(QMainWindow, Ui_HomeView):
         self.ristorante_window = RistoranteView()
         self.ristorante_window.show()
 
-
-
-
-
     def connectButton(self):
         self.pB_Camere.clicked.connect(lambda: self.openCamere())
         self.pB_Anagrafiche.clicked.connect(lambda: self.openAnagrafiche())
