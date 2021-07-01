@@ -739,7 +739,11 @@ class Ui_BarView(object):
         self.tW_scontrino.verticalHeader().setStretchLastSection(False)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         #self.tW_scontrino.setHorizontalHeaderLabels("Consumazione;Quantità;Costo Unitario;Costo Totale").split(";")
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
