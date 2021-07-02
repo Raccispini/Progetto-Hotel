@@ -1,11 +1,15 @@
 class ModelUtente(object):
-    def __init__(self, nome, cognome, email, cellulare, data_di_nascita):
+    def __init__(self, id, nome, cognome, email, cellulare, data_di_nascita):
+        self.id = id
         self.nome = nome
         self.cognome = cognome
         self.email = email
         self.cellulare = cellulare
         self.data_di_nascita = data_di_nascita
 
+
+    def get_id(self):
+        return self.id
 
     def get_nome(self):
         return self.nome
@@ -22,11 +26,14 @@ class ModelUtente(object):
     def get_data_di_nascita(self):
         return self.data_di_nascita
 
-    def set_username(self, username):
-        self.username = username
+    def set_id(self, id):
+        self.id = id
 
-    def set_password(self, password):
-        self.password = password
+    def set_nome(self, nome):
+        self.nome = nome
+
+    def set_cognome(self, cognome):
+        self.cognome = cognome
 
     def set_email(self, email):
         self.email = email

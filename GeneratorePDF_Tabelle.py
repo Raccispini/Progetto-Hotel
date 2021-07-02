@@ -34,8 +34,8 @@ class GeneratorePDF_Tabelle(object):
         if isinstance(lista[0], ClienteModel):
             title = "PDF/RiepilogoClienti/"
         elif isinstance(lista[0], DipendenteModel):
-            title = "PDF/RiepilogoDipendenti"
+            title = "PDF/RiepilogoDipendenti/"
         elif isinstance(lista[0], FornitoreModel):
-            title = "PDF/RiepilogoFornitori"
+            title = "PDF/RiepilogoFornitori/"
         title += str(datetime.now().strftime("%d-%m-%Y_%H-%M-%S")) + ".pdf"
         pdfkit.from_string(html, title, configuration=config, options=options)
