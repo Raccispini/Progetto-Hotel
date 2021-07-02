@@ -1410,7 +1410,7 @@ class Ui_AnagraficheView(object):
         Anagrafiche_Window.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(Anagrafiche_Window)
-        self.tabWidget_Anagrafiche.setCurrentIndex(2)
+        self.tabWidget_Anagrafiche.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Anagrafiche_Window)
 
     def retranslateUi(self, Anagrafiche_Window):
