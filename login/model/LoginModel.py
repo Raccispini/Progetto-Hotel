@@ -12,7 +12,7 @@ class LoginModel:
 
     def is_utente(self):
         connection = sqlite3.connect("database.db")
-        query = "SELECT * FROM Utenti WHERE Utenti.username=\'%s\' AND Utenti.password=\'%s\';" % (self.username, self.password)
+        query = "SELECT * FROM Dipendenti WHERE Dipendenti.username=\'%s\' AND Dipendenti.password=\'%s\';" % (self.username, self.password)
         database_utenti = connection.execute(query).fetchall()
         connection.close()
         if database_utenti:
