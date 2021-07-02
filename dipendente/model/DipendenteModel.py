@@ -1,8 +1,8 @@
 from utente.model.ModelUtente import ModelUtente
 
-class ModelDipendente(ModelUtente):
+class DipendenteModel(ModelUtente):
     def __init__(self, username, password, nome, cognome, ambito, permessi, email, cellulare, data_di_nascita):
-        super(ModelDipendente, self).__init__(nome, cognome, email, cellulare, data_di_nascita)
+        super(DipendenteModel, self).__init__(nome, cognome, email, cellulare, data_di_nascita)
         self.username = username
         self.password = password
         self.ambito = ambito

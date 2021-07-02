@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow
 from anagrafiche.view.Ui_AnagraficheView import Ui_AnagraficheView
-from GeneratorePDF_Clienti import GeneratorePDF_Clienti
+from GeneratorePDF_Tabelle import GeneratorePDF_Tabelle
 from anagrafiche.controller.AnagraficheController import AnagraficheController
 
 class AnagraficheView(QMainWindow, Ui_AnagraficheView):
@@ -12,9 +12,9 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
 
 
     def connectButton(self):
-        self.PB_CreaPDF.clicked.connect(lambda: self.stampaPDF())
+        self.PB_CreaPDF_Cliente.clicked.connect(lambda: self.stampaPDF("HTML/Tabelle/tabella_clienti.html"))
         self.pB_Salva_Utenti.clicked.connect(lambda: print("Nuovo dipendente salvato"))
 
-    def stampaPDF(self):
-        gen = GeneratorePDF_Clienti()
-        gen.stampa(self.controller.get_lista_clienti())
+    def stampaPDF(self, path):
+        gen = GeneratorePDF_Tabelle()
+        gen.stampa(self.controller.get_lista_clienti(), path)

@@ -1,8 +1,8 @@
 from utente.model.ModelUtente import ModelUtente
 
-class ModelCliente(ModelUtente):
+class ClienteModel(ModelUtente):
     def __init__(self, id, nome, cognome, sesso, data_di_nascita, luogo_di_nascita, residenza, provincia, via, cap, cf, nazione, telefono, cellulare, email, tipo_documento, numero_documento, ente_rilascio, data_rilascio, modalita_pagamento, info_check_in):
-        super(ModelCliente, self).__init__(nome, cognome, email, cellulare, data_di_nascita)
+        super(ClienteModel, self).__init__(nome, cognome, email, cellulare, data_di_nascita)
         self.id = id
         self.sesso = sesso
         self.luogo_di_nascita = luogo_di_nascita
