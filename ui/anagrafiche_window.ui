@@ -66,7 +66,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="documentMode">
        <bool>false</bool>
@@ -1729,6 +1729,34 @@ CheckIn</string>
           </row>
           <column>
            <property name="text">
+            <string>Id</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nome Fornitore</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
             <string>Tipo Fornitura</string>
            </property>
            <property name="font">
@@ -1825,18 +1853,6 @@ CheckIn</string>
           </column>
           <column>
            <property name="text">
-            <string>Tempo pagamento</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-          </column>
-          <column>
-           <property name="text">
             <string>Telefono</string>
            </property>
            <property name="font">
@@ -1861,7 +1877,7 @@ CheckIn</string>
           </column>
           <item row="0" column="0">
            <property name="text">
-            <string>Acqua</string>
+            <string>000001</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1869,7 +1885,7 @@ CheckIn</string>
           </item>
           <item row="0" column="1">
            <property name="text">
-            <string>-</string>
+            <string>Acqua_SPA</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1877,7 +1893,7 @@ CheckIn</string>
           </item>
           <item row="0" column="2">
            <property name="text">
-            <string>0734567821</string>
+            <string>Acqua</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1885,7 +1901,7 @@ CheckIn</string>
           </item>
           <item row="0" column="3">
            <property name="text">
-            <string>acqua@gmail.com</string>
+            <string>-</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1893,7 +1909,7 @@ CheckIn</string>
           </item>
           <item row="0" column="4">
            <property name="text">
-            <string>Via dell'Acqua</string>
+            <string>0734567821</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1901,7 +1917,7 @@ CheckIn</string>
           </item>
           <item row="0" column="5">
            <property name="text">
-            <string>3-2 per l'acqua</string>
+            <string>acqua@gmail.com</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1909,7 +1925,7 @@ CheckIn</string>
           </item>
           <item row="0" column="6">
            <property name="text">
-            <string>boh</string>
+            <string>Via dell'Acqua</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1917,7 +1933,7 @@ CheckIn</string>
           </item>
           <item row="0" column="7">
            <property name="text">
-            <string>contanti</string>
+            <string>3-2 per l'acqua</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1925,7 +1941,7 @@ CheckIn</string>
           </item>
           <item row="0" column="8">
            <property name="text">
-            <string>3 ore</string>
+            <string>boh</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
@@ -1933,13 +1949,21 @@ CheckIn</string>
           </item>
           <item row="0" column="9">
            <property name="text">
-            <string>0390929212</string>
+            <string>contanti</string>
            </property>
            <property name="textAlignment">
             <set>AlignCenter</set>
            </property>
           </item>
           <item row="0" column="10">
+           <property name="text">
+            <string>0390929212</string>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="11">
            <property name="text">
             <string>143135134135</string>
            </property>
@@ -1949,7 +1973,7 @@ CheckIn</string>
           </item>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="3" column="0">
          <layout class="QGridLayout" name="gridLayout_3">
           <property name="leftMargin">
            <number>10</number>
@@ -1995,16 +2019,6 @@ CheckIn</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_27">
-            <property name="text">
-             <string>Tipo fornitura:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
           <item row="1" column="3">
            <widget class="QLineEdit" name="lineEdit_PartitaIVA"/>
           </item>
@@ -2041,9 +2055,6 @@ CheckIn</string>
           <item row="2" column="1">
            <widget class="QLineEdit" name="lineEdit_TelefonoRif"/>
           </item>
-          <item row="0" column="3">
-           <widget class="QLineEdit" name="lineEdit_Indirizzo"/>
-          </item>
           <item row="1" column="1">
            <widget class="QLineEdit" name="lineEdit_TipoFornitura2"/>
           </item>
@@ -2057,9 +2068,6 @@ CheckIn</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit_TipoFornitura"/>
-          </item>
           <item row="1" column="5">
            <widget class="QLineEdit" name="lineEdit_TempoPagamento"/>
           </item>
@@ -2067,16 +2075,6 @@ CheckIn</string>
            <widget class="QLabel" name="label_28">
             <property name="text">
              <string>Telefono:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QLabel" name="label_26">
-            <property name="text">
-             <string>Indirizzo:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2149,6 +2147,46 @@ CheckIn</string>
              </property>
             </item>
            </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_33">
+            <property name="text">
+             <string>Nome fornitore:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_nomeFornitore">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="lineEdit_TipoFornitura"/>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>Indirizzo:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_27">
+            <property name="text">
+             <string>Tipo fornitura:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLineEdit" name="lineEdit_Indirizzo"/>
           </item>
          </layout>
         </item>
@@ -2367,6 +2405,22 @@ CheckIn</string>
           </row>
           <column>
            <property name="text">
+            <string>Id</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
             <string>Cognome</string>
            </property>
            <property name="font">
@@ -2502,7 +2556,7 @@ CheckIn</string>
           </column>
           <item row="0" column="0">
            <property name="text">
-            <string>Corona</string>
+            <string>00001</string>
            </property>
            <property name="font">
             <font>
@@ -2516,7 +2570,7 @@ CheckIn</string>
           </item>
           <item row="0" column="1">
            <property name="text">
-            <string>Fabrizio</string>
+            <string>Corona</string>
            </property>
            <property name="font">
             <font>
@@ -2530,7 +2584,7 @@ CheckIn</string>
           </item>
           <item row="0" column="2">
            <property name="text">
-            <string>admin</string>
+            <string>Fabrizio</string>
            </property>
            <property name="font">
             <font>
@@ -2558,7 +2612,7 @@ CheckIn</string>
           </item>
           <item row="0" column="4">
            <property name="text">
-            <string>Admin</string>
+            <string>admin</string>
            </property>
            <property name="font">
             <font>
@@ -2572,7 +2626,7 @@ CheckIn</string>
           </item>
           <item row="0" column="5">
            <property name="text">
-            <string>Drogato</string>
+            <string>Admin</string>
            </property>
            <property name="font">
             <font>
@@ -2586,6 +2640,20 @@ CheckIn</string>
           </item>
           <item row="0" column="6">
            <property name="text">
+            <string>Drogato</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="7">
+           <property name="text">
             <string>f.corona@gmail.com</string>
            </property>
            <property name="font">
@@ -2595,7 +2663,7 @@ CheckIn</string>
             </font>
            </property>
           </item>
-          <item row="0" column="7">
+          <item row="0" column="8">
            <property name="text">
             <string>3334456637</string>
            </property>
@@ -2606,7 +2674,7 @@ CheckIn</string>
             </font>
            </property>
           </item>
-          <item row="0" column="8">
+          <item row="0" column="9">
            <property name="text">
             <string>18/04/1967</string>
            </property>
