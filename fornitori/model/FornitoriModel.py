@@ -1,122 +1,91 @@
-class ModelCliente():
-    def __init__(self, ):
+class ModelFornitore():
+    def __init__(self, id, nome, fornitura1, fornitura2, riferimento, cellulare_rif, email, indirizzo, iva, mod_pagamento, telefono, fax):
         self.id = id
-        self.sesso = sesso
-        self.luogo_di_nascita = luogo_di_nascita
-        self.residenza = residenza
-        self.provincia = provincia
-        self.via = via
-        self.cap = cap
-        self.cf = cf
-        self.nazione = nazione
+        self.nome = nome
+        self.fornitura1 = fornitura1
+        self.fornitura2 = fornitura2
+        self.riferimento = riferimento
+        self.cellulare_rif = cellulare_rif
+        self.email = email
+        self.indirizzo = indirizzo
+        self.iva = iva
+        self.mod_pagamento = mod_pagamento
         self.telefono = telefono
-        self.tipo_documento = tipo_documento
-        self.numero_documento = numero_documento
-        self.ente_rilascio = ente_rilascio
-        self.data_rilascio = data_rilascio
-        self.modalita_pagamento = modalita_pagamento
-        self.info_check_in = info_check_in
+        self.fax = fax
 
     def get_id(self):
         return self.id
 
-    def get_sesso(self):
-        return self.sesso
+    def get_nome(self):
+        return self.nome
 
-    def get_luogo_di_nascita(self):
-        return self.luogo_di_nascita
+    def get_fornitura1(self):
+        return self.fornitura1
 
-    def get_residenza(self):
-        return self.residenza
+    def get_fornitura2(self):
+        return self.fornitura2
 
-    def get_provincia(self):
-        return self.provincia
+    def get_riferimento(self):
+        return self.riferimento
 
-    def get_via(self):
-        return self.via
+    def get_cellulare_rif(self):
+        return self.cellulare_rif
 
-    def get_cap(self):
-        return self.cap
+    def get_email(self):
+        return self.email
 
-    def get_cf(self):
-        return self.cf
+    def get_indirizzo(self):
+        return self.indirizzo
 
-    def get_nazione(self):
-        return self.nazione
+    def get_iva(self):
+        return self.iva
+
+    def get_mod_pagamento(self):
+        return self.mod_pagamento
 
     def get_telefono(self):
         return self.telefono
 
-    def get_tipo_documento(self):
-        return self.tipo_documento
-
-    def get_numero_documento(self):
-        return self.numero_documento
-
-    def get_ente_rilascio(self):
-        return self.ente_rilascio
-
-    def get_data_rilascio(self):
-        return self.data_rilascio
-
-    def get_modalita_pagamento(self):
-        return self.modalita_pagamento
-
-    def get_info_check_in(self):
-        return self.info_check_in
+    def get_fax(self):
+        return self.fax
 
     def set_id(self, id):
         self.id = id
 
-    def set_sesso(self, sesso):
-        self.sesso = sesso
+    def set_nome(self, nome):
+        self.nome = nome
 
-    def set_luogo_di_nascita(self, luogo_di_nascita):
-        self.luogo_di_nascita = luogo_di_nascita
+    def set_fornitura1(self, fornitura1):
+        self.fornitura1 = fornitura1
 
-    def set_residenza(self, residenza):
-        self.residenza = residenza
+    def set_fornitura2(self, fornitura2):
+        self.fornitura2 = fornitura2
 
-    def set_provincia(self, provincia):
-        self.provincia = provincia
+    def set_riferimento(self, riferimento):
+        self.riferimento = riferimento
 
-    def set_via(self, via):
-        self.via = via
+    def set_cellulare_rif(self, cellulare_rif):
+        self.cellulare_rif = cellulare_rif
 
-    def set_cap(self, cap):
-        self.cap = cap
+    def set_email(self, email):
+        self.email = email
 
-    def set_cf(self, cf):
-        self.cf = cf
+    def set_indirizzo(self, indirizzo):
+        self.indirizzo = indirizzo
 
-    def set_nazione(self, nazione):
-        self.nazione = nazione
+    def set_iva(self, iva):
+        self.iva = iva
+
+    def set_mod_pagamento(self, mod_pagamento):
+        self.mod_pagamento = mod_pagamento
 
     def set_telefono(self, telefono):
         self.telefono = telefono
 
-    def set_tipo_documento(self, tipo_documento):
-        self.tipo_documento = tipo_documento
-
-    def set_numero_documento(self, numero_documento):
-        self.numero_documento = numero_documento
-
-    def set_ente_rilascio(self, ente_rilascio):
-        self.ente_rilascio = ente_rilascio
-
-    def set_data_rilascio(self, data_rilascio):
-        self.data_rilascio = data_rilascio
-
-    def set_modalita_pagamento(self, modalita_pagamento):
-        self.modalita_pagamento = modalita_pagamento
-
-    def set_info_check_in(self, info_check_in):
-        self.info_check_in = info_check_in
+    def set_fax(self, fax):
+        self.fax = fax
 
     def __str__(self):
-        return (f"""<tr><td> {self.id}</td><td>{self.nome}</td><td>{self.cognome}</td><td>{self.sesso}</td><td>
-        {self.data_di_nascita}</td><td>{self.luogo_di_nascita}</td><td>{self.residenza}</td><td>{self.provincia}
-        </td><td>{self.via}</td><td>{self.cap}</td><td>{self.cf}</td><td>{self.nazione}</td><td> {self.telefono}
-        </td><td>{self.get_cellulare()}</td><td>{self.email}</td><td>{self.tipo_documento}</td><td>{self.numero_documento}
-        </td><td>{self.ente_rilascio}</td><td>{self.get_data_rilascio()}</td><td>{self.modalita_pagamento}
-        </td><td style=\"min-width:150px;\">{self.info_check_in} </td></tr>""")
+        return (f"""<tr><td> {self.id}</td><td>{self.nome}</td><td>{self.fornitura1}</td><td>{self.fornitura2}</td><td>
+        {self.riferimento}</td><td>{self.cellulare_rif}</td><td>{self.email}</td><td>{self.indirizzo}
+        </td><td>{self.iva}</td><td>{self.mod_pagamento}</td><td>{self.telefono}</td><td>{self.fax}</td></tr>""")

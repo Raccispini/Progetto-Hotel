@@ -31,3 +31,8 @@ class ModelDipendente(ModelUtente):
 
     def set_permessi(self, permessi):
         self.permessi = permessi
+
+    def __str__(self):
+        return (f"""<tr><td> {self.id}</td><td>{self.username}</td><td>{self.password}</td><td>{self.nome}</td><td>
+        {self.cognome}</td><td>{self.email}</td><td>{self.cellulare}</td><td>{self.data_di_nascita}
+        </td><td>{self.ambito}</td><td>{self.permessi}</td></tr>""")

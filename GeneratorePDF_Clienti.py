@@ -8,7 +8,7 @@ class GeneratorePDF_Clienti(object):
     def stampa(self,lista):
         path_wkhtmltopdf = r'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'
         config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
-        Html_file = open("tabella.html", "r")
+        Html_file = open("tabella_clienti.html", "r")
         html= Html_file.read()
 
         #per ogni cliente della lista richiama il metodo string dell'oggetto cliente
