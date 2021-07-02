@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1419</width>
+    <width>1315</width>
     <height>821</height>
    </rect>
   </property>
@@ -25,7 +25,7 @@
     <property name="rightMargin">
      <number>3</number>
     </property>
-    <item row="0" column="1">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget_Anagrafiche">
       <property name="enabled">
        <bool>true</bool>
@@ -220,7 +220,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="PB_CreaPDF_Cliente">
+           <widget class="QPushButton" name="PB_CreaPDF">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -315,32 +315,32 @@
           </column>
           <column>
            <property name="text">
-            <string>DatadiNascita</string>
+            <string>Data di Nascita</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>LuogodiNascita</string>
+            <string>Luogo di Nascita</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>LuogoResidenza</string>
+            <string>Luogo di Residenza</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>ProvResidenza</string>
+            <string>Provincia di Residenza</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>ViaResidenza</string>
+            <string>Via di Residenza</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>CapResidenza</string>
+            <string>CAP</string>
            </property>
           </column>
           <column>
@@ -375,32 +375,37 @@
           </column>
           <column>
            <property name="text">
-            <string>TipoDocumento</string>
+            <string>Tipo Documento</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>NumeroDocumento</string>
+            <string>Numero Documento</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>RilasciatoDa</string>
+            <string>Ente di Rilascio</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>RilasciatoIl</string>
+            <string>Data Rilascio</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>ModPagamento</string>
+            <string>Data Scadenza</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>InfoCheckIn</string>
+            <string>Modalità di Pagamento</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Info CheckIn</string>
            </property>
           </column>
           <item row="0" column="0">
@@ -743,7 +748,7 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
-          <item row="0" column="20">
+          <item row="0" column="21">
            <property name="text">
             <string>Carta</string>
            </property>
@@ -760,7 +765,7 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
-          <item row="0" column="21">
+          <item row="0" column="22">
            <property name="text">
             <string>Il cliente ha richiesto di un aiuto per il trasporto dei bagagli in camera</string>
            </property>
@@ -1259,6 +1264,53 @@ da </string>
             </property>
            </widget>
           </item>
+          <item row="7" column="4">
+           <widget class="QLabel" name="label_22">
+            <property name="text">
+             <string>Modalità di 
+Pagamento</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="6">
+           <widget class="QComboBox" name="comboBox_ModPag_Clienti">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAtTop</enum>
+            </property>
+            <property name="placeholderText" stdset="0">
+             <string>Scegli una modalità</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Assegno</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Carta</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Contanti</string>
+             </property>
+            </item>
+           </widget>
+          </item>
           <item row="4" column="3">
            <spacer name="verticalSpacer">
             <property name="orientation">
@@ -1424,53 +1476,6 @@ il</string>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
-           </widget>
-          </item>
-          <item row="7" column="2">
-           <widget class="QLabel" name="label_22">
-            <property name="text">
-             <string>Modalità di 
-Pagamento</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="3">
-           <widget class="QComboBox" name="comboBox_ModPag_Clienti">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="insertPolicy">
-             <enum>QComboBox::InsertAtTop</enum>
-            </property>
-            <property name="placeholderText" stdset="0">
-             <string>Scegli una modalità</string>
-            </property>
-            <item>
-             <property name="text">
-              <string>Assegno</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Carta</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Contanti</string>
-             </property>
-            </item>
            </widget>
           </item>
          </layout>
@@ -1685,7 +1690,7 @@ CheckIn</string>
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>Crea PDF</string>
+             <string>CreaPDF</string>
             </property>
            </widget>
           </item>
@@ -1711,7 +1716,10 @@ CheckIn</string>
            <enum>QAbstractItemView::SelectRows</enum>
           </property>
           <attribute name="horizontalHeaderDefaultSectionSize">
-           <number>180</number>
+           <number>183</number>
+          </attribute>
+          <attribute name="horizontalHeaderHighlightSections">
+           <bool>true</bool>
           </attribute>
           <attribute name="horizontalHeaderStretchLastSection">
            <bool>true</bool>
@@ -2197,7 +2205,116 @@ CheckIn</string>
         <string>Utenti</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
-        <item row="2" column="0">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QPushButton" name="pB_Aggiungi_Utenti">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Aggiungi</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_Modifica_Utenti">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Modifica</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_Elimina_Utenti">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Elimina</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_Salva_Utenti">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Salva</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_Annulla_Utenti">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Annulla</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
          <widget class="QTableWidget" name="tableWidget_Utenti">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -2312,36 +2429,6 @@ CheckIn</string>
           </column>
           <column>
            <property name="text">
-            <string>Cognome</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="textAlignment">
-            <set>AlignCenter</set>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Nome</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="textAlignment">
-            <set>AlignCenter</set>
-           </property>
-          </column>
-          <column>
-           <property name="text">
             <string>Username</string>
            </property>
            <property name="font">
@@ -2372,7 +2459,7 @@ CheckIn</string>
           </column>
           <column>
            <property name="text">
-            <string>Permessi</string>
+            <string>Nome</string>
            </property>
            <property name="font">
             <font>
@@ -2387,7 +2474,7 @@ CheckIn</string>
           </column>
           <column>
            <property name="text">
-            <string>Ambito</string>
+            <string>Cognome</string>
            </property>
            <property name="font">
             <font>
@@ -2445,6 +2532,36 @@ CheckIn</string>
             <set>AlignCenter</set>
            </property>
           </column>
+          <column>
+           <property name="text">
+            <string>Ambito</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Permessi</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
           <item row="0" column="0">
            <property name="text">
             <string>00001</string>
@@ -2461,7 +2578,7 @@ CheckIn</string>
           </item>
           <item row="0" column="1">
            <property name="text">
-            <string>Corona</string>
+            <string>admin</string>
            </property>
            <property name="font">
             <font>
@@ -2475,7 +2592,7 @@ CheckIn</string>
           </item>
           <item row="0" column="2">
            <property name="text">
-            <string>Fabrizio</string>
+            <string>admin</string>
            </property>
            <property name="font">
             <font>
@@ -2489,7 +2606,7 @@ CheckIn</string>
           </item>
           <item row="0" column="3">
            <property name="text">
-            <string>admin</string>
+            <string>Fabrizio</string>
            </property>
            <property name="font">
             <font>
@@ -2503,7 +2620,7 @@ CheckIn</string>
           </item>
           <item row="0" column="4">
            <property name="text">
-            <string>admin</string>
+            <string>Corona</string>
            </property>
            <property name="font">
             <font>
@@ -2517,7 +2634,7 @@ CheckIn</string>
           </item>
           <item row="0" column="5">
            <property name="text">
-            <string>Admin</string>
+            <string>f.corona@gmail.com</string>
            </property>
            <property name="font">
             <font>
@@ -2525,11 +2642,30 @@ CheckIn</string>
              <bold>false</bold>
             </font>
            </property>
-           <property name="textAlignment">
-            <set>AlignCenter</set>
-           </property>
           </item>
           <item row="0" column="6">
+           <property name="text">
+            <string>3334456637</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </item>
+          <item row="0" column="7">
+           <property name="text">
+            <string>18/04/1967</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </item>
+          <item row="0" column="8">
            <property name="text">
             <string>Drogato</string>
            </property>
@@ -2543,42 +2679,23 @@ CheckIn</string>
             <set>AlignCenter</set>
            </property>
           </item>
-          <item row="0" column="7">
-           <property name="text">
-            <string>f.corona@gmail.com</string>
-           </property>
-           <property name="font">
-            <font>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-          </item>
-          <item row="0" column="8">
-           <property name="text">
-            <string>3334456637</string>
-           </property>
-           <property name="font">
-            <font>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-          </item>
           <item row="0" column="9">
            <property name="text">
-            <string>18/04/1967</string>
+            <string>Admin</string>
            </property>
            <property name="font">
             <font>
              <weight>50</weight>
              <bold>false</bold>
             </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
            </property>
           </item>
          </widget>
         </item>
-        <item row="3" column="0">
+        <item row="2" column="0">
          <layout class="QGridLayout" name="gridLayout_5">
           <property name="leftMargin">
            <number>15</number>
@@ -2832,129 +2949,6 @@ CheckIn</string>
               <weight>50</weight>
               <bold>false</bold>
              </font>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="1" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_7">
-          <item>
-           <widget class="QPushButton" name="pB_Aggiungi_Utenti">
-            <property name="minimumSize">
-             <size>
-              <width>180</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>Aggiungi</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pB_Modifica_Utenti">
-            <property name="minimumSize">
-             <size>
-              <width>180</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>Modifica</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pB_Elimina_Utenti">
-            <property name="minimumSize">
-             <size>
-              <width>180</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>Elimina</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pB_Ricerca_Utenti">
-            <property name="text">
-             <string>Ricerca</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pB_Salva_Utenti">
-            <property name="minimumSize">
-             <size>
-              <width>180</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>Salva</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pB_Annulla_Utenti">
-            <property name="minimumSize">
-             <size>
-              <width>180</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>Annulla</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pB_CreaPDF_Utenti">
-            <property name="text">
-             <string>Crea PDF</string>
             </property>
            </widget>
           </item>
