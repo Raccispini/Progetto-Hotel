@@ -1,14 +1,21 @@
 import sqlite3
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from anagrafiche.view.Ui_AnagraficheView import Ui_AnagraficheView
 from GeneratorePDF_Tabelle import GeneratorePDF_Tabelle
 from anagrafiche.controller.AnagraficheController import AnagraficheController
+from cliente.model.ClienteModel import ClienteModel
+from dipendente.model.DipendenteModel import DipendenteModel
+from fornitore.model.FornitoreModel import FornitoreModel
+
 
 class AnagraficheView(QMainWindow, Ui_AnagraficheView):
     def __init__(self, parent=None):
         super(AnagraficheView, self).__init__(parent)
         self.setupUi(self)
         self.controller = AnagraficheController()
+        self.cliente = ClienteModel()
+        self.fornitore = FornitoreModel()
+        self.dipendente = DipendenteModel()
         self.connectButton()
 
 #========================================================================================================================
@@ -52,23 +59,38 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
 
 ###########################################METODI PER CLIENTE###########################################################
     def add_cliente(self):
-        db = sqlite3.connect("database.db")
-        query = """INSERT INTO Clienti(ID, nome, cognome, sesso, data_nascita, luogo_nascita, residenza,  
-                                       provincia, via, CAP, CF, nazione, telefono, cellulare, email, documento,
-                                        numero_documento, ente_rilascio, data_rilascio, data_scadenza,
-                                        modalita_pagamento, info_checkin) VALUES ('prova','prova','prova','prova', null 
-                                        ,'prova','prova','prova','prova','prova','prova','prova','prova','prova','prova'
-                                        ,'prova',12,'prova',null,null,'prova','prova');"""
-        print(query)
-        id = db.execute("SELECT MAX(ID) FROM Clienti").fetchone()
+        self.cliente.set_nome(self.lineEdit_nome_Cliente.text())
+        self.cliente.set_cognome(self.lineEdit_Cognome_Cliente)
+        self.cliente.set_sesso(self.comboBox_sesso_Cliente.currentText())
+        self.cliente.set_data_di_nascita(self.)
+        self.cliente.set_luogo_di_nascita()
+        self.cliente.set_residenza()
+        self.cliente.set_provincia()
+        self.cliente.set_via()
+        self.cliente.set_cap()
+        self.cliente.set_cf()
+        self.cliente.set_nazione()
+        self.cliente.set_telefono()
+        self.cliente.set_cellulare()
+        self.cliente.set_email()
+        self.cliente.set_tipo_documento()
+        self.cliente.set_numero_documento()
+        self.cliente.set_ente_rilascio()
+        self.cliente.set_data_rilascio()
+        self.cliente.set_data_scadenza()
+        self.cliente.set_modalita_pagamento()
+        self.cliente.set_info_check_in()
+        if self.cliente.iscompleto():
+            self.controller.add_cliente(self.cliente)
+        else:
+            QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
 
-        print(int(id[0]))
-        id = int(id[0])+1
-        nuovo_id = str(id).zfill(10)
-        print(nuovo_id)
-        #db.execute(query)
-        db.commit()
 
+
+
+
+    def take_data_from_label(self, interfaccia):
+        return interfaccia.lineEdit_nome_Cliente.text()
 
 
     def mod_cliente(self):

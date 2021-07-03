@@ -1,5 +1,5 @@
 class FornitoreModel():
-    def __init__(self, id, nome, fornitura1, fornitura2, riferimento, cellulare_rif, email, indirizzo, iva, mod_pagamento, telefono, fax):
+    def __init__(self, id=0, nome="", fornitura1="", fornitura2="", riferimento="", cellulare_rif="", email="", indirizzo="", iva="", mod_pagamento="", telefono="", fax=""):
         self.id = id
         self.nome = nome
         self.fornitura1 = fornitura1

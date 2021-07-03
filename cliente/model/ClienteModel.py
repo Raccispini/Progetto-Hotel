@@ -1,7 +1,7 @@
 from utente.model.ModelUtente import ModelUtente
 
 class ClienteModel(ModelUtente):
-    def __init__(self,id, nome, cognome, sesso, data_di_nascita, luogo_di_nascita, residenza, provincia, via, cap, cf, nazione, telefono, cellulare, email, tipo_documento, numero_documento, ente_rilascio, data_rilascio, data_scadenza, modalita_pagamento, info_check_in):
+    def __init__(self,id=0, nome="", cognome="", sesso="", data_di_nascita = "", luogo_di_nascita="", residenza="", provincia="", via="", cap="", cf="", nazione="", telefono="", cellulare="", email="", tipo_documento="", numero_documento="", ente_rilascio="", data_rilascio="", data_scadenza="", modalita_pagamento="", info_check_in=""):
         super(ClienteModel, self).__init__(id, nome, cognome, email, cellulare, data_di_nascita)
         self.sesso = sesso
         self.luogo_di_nascita = luogo_di_nascita
@@ -19,6 +19,18 @@ class ClienteModel(ModelUtente):
         self.data_scadenza = data_scadenza
         self.modalita_pagamento = modalita_pagamento
         self.info_check_in = info_check_in
+
+    def iscompleto(self):
+        if (self.nome!="" and self.cognome!="" and self.sesso!="" and self.data_di_nascita!=""
+            and self.luogo_di_nascita!="" and self.residenza!="" and self.provincia!="" and self.via!="" and self.cap!=""
+            and self.cf!="" and self.nazione!="" and self.telefono!="" and self.cellulare!=""and self.email!="" and
+            self.tipo_documento!="" and self.numero_documento!="" and self.ente_rilascio!="" and self.data_rilascio!=""
+            and self.data_scadenza!="" and self.modalita_pagamento!="" and self.info_check_in!=""):
+
+            return True
+        else:
+            return False
+
 
     def get_sesso(self):
         return self.sesso

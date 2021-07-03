@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1315</width>
-    <height>821</height>
+    <height>837</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -66,7 +66,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <property name="documentMode">
        <bool>false</bool>
@@ -2963,14 +2963,9 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="5">
-           <widget class="QLineEdit" name="lE_DataNascitaDipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
+           <widget class="QDateEdit" name="dateEdit">
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>

@@ -1,7 +1,7 @@
 from utente.model.ModelUtente import ModelUtente
 
 class DipendenteModel(ModelUtente):
-    def __init__(self, id, username, password, nome, cognome, email, cellulare, data_di_nascita, ambito, permessi):
+    def __init__(self, id=0, username="", password="", nome="", cognome="", email="", cellulare="", data_di_nascita="", ambito="", permessi=""):
         super(DipendenteModel, self).__init__(id, nome, cognome, email, cellulare, data_di_nascita)
         self.username = username
         self.password = password
