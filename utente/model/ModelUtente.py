@@ -36,3 +36,4 @@ class ModelUtente(object):
 
     def set_data_di_nascita(self, data_di_nascita):
         self.data_di_nascita = data_di_nascita
+

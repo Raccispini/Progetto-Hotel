@@ -1,40 +1,25 @@
 import pdfkit
 from datetime import datetime
 class Scontrini(object):
-    #formato lista : (oggetto,quantita,prezzo)
     def stampa(self,lista,tot):
-        print("prova")
         path_wkhtmltopdf = r'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'
         config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
-
         html = "<html><head><meta charset=\"utf-8\"><style>.leftColumn{float:left;}.rightColumn{float:right;}</style></head><body><h1 align = Center>Scontrino</h1><table style=\"width: 100%;\">"
         for i in lista:
-            html += "<tr><td class = \"leftColumn\">"+str(i[0])+" x"+str(i[1])+"</td>"
+            html += "<tr><td class = \"leftColumn\">"+ str(i[0])+"x"+str(i[1])+"</td>"
             html += "<td class = \"rightColumn\">"+str(i[2])+" €</td></tr>"
         html += "<tr><td class = \"rightColumn\"><b>Totale</b></td><td class = \"rightColumn\">"+str(tot)+"</td></tr></table></body></html>"
-        file = open("test.html","w")
-        file.write(html)
-        file.close()
-        now = datetime.now()
         options = {
-            'page-size': 'Letter',
+            'page-size': 'A4',
             'margin-top': '0.75in',
-            'margin-right': '1in',
-            'margin-bottom': '1in',
+            'margin-right': '0.75in',
+            'margin-bottom': '0.75in',
             'margin-left': '0.75in',
+            'zoom': '1.2',
             'encoding': "UTF-8",
-            'custom-header': [
-                ('Accept-Encoding', 'utf8')
-            ],
-            'cookie': [
-                ('cookie-name1', 'cookie-value1'),
-                ('cookie-name2', 'cookie-value2'),
-            ],
-            'no-outline': None
         }
-        title = "Scontrini\\"+str(datetime.now().strftime("%d-%m-%Y_%H-%M-%S"))+".pdf"
-        #print(title)
-        pdfkit.from_string(html, title, configuration=config)
+        title = "PDF/Scontrini/"+str(datetime.now().strftime("%d-%m-%Y_%H-%M-%S"))+".pdf"
+        pdfkit.from_string(html, title, configuration=config, options=options)
 
 
 

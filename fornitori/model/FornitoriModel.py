@@ -1,8 +1,5 @@
-from utente.model.ModelUtente import ModelUtente
-
-class ModelCliente(ModelUtente):
-    def __init__(self, id, nome, cognome, sesso, data_di_nascita, luogo_di_nascita, residenza, provincia, via, cap, cf, nazione, telefono, cellulare, email, tipo_documento, numero_documento, ente_rilascio, data_rilascio, modalita_pagamento, info_check_in):
-        super(ModelCliente, self).__init__(nome, cognome, email, cellulare, data_di_nascita)
+class ModelCliente():
+    def __init__(self, ):
         self.id = id
         self.sesso = sesso
         self.luogo_di_nascita = luogo_di_nascita
@@ -117,4 +114,9 @@ class ModelCliente(ModelUtente):
         self.info_check_in = info_check_in
 
     def __str__(self):
-        return (f' Cliente {self.id} '.center(100, '-') + f'\nID: {self.id} |  ')
+        return (f"""<tr><td> {self.id}</td><td>{self.nome}</td><td>{self.cognome}</td><td>{self.sesso}</td><td>
+        {self.data_di_nascita}</td><td>{self.luogo_di_nascita}</td><td>{self.residenza}</td><td>{self.provincia}
+        </td><td>{self.via}</td><td>{self.cap}</td><td>{self.cf}</td><td>{self.nazione}</td><td> {self.telefono}
+        </td><td>{self.get_cellulare()}</td><td>{self.email}</td><td>{self.tipo_documento}</td><td>{self.numero_documento}
+        </td><td>{self.ente_rilascio}</td><td>{self.get_data_rilascio()}</td><td>{self.modalita_pagamento}
+        </td><td style=\"min-width:150px;\">{self.info_check_in} </td></tr>""")
