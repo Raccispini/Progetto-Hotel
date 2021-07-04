@@ -21,11 +21,11 @@ class CamereView(QMainWindow, Ui_CamereView):
             if numero != -1:
                 query += "Camere.numeroCamera = "+str(numero)+" and "
             if matrimoniali != -1:
-                query += "Camere.matrimoniale >= "+str(matrimoniali)+"' and "
+                query += "Camere.matrimoniale >= "+str(matrimoniali)+" and "
             if singoli != -1:
-                query += "Camere.numeroSingoli >= '"+str(singoli)+"' and "
+                query += "Camere.numeroSingoli >= "+str(singoli)+" and "
             if tipo != -1:
-                query += "Camere.allestimento = '"+str(tipo) +"' and "
+                query += "Camere.allestimento = "+str(tipo) +" and "
             if aria != -1 :
                 query += "Camere.ariaCondizionata = "+str(aria)+" and "
             if animale != -1:

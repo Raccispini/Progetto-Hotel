@@ -1,5 +1,4 @@
 import sqlite3
-from cliente.model.ClienteModel import ModelCliente
 from cliente.model.ClienteModel import ClienteModel
 from dipendente.model.DipendenteModel import DipendenteModel
 from fornitore.model.FornitoreModel import FornitoreModel
@@ -16,41 +15,12 @@ class AnagraficheModel():
         self.get_listadipendenti()
 
     def get_listaclienti(self):
-        con = sqlite3.connect("database.db")
-        cursor = con.cursor()
-        tab_clienti = cursor.execute('SELECT * FROM Clienti;').fetchall()
         tab_clienti = self.db.execute('SELECT * FROM Clienti;').fetchall()
         for cliente in tab_clienti:
             self.listaclienti.append(ClienteModel(cliente[0], cliente[1], cliente[2], cliente[3], cliente[4],
                                                   cliente[5], cliente[6], cliente[7], cliente[8], cliente[9],
                                                   cliente[10], cliente[11], cliente[12], cliente[13], cliente[14],
                                                   cliente[15], cliente[16], cliente[17], cliente[18], cliente[19],
-                                                  cliente[20]))
-
-    def get_listafornitori(self):
-        con = sqlite3.connect("database.db")
-        cursor = con.cursor()
-        tab_clienti = cursor.execute('SELECT * FROM Clienti;').fetchall()
-        for cliente in tab_clienti:
-            self.listaclienti.append(ModelCliente(cliente[0], cliente[1], cliente[2],cliente[3], cliente[4],
-                                                  cliente[5],cliente[6], cliente[7], cliente[8], cliente[9],
-                                                  cliente[10], cliente[11], cliente[12], cliente[13], cliente[14],
-                                                  cliente[15], cliente[16], cliente[17], cliente[18], cliente[19],
-                                                  cliente[20]))
-
-    def get_listadipendenti(self):
-        con = sqlite3.connect("database.db")
-        cursor = con.cursor()
-        tab_clienti = cursor.execute('SELECT * FROM Clienti;').fetchall()
-        for cliente in tab_clienti:
-            self.listaclienti.append(ModelCliente(cliente[0], cliente[1], cliente[2],cliente[3], cliente[4],
-                                                  cliente[5],cliente[6], cliente[7], cliente[8], cliente[9],
-                                                  cliente[10], cliente[11], cliente[12], cliente[13], cliente[14],
-                                                  cliente[15], cliente[16], cliente[17], cliente[18], cliente[19],
-                                                  cliente[20]))
-
-
-
                                                   cliente[20], cliente[21]))
     def get_listafornitori(self):
         tab_fornitori = self.db.execute('SELECT * FROM Fornitori;').fetchall()
