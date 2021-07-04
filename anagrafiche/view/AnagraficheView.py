@@ -1,4 +1,3 @@
-import sqlite3
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from anagrafiche.view.Ui_AnagraficheView import Ui_AnagraficheView
 from GeneratorePDF_Tabelle import GeneratorePDF_Tabelle
@@ -24,32 +23,32 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
     def connectButton(self):
 
         ########################################PULSANTI CLIENTE#######################################################
-        self.pB_add_Cliente.clicked.connect(lambda: self.add_cliente())
-        self.pB_modifica_Cliente.clicked.connect(lambda: self.mod_cliente())
-        self.pB_Elimina_Cliente.clicked.connect(lambda: self.elimina_cliente())
+        self.pB_aggiungi_Cliente.clicked.connect(lambda: self.aggiungi_cliente())
+        self.pB_modifica_Cliente.clicked.connect(lambda: self.modifica_cliente())
+        self.pB_elimina_Cliente.clicked.connect(lambda: self.elimina_cliente())
         self.pB_ricerca_Cliente.clicked.connect(lambda: self.ricerca_cliente())
         self.pB_salva_Cliente.clicked.connect(lambda: self.salva_cliente())
-        self.pB_Annulla_Cliente.clicked.connect(lambda: self.annulla_cliente())
-        self.pB_CreaPDF_Cliente.clicked.connect(lambda: self.stampaPDF(self.controller.get_listaclienti() ,
+        self.pB_annulla_Cliente.clicked.connect(lambda: self.annulla_cliente())
+        self.pB_creaPDF_Cliente.clicked.connect(lambda: self.stampaPDF(self.controller.get_listaclienti() ,
                                                                        "HTML/Tabelle/tabella_clienti.html"))
 
         ########################################PULSANTI DIPENDENTE######################################################
-        self.pB_Aggiungi_Dipendente.clicked.connect(lambda: self.add_dipendente())
-        self.pB_Modifica_Dipendente.clicked.connect(lambda: self.mod_dipendente())
-        self.pB_Elimina_Dipendente.clicked.connect(lambda: self.elimina_dipendente())
-        self.pB_Ricerca_Dipendente.clicked.connect(lambda: self.ricerca_dipendente())
-        self.pB_Salva_Dipendente.clicked.connect(lambda: self.salva_dipendente())
-        self.pB_Annulla_Dipendente.clicked.connect(lambda: self.annulla_dipendente())
-        self.pB_CreaPDF_Dipendente.clicked.connect(lambda: self.stampaPDF(self.controller.get_listadipendenti(),
+        self.pB_aggiungi_Dipendente.clicked.connect(lambda: self.aggiungi_dipendente())
+        self.pB_modifica_Dipendente.clicked.connect(lambda: self.modifica_dipendente())
+        self.pB_elimina_Dipendente.clicked.connect(lambda: self.elimina_dipendente())
+        self.pB_ricerca_Dipendente.clicked.connect(lambda: self.ricerca_dipendente())
+        self.pB_salva_Dipendente.clicked.connect(lambda: self.salva_dipendente())
+        self.pB_annulla_Dipendente.clicked.connect(lambda: self.annulla_dipendente())
+        self.pB_creaPDF_Dipendente.clicked.connect(lambda: self.stampaPDF(self.controller.get_listadipendenti(),
                                                                           "HTML/Tabelle/tabella_dipendenti.html"))
         #######################################PULSANTI FORNITORE######################################################
-        self.pB_add_Fornitore.clicked.connect(lambda: self.add_fornitore())
-        self.pB_modifica_Fornitore.clicked.connect(lambda: self.mod_fornitore())
-        self.pB_Elimina_Fornitore.clicked.connect(lambda: self.elimina_fornitore())
+        self.pB_aggiungi_Fornitore.clicked.connect(lambda: self.aggiungi_fornitore())
+        self.pB_modifica_Fornitore.clicked.connect(lambda: self.modifica_fornitore())
+        self.pB_elimina_Fornitore.clicked.connect(lambda: self.elimina_fornitore())
         self.pB_ricerca_Fornitore.clicked.connect(lambda: self.ricerca_fornitore())
         self.pB_salva_Fornitore.clicked.connect(lambda: self.salva_fornitore())
-        self.pB_Annulla_Fornitore.clicked.connect(lambda: self.annulla_fornitore())
-        self.pB_CreaPDF_Fornitore.clicked.connect(lambda: self.stampaPDF(self.controller.get_listafornitori(),
+        self.pB_annulla_Fornitore.clicked.connect(lambda: self.annulla_fornitore())
+        self.pB_creaPDF_Fornitore.clicked.connect(lambda: self.stampaPDF(self.controller.get_listafornitori(),
                                                                          "HTML/Tabelle/tabella_fornitori.html"))
 
 
@@ -58,42 +57,39 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
 
 
 ###########################################METODI PER CLIENTE###########################################################
-    def add_cliente(self):
-        self.cliente.set_nome(self.lineEdit_nome_Cliente.text())
-        self.cliente.set_cognome(self.lineEdit_Cognome_Cliente)
-        self.cliente.set_sesso(self.comboBox_sesso_Cliente.currentText())
-        self.cliente.set_data_di_nascita(self.)
-        self.cliente.set_luogo_di_nascita()
-        self.cliente.set_residenza()
-        self.cliente.set_provincia()
-        self.cliente.set_via()
-        self.cliente.set_cap()
-        self.cliente.set_cf()
-        self.cliente.set_nazione()
-        self.cliente.set_telefono()
-        self.cliente.set_cellulare()
-        self.cliente.set_email()
-        self.cliente.set_tipo_documento()
-        self.cliente.set_numero_documento()
-        self.cliente.set_ente_rilascio()
-        self.cliente.set_data_rilascio()
-        self.cliente.set_data_scadenza()
-        self.cliente.set_modalita_pagamento()
-        self.cliente.set_info_check_in()
+    def aggiungi_cliente(self):
+        self.cliente.set_nome(self.lineE_nome_Cliente.text())
+        self.cliente.set_cognome(self.lineE_cognome_Cliente.text())
+        self.cliente.set_sesso(self.cB_sesso_Cliente.currentText())
+        self.cliente.set_data_di_nascita(self.dE_nascita_Cliente.date())
+        self.cliente.set_luogo_di_nascita(self.lineE_nascita_Cliente.text())
+        self.cliente.set_residenza(self.lineE_residenza_Cliente.text())
+        self.cliente.set_provincia(self.lineE_provincia_Cliente.text())
+        self.cliente.set_via(self.lineE_via_Cliente.text())
+        self.cliente.set_cap(self.lineE_cap_Cliente.text())
+        self.cliente.set_cf(self.lineE_cf_Cliente.text())
+        self.cliente.set_nazione(self.lineE_nazione_Cliente.text())
+        self.cliente.set_telefono(self.lineE_telefono_Cliente.text())
+        self.cliente.set_cellulare(self.lineE_cellulare_Cliente.text())
+        self.cliente.set_email(self.lineE_email_Cliente.text())
+        self.cliente.set_tipo_documento(self.cB_documento_Cliente.currentText())
+        self.cliente.set_numero_documento(self.lineE_numeroDoc_Cliente.text())
+        self.cliente.set_ente_rilascio(self.lineE_enteRilascio_Cliente.text())
+        self.cliente.set_data_rilascio(self.dE_dataRilascio_Cliente.date())
+        self.cliente.set_data_scadenza(self.dE_dataScadenza_Cliente.date())
+        self.cliente.set_modalita_pagamento(self.cB_modalitaPag_Cliente.currentText())
+        self.cliente.set_info_check_in(self.lineE_infoCheckin_Cliente.text())
         if self.cliente.iscompleto():
             self.controller.add_cliente(self.cliente)
+            QMessageBox.information(QMessageBox.information(self, "Informazione", "I dati sono stati salvati correttamente",QMessageBox.Ok, QMessageBox.Ok))
         else:
             QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
-
-
-
-
 
     def take_data_from_label(self, interfaccia):
         return interfaccia.lineEdit_nome_Cliente.text()
 
 
-    def mod_cliente(self):
+    def modifica_cliente(self):
         print("Cliente pronto per la modifica")
 
     def elimina_cliente(self):
@@ -109,10 +105,10 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
         print("Cliente annullato")
 
 #############################################METODI PER DIPENDETE#######################################################
-    def add_dipendente(self):
+    def aggiungi_dipendente(self):
         print("Dipendente Aggiunto")
 
-    def mod_dipendente(self):
+    def modifica_dipendente(self):
         print("Dipendente pronto per la modifica")
 
     def elimina_dipendente(self):
@@ -128,10 +124,25 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
         print("Dipendente annullato")
 
     #########################################METODI PER FORNITORE#######################################################
-    def add_fornitore(self):
-        print("Fornitore Aggiunto")
+    def aggiungi_fornitore(self):
+        self.fornitore.set_nome(self.lineE_nome_Fornitore.text())
+        self.fornitore.set_fornitura1(self.lineE_fornitura1_Fornitore.text())
+        self.fornitore.set_fornitura2(self.lineE_fornitura2_Fornitore.text())
+        self.fornitore.set_riferimento(self.lineE_riferimento_Fornitore.text())
+        self.fornitore.set_cellulare_rif(self.lineE_telefonoRif_Fornitore.text())
+        self.fornitore.set_email(self.lineE_email_Fornitore.text())
+        self.fornitore.set_indirizzo(self.lineE_indirizzo_Fornitore.text())
+        self.fornitore.set_iva(self.lineE_IVA_Fornitore.text())
+        self.fornitore.set_mod_pagamento(self.cB_modalitaPag_Fornitore.currentText())
+        self.fornitore.set_telefono(self.lineE_telefono_Fornitore.text())
+        self.fornitore.set_fax(self.lineE_fax_Fornitore.text())
+        if self.fornitore.iscompleto():
+            self.controller.add_fornitore(self.fornitore)
+            QMessageBox.information(self, "Informazione", "I dati sono stati salvati correttamente",QMessageBox.Ok, QMessageBox.Ok)
+        else:
+            QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
 
-    def mod_fornitore(self):
+    def modifica_fornitore(self):
         print("Fornitore pronto per la modifica")
 
     def elimina_fornitore(self):

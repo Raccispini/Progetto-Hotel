@@ -13,7 +13,10 @@ class AnagraficheController():
     def get_listadipendenti(self):
         return self.model.listadipendeti
 
-    def add_cliente(self, info):
-        self.model.add_cliente(info)
+    def add_cliente(self, cliente):
+        self.model.add_cliente(cliente)
+
+    def add_fornitore(self, fornitore):
+        self.model.add_fornitore(fornitore)
 
 

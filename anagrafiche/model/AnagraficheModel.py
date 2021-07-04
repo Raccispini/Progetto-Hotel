@@ -35,22 +35,34 @@ class AnagraficheModel():
             self.listadipendeti.append(DipendenteModel(dipendente[0], dipendente[1], dipendente[2], dipendente[3], dipendente[4],
                                                        dipendente[5], dipendente[6], dipendente[7], dipendente[8], dipendente[9]))
 
-    def add_cliente(self, info):
-        #Metodo che ci permette di calcolare il nuovo ID da assegnare
-        def take_new_ID():
-            id = self.db.execute("SELECT MAX(ID) FROM Clienti").fetchone()
-            id_int = int(id[0]) + 1
-            id_str = str(id_int).zfill(15)
-            return id_str
+    def add_cliente(self, cliente):
 
-        new_id = take_new_ID()
-        query = ("""INSERT INTO Clienti(nome, cognome, sesso, data_nascita, luogo_nascita, residenza, provincia, via, CAP,
-                                       CF, nazione, telefono, cellulare, email, documento, numero_documento, 
-                                       ente_rilascio, data_rilascio, data_scadenza, modalita_pagamento, info_checkin) 
-                                       VALUES (""" + info["Nome"] + ")")
-                 (, info["Cognome"], info["Sesso"])
-        #cur.execute('INSERT INTO name VALUES(?, ?, ?, ?);', (0, "0123", "034", 23))
-        self.db.execute(query)
+        query = "INSERT INTO Clienti(nome, cognome, sesso, data_nascita, luogo_nascita, residenza, provincia, via, CAP,"\
+                " CF, nazione, telefono, cellulare, email, documento, numero_documento, ente_rilascio,"\
+                " data_rilascio, data_scadenza, modalita_pagamento, info_checkin) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);"
+
+
+        data =  (cliente.get_nome(), cliente.get_cognome(), cliente.get_sesso(), cliente.get_data_di_nascita().toString("dd/MM/yyyy"),
+                cliente.get_luogo_di_nascita(), cliente.get_residenza(), cliente.get_provincia(), cliente.get_via(),
+                cliente.get_cap(), cliente.get_cf(), cliente.get_nazione(), cliente.get_telefono(), cliente.get_cellulare(),
+                cliente.get_email(), cliente.get_tipo_documento(), cliente.get_numero_documento(), cliente.get_ente_rilascio(),
+                cliente.get_data_rilascio().toString("dd/MM/yyyy"), cliente.get_data_scadenza().toString("dd/MM/yyyy"),
+                cliente.get_modalita_pagamento(), cliente.get_info_check_in())
+
+        self.db.execute(query, data)
+        self.db.commit()
+
+    def add_fornitore(self, fornitore):
+        query = "INSERT INTO Fornitori(nome_fornitore, tipo_fornitura, tipo_fornitura_2, riferimento, cellulare_riferimento," \
+                " email, indirizzo, IVA, modalita_pagamento, telefono, fax)  VALUES (?,?,?,?,?,?,?,?,?,?,?);"
+
+        data = (fornitore.get_nome(), fornitore.get_fornitura1(), fornitore.get_fornitura2(), fornitore.get_riferimento(),
+                fornitore.get_cellulare_rif(), fornitore.get_email(), fornitore.get_indirizzo(), fornitore.get_iva(),
+                fornitore.get_mod_pagamento(), fornitore.get_telefono(), fornitore.get_fax() )
+
+        print(data)
+
+        self.db.execute(query, data)
         self.db.commit()
 
 
