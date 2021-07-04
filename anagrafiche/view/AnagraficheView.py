@@ -74,7 +74,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
         self.cliente.set_nome(self.lineEdit_nome_Cliente.text())
         self.cliente.set_cognome(self.lineEdit_Cognome_Cliente)
         self.cliente.set_sesso(self.comboBox_sesso_Cliente.currentText())
-        self.cliente.set_data_di_nascita(self.)
+        #self.cliente.set_data_di_nascita(self.)
         self.cliente.set_luogo_di_nascita()
         self.cliente.set_residenza()
         self.cliente.set_provincia()

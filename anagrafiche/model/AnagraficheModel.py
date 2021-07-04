@@ -1,5 +1,5 @@
 import sqlite3
-from cliente.model.ClienteModel import ModelCliente
+from cliente.model.ClienteModel import ClienteModel
 from cliente.model.ClienteModel import ClienteModel
 from dipendente.model.DipendenteModel import DipendenteModel
 from fornitore.model.FornitoreModel import FornitoreModel
@@ -47,11 +47,8 @@ class AnagraficheModel():
                                                   cliente[5],cliente[6], cliente[7], cliente[8], cliente[9],
                                                   cliente[10], cliente[11], cliente[12], cliente[13], cliente[14],
                                                   cliente[15], cliente[16], cliente[17], cliente[18], cliente[19],
-                                                  cliente[20]))
+                                                  cliente[20],cliente[21]))
 
-
-
-                                                  cliente[20], cliente[21]))
     def get_listafornitori(self):
         tab_fornitori = self.db.execute('SELECT * FROM Fornitori;').fetchall()
         for fornitore in tab_fornitori:
@@ -78,7 +75,7 @@ class AnagraficheModel():
                                        CF, nazione, telefono, cellulare, email, documento, numero_documento, 
                                        ente_rilascio, data_rilascio, data_scadenza, modalita_pagamento, info_checkin) 
                                        VALUES (""" + info["Nome"] + ")")
-                 (, info["Cognome"], info["Sesso"])
+                 #(, info["Cognome"], info["Sesso"])
         #cur.execute('INSERT INTO name VALUES(?, ?, ?, ?);', (0, "0123", "034", 23))
         self.db.execute(query)
         self.db.commit()
