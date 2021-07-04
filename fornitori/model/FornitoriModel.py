@@ -1,8 +1,6 @@
-from utente.model.ModelUtente import ModelUtente
-
-class ClienteModel(ModelUtente):
-    def __init__(self,id=0, nome="", cognome="", sesso="", data_di_nascita = "", luogo_di_nascita="", residenza="", provincia="", via="", cap="", cf="", nazione="", telefono="", cellulare="", email="", tipo_documento="", numero_documento="", ente_rilascio="", data_rilascio="", data_scadenza="", modalita_pagamento="", info_check_in=""):
-        super(ClienteModel, self).__init__(id, nome, cognome, email, cellulare, data_di_nascita)
+class ModelCliente():
+    def __init__(self, ):
+        self.id = id
         self.sesso = sesso
         self.luogo_di_nascita = luogo_di_nascita
         self.residenza = residenza
@@ -16,21 +14,11 @@ class ClienteModel(ModelUtente):
         self.numero_documento = numero_documento
         self.ente_rilascio = ente_rilascio
         self.data_rilascio = data_rilascio
-        self.data_scadenza = data_scadenza
         self.modalita_pagamento = modalita_pagamento
         self.info_check_in = info_check_in
 
-    def iscompleto(self):
-        if (self.nome!="" and self.cognome!="" and self.sesso!="" and self.data_di_nascita!=""
-            and self.luogo_di_nascita!="" and self.residenza!="" and self.provincia!="" and self.via!="" and self.cap!=""
-            and self.cf!="" and self.nazione!="" and self.telefono!="" and self.cellulare!=""and self.email!="" and
-            self.tipo_documento!="" and self.numero_documento!="" and self.ente_rilascio!="" and self.data_rilascio!=""
-            and self.data_scadenza!="" and self.modalita_pagamento!="" and self.info_check_in!=""):
-
-            return True
-        else:
-            return False
-
+    def get_id(self):
+        return self.id
 
     def get_sesso(self):
         return self.sesso
@@ -71,14 +59,14 @@ class ClienteModel(ModelUtente):
     def get_data_rilascio(self):
         return self.data_rilascio
 
-    def get_data_scadenza(self):
-        return self.data_scadenza
-
     def get_modalita_pagamento(self):
         return self.modalita_pagamento
 
     def get_info_check_in(self):
         return self.info_check_in
+
+    def set_id(self, id):
+        self.id = id
 
     def set_sesso(self, sesso):
         self.sesso = sesso
@@ -119,9 +107,6 @@ class ClienteModel(ModelUtente):
     def set_data_rilascio(self, data_rilascio):
         self.data_rilascio = data_rilascio
 
-    def set_data_scadenza(self, data_scadenza):
-        self.data_scadenza = data_scadenza
-
     def set_modalita_pagamento(self, modalita_pagamento):
         self.modalita_pagamento = modalita_pagamento
 
@@ -134,6 +119,4 @@ class ClienteModel(ModelUtente):
         </td><td>{self.via}</td><td>{self.cap}</td><td>{self.cf}</td><td>{self.nazione}</td><td> {self.telefono}
         </td><td>{self.get_cellulare()}</td><td>{self.email}</td><td>{self.tipo_documento}</td><td>{self.numero_documento}
         </td><td>{self.ente_rilascio}</td><td>{self.get_data_rilascio()}</td><td>{self.modalita_pagamento}
-        </td><td>{self.cellulare}</td><td>{self.email}</td><td>{self.tipo_documento}</td><td>{self.numero_documento}
-        </td><td>{self.ente_rilascio}</td><td>{self.data_rilascio}</td><td>{self.data_scadenza}</td><td>{self.modalita_pagamento}
         </td><td style=\"min-width:150px;\">{self.info_check_in} </td></tr>""")

@@ -4,6 +4,9 @@ class AnagraficheController():
     def __init__(self):
         self.model = AnagraficheModel()
 
+    def get_lista_clienti(self):
+        return self.model.listaclienti
+
     def get_listaclienti(self):
         return self.model.listaclienti
 
