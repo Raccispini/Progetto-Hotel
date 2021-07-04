@@ -3,16 +3,15 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer, QTime
 
 #Setto manualmente alcune particolarità dell'interfaccia e le salvo in una variabile
-stylesheet = """#MainWindow{border-image: url(ui/resources/main/2690549.jpg) 0 0 0 0 stretch stretch;}
-                #pB_Camere,#pB_Ristorante,#pB_Bar,#pB_Anagrafiche,#pB_Magazzino,#pB_Ombrelloni, #pB_Meteo, #pB_Uscita{
+stylesheet = """QMainWindow{border-image: url(ui/resources/main/2690549.jpg) 0 0 0 0 stretch stretch;}
+                QPushButton{
                             background-image: url(ui/resources/button/button.jpg);
                             border-style: outset;
                             border-width: 5px;
                             border-color: rgb(221,34,24);
                             border-radius: 20px;                            
                             }
-                #pB_Camere:pressed,#pB_Ristorante:pressed,#pB_Bar:pressed,#pB_Anagrafiche:pressed,#pB_Magazzino:pressed
-                ,#pB_Ombrelloni:pressed, #pB_Meteo:pressed, #pB_Uscita:pressed{
+                QPushButton:pressed{
                             border-style: inset;
                             }   
             """

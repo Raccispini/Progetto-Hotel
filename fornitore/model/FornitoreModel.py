@@ -13,15 +13,6 @@ class FornitoreModel():
         self.telefono = telefono
         self.fax = fax
 
-    def iscompleto(self):
-        if(self.nome!="" and self.fornitura1!="" and self.fornitura2!="" and self.riferimento!="" and self.cellulare_rif!=""
-           and self.email!="" and self.indirizzo!="" and self.iva!="" and self.mod_pagamento!="" and self.telefono!="" and self.fax!=""):
-
-            return True
-        else:
-            return False
-
-
     def get_id(self):
         return self.id
 

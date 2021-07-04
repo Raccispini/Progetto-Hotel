@@ -11,7 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
+<<<<<<< HEAD
 class Ui_Anagrafiche_Window(object):
+=======
+class Ui_AnagraficheView(object):
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
     def setupUi(self, Anagrafiche_Window):
         Anagrafiche_Window.setObjectName("Anagrafiche_Window")
         Anagrafiche_Window.setWindowTitle("Anagrafiche")
@@ -914,7 +918,10 @@ class Ui_Anagrafiche_Window(object):
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.tableWidget_Fornitori.setItem(0, 11, item)
+<<<<<<< HEAD
         self.tableWidget_Fornitori.horizontalHeader().setDefaultSectionSize(180)
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
         self.tableWidget_Fornitori.horizontalHeader().setDefaultSectionSize(183)
         self.tableWidget_Fornitori.horizontalHeader().setHighlightSections(True)
         self.tableWidget_Fornitori.horizontalHeader().setStretchLastSection(True)
@@ -1159,7 +1166,6 @@ class Ui_Anagrafiche_Window(object):
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
         font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
@@ -1232,6 +1238,7 @@ class Ui_Anagrafiche_Window(object):
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
         font = QtGui.QFont()
+<<<<<<< HEAD
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
@@ -1240,6 +1247,8 @@ class Ui_Anagrafiche_Window(object):
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
         font = QtGui.QFont()
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
         font.setBold(False)
         font.setWeight(50)
         item.setFont(font)
@@ -1279,7 +1288,10 @@ class Ui_Anagrafiche_Window(object):
         item.setFont(font)
         self.tableWidget_Dipendente.setItem(0, 5, item)
         item = QtWidgets.QTableWidgetItem()
+<<<<<<< HEAD
         item.setTextAlignment(QtCore.Qt.AlignCenter)
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
         font = QtGui.QFont()
         font.setBold(False)
         font.setWeight(50)
@@ -1304,6 +1316,7 @@ class Ui_Anagrafiche_Window(object):
         font.setBold(False)
         font.setWeight(50)
         item.setFont(font)
+<<<<<<< HEAD
         self.tableWidget_Utenti.setItem(0, 8, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
@@ -1318,6 +1331,8 @@ class Ui_Anagrafiche_Window(object):
         self.tableWidget_Utenti.horizontalHeader().setStretchLastSection(True)
         self.tableWidget_Utenti.verticalHeader().setCascadingSectionResizes(True)
         self.gridLayout_2.addWidget(self.tableWidget_Utenti, 1, 0, 1, 1)
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
         self.tableWidget_Dipendente.setItem(0, 9, item)
         self.tableWidget_Dipendente.horizontalHeader().setCascadingSectionResizes(True)
         self.tableWidget_Dipendente.horizontalHeader().setDefaultSectionSize(160)
@@ -1394,6 +1409,7 @@ class Ui_Anagrafiche_Window(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.cB_permessi.sizePolicy().hasHeightForWidth())
         self.cB_permessi.setSizePolicy(sizePolicy)
+<<<<<<< HEAD
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(11)
@@ -1414,11 +1430,36 @@ class Ui_Anagrafiche_Window(object):
         self.label_91.setObjectName("label_91")
         self.gridLayout_5.addWidget(self.label_91, 0, 4, 1, 1)
         self.lE_ambitoDipendente = QtWidgets.QLineEdit(self.tab_Anag_Utenti)
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(11)
         font.setBold(False)
         font.setWeight(50)
+<<<<<<< HEAD
+=======
+        self.cB_permessi.setFont(font)
+        self.cB_permessi.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.cB_permessi.setMaxVisibleItems(10)
+        self.cB_permessi.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
+        self.cB_permessi.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
+        self.cB_permessi.setObjectName("cB_permessi")
+        self.cB_permessi.addItem("")
+        self.cB_permessi.addItem("")
+        self.cB_permessi.addItem("")
+        self.gridLayout_5.addWidget(self.cB_permessi, 1, 5, 1, 1)
+        self.label_91 = QtWidgets.QLabel(self.tab_Anag_Utenti)
+        self.label_91.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_91.setObjectName("label_91")
+        self.gridLayout_5.addWidget(self.label_91, 0, 4, 1, 1)
+        self.lE_ambitoDipendente = QtWidgets.QLineEdit(self.tab_Anag_Utenti)
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
         self.lE_ambitoDipendente.setFont(font)
         self.lE_ambitoDipendente.setObjectName("lE_ambitoDipendente")
         self.gridLayout_5.addWidget(self.lE_ambitoDipendente, 0, 5, 1, 1)
@@ -1707,6 +1748,7 @@ class Ui_Anagrafiche_Window(object):
         self.pB_CreaPDF_Dipendente.setText(_translate("Anagrafiche_Window", "Crea PDF"))
         item = self.tableWidget_Dipendente.verticalHeaderItem(0)
         item.setText(_translate("Anagrafiche_Window", "Utente_00"))
+<<<<<<< HEAD
         item = self.tableWidget_Utenti.horizontalHeaderItem(0)
         item.setText(_translate("Anagrafiche_Window", "Id"))
         item = self.tableWidget_Utenti.horizontalHeaderItem(1)
@@ -1750,6 +1792,8 @@ class Ui_Anagrafiche_Window(object):
         item = self.tableWidget_Utenti.item(0, 9)
         item.setText(_translate("Anagrafiche_Window", "18/04/1967"))
         self.tableWidget_Utenti.setSortingEnabled(__sortingEnabled)
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
         item = self.tableWidget_Dipendente.horizontalHeaderItem(0)
         item.setText(_translate("Anagrafiche_Window", "Id"))
         item = self.tableWidget_Dipendente.horizontalHeaderItem(1)
@@ -1806,4 +1850,8 @@ class Ui_Anagrafiche_Window(object):
         self.label_46.setText(_translate("Anagrafiche_Window", "E-Mail"))
         self.label_47.setText(_translate("Anagrafiche_Window", "Cellulare"))
         self.label_48.setText(_translate("Anagrafiche_Window", "Data di Nascita"))
+<<<<<<< HEAD
         self.tabWidget_Anagrafiche.setTabText(self.tabWidget_Anagrafiche.indexOf(self.tab_Anag_Utenti), _translate("Anagrafiche_Window", "Utenti"))
+=======
+        self.tabWidget_Anagrafiche.setTabText(self.tabWidget_Anagrafiche.indexOf(self.tab_Anag_Utenti), _translate("Anagrafiche_Window", "Dipendenti"))
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)

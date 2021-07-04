@@ -81,7 +81,7 @@
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QPushButton" name="pB_aggiungi_Cliente">
+           <widget class="QPushButton" name="pB_add_Cliente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -127,7 +127,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_elimina_Cliente">
+           <widget class="QPushButton" name="pB_Elimina_Cliente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -199,7 +199,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_annulla_Cliente">
+           <widget class="QPushButton" name="pB_AnnullaMod_Cliente">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -231,7 +231,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_creaPDF_Cliente">
+           <widget class="QPushButton" name="pB_CreaPDF_Cliente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -421,6 +421,7 @@
            </property>
            <property name="font">
             <font>
+<<<<<<< HEAD
              <bold>false</bold>
             </font>
            </property>
@@ -437,6 +438,9 @@
            </property>
            <property name="font">
             <font>
+=======
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -447,12 +451,22 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
+<<<<<<< HEAD
           <item row="0" column="2">
            <property name="text">
             <string>Pretini</string>
            </property>
            <property name="font">
             <font>
+=======
+          <item row="0" column="1">
+           <property name="text">
+            <string>Federico</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -463,12 +477,22 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
+<<<<<<< HEAD
           <item row="0" column="3">
            <property name="text">
             <string>M</string>
            </property>
            <property name="font">
             <font>
+=======
+          <item row="0" column="2">
+           <property name="text">
+            <string>Pretini</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -479,12 +503,22 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
+<<<<<<< HEAD
           <item row="0" column="4">
            <property name="text">
             <string>06/07/2000</string>
            </property>
            <property name="font">
             <font>
+=======
+          <item row="0" column="3">
+           <property name="text">
+            <string>M</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -495,12 +529,22 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
+<<<<<<< HEAD
           <item row="0" column="5">
            <property name="text">
             <string>Jesi</string>
            </property>
            <property name="font">
             <font>
+=======
+          <item row="0" column="4">
+           <property name="text">
+            <string>06/07/2000</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -511,12 +555,22 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
+<<<<<<< HEAD
           <item row="0" column="6">
            <property name="text">
             <string>Serra dè Conti</string>
            </property>
            <property name="font">
             <font>
+=======
+          <item row="0" column="5">
+           <property name="text">
+            <string>Jesi</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -527,12 +581,22 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
+<<<<<<< HEAD
           <item row="0" column="7">
            <property name="text">
             <string>AN</string>
            </property>
            <property name="font">
             <font>
+=======
+          <item row="0" column="6">
+           <property name="text">
+            <string>Serra dè Conti</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -543,12 +607,22 @@
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
+<<<<<<< HEAD
           <item row="0" column="8">
            <property name="text">
             <string>Via Trionfi Honorati</string>
            </property>
            <property name="font">
             <font>
+=======
+          <item row="0" column="7">
+           <property name="text">
+            <string>AN</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -558,6 +632,7 @@
            <property name="flags">
             <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
+<<<<<<< HEAD
           </item>
           <item row="0" column="9">
            <property name="text">
@@ -851,18 +926,256 @@
            <widget class="QLabel" name="label_21">
             <property name="text">
              <string>Nazione</string>
+=======
+          </item>
+          <item row="0" column="8">
+           <property name="text">
+            <string>Via Trionfi Honorati</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="9">
+           <property name="text">
+            <string>60030</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="10">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="11">
+           <property name="text">
+            <string>IT</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="12">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="13">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="14">
+           <property name="text">
+            <string>Pretini</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="15">
+           <property name="text">
+            <string>Carta d'Identità</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="16">
+           <property name="text">
+            <string>ccc</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="17">
+           <property name="text">
+            <string>ccc</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="18">
+           <property name="text">
+            <string>22/12/2018</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="20">
+           <property name="text">
+            <string>Carta</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="21">
+           <property name="text">
+            <string>Il cliente ha richiesto di un aiuto per il trasporto dei bagagli in camera</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="6" column="2">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Cellulare</string>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
           <item row="7" column="1">
            <widget class="QLineEdit" name="lE_Email_Cliente">
+=======
+          <item row="6" column="6">
+           <widget class="QLineEdit" name="lineEdit_num_Doc">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
               <pointsize>11</pointsize>
+<<<<<<< HEAD
               <bold>false</bold>
              </font>
             </property>
@@ -887,10 +1200,138 @@
           </item>
           <item row="1" column="6">
            <widget class="QComboBox" name="cB_residenza_Cliente">
+=======
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QLineEdit" name="lineEdit_Cellulare_Clienti">
             <property name="font">
              <font>
               <family>Arial</family>
               <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QDateEdit" name="dateEdit_nascita_Cliente">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::UpDownArrows</enum>
+            </property>
+            <property name="correctionMode">
+             <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+            </property>
+            <property name="displayFormat">
+             <string>dd/MM/yyyy</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Codice Fiscale</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLineEdit" name="lineEdit_CodFis_Cliente">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>11</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="4">
+           <widget class="QLabel" name="label_21">
+            <property name="text">
+             <string>Nazione</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="lineEdit_Email_Clienti">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="6">
+           <widget class="QLineEdit" name="lineEdit_Nazione_Clienti">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="6">
+           <widget class="QComboBox" name="comboBox_Residenza_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+              <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
               <bold>false</bold>
              </font>
             </property>
@@ -928,7 +1369,11 @@
            </widget>
           </item>
           <item row="2" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_provincia_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_Prov_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -962,7 +1407,7 @@
            </widget>
           </item>
           <item row="0" column="6">
-           <widget class="QComboBox" name="cB_sesso_Cliente">
+           <widget class="QComboBox" name="comboBox_sesso_Cliente">
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1025,7 +1470,11 @@
            </widget>
           </item>
           <item row="2" column="6">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_CAP_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_CAP_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1062,7 +1511,11 @@
            </widget>
           </item>
           <item row="1" column="1">
+<<<<<<< HEAD
            <widget class="QComboBox" name="cB_nascita_Cliente">
+=======
+           <widget class="QComboBox" name="comboBox_nascita_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1072,6 +1525,18 @@
             </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
+<<<<<<< HEAD
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAtTop</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             </property>
             <property name="editable">
              <bool>true</bool>
@@ -1082,7 +1547,7 @@
             <property name="sizeAdjustPolicy">
              <enum>QComboBox::AdjustToContents</enum>
             </property>
-            <property name="placeholderText">
+            <property name="placeholderText" stdset="0">
              <string/>
             </property>
             <item>
@@ -1151,11 +1616,19 @@
            </widget>
           </item>
           <item row="6" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_rilascio_documenti_Cliente">
+=======
+           <widget class="QLineEdit" name="_RilascioDoc_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
               <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+              <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
               <bold>false</bold>
              </font>
             </property>
@@ -1168,7 +1641,11 @@
            </widget>
           </item>
           <item row="2" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_via_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_Via_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1193,7 +1670,11 @@ da </string>
            </widget>
           </item>
           <item row="3" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_telefono_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_Tel_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1218,7 +1699,11 @@ il</string>
            </widget>
           </item>
           <item row="5" column="1">
+<<<<<<< HEAD
            <widget class="QComboBox" name="cB_tipo_documento_Cliente">
+=======
+           <widget class="QComboBox" name="comboBox_Doc_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1261,7 +1746,11 @@ Documeto</string>
            </widget>
           </item>
           <item row="5" column="6">
+<<<<<<< HEAD
            <widget class="QDateEdit" name="dE_scadenza_documenti_Cliente">
+=======
+           <widget class="QDateEdit" name="dateEdit_Doc_Clienti_Scadenza">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1298,7 +1787,11 @@ Documeto</string>
            </widget>
           </item>
           <item row="5" column="3">
+<<<<<<< HEAD
            <widget class="QDateEdit" name="dE_data_rilascio_Cliente">
+=======
+           <widget class="QDateEdit" name="dateEdit_Doc_Clienti_Rilascio">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1342,7 +1835,11 @@ Pagamento</string>
            </widget>
           </item>
           <item row="7" column="4">
+<<<<<<< HEAD
            <widget class="QComboBox" name="cB_modalita_pagamento_Cliente">
+=======
+           <widget class="QComboBox" name="comboBox_ModPag_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1377,7 +1874,11 @@ Pagamento</string>
            </widget>
           </item>
           <item row="0" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_cognome_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_Cognome_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1411,7 +1912,11 @@ Pagamento</string>
            </widget>
           </item>
           <item row="0" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_nome_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_nome_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -1435,12 +1940,17 @@ Pagamento</string>
            <font>
             <family>Arial</family>
             <pointsize>9</pointsize>
+<<<<<<< HEAD
+=======
+            <weight>75</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <bold>true</bold>
            </font>
           </property>
           <property name="text">
            <string>Info 
 CheckIn</string>
+<<<<<<< HEAD
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1449,6 +1959,16 @@ CheckIn</string>
         </item>
         <item row="4" column="0">
          <widget class="QLineEdit" name="lE_info_checkin_Cliente">
+=======
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="_InfoCheckIn_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -1465,6 +1985,10 @@ CheckIn</string>
            <font>
             <family>Arial</family>
             <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+            <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <bold>false</bold>
            </font>
           </property>
@@ -1483,7 +2007,7 @@ CheckIn</string>
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QPushButton" name="pB_aggiungi_Fornitore">
+           <widget class="QPushButton" name="pB_add_Fornitore">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1529,7 +2053,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_elimina_Fornitore">
+           <widget class="QPushButton" name="pB_Elimina_Fornitore">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1601,7 +2125,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_annulla_Fornitore">
+           <widget class="QPushButton" name="pB_AnnullaMod_Fornitore">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -1633,7 +2157,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_creaPDF_Fornitore">
+           <widget class="QPushButton" name="pB_CreaPDF_Fornitore">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1658,7 +2182,7 @@ CheckIn</string>
          </layout>
         </item>
         <item row="1" column="0">
-         <widget class="QTableWidget" name="tableWidget_Fornitore">
+         <widget class="QTableWidget" name="tableWidget_Fornitori">
           <property name="font">
            <font>
             <family>Arial</family>
@@ -1693,6 +2217,10 @@ CheckIn</string>
            </property>
            <property name="font">
             <font>
+<<<<<<< HEAD
+=======
+             <weight>75</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>true</bold>
             </font>
            </property>
@@ -1967,7 +2495,11 @@ CheckIn</string>
            <number>20</number>
           </property>
           <item row="2" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_riferimento_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_Riferimento"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="label_31">
@@ -1980,7 +2512,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="3" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_email_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_Email"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           </item>
           <item row="3" column="4">
            <widget class="QLabel" name="label_29">
@@ -1993,7 +2529,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="1" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_partitaIVA_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_PartitaIVA"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           </item>
           <item row="1" column="4">
            <widget class="QLabel" name="label_32">
@@ -2026,10 +2566,17 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_telefono_riferimento_Fornitore"/>
           </item>
           <item row="1" column="1">
            <widget class="QLineEdit" name="lE_tipo_fornitura_Fornitore_2"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_TelefonoRif"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_TipoFornitura2"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           </item>
           <item row="1" column="2">
            <widget class="QLabel" name="label_24">
@@ -2042,7 +2589,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="1" column="5">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_tempo_pagamento_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_TempoPagamento"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           </item>
           <item row="2" column="4">
            <widget class="QLabel" name="label_28">
@@ -2075,6 +2626,7 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="5">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_telefono_Fornitore"/>
           </item>
           <item row="3" column="5">
@@ -2082,6 +2634,15 @@ CheckIn</string>
           </item>
           <item row="0" column="5">
            <widget class="QComboBox" name="cB_modalita_pagamento_Fornitore">
+=======
+           <widget class="QLineEdit" name="lineEdit_Telefono"/>
+          </item>
+          <item row="3" column="5">
+           <widget class="QLineEdit" name="lineEdit_Fax"/>
+          </item>
+          <item row="0" column="5">
+           <widget class="QComboBox" name="comboBox_ModPag_Fornitori">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -2128,14 +2689,22 @@ CheckIn</string>
            </widget>
           </item>
           <item row="0" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_nome_Fornitore">
+=======
+           <widget class="QLineEdit" name="lineEdit_nomeFornitore">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="text">
              <string/>
             </property>
            </widget>
           </item>
           <item row="0" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_tipo_fornitura_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_TipoFornitura"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           </item>
           <item row="3" column="2">
            <widget class="QLabel" name="label_26">
@@ -2158,7 +2727,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="3" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_indirizzo_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_Indirizzo"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           </item>
          </layout>
         </item>
@@ -2172,7 +2745,7 @@ CheckIn</string>
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <item>
-           <widget class="QPushButton" name="pB_aggiungi_Dipendente">
+           <widget class="QPushButton" name="pB_Aggiungi_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -2195,7 +2768,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_modifica_Dipendente">
+           <widget class="QPushButton" name="pB_Modifica_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -2218,7 +2791,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_elimina_Dipendente">
+           <widget class="QPushButton" name="pB_Elimina_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -2241,7 +2814,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_ricerca_Dipendente">
+           <widget class="QPushButton" name="pB_Ricerca_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -2264,7 +2837,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_salva_Dipendente">
+           <widget class="QPushButton" name="pB_Salva_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -2287,7 +2860,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_annulla_Dipendente">
+           <widget class="QPushButton" name="pB_Annulla_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -2310,7 +2883,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_creaPDF_Dipendente">
+           <widget class="QPushButton" name="pB_CreaPDF_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -2425,6 +2998,10 @@ CheckIn</string>
            <property name="font">
             <font>
              <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+             <weight>75</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>true</bold>
             </font>
            </property>
@@ -2446,11 +3023,14 @@ CheckIn</string>
           </column>
           <column>
            <property name="text">
+<<<<<<< HEAD
             <string>Cognome</string>
+=======
+            <string>Username</string>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
            </property>
            <property name="font">
             <font>
-             <family>MS Shell Dlg 2</family>
              <pointsize>11</pointsize>
              <bold>true</bold>
             </font>
@@ -2591,6 +3171,129 @@ CheckIn</string>
            </property>
            <property name="font">
             <font>
+<<<<<<< HEAD
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nome</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Cognome</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>E-Mail</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Cellulare</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Data di Nascita</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Ambito</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Permessi</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>00001</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
              <bold>false</bold>
             </font>
            </property>
@@ -2604,6 +3307,8 @@ CheckIn</string>
            </property>
            <property name="font">
             <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -2611,25 +3316,43 @@ CheckIn</string>
             <set>AlignCenter</set>
            </property>
           </item>
+<<<<<<< HEAD
+          <item row="0" column="1">
+=======
+          <item row="0" column="2">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+           <property name="text">
+            <string>admin</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+=======
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+<<<<<<< HEAD
           <item row="0" column="2">
            <property name="text">
             <string>Fabrizio</string>
            </property>
            <property name="font">
             <font>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="textAlignment">
-            <set>AlignCenter</set>
-           </property>
-          </item>
+=======
           <item row="0" column="3">
            <property name="text">
             <string>adim</string>
            </property>
            <property name="font">
             <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -2637,6 +3360,30 @@ CheckIn</string>
             <set>AlignCenter</set>
            </property>
           </item>
+<<<<<<< HEAD
+          <item row="0" column="3">
+           <property name="text">
+            <string>adim</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+          <item row="0" column="4">
+           <property name="text">
+            <string>admin</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+<<<<<<< HEAD
           <item row="0" column="4">
            <property name="text">
             <string>admin</string>
@@ -2666,12 +3413,35 @@ CheckIn</string>
            </property>
            <property name="font">
             <font>
+=======
+          <item row="0" column="5">
+           <property name="text">
+            <string>admin@admin.it</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
              <bold>false</bold>
             </font>
            </property>
-           <property name="textAlignment">
-            <set>AlignCenter</set>
+          </item>
+          <item row="0" column="6">
+           <property name="text">
+            <string>334342</string>
            </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+          </item>
+          <item row="0" column="7">
+           <property name="text">
+            <string>16/07/1875</string>
+           </property>
+<<<<<<< HEAD
           </item>
           <item row="0" column="7">
            <property name="text">
@@ -2679,6 +3449,10 @@ CheckIn</string>
            </property>
            <property name="font">
             <font>
+=======
+           <property name="font">
+            <font>
+             <weight>50</weight>
              <bold>false</bold>
             </font>
            </property>
@@ -2689,9 +3463,24 @@ CheckIn</string>
            </property>
            <property name="font">
             <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
+          </item>
+          <item row="0" column="8">
+           <property name="text">
+            <string>Admin</string>
+           </property>
+<<<<<<< HEAD
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
           </item>
           <item row="0" column="9">
            <property name="text">
@@ -2699,6 +3488,10 @@ CheckIn</string>
            </property>
            <property name="font">
             <font>
+<<<<<<< HEAD
+=======
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
              <bold>false</bold>
             </font>
            </property>
@@ -2739,7 +3532,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="0" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_username_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_usernameDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -2773,7 +3570,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="0" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_nome_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_nomeDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -2784,7 +3585,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="1" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_password_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_passwordDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -2805,7 +3610,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="1" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_cognome_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_cognomeDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -2826,7 +3635,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="1" column="5">
+<<<<<<< HEAD
            <widget class="QComboBox" name="cB_permessi_Dipendente">
+=======
+           <widget class="QComboBox" name="cB_permessi">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -2883,7 +3696,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="0" column="5">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_ambito_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_ambitoDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -2924,7 +3741,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="1">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_Email_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_EmailDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -2935,7 +3756,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="3">
+<<<<<<< HEAD
            <widget class="QLineEdit" name="lE_cellulare_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_CellulareDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -2946,7 +3771,11 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="5">
+<<<<<<< HEAD
            <widget class="QDateEdit" name="dE_nascita_Dipendente">
+=======
+           <widget class="QDateEdit" name="dateEdit">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
