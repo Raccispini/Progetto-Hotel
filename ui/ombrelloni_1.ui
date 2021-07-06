@@ -1460,10 +1460,14 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
                <font>
                 <family>Arial</family>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <pointsize>11</pointsize>
 =======
                 <pointsize>15</pointsize>
 >>>>>>> parent of 68c57a5 (update ombrelloni)
+=======
+                <pointsize>11</pointsize>
+>>>>>>> parent of ab5c1be (prenota ombrellone)
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -1491,10 +1495,14 @@ color: rgb(229, 22, 50);</string>
               <property name="font">
                <font>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <pointsize>11</pointsize>
 =======
                 <pointsize>14</pointsize>
 >>>>>>> parent of 68c57a5 (update ombrelloni)
+=======
+                <pointsize>11</pointsize>
+>>>>>>> parent of ab5c1be (prenota ombrellone)
                </font>
               </property>
               <property name="calendarPopup">
@@ -1525,10 +1533,14 @@ color: rgb(229, 22, 50);</string>
                <font>
                 <family>Arial</family>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <pointsize>11</pointsize>
 =======
                 <pointsize>15</pointsize>
 >>>>>>> parent of 68c57a5 (update ombrelloni)
+=======
+                <pointsize>11</pointsize>
+>>>>>>> parent of ab5c1be (prenota ombrellone)
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -1555,10 +1567,14 @@ color: rgb(229, 22, 50);</string>
               <property name="font">
                <font>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <pointsize>11</pointsize>
 =======
                 <pointsize>14</pointsize>
 >>>>>>> parent of 68c57a5 (update ombrelloni)
+=======
+                <pointsize>11</pointsize>
+>>>>>>> parent of ab5c1be (prenota ombrellone)
                </font>
               </property>
               <property name="calendarPopup">
