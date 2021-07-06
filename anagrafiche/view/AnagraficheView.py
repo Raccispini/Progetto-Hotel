@@ -107,6 +107,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
     def elimina_cliente(self):
         print("Cliente eliminato")
         self.pB_elimina_Cliente.setEnabled(False)
+        self.checkpB_to_enable()
 
 
     def ricerca_cliente(self):

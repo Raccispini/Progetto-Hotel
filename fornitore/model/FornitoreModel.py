@@ -23,8 +23,8 @@ class FornitoreModel():
             return False
 
     def get_info(self):
-        return(self.id, self.nome, self.fornitura1, self.fornitura2, self.riferimento, self.cellulare_rif, self.email,
-               self.indirizzo, self.iva, self.mod_pagamento, self.telefono, self.fax)
+        return(self.id, self.nome, self.fornitura1, self.fornitura2,  self.iva, self.riferimento, self.cellulare_rif,
+               self.indirizzo, self.telefono, self.email, self.mod_pagamento,  self.fax)
 
     def get_id(self):
         return self.id

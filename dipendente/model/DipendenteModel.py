@@ -17,7 +17,7 @@ class DipendenteModel(ModelUtente):
             return False
 
     def get_info(self):
-        return(self.id, self.username, self.password, self.nome, self.cognome, self.email, self.cellulare,
+        return(self.id, self.nome, self.cognome, self.username, self.password,  self.email, self.cellulare,
                self.data_di_nascita, self.ambito, self.permessi)
 
     def get_username(self):
