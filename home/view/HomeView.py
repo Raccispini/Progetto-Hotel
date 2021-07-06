@@ -17,34 +17,31 @@ class HomeView(QMainWindow, Ui_HomeView):
         self.connectButton()
 
     def openBar(self):
-       self.bar_window = BarView()
+       self.bar_window = BarView(self)
        self.bar_window.show()
-       print("Finestra bar aperta")
 
     def openCamere(self):
-        self.camere_window = CamereView()
+        self.camere_window = CamereView(self)
         self.camere_window.show()
-        print("Finestra Camere Aperta")
 
     def openAnagrafiche(self):
-        self.anagrafiche_window = AnagraficheView()
+        self.anagrafiche_window = AnagraficheView(self)
         self.anagrafiche_window.show()
-        print("Finestra Anagrafiche Aperta")
 
     def openMagazzino(self):
-        self.magazzino_window = MagazzinoView()
+        self.magazzino_window = MagazzinoView(self)
         self.magazzino_window.show()
 
     def openMeteo(self):
-        self.meteo_window = MeteoView()
+        self.meteo_window = MeteoView(self)
         self.meteo_window.show()
 
     def openOmbrelloni(self):
-        self.ombrelloni_window = OmbrelloneView()
+        self.ombrelloni_window = OmbrelloneView(self)
         self.ombrelloni_window.show()
 
     def openRistorante(self):
-        self.ristorante_window = RistoranteView()
+        self.ristorante_window = RistoranteView(self)
         self.ristorante_window.show()
 
     def connectButton(self):

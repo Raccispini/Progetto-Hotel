@@ -51,11 +51,9 @@ class BarView(QMainWindow, Ui_BarView):
         #elimina la riga
         for i in range(len(selected_rows)):
             try:
-                print("Elimina : "+str(self.lista[selected_rows[i]]))
                 self.lista.remove(self.lista[selected_rows[i]])
             except :
                 pass
-        print(self.lista)
         self.update_table()
         self.update_tot()
 

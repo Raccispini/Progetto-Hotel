@@ -1,5 +1,6 @@
 class FornitoreModel():
-    def __init__(self, id=0, nome="", fornitura1="", fornitura2="", riferimento="", cellulare_rif="", email="", indirizzo="", iva="", mod_pagamento="", telefono="", fax=""):
+    def __init__(self, id=0, nome="", fornitura1="", fornitura2="", riferimento="", cellulare_rif="",
+                 email="", indirizzo="", iva="", mod_pagamento="", telefono="", fax=""):
         self.id = id
         self.nome = nome
         self.fornitura1 = fornitura1
@@ -12,6 +13,18 @@ class FornitoreModel():
         self.mod_pagamento = mod_pagamento
         self.telefono = telefono
         self.fax = fax
+
+    def iscompleto(self):
+        if (self.nome!="" and self.fornitura1!="" and self.fornitura2!="" and self.riferimento!="" and
+            self.cellulare_rif!="" and self.email!="" and self.indirizzo!="" and self.iva!="" and
+            self.mod_pagamento!="" and self.telefono!="" and self.fax!=""):
+            return True
+        else:
+            return False
+
+    def get_info(self):
+        return(self.id, self.nome, self.fornitura1, self.fornitura2, self.riferimento, self.cellulare_rif, self.email,
+               self.indirizzo, self.iva, self.mod_pagamento, self.telefono, self.fax)
 
     def get_id(self):
         return self.id

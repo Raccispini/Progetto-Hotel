@@ -54,7 +54,6 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_pasticceria.setEditable(True)
-        self.cB_pasticceria.setEditable(True)
         line_edit = self.cB_pasticceria.lineEdit()
         line_edit.setAlignment(QtCore.Qt.AlignCenter)
         line_edit.setReadOnly(True)

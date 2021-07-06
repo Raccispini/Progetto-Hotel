@@ -7,7 +7,6 @@ class ModelUtente(object):
         self.cellulare = cellulare
         self.data_di_nascita = data_di_nascita
 
-
     def get_id(self):
         return self.id
 

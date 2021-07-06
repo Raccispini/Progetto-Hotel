@@ -1,12 +1,24 @@
 from utente.model.ModelUtente import ModelUtente
 
 class DipendenteModel(ModelUtente):
-    def __init__(self, id=0, username="", password="", nome="", cognome="", email="", cellulare="", data_di_nascita="", ambito="", permessi=""):
+    def __init__(self, id=0, username="", password="", nome="", cognome="", email="", cellulare="", data_di_nascita="",
+                 ambito="", permessi=""):
         super(DipendenteModel, self).__init__(id, nome, cognome, email, cellulare, data_di_nascita)
         self.username = username
         self.password = password
         self.ambito = ambito
         self.permessi = permessi
+
+    def iscompleto(self):
+        if(self.username!="" and self.password!="" and self.nome!="" and self.cognome!="" and self.email!="" and
+           self.cellulare!="" and self.data_di_nascita.toString("dd/MM/yyyy")!="01/01/1800" and self.ambito!="" and self.permessi!=""):
+            return True
+        else:
+            return False
+
+    def get_info(self):
+        return(self.id, self.username, self.password, self.nome, self.cognome, self.email, self.cellulare,
+               self.data_di_nascita, self.ambito, self.permessi)
 
     def get_username(self):
         return self.username
