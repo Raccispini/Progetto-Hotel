@@ -81,6 +81,29 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
 
 ###########################################METODI PER CLIENTE###########################################################
     def add_cliente(self):
+        self.cliente.set_nome(self.lineEdit_nome_Cliente.text())
+        self.cliente.set_cognome(self.lineEdit_Cognome_Cliente)
+        self.cliente.set_sesso(self.comboBox_sesso_Cliente.currentText())
+        #self.cliente.set_data_di_nascita(self.)
+        self.cliente.set_luogo_di_nascita()
+        self.cliente.set_residenza()
+        self.cliente.set_provincia()
+        self.cliente.set_via()
+        self.cliente.set_cap()
+        self.cliente.set_cf()
+        self.cliente.set_nazione()
+        self.cliente.set_telefono()
+        self.cliente.set_cellulare()
+        self.cliente.set_email()
+        self.cliente.set_tipo_documento()
+        self.cliente.set_numero_documento()
+        self.cliente.set_ente_rilascio()
+        self.cliente.set_data_rilascio()
+        self.cliente.set_data_scadenza()
+        self.cliente.set_modalita_pagamento()
+        self.cliente.set_info_check_in()
+        if self.cliente.iscompleto():
+            self.controller.add_cliente(self.cliente)
         self.controller_cliente.set_info(self.get_info_cliente_from_view())
         if self.controller_cliente.iscompleto():
             self.controller.add_cliente(self.controller_cliente.get_cliente())

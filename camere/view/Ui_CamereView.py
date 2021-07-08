@@ -3,13 +3,13 @@ from ui.resources.Camere import camere_rc
 
 class Ui_CamereView(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setObjectName("MainWindow_Camere")
         MainWindow.resize(1558, 842)
         MainWindow.setMinimumSize(QtCore.QSize(1223, 665))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("background-image: url(:/camere/Grand-Hotel-Fleming-2.jpg);")
+        MainWindow.setStyleSheet("#MainWindow_Camere{background-image: url(:/camere/Grand-Hotel-Fleming-2.jpg);}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
@@ -88,9 +88,9 @@ class Ui_CamereView(object):
         self.combo_tipo.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.combo_tipo.setObjectName("combo_tipo")
-        self.combo_tipo.addItem("")
-        self.combo_tipo.addItem("")
-        self.combo_tipo.addItem("")
+        self.combo_tipo.addItem("Nessuno")
+        self.combo_tipo.addItem("Luna di miele")
+        self.combo_tipo.addItem("Singola")
         self.gridLayout_7.addWidget(self.combo_tipo, 2, 1, 1, 3)
         self.gridLayout_6.addLayout(self.gridLayout_7, 0, 4, 1, 1)
         self.spin_singoli = QtWidgets.QSpinBox(self.centralwidget)

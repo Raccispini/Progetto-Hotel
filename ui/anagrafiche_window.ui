@@ -50,7 +50,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Segoe UI</family>
+        <family>Arial</family>
         <pointsize>14</pointsize>
         <weight>75</weight>
         <bold>true</bold>
@@ -74,7 +74,7 @@
       <property name="tabBarAutoHide">
        <bool>false</bool>
       </property>
-      <widget class="QWidget" name="Layout_clienti">
+      <widget class="QWidget" name="tab_Anag_Clienti">
        <attribute name="title">
         <string>Clienti</string>
        </attribute>
@@ -109,7 +109,7 @@
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QPushButton" name="pB_aggiungi_Cliente">
+           <widget class="QPushButton" name="pB_add_Cliente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -151,7 +151,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_elimina_Cliente">
+           <widget class="QPushButton" name="pB_Elimina_Cliente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -217,7 +217,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_annulla_Cliente">
+           <widget class="QPushButton" name="pB_AnnullaMod_Cliente">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -247,7 +247,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_creaPDF_Cliente">
+           <widget class="QPushButton" name="pB_CreaPDF_Cliente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -280,7 +280,7 @@
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>11</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -425,6 +425,820 @@
             <string>Info CheckIn</string>
            </property>
           </column>
+<<<<<<< HEAD
+          <item row="0" column="0">
+           <property name="text">
+            <string>0000000001</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>Federico</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="2">
+           <property name="text">
+            <string>Pretini</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+          <item row="0" column="1">
+           <property name="text">
+            <string>Federico</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="3">
+           <property name="text">
+            <string>M</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+          <item row="0" column="2">
+           <property name="text">
+            <string>Pretini</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="4">
+           <property name="text">
+            <string>06/07/2000</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+          <item row="0" column="3">
+           <property name="text">
+            <string>M</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="5">
+           <property name="text">
+            <string>Jesi</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+          <item row="0" column="4">
+           <property name="text">
+            <string>06/07/2000</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="6">
+           <property name="text">
+            <string>Serra dè Conti</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+          <item row="0" column="5">
+           <property name="text">
+            <string>Jesi</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="7">
+           <property name="text">
+            <string>AN</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+          <item row="0" column="6">
+           <property name="text">
+            <string>Serra dè Conti</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="8">
+           <property name="text">
+            <string>Via Trionfi Honorati</string>
+           </property>
+           <property name="font">
+            <font>
+=======
+          <item row="0" column="7">
+           <property name="text">
+            <string>AN</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+<<<<<<< HEAD
+          </item>
+          <item row="0" column="9">
+           <property name="text">
+            <string>60030</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="10">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="11">
+           <property name="text">
+            <string>IT</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="12">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="13">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="14">
+           <property name="text">
+            <string>Pretini</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="15">
+           <property name="text">
+            <string>Carta d'Identità</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="16">
+           <property name="text">
+            <string>ccc</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="17">
+           <property name="text">
+            <string>ccc</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="18">
+           <property name="text">
+            <string>22/12/2018</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="20">
+           <property name="text">
+            <string>Carta</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="21">
+           <property name="text">
+            <string>Il cliente ha richiesto di un aiuto per il trasporto dei bagagli in camera</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="6" column="2">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Cellulare</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="6">
+           <widget class="QLineEdit" name="lE_numero_documento_Cliente">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QLineEdit" name="lE_cellulare_Cliente">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QDateEdit" name="dE_nascita_Cliente">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::UpDownArrows</enum>
+            </property>
+            <property name="correctionMode">
+             <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+            </property>
+            <property name="displayFormat">
+             <string>dd/MM/yyyy</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Codice Fiscale</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLineEdit" name="lE_codice_fiscale_Cliente">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>11</pointsize>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="4">
+           <widget class="QLabel" name="label_21">
+            <property name="text">
+             <string>Nazione</string>
+=======
+          </item>
+          <item row="0" column="8">
+           <property name="text">
+            <string>Via Trionfi Honorati</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="9">
+           <property name="text">
+            <string>60030</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="10">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="11">
+           <property name="text">
+            <string>IT</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="12">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="13">
+           <property name="text">
+            <string>CCC</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="14">
+           <property name="text">
+            <string>Pretini</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="15">
+           <property name="text">
+            <string>Carta d'Identità</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="16">
+           <property name="text">
+            <string>ccc</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="17">
+           <property name="text">
+            <string>ccc</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="18">
+           <property name="text">
+            <string>22/12/2018</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="20">
+           <property name="text">
+            <string>Carta</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="21">
+           <property name="text">
+            <string>Il cliente ha richiesto di un aiuto per il trasporto dei bagagli in camera</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="6" column="2">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Cellulare</string>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+<<<<<<< HEAD
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="lE_Email_Cliente">
+=======
+          <item row="6" column="6">
+           <widget class="QLineEdit" name="lineEdit_num_Doc">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+<<<<<<< HEAD
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="6">
+           <widget class="QLineEdit" name="lE_nazione_Cliente">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="6">
+           <widget class="QComboBox" name="cB_residenza_Cliente">
+=======
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QLineEdit" name="lineEdit_Cellulare_Clienti">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QDateEdit" name="dateEdit_nascita_Cliente">
+=======
          </widget>
         </item>
         <item row="4" column="0">
@@ -552,6 +1366,7 @@ CheckIn</string>
           </item>
           <item row="7" column="1">
            <widget class="QLineEdit" name="lineE_email_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -563,12 +1378,41 @@ CheckIn</string>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
+<<<<<<< HEAD
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::UpDownArrows</enum>
+            </property>
+            <property name="correctionMode">
+             <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+            </property>
+            <property name="displayFormat">
+             <string>dd/MM/yyyy</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Codice Fiscale</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+=======
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
            </widget>
           </item>
           <item row="3" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
+<<<<<<< HEAD
+             <widget class="QLineEdit" name="lineEdit_CodFis_Cliente">
+=======
              <widget class="QLineEdit" name="lineE_cf_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
               <property name="font">
                <font>
                 <family>Arial</family>
@@ -587,25 +1431,112 @@ CheckIn</string>
           <item row="1" column="4">
            <widget class="QLabel" name="label_7">
             <property name="text">
+<<<<<<< HEAD
+             <string>Nazione</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="lineEdit_Email_Clienti">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+=======
              <string>Residente a:</string>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="3" column="6">
+           <widget class="QLineEdit" name="lineEdit_Nazione_Clienti">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+=======
           <item row="2" column="0">
            <widget class="QLabel" name="label_9">
             <property name="text">
              <string>Provincia:</string>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="1" column="6">
+           <widget class="QComboBox" name="comboBox_Residenza_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+              <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAtTop</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>Serra de' Conti</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Fermo</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Jesi</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Senigalli</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ancona</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="1">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_provincia_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_Prov_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
           <item row="2" column="1">
            <widget class="QLineEdit" name="lineE_provincia_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -630,7 +1561,7 @@ CheckIn</string>
            </widget>
           </item>
           <item row="0" column="6">
-           <widget class="QComboBox" name="cB_sesso_Cliente">
+           <widget class="QComboBox" name="comboBox_sesso_Cliente">
             <property name="font">
              <font>
               <family>Arial</family>
@@ -697,7 +1628,15 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="6">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_CAP_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_CAP_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QLineEdit" name="lineE_cap_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -731,8 +1670,17 @@ CheckIn</string>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="1" column="1">
+<<<<<<< HEAD
+           <widget class="QComboBox" name="cB_nascita_Cliente">
+=======
+           <widget class="QComboBox" name="comboBox_nascita_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
           <item row="6" column="1">
            <widget class="QLineEdit" name="lineE_enteRilascio_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -741,10 +1689,36 @@ CheckIn</string>
               <bold>false</bold>
              </font>
             </property>
+<<<<<<< HEAD
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+<<<<<<< HEAD
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAtTop</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
             <property name="alignment">
              <set>Qt::AlignCenter</set>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             </property>
-            <property name="placeholderText">
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAtTop</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+            </property>
+            <property name="placeholderText" stdset="0">
              <string/>
             </property>
            </widget>
@@ -782,10 +1756,29 @@ CheckIn</string>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="6" column="1">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_rilascio_documenti_Cliente">
+=======
+           <widget class="QLineEdit" name="_RilascioDoc_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+              <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+              <bold>false</bold>
+             </font>
+=======
           <item row="6" column="0">
            <widget class="QLabel" name="label_16">
             <property name="text">
              <string>Rilasciato da: </string>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -793,7 +1786,15 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="3">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_via_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_Via_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QLineEdit" name="lineE_via_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -818,7 +1819,15 @@ CheckIn</string>
            </widget>
           </item>
           <item row="3" column="3">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_telefono_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_Tel_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QLineEdit" name="lineE_telefono_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -843,7 +1852,15 @@ CheckIn</string>
            </widget>
           </item>
           <item row="5" column="1">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QComboBox" name="cB_tipo_documento_Cliente">
+=======
+           <widget class="QComboBox" name="comboBox_Doc_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QComboBox" name="cB_documento_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -876,7 +1893,15 @@ CheckIn</string>
            </widget>
           </item>
           <item row="5" column="6">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QDateEdit" name="dE_scadenza_documenti_Cliente">
+=======
+           <widget class="QDateEdit" name="dateEdit_Doc_Clienti_Scadenza">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QDateEdit" name="dE_dataScadenza_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -914,7 +1939,15 @@ CheckIn</string>
            </widget>
           </item>
           <item row="5" column="3">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QDateEdit" name="dE_data_rilascio_Cliente">
+=======
+           <widget class="QDateEdit" name="dateEdit_Doc_Clienti_Rilascio">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QDateEdit" name="dE_dataRilascio_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -966,8 +1999,17 @@ CheckIn</string>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="7" column="4">
+<<<<<<< HEAD
+           <widget class="QComboBox" name="cB_modalita_pagamento_Cliente">
+=======
+           <widget class="QComboBox" name="comboBox_ModPag_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
           <item row="7" column="3">
            <widget class="QComboBox" name="cB_modalitaPag_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1002,6 +2044,14 @@ CheckIn</string>
             </item>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="0" column="3">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_cognome_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_Cognome_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
           <item row="0" column="0">
            <widget class="QLabel" name="label_3">
             <property name="text">
@@ -1017,6 +2067,7 @@ CheckIn</string>
             <property name="enabled">
              <bool>true</bool>
             </property>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1034,7 +2085,6 @@ CheckIn</string>
            <widget class="QLineEdit" name="lineE_nascita_Cliente">
             <property name="font">
              <font>
-              <family>Arial</family>
               <pointsize>11</pointsize>
               <weight>50</weight>
               <bold>false</bold>
@@ -1045,11 +2095,22 @@ CheckIn</string>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="0" column="1">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_nome_Cliente">
+=======
+           <widget class="QLineEdit" name="lineEdit_nome_Cliente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+=======
           <item row="1" column="6">
            <widget class="QLineEdit" name="lineE_residenza_Cliente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
-              <family>Arial</family>
               <pointsize>11</pointsize>
               <weight>50</weight>
               <bold>false</bold>
@@ -1062,6 +2123,48 @@ CheckIn</string>
           </item>
          </layout>
         </item>
+<<<<<<< HEAD
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_14">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>9</pointsize>
+<<<<<<< HEAD
+=======
+            <weight>75</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Info 
+CheckIn</string>
+<<<<<<< HEAD
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="lE_info_checkin_Cliente">
+=======
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="_InfoCheckIn_Clienti">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+=======
         <item row="2" column="0">
          <spacer name="verticalSpacer">
           <property name="orientation">
@@ -1069,6 +2172,7 @@ CheckIn</string>
           </property>
           <property name="sizeType">
            <enum>QSizePolicy::Fixed</enum>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -1076,7 +2180,25 @@ CheckIn</string>
             <height>23</height>
            </size>
           </property>
+<<<<<<< HEAD
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+            <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+=======
          </spacer>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
         </item>
        </layout>
       </widget>
@@ -1088,7 +2210,7 @@ CheckIn</string>
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QPushButton" name="pB_aggiungi_Fornitore">
+           <widget class="QPushButton" name="pB_add_Fornitore">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1130,7 +2252,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_elimina_Fornitore">
+           <widget class="QPushButton" name="pB_Elimina_Fornitore">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1196,7 +2318,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_annulla_Fornitore">
+           <widget class="QPushButton" name="pB_AnnullaMod_Fornitore">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -1226,7 +2348,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_creaPDF_Fornitore">
+           <widget class="QPushButton" name="pB_CreaPDF_Fornitore">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1249,12 +2371,10 @@ CheckIn</string>
          </layout>
         </item>
         <item row="1" column="0">
-         <widget class="QTableWidget" name="tableWidget_Fornitore">
+         <widget class="QTableWidget" name="tableWidget_Fornitori">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <pointsize>9</pointsize>
            </font>
           </property>
           <property name="editTriggers">
@@ -1278,64 +2398,169 @@ CheckIn</string>
           <attribute name="horizontalHeaderStretchLastSection">
            <bool>true</bool>
           </attribute>
+<<<<<<< HEAD
+          <row>
+           <property name="text">
+            <string>Fornitore 1.</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+=======
+             <weight>75</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>true</bold>
+            </font>
+           </property>
+          </row>
+=======
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
           <column>
            <property name="text">
             <string>Id</string>
            </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Nome</string>
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Tipo Fornitura 1</string>
+            <string>Nome Fornitore</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Tipo Fornitura 2</string>
+            <string>Tipo Fornitura</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Partita IVA</string>
+            <string>Tipo Fortnitura 2</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Riferimento</string>
+            <string>Telefono rif.</string>
            </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Telefono Riferimento</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Indirizzo</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Telefono</string>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </column>
           <column>
            <property name="text">
             <string>E-Mail</string>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Indirizzo</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Partita IVA</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Riferimento</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>Modalità di Pagamento</string>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Telefono</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>Fax</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </column>
          </widget>
@@ -1360,6 +2585,16 @@ CheckIn</string>
           <property name="verticalSpacing">
            <number>20</number>
           </property>
+<<<<<<< HEAD
+          <item row="2" column="3">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_riferimento_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_Riferimento"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+          </item>
+=======
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
           <item row="3" column="0">
            <widget class="QLabel" name="label_31">
             <property name="text">
@@ -1371,6 +2606,18 @@ CheckIn</string>
            </widget>
           </item>
           <item row="3" column="1">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_email_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_Email"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+          </item>
+          <item row="3" column="4">
+           <widget class="QLabel" name="label_29">
+            <property name="text">
+             <string>Fax:</string>
+=======
            <widget class="QLineEdit" name="lineE_email_Fornitore">
             <property name="font">
              <font>
@@ -1378,6 +2625,7 @@ CheckIn</string>
               <weight>50</weight>
               <bold>false</bold>
              </font>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -1385,6 +2633,18 @@ CheckIn</string>
            </widget>
           </item>
           <item row="1" column="3">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_partitaIVA_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_PartitaIVA"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+          </item>
+          <item row="1" column="4">
+           <widget class="QLabel" name="label_32">
+            <property name="text">
+             <string>Tempo pagamento:</string>
+=======
            <widget class="QLineEdit" name="lineE_IVA_Fornitore">
             <property name="font">
              <font>
@@ -1392,6 +2652,7 @@ CheckIn</string>
               <weight>50</weight>
               <bold>false</bold>
              </font>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -1419,6 +2680,19 @@ CheckIn</string>
            </widget>
           </item>
           <item row="2" column="1">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_telefono_riferimento_Fornitore"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lE_tipo_fornitura_Fornitore_2"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_TelefonoRif"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_TipoFornitura2"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QLineEdit" name="lineE_telefonoRif_Fornitore">
             <property name="font">
              <font>
@@ -1445,6 +2719,7 @@ CheckIn</string>
              <set>Qt::AlignCenter</set>
             </property>
            </widget>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
           </item>
           <item row="1" column="2">
            <widget class="QLabel" name="label_24">
@@ -1456,6 +2731,16 @@ CheckIn</string>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="1" column="5">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_tempo_pagamento_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_TempoPagamento"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+          </item>
+=======
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
           <item row="2" column="4">
            <widget class="QLabel" name="label_28">
             <property name="text">
@@ -1490,8 +2775,29 @@ CheckIn</string>
             </property>
            </widget>
           </item>
+<<<<<<< HEAD
+          <item row="2" column="5">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_telefono_Fornitore"/>
+          </item>
+          <item row="3" column="5">
+           <widget class="QLineEdit" name="lE_fax_Fornitore"/>
+          </item>
+          <item row="0" column="5">
+           <widget class="QComboBox" name="cB_modalita_pagamento_Fornitore">
+=======
+           <widget class="QLineEdit" name="lineEdit_Telefono"/>
+          </item>
+          <item row="3" column="5">
+           <widget class="QLineEdit" name="lineEdit_Fax"/>
+          </item>
+          <item row="0" column="5">
+           <widget class="QComboBox" name="comboBox_ModPag_Fornitori">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
           <item row="0" column="5">
            <widget class="QComboBox" name="cB_modalitaPag_Fornitore">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="font">
              <font>
               <family>Arial</family>
@@ -1539,6 +2845,13 @@ CheckIn</string>
            </widget>
           </item>
           <item row="0" column="1">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_nome_Fornitore">
+=======
+           <widget class="QLineEdit" name="lineEdit_nomeFornitore">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QLineEdit" name="lineE_nome_Fornitore">
             <property name="font">
              <font>
@@ -1547,6 +2860,7 @@ CheckIn</string>
               <bold>false</bold>
              </font>
             </property>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
             <property name="text">
              <string/>
             </property>
@@ -1556,6 +2870,13 @@ CheckIn</string>
            </widget>
           </item>
           <item row="0" column="3">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_tipo_fornitura_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_TipoFornitura"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QLineEdit" name="lineE_fornitura1_Fornitore">
             <property name="font">
              <font>
@@ -1568,11 +2889,12 @@ CheckIn</string>
              <set>Qt::AlignCenter</set>
             </property>
            </widget>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
           </item>
           <item row="0" column="2">
            <widget class="QLabel" name="label_27">
             <property name="text">
-             <string>Tipo fornitura 1:</string>
+             <string>Tipo fornitura:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1638,6 +2960,13 @@ CheckIn</string>
            </widget>
           </item>
           <item row="3" column="3">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_indirizzo_Fornitore"/>
+=======
+           <widget class="QLineEdit" name="lineEdit_Indirizzo"/>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
            <widget class="QLineEdit" name="lineE_fax_Fornitore">
             <property name="font">
              <font>
@@ -1650,6 +2979,7 @@ CheckIn</string>
              <set>Qt::AlignCenter</set>
             </property>
            </widget>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
           </item>
          </layout>
         </item>
@@ -1663,7 +2993,7 @@ CheckIn</string>
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <item>
-           <widget class="QPushButton" name="pB_aggiungi_Dipendente">
+           <widget class="QPushButton" name="pB_Aggiungi_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1684,7 +3014,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_modifica_Dipendente">
+           <widget class="QPushButton" name="pB_Modifica_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1705,7 +3035,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_elimina_Dipendente">
+           <widget class="QPushButton" name="pB_Elimina_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1726,7 +3056,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_ricerca_Dipendente">
+           <widget class="QPushButton" name="pB_Ricerca_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1749,7 +3079,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_salva_Dipendente">
+           <widget class="QPushButton" name="pB_Salva_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1770,7 +3100,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_annulla_Dipendente">
+           <widget class="QPushButton" name="pB_Annulla_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1791,7 +3121,7 @@ CheckIn</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pB_creaPDF_Dipendente">
+           <widget class="QPushButton" name="pB_CreaPDF_Dipendente">
             <property name="minimumSize">
              <size>
               <width>180</width>
@@ -1813,290 +3143,6 @@ CheckIn</string>
           </item>
          </layout>
         </item>
-        <item row="3" column="0">
-         <layout class="QGridLayout" name="gridLayout_5">
-          <property name="leftMargin">
-           <number>15</number>
-          </property>
-          <property name="topMargin">
-           <number>15</number>
-          </property>
-          <property name="rightMargin">
-           <number>15</number>
-          </property>
-          <property name="bottomMargin">
-           <number>15</number>
-          </property>
-          <property name="horizontalSpacing">
-           <number>20</number>
-          </property>
-          <property name="verticalSpacing">
-           <number>25</number>
-          </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_42">
-            <property name="text">
-             <string>Username:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="lineE_username_Dipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="QLineEdit" name="lineE_password_Dipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QLabel" name="label_43">
-            <property name="text">
-             <string>Password:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="5">
-           <widget class="QLineEdit" name="lineE_nome_Dipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QLineEdit" name="lineE_email_Dipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QLabel" name="label_46">
-            <property name="text">
-             <string>E-Mail:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="lineE_cognome_Dipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_45">
-            <property name="text">
-             <string>Cognome:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="4">
-           <widget class="QLabel" name="label_44">
-            <property name="text">
-             <string>Nome:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="5">
-           <widget class="QLineEdit" name="lineE_cellulare_Dipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="4">
-           <widget class="QLabel" name="label_47">
-            <property name="text">
-             <string>Cellulare:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_48">
-            <property name="text">
-             <string>Data di Nascita:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QDateEdit" name="dE_nascita_Dipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-             </font>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="buttonSymbols">
-             <enum>QAbstractSpinBox::UpDownArrows</enum>
-            </property>
-            <property name="calendarPopup">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="3">
-           <widget class="QLineEdit" name="lineE_ambito_Dipendente">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="5">
-           <widget class="QComboBox" name="cB_permessi_Dipendente">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="currentText">
-             <string>Admin</string>
-            </property>
-            <property name="maxVisibleItems">
-             <number>10</number>
-            </property>
-            <property name="insertPolicy">
-             <enum>QComboBox::InsertAlphabetically</enum>
-            </property>
-            <property name="sizeAdjustPolicy">
-             <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-            </property>
-            <item>
-             <property name="text">
-              <string>Admin</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Responsabile</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Dipendente</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="2" column="4">
-           <widget class="QLabel" name="label_92">
-            <property name="text">
-             <string>Permessi:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="QLabel" name="label_91">
-            <property name="text">
-             <string>Ambito:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
         <item row="1" column="0">
          <widget class="QTableWidget" name="tableWidget_Dipendente">
           <property name="sizePolicy">
@@ -2108,7 +3154,7 @@ CheckIn</string>
           <property name="font">
            <font>
             <family>Arial</family>
-            <pointsize>12</pointsize>
+            <pointsize>10</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -2182,57 +3228,852 @@ CheckIn</string>
           <attribute name="verticalHeaderCascadingSectionResizes">
            <bool>true</bool>
           </attribute>
+<<<<<<< HEAD
+          <row>
+           <property name="text">
+            <string>Utente_00</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+             <weight>75</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>true</bold>
+            </font>
+           </property>
+          </row>
           <column>
            <property name="text">
             <string>Id</string>
            </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Nome</string>
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>11</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
            </property>
           </column>
           <column>
            <property name="text">
+<<<<<<< HEAD
             <string>Cognome</string>
+=======
+            <string>Username</string>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
            </property>
           </column>
+=======
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
           <column>
            <property name="text">
             <string>Username</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Id</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
            </property>
           </column>
           <column>
            <property name="text">
             <string>Password</string>
            </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nome</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Cognome</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>E-Mail</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
            </property>
           </column>
           <column>
            <property name="text">
             <string>Cellulare</string>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>Data di Nascita</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
            </property>
           </column>
           <column>
            <property name="text">
             <string>Ambito</string>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>Permessi</string>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>00001</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>admin</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+<<<<<<< HEAD
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="1">
+=======
+          <item row="0" column="2">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+          </column>
+          <column>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+           <property name="text">
+            <string>Nome</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+<<<<<<< HEAD
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="2">
+=======
+          </column>
+          <column>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+           <property name="text">
+            <string>Cognome</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+=======
+          <item row="0" column="3">
+           <property name="text">
+            <string>adim</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+<<<<<<< HEAD
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="3">
+=======
+          </column>
+          <column>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+           <property name="text">
+            <string>E-Mail</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+=======
+          <item row="0" column="4">
+           <property name="text">
+            <string>admin</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+<<<<<<< HEAD
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="4">
+=======
+          </column>
+          <column>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+           <property name="text">
+            <string>Cellulare</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Data di Nascita</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+=======
+          <item row="0" column="5">
+           <property name="text">
+            <string>admin@admin.it</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </item>
+          <item row="0" column="6">
+           <property name="text">
+            <string>334342</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            </font>
+           </property>
+          </item>
+          <item row="0" column="7">
+           <property name="text">
+            <string>16/07/1875</string>
+           </property>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </item>
+          <item row="0" column="7">
+=======
+          </column>
+          <column>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+           <property name="text">
+            <string>Ambito</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+=======
+           <property name="font">
+            <font>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </item>
+          <item row="0" column="8">
+           <property name="text">
+            <string>Admin</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+            </font>
+           </property>
+          </item>
+          <item row="0" column="8">
+           <property name="text">
+            <string>Admin</string>
+           </property>
+<<<<<<< HEAD
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+=======
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+          </item>
+          <item row="0" column="9">
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </column>
+          <column>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+           <property name="text">
+            <string>Permessi</string>
+           </property>
+           <property name="font">
+            <font>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+             <weight>50</weight>
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+             <bold>false</bold>
+=======
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
           </column>
          </widget>
+        </item>
+        <item row="3" column="0">
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>15</number>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <property name="bottomMargin">
+           <number>15</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>25</number>
+          </property>
+          <item row="0" column="1">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_username_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_usernameDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+           <widget class="QLineEdit" name="lineE_username_Dipendente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_42">
+            <property name="text">
+             <string>Username:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_43">
+            <property name="text">
+             <string>Password:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+<<<<<<< HEAD
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_nome_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_nomeDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+           <widget class="QLineEdit" name="lineE_password_Dipendente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+<<<<<<< HEAD
+          <item row="1" column="1">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_password_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_passwordDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="lineE_nome_Dipendente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_44">
+            <property name="text">
+             <string>Nome:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+<<<<<<< HEAD
+          <item row="1" column="3">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_cognome_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_cognomeDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineE_cognome_Dipendente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_45">
+            <property name="text">
+             <string>Cognome:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+<<<<<<< HEAD
+          <item row="1" column="5">
+<<<<<<< HEAD
+           <widget class="QComboBox" name="cB_permessi_Dipendente">
+=======
+           <widget class="QComboBox" name="cB_permessi">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+=======
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="lineE_email_Dipendente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_46">
+            <property name="text">
+             <string>E-Mail:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLabel" name="label_47">
+            <property name="text">
+             <string>Cellulare:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+<<<<<<< HEAD
+          <item row="0" column="5">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_ambito_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_ambitoDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+          <item row="1" column="5">
+           <widget class="QLineEdit" name="lineE_cellulare_Dipendente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDateEdit" name="dateEdit">
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::UpDownArrows</enum>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_48">
+            <property name="text">
+             <string>Data di Nascita:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+<<<<<<< HEAD
+          <item row="2" column="1">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_Email_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_EmailDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="lineE_ambito_Dipendente">
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+<<<<<<< HEAD
+          <item row="2" column="3">
+<<<<<<< HEAD
+           <widget class="QLineEdit" name="lE_cellulare_Dipendente">
+=======
+           <widget class="QLineEdit" name="lE_CellulareDipendente">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+          <item row="2" column="5">
+           <widget class="QComboBox" name="cB_permessi_Dipendente">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="currentText">
+             <string>Admin</string>
+            </property>
+            <property name="maxVisibleItems">
+             <number>10</number>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAlphabetically</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>Admin</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Responsabile</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dipendente</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QLabel" name="label_92">
+            <property name="text">
+             <string>Permessi:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+<<<<<<< HEAD
+          <item row="2" column="5">
+<<<<<<< HEAD
+           <widget class="QDateEdit" name="dE_nascita_Dipendente">
+=======
+           <widget class="QDateEdit" name="dateEdit">
+>>>>>>> parent of a13f16f (Avanzamento Anagrafiche)
+=======
+          <item row="2" column="2">
+           <widget class="QLabel" name="label_91">
+            <property name="text">
+             <string>Ambito:</string>
+            </property>
+>>>>>>> parent of 8b77839 (Merge branch 'main' of https://github.com/Raccispini/Progetto-Hotel into main)
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
@@ -2241,73 +4082,6 @@ CheckIn</string>
    </layout>
   </widget>
  </widget>
- <tabstops>
-  <tabstop>pB_aggiungi_Cliente</tabstop>
-  <tabstop>pB_modifica_Cliente</tabstop>
-  <tabstop>pB_elimina_Cliente</tabstop>
-  <tabstop>pB_ricerca_Cliente</tabstop>
-  <tabstop>pB_salva_Cliente</tabstop>
-  <tabstop>pB_annulla_Cliente</tabstop>
-  <tabstop>pB_creaPDF_Cliente</tabstop>
-  <tabstop>tableWidget_Anagrafiche</tabstop>
-  <tabstop>lineE_nome_Cliente</tabstop>
-  <tabstop>lineE_cognome_Cliente</tabstop>
-  <tabstop>cB_sesso_Cliente</tabstop>
-  <tabstop>lineE_nascita_Cliente</tabstop>
-  <tabstop>dE_nascita_Cliente</tabstop>
-  <tabstop>lineE_residenza_Cliente</tabstop>
-  <tabstop>lineE_provincia_Cliente</tabstop>
-  <tabstop>lineE_via_Cliente</tabstop>
-  <tabstop>lineE_cap_Cliente</tabstop>
-  <tabstop>lineE_cf_Cliente</tabstop>
-  <tabstop>lineE_telefono_Cliente</tabstop>
-  <tabstop>lineE_nazione_Cliente</tabstop>
-  <tabstop>cB_documento_Cliente</tabstop>
-  <tabstop>dE_dataRilascio_Cliente</tabstop>
-  <tabstop>dE_dataScadenza_Cliente</tabstop>
-  <tabstop>lineE_enteRilascio_Cliente</tabstop>
-  <tabstop>lineE_cellulare_Cliente</tabstop>
-  <tabstop>lineE_numeroDoc_Cliente</tabstop>
-  <tabstop>lineE_email_Cliente</tabstop>
-  <tabstop>cB_modalitaPag_Cliente</tabstop>
-  <tabstop>lineE_infoCheckin_Cliente</tabstop>
-  <tabstop>pB_aggiungi_Fornitore</tabstop>
-  <tabstop>pB_modifica_Fornitore</tabstop>
-  <tabstop>pB_elimina_Fornitore</tabstop>
-  <tabstop>pB_ricerca_Fornitore</tabstop>
-  <tabstop>pB_salva_Fornitore</tabstop>
-  <tabstop>pB_annulla_Fornitore</tabstop>
-  <tabstop>pB_creaPDF_Fornitore</tabstop>
-  <tabstop>tableWidget_Fornitore</tabstop>
-  <tabstop>lineE_nome_Fornitore</tabstop>
-  <tabstop>lineE_fornitura1_Fornitore</tabstop>
-  <tabstop>cB_modalitaPag_Fornitore</tabstop>
-  <tabstop>lineE_fornitura2_Fornitore</tabstop>
-  <tabstop>lineE_IVA_Fornitore</tabstop>
-  <tabstop>lineE_riferimento_Fornitore</tabstop>
-  <tabstop>lineE_telefonoRif_Fornitore</tabstop>
-  <tabstop>lineE_indirizzo_Fornitore</tabstop>
-  <tabstop>lineE_telefono_Fornitore</tabstop>
-  <tabstop>lineE_email_Fornitore</tabstop>
-  <tabstop>lineE_fax_Fornitore</tabstop>
-  <tabstop>pB_aggiungi_Dipendente</tabstop>
-  <tabstop>pB_modifica_Dipendente</tabstop>
-  <tabstop>pB_elimina_Dipendente</tabstop>
-  <tabstop>pB_ricerca_Dipendente</tabstop>
-  <tabstop>pB_salva_Dipendente</tabstop>
-  <tabstop>pB_annulla_Dipendente</tabstop>
-  <tabstop>pB_creaPDF_Dipendente</tabstop>
-  <tabstop>tableWidget_Dipendente</tabstop>
-  <tabstop>lineE_username_Dipendente</tabstop>
-  <tabstop>lineE_password_Dipendente</tabstop>
-  <tabstop>lineE_nome_Dipendente</tabstop>
-  <tabstop>lineE_cognome_Dipendente</tabstop>
-  <tabstop>lineE_email_Dipendente</tabstop>
-  <tabstop>lineE_cellulare_Dipendente</tabstop>
-  <tabstop>dE_nascita_Dipendente</tabstop>
-  <tabstop>lineE_ambito_Dipendente</tabstop>
-  <tabstop>cB_permessi_Dipendente</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>
