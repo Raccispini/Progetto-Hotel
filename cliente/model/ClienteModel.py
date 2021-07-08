@@ -1,7 +1,10 @@
 from utente.model.ModelUtente import ModelUtente
 
 class ClienteModel(ModelUtente):
-    def __init__(self,id=0, nome="", cognome="", sesso="", data_di_nascita = "", luogo_di_nascita="", residenza="", provincia="", via="", cap="", cf="", nazione="", telefono="", cellulare="", email="", tipo_documento="", numero_documento="", ente_rilascio="", data_rilascio="", data_scadenza="", modalita_pagamento="", info_check_in=""):
+    def __init__(self,id=0, nome="", cognome="", sesso="", data_di_nascita = "", luogo_di_nascita="", residenza="",
+                 provincia="", via="", cap="", cf="", nazione="", telefono="", cellulare="", email="",
+                 tipo_documento="", numero_documento="", ente_rilascio="", data_rilascio="", data_scadenza="",
+                 modalita_pagamento="", info_check_in=""):
         super(ClienteModel, self).__init__(id, nome, cognome, email, cellulare, data_di_nascita)
         self.sesso = sesso
         self.luogo_di_nascita = luogo_di_nascita
@@ -21,15 +24,45 @@ class ClienteModel(ModelUtente):
         self.info_check_in = info_check_in
 
     def iscompleto(self):
-        if (self.nome!="" and self.cognome!="" and self.sesso!="" and self.data_di_nascita!=""
-            and self.luogo_di_nascita!="" and self.residenza!="" and self.provincia!="" and self.via!="" and self.cap!=""
-            and self.cf!="" and self.nazione!="" and self.telefono!="" and self.cellulare!=""and self.email!="" and
-            self.tipo_documento!="" and self.numero_documento!="" and self.ente_rilascio!="" and self.data_rilascio!=""
-            and self.data_scadenza!="" and self.modalita_pagamento!="" and self.info_check_in!=""):
+        if (self.nome!="" and self.cognome!="" and self.sesso!="" and self.data_di_nascita!="01/01/1800" and self.luogo_di_nascita!=""
+            and self.residenza!="" and self.provincia!="" and self.via!="" and self.cap!="" and self.cf!="" and self.nazione!=""
+            and self.telefono!="" and self.cellulare!=""and self.email!="" and self.tipo_documento!="" and self.numero_documento!=""
+            and self.ente_rilascio!="" and self.data_rilascio!="01/01/1800" and self.data_scadenza!="01/01/1800"
+            and self.modalita_pagamento!="" and self.info_check_in!=""):
 
             return True
         else:
             return False
+
+    def get_info(self):
+        return (self.id, self.nome, self.cognome, self.sesso, self.data_di_nascita, self.luogo_di_nascita, self.residenza,
+                self.provincia, self.via, self.cap, self.cf, self.nazione, self.telefono, self.cellulare, self.email,
+                self.tipo_documento, self.numero_documento, self.ente_rilascio, self.data_rilascio,
+                self.data_scadenza, self.modalita_pagamento, self.info_check_in)
+
+    def set_info(self, info):
+        self.id = info[0]
+        self.nome = info[1]
+        self.cognome = info[2]
+        self.sesso = info[3]
+        self.data_di_nascita = info[4]
+        self.luogo_di_nascita = info[5]
+        self.residenza = info[6]
+        self.provincia = info[7]
+        self.via = info[8]
+        self.cap = info[9]
+        self.cf = info[10]
+        self.nazione = info[11]
+        self.telefono = info[12]
+        self.cellulare = info[13]
+        self.email = info[14]
+        self.tipo_documento = info[15]
+        self.numero_documento = info[16]
+        self.ente_rilascio = info[17]
+        self.data_rilascio = info[18]
+        self.data_scadenza = info[19]
+        self.modalita_pagamento = info[20]
+        self.info_check_in = info[21]
 
 
     def get_sesso(self):
@@ -77,7 +110,7 @@ class ClienteModel(ModelUtente):
     def get_modalita_pagamento(self):
         return self.modalita_pagamento
 
-    def get_info_check_in(self):
+    def get_info_checkin(self):
         return self.info_check_in
 
     def set_sesso(self, sesso):
@@ -125,7 +158,7 @@ class ClienteModel(ModelUtente):
     def set_modalita_pagamento(self, modalita_pagamento):
         self.modalita_pagamento = modalita_pagamento
 
-    def set_info_check_in(self, info_check_in):
+    def set_info_checkin(self, info_check_in):
         self.info_check_in = info_check_in
 
     def __str__(self):

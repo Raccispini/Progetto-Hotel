@@ -46,16 +46,15 @@ class BarView(QMainWindow, Ui_BarView):
         selected_rows = []
         for index in sorted(indexes):
             selected_rows.append(index.row())
+            print(selected_rows)
             #print('Row %d is selected' % index.row())
 
         #elimina la riga
         for i in range(len(selected_rows)):
             try:
-                print("Elimina : "+str(self.lista[selected_rows[i]]))
                 self.lista.remove(self.lista[selected_rows[i]])
             except :
                 pass
-        print(self.lista)
         self.update_table()
         self.update_tot()
 

@@ -19,17 +19,14 @@ class HomeView(QMainWindow, Ui_HomeView):
     def openBar(self):
        self.bar_window = BarView()
        self.bar_window.show()
-       print("Finestra bar aperta")
 
     def openCamere(self):
         self.camere_window = CamereView()
         self.camere_window.show()
-        print("Finestra Camere Aperta")
 
     def openAnagrafiche(self):
         self.anagrafiche_window = AnagraficheView()
         self.anagrafiche_window.show()
-        print("Finestra Anagrafiche Aperta")
 
     def openMagazzino(self):
         self.magazzino_window = MagazzinoView()
