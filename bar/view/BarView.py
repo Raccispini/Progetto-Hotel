@@ -46,6 +46,7 @@ class BarView(QMainWindow, Ui_BarView):
         selected_rows = []
         for index in sorted(indexes):
             selected_rows.append(index.row())
+            print(selected_rows)
             #print('Row %d is selected' % index.row())
 
         #elimina la riga

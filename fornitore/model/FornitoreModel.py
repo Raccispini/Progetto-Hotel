@@ -1,23 +1,23 @@
 class FornitoreModel():
-    def __init__(self, id=0, nome="", fornitura1="", fornitura2="", riferimento="", cellulare_rif="",
-                 email="", indirizzo="", iva="", mod_pagamento="", telefono="", fax=""):
+    def __init__(self, id=0, nome="", fornitura1="", fornitura2="", iva="", riferimento="", cellulare_rif="",
+                 indirizzo="", telefono="", email="", mod_pagamento="", fax=""):
         self.id = id
         self.nome = nome
         self.fornitura1 = fornitura1
         self.fornitura2 = fornitura2
+        self.iva = iva
         self.riferimento = riferimento
         self.cellulare_rif = cellulare_rif
-        self.email = email
         self.indirizzo = indirizzo
-        self.iva = iva
-        self.mod_pagamento = mod_pagamento
         self.telefono = telefono
+        self.email = email
+        self.mod_pagamento = mod_pagamento
         self.fax = fax
 
     def iscompleto(self):
-        if (self.nome!="" and self.fornitura1!="" and self.fornitura2!="" and self.riferimento!="" and
-            self.cellulare_rif!="" and self.email!="" and self.indirizzo!="" and self.iva!="" and
-            self.mod_pagamento!="" and self.telefono!="" and self.fax!=""):
+        if (self.nome!="" and self.fornitura1!="" and self.fornitura2!="" and self.iva!="" and self.riferimento!="" and
+            self.cellulare_rif!="" and self.indirizzo!="" and self.telefono!="" and self.email!=""  and  self.mod_pagamento!=""
+            and self.fax!=""):
             return True
         else:
             return False
@@ -25,6 +25,21 @@ class FornitoreModel():
     def get_info(self):
         return(self.id, self.nome, self.fornitura1, self.fornitura2,  self.iva, self.riferimento, self.cellulare_rif,
                self.indirizzo, self.telefono, self.email, self.mod_pagamento,  self.fax)
+
+    def set_info(self, info):
+        self.id = info[0]
+        self.nome = info[1]
+        self.fornitura1 = info[2]
+        self.fornitura2 = info[3]
+        self.iva = info[4]
+        self.riferimento = info[5]
+        self.cellulare_rif = info[6]
+        self.indirizzo = info[7]
+        self.telefono = info[8]
+        self.email = info[9]
+        self.mod_pagamento = info[10]
+        self.fax = info[11]
+
 
     def get_id(self):
         return self.id
