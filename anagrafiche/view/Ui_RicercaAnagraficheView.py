@@ -104,8 +104,12 @@ class Ui_RicercaAnagraficheView():
     def on_text_changed(self):
         self.pB_ricerca.setEnabled(bool(self.lineE_parola.text()) and bool(self.cB_criterio_ricerca.currentText()))
     def set_cB(self, cB_element):
+        self.cB_criterio_ricerca.setEditable(True)
         for element in cB_element:
             self.cB_criterio_ricerca.addItem(element)
+        lineEdit = self.cB_criterio_ricerca.lineEdit()
+        lineEdit.setAlignment(QtCore.Qt.AlignCenter)
+        lineEdit.setReadOnly(True)
 
 
     def retranslateUi(self, MainWindow):
