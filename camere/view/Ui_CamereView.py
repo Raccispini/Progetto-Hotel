@@ -3,13 +3,13 @@ from ui.resources.Camere import camere_rc
 
 class Ui_CamereView(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setObjectName("MainWindow_Camere")
         MainWindow.resize(1558, 842)
         MainWindow.setMinimumSize(QtCore.QSize(1223, 665))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("background-image: url(:/camere/Grand-Hotel-Fleming-2.jpg);")
+        MainWindow.setStyleSheet("#MainWindow_Camere{background-image: url(:/camere/Grand-Hotel-Fleming-2.jpg);}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)

@@ -9,21 +9,64 @@ class CamereView(QMainWindow, Ui_CamereView):
         super(CamereView, self).__init__(parent)
         self.setupUi(self)
         self.update_tipo()
-        self.update_table(onstart=True)
+        self.update_table()
+        #letti
         self.spin_singoli.valueChanged.connect(lambda: self.update_table())
+        self.spin_matrim.valueChanged.connect(lambda: self.update_table())
+        #tipo
+        self.combo_tipo.currentTextChanged.connect(lambda: self.update_table())
+        #date
+        self.date_al.dateChanged.connect(lambda : self.update_table())
+        self.date_dal.dateChanged.connect(lambda: self.update_table())
+        #checkbox
+        self.cb_ariaCondizionata.clicked.connect(lambda: self.update_table())
+        self.cb_animaledomestico.clicked.connect(lambda: self.update_table())
+        self.cb_saunainterna.clicked.connect(lambda: self.update_table())
+        self.cb_vascaidromassaggio.clicked.connect(lambda: self.update_table())
+        self.cb_fumatori.clicked.connect(lambda: self.update_table())
+        self.cb_vistapanoramica.clicked.connect(lambda: self.update_table())
+        self.cb_culla_2.clicked.connect(lambda: self.update_table())
+        self.cb_minibar.clicked.connect(lambda: self.update_table())
+        self.cb_cassaforte.clicked.connect(lambda: self.update_table())
+        #bottoni laterali
+        self.pb_ricerca.clicked.connect(lambda: self.update_table())
+        self.pb_azzera.clicked.connect(lambda: self.azzera())
+        self.pb_prenota.clicked.connect(lambda: self.prenota())
+        self.pb_prenota_2.clicked.connect(lambda: self.checkout())
+
+
+    def prenota(self):
+        print("Apri Finestra prenotazione")
+
+    def checkout(self):
+        print("checkout")
 
     
 
-    
+    def azzera(self):
+        self.spin_singoli.setValue(0)
+        self.spin_matrim.setValue(0)
+
+        self.cb_ariaCondizionata.setChecked(False)
+        self.cb_animaledomestico.setChecked(False)
+        self.cb_saunainterna.setChecked(False)
+        self.cb_vascaidromassaggio.setChecked(False)
+        self.cb_fumatori.setChecked(False)
+        self.cb_vistapanoramica.setChecked(False)
+        self.cb_culla_2.setChecked(False)
+        self.cb_minibar.setChecked(False)
+        self.cb_cassaforte.setChecked(False)
+        self.update_table()
+
     def update_table(self,onstart=False):
         camere = []
         options = self.check_options()
         if onstart:
             camere = ModelCamere.getCamere()
         else:
-            camere = ModelCamere.getCamere(self,options)
-        print(options)
-        print(len(camere[0]))
+            camere = ModelCamere.getCamere(options=options)
+        #print(options)
+        #print(len(camere[0]))
         self.tabellaCamere.setRowCount(0)
         for i in range(0, len(camere)):
             self.tabellaCamere.insertRow(i)
@@ -34,6 +77,7 @@ class CamereView(QMainWindow, Ui_CamereView):
                     self.tabellaCamere.setItem(i, j , QtWidgets.QTableWidgetItem(str(camere[i][j])))
     def update_tipo(self):
         allestimenti = ModelCamere.get_tipo()
+        self.combo_tipo.clear()
         for i in range(len(allestimenti)):
             self.combo_tipo.addItem(allestimenti[i])
     def check_options(self):
@@ -56,7 +100,7 @@ class CamereView(QMainWindow, Ui_CamereView):
         options["culla"] = True if self.cb_culla_2.isChecked() else False
         options["minibar"] = True if self.cb_minibar.isChecked() else False
         options["cassaforte"] = True if self.cb_cassaforte.isChecked() else False
-        print(options)
+        #print(options)
         return options
 
     def QdateToDate(self,qdate):
