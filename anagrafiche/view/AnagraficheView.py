@@ -7,9 +7,8 @@ from anagrafiche.controller.AnagraficheController import AnagraficheController
 from anagrafiche.view.Ui_RicercaAnagraficheView import Ui_RicercaAnagraficheView
 from cliente.controller.ClienteController import ClienteController
 from dipendente.controller.DipendenteController import DipendenteController
-from dipendente.model.DipendenteModel import DipendenteModel
 from fornitore.controller.FornitoreController import FornitoreController
-from fornitore.model.FornitoreModel import FornitoreModel
+
 
 
 
@@ -81,29 +80,6 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
 
 ###########################################METODI PER CLIENTE###########################################################
     def add_cliente(self):
-        self.cliente.set_nome(self.lineEdit_nome_Cliente.text())
-        self.cliente.set_cognome(self.lineEdit_Cognome_Cliente)
-        self.cliente.set_sesso(self.comboBox_sesso_Cliente.currentText())
-        #self.cliente.set_data_di_nascita(self.)
-        self.cliente.set_luogo_di_nascita()
-        self.cliente.set_residenza()
-        self.cliente.set_provincia()
-        self.cliente.set_via()
-        self.cliente.set_cap()
-        self.cliente.set_cf()
-        self.cliente.set_nazione()
-        self.cliente.set_telefono()
-        self.cliente.set_cellulare()
-        self.cliente.set_email()
-        self.cliente.set_tipo_documento()
-        self.cliente.set_numero_documento()
-        self.cliente.set_ente_rilascio()
-        self.cliente.set_data_rilascio()
-        self.cliente.set_data_scadenza()
-        self.cliente.set_modalita_pagamento()
-        self.cliente.set_info_check_in()
-        if self.cliente.iscompleto():
-            self.controller.add_cliente(self.cliente)
         self.controller_cliente.set_info(self.get_info_cliente_from_view())
         if self.controller_cliente.iscompleto():
             self.controller.add_cliente(self.controller_cliente.get_cliente())
@@ -228,6 +204,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
 
     def annulla_cliente(self):
             self.pB_salva_Cliente.setEnabled(False)
+            self.pB_aggiungi_Cliente.setEnabled(True)
             self.lineE_nome_Cliente.clear()
             self.lineE_cognome_Cliente.clear()
             self.cB_sesso_Cliente.setCurrentIndex(0)
@@ -379,6 +356,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
 
     def annulla_dipendente(self):
         self.pB_salva_Dipendente.setEnabled(False)
+        self.pB_aggiungi_Dipendente.setEnabled(True)
         self.lineE_username_Dipendente.clear()
         self.lineE_password_Dipendente.clear()
         self.lineE_ambito_Dipendente.clear()
@@ -511,6 +489,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
 
     def annulla_fornitore(self):
         self.pB_salva_Fornitore.setEnabled(False)
+        self.pB_aggiungi_Fornitore.setEnabled(True)
         self.lineE_nome_Fornitore.clear()
         self.lineE_fornitura1_Fornitore.clear()
         self.lineE_fornitura2_Fornitore.clear()
