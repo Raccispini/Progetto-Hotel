@@ -1,10 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class AnagraficheWinow:
-    pass
-
-
 class Ui_RicercaAnagraficheView():
     def setupUi(self, MainWindow):
         self.setWindowFlag(QtCore.Qt.WindowCloseButtonHint, False)
@@ -100,9 +96,11 @@ class Ui_RicercaAnagraficheView():
         self.lineE_parola.textChanged.connect(lambda: self.on_text_changed())
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
     #Attiva il pulsante quando viene inserito qualcosa nelle lineEdit o comboBox
     def on_text_changed(self):
         self.pB_ricerca.setEnabled(bool(self.lineE_parola.text()) and bool(self.cB_criterio_ricerca.currentText()))
+
     def set_cB(self, cB_element):
         self.cB_criterio_ricerca.setEditable(True)
         for element in cB_element:

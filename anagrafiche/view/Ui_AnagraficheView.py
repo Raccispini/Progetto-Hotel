@@ -113,13 +113,12 @@ class Ui_AnagraficheView(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.tableWidget_Clienti.sizePolicy().hasHeightForWidth())
         self.tableWidget_Clienti.setSizePolicy(sizePolicy)
-        self.tableFont(self.tableWidget_Clienti)
         self.tableWidget_Clienti.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.tableWidget_Clienti.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
         self.tableWidget_Clienti.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tableWidget_Clienti.setAlternatingRowColors(True)
         self.tableWidget_Clienti.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
-        self.tableWidget_Clienti.setGridStyle(QtCore.Qt.DashLine)
+        self.tableWidget_Clienti.setGridStyle(QtCore.Qt.SolidLine)
         self.tableWidget_Clienti.setObjectName("tableWidget_Anagrafiche")
         self.tableWidget_Clienti.setColumnCount(22)
         self.tableWidget_Clienti.setRowCount(0)
@@ -170,6 +169,7 @@ class Ui_AnagraficheView(object):
         self.tableWidget_Clienti.horizontalHeader().setCascadingSectionResizes(True)
         self.tableWidget_Clienti.horizontalHeader().setDefaultSectionSize(200)
         self.tableWidget_Clienti.horizontalHeader().setStretchLastSection(True)
+        self.tableFont(self.tableWidget_Clienti)
         self.gridLayout_7.addWidget(self.tableWidget_Clienti, 1, 0, 1, 1)
         self.label_14 = QtWidgets.QLabel(self.Layout_clienti)
         self.labelFont(self.label_14)
@@ -589,7 +589,6 @@ class Ui_AnagraficheView(object):
         self.horizontalLayout_3.addWidget(self.pB_creaPDF_Fornitore)
         self.gridLayout_4.addLayout(self.horizontalLayout_3, 0, 0, 1, 1)
         self.tableWidget_Fornitore = QtWidgets.QTableWidget(self.tab_Anag_Fornitori)
-        self.tableFont(self.tableWidget_Fornitore)
         self.tableWidget_Fornitore.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tableWidget_Fornitore.setAlternatingRowColors(True)
         self.tableWidget_Fornitore.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
@@ -1154,6 +1153,7 @@ class Ui_AnagraficheView(object):
         font.setBold(True)
         table.setFont(font)
         table.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
+        table.setShowGrid(True)
 
 
     def retranslateUi(self, Anagrafiche_Window):

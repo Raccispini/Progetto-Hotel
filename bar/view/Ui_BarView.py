@@ -1,17 +1,15 @@
-import sqlite3
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui.resources.Bar import resource_bar_rc
 
+
 class Ui_BarView(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1244, 946)
-        MainWindow.setWindowTitle("Gestionale Bar")
+        MainWindow.setObjectName("MainWindow_Bar")
+        MainWindow.resize(1231, 970)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("QMainWindow{background-image: url(:/resource_bar/bar.jpg) 0 0 0 0 stretch stretch;}")
+        MainWindow.setStyleSheet("#MainWindow_Bar{background-image: url(:/resource_bar/bar.jpg) 0 0 0 0 stretch stretch;}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.centralwidget)
@@ -33,12 +31,11 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_8.setFont(font)
-        self.label_8.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_8.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_8.setAlignment(QtCore.Qt.AlignCenter)
         self.label_8.setObjectName("label_8")
         self.gridLayout_2.addWidget(self.label_8, 24, 0, 1, 1)
@@ -54,12 +51,12 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_pasticceria.setEditable(True)
-        line_edit = self.cB_pasticceria.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         self.cB_pasticceria.setCurrentText("")
         self.cB_pasticceria.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_pasticceria.setObjectName("cB_pasticceria")
+        self.cB_pasticceria.addItem("")
+        self.cB_pasticceria.setItemText(0, "")
+        self.cB_aligment(self.cB_pasticceria)
         self.gridLayout_2.addWidget(self.cB_pasticceria, 29, 0, 1, 1)
         self.sB_aperitivi = QtWidgets.QSpinBox(self.centralwidget)
         font = QtGui.QFont()
@@ -93,14 +90,13 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_liquori.setEditable(True)
-        self.cB_liquori.setEditable(True)
-        line_edit = self.cB_liquori.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         self.cB_liquori.setCurrentText("")
         self.cB_liquori.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_liquori.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContentsOnFirstShow)
         self.cB_liquori.setObjectName("cB_liquori")
+        self.cB_liquori.addItem("")
+        self.cB_liquori.setItemText(0, "")
+        self.cB_aligment(self.cB_liquori)
         self.gridLayout_2.addWidget(self.cB_liquori, 25, 0, 1, 1)
         self.sB_analcolici = QtWidgets.QSpinBox(self.centralwidget)
         font = QtGui.QFont()
@@ -128,12 +124,11 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_9.setFont(font)
-        self.label_9.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_9.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_9.setAlignment(QtCore.Qt.AlignCenter)
         self.label_9.setObjectName("label_9")
         self.gridLayout_2.addWidget(self.label_9, 28, 0, 1, 1)
@@ -179,12 +174,11 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_7.setFont(font)
-        self.label_7.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_7.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_7.setAlignment(QtCore.Qt.AlignCenter)
         self.label_7.setObjectName("label_7")
         self.gridLayout_2.addWidget(self.label_7, 20, 0, 1, 1)
@@ -202,13 +196,12 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_aperitivi.setEditable(True)
-        self.cB_aperitivi.setEditable(True)
-        line_edit = self.cB_aperitivi.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         self.cB_aperitivi.setCurrentText("")
         self.cB_aperitivi.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_aperitivi.setObjectName("cB_aperitivi")
+        self.cB_aperitivi.addItem("")
+        self.cB_aperitivi.setItemText(0, "")
+        self.cB_aligment(self.cB_aperitivi)
         self.gridLayout_2.addWidget(self.cB_aperitivi, 17, 0, 1, 1)
         self.cB_bibite = QtWidgets.QComboBox(self.centralwidget)
         font = QtGui.QFont()
@@ -222,13 +215,12 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_bibite.setEditable(True)
-        self.cB_bibite.setEditable(True)
-        line_edit = self.cB_bibite.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         self.cB_bibite.setCurrentText("")
         self.cB_bibite.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_bibite.setObjectName("cB_bibite")
+        self.cB_bibite.addItem("")
+        self.cB_bibite.setItemText(0, "")
+        self.cB_aligment(self.cB_bibite)
         self.gridLayout_2.addWidget(self.cB_bibite, 9, 0, 1, 1)
         self.sB_bibite = QtWidgets.QSpinBox(self.centralwidget)
         font = QtGui.QFont()
@@ -246,7 +238,7 @@ class Ui_BarView(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pB_alcolici.sizePolicy().hasHeightForWidth())
         self.pB_alcolici.setSizePolicy(sizePolicy)
-        self.pB_alcolici.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.pB_alcolici.setMaximumSize(QtCore.QSize(100, 16777215))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
@@ -265,7 +257,7 @@ class Ui_BarView(object):
         self.pB_alcolici.setObjectName("pB_alcolici")
         self.gridLayout_2.addWidget(self.pB_alcolici, 2, 1, 1, 1)
         self.pB_aperitivi = QtWidgets.QPushButton(self.centralwidget)
-        self.pB_aperitivi.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.pB_aperitivi.setMaximumSize(QtCore.QSize(100, 16777215))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
@@ -284,7 +276,7 @@ class Ui_BarView(object):
         self.pB_aperitivi.setObjectName("pB_aperitivi")
         self.gridLayout_2.addWidget(self.pB_aperitivi, 18, 1, 1, 1)
         self.pB_liquori = QtWidgets.QPushButton(self.centralwidget)
-        self.pB_liquori.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.pB_liquori.setMaximumSize(QtCore.QSize(100, 16777215))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
@@ -317,12 +309,11 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_3.setFont(font)
-        self.label_3.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_3.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
         self.gridLayout_2.addWidget(self.label_3, 4, 0, 1, 1)
@@ -341,12 +332,11 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_4.setFont(font)
-        self.label_4.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_4.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.gridLayout_2.addWidget(self.label_4, 8, 0, 1, 1)
@@ -371,13 +361,12 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_alcolici.setEditable(True)
-        self.cB_alcolici.setEditable(True)
-        line_edit = self.cB_alcolici.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         self.cB_alcolici.setCurrentText("")
         self.cB_alcolici.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_alcolici.setObjectName("cB_alcolici")
+        self.cB_alcolici.addItem("")
+        self.cB_alcolici.setItemText(0, "")
+        self.cB_aligment(self.cB_alcolici)
         self.gridLayout_2.addWidget(self.cB_alcolici, 1, 0, 1, 1)
         self.sB_alcolici = QtWidgets.QSpinBox(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
@@ -407,13 +396,12 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_analcolici.setEditable(True)
-        self.cB_analcolici.setEditable(True)
-        line_edit = self.cB_analcolici.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         self.cB_analcolici.setCurrentText("")
         self.cB_analcolici.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_analcolici.setObjectName("cB_analcolici")
+        self.cB_analcolici.addItem("")
+        self.cB_analcolici.setItemText(0, "")
+        self.cB_aligment(self.cB_analcolici)
         self.gridLayout_2.addWidget(self.cB_analcolici, 5, 0, 1, 1)
         self.cB_caffetteria = QtWidgets.QComboBox(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
@@ -432,13 +420,12 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_caffetteria.setEditable(True)
-        self.cB_caffetteria.setEditable(True)
-        line_edit = self.cB_caffetteria.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         self.cB_caffetteria.setCurrentText("")
         self.cB_caffetteria.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_caffetteria.setObjectName("cB_caffetteria")
+        self.cB_caffetteria.addItem("")
+        self.cB_caffetteria.setItemText(0, "")
+        self.cB_aligment(self.cB_caffetteria)
         self.gridLayout_2.addWidget(self.cB_caffetteria, 13, 0, 1, 1)
         self.sB_caffetteria = QtWidgets.QSpinBox(self.centralwidget)
         font = QtGui.QFont()
@@ -465,12 +452,11 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_5.setFont(font)
-        self.label_5.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_5.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 12, 0, 1, 1)
@@ -489,12 +475,11 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_6.setFont(font)
-        self.label_6.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_6.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
         self.gridLayout_2.addWidget(self.label_6, 16, 0, 1, 1)
@@ -510,16 +495,15 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: rgb(255, 255, 255);")
         self.cB_vini.setEditable(True)
-        self.cB_vini.setEditable(True)
-        line_edit = self.cB_vini.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         self.cB_vini.setCurrentText("")
         self.cB_vini.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_vini.setObjectName("cB_vini")
+        self.cB_vini.addItem("")
+        self.cB_vini.setItemText(0, "")
+        self.cB_aligment(self.cB_vini)
         self.gridLayout_2.addWidget(self.cB_vini, 21, 0, 1, 1)
         self.pB_analcolici = QtWidgets.QPushButton(self.centralwidget)
-        self.pB_analcolici.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.pB_analcolici.setMaximumSize(QtCore.QSize(100, 16777215))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
@@ -538,7 +522,7 @@ class Ui_BarView(object):
         self.pB_analcolici.setObjectName("pB_analcolici")
         self.gridLayout_2.addWidget(self.pB_analcolici, 6, 1, 1, 1)
         self.pB_vini = QtWidgets.QPushButton(self.centralwidget)
-        self.pB_vini.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.pB_vini.setMaximumSize(QtCore.QSize(100, 16777215))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
@@ -557,7 +541,7 @@ class Ui_BarView(object):
         self.pB_vini.setObjectName("pB_vini")
         self.gridLayout_2.addWidget(self.pB_vini, 22, 1, 1, 1)
         self.pB_bibite = QtWidgets.QPushButton(self.centralwidget)
-        self.pB_bibite.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.pB_bibite.setMaximumSize(QtCore.QSize(100, 16777215))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
@@ -597,7 +581,7 @@ class Ui_BarView(object):
         self.pB_caffetteria.setObjectName("pB_caffetteria")
         self.gridLayout_2.addWidget(self.pB_caffetteria, 14, 1, 1, 1)
         self.pB_pasticceria = QtWidgets.QPushButton(self.centralwidget)
-        self.pB_pasticceria.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.pB_pasticceria.setMaximumSize(QtCore.QSize(100, 16777215))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
@@ -630,12 +614,11 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_2.setFont(font)
-        self.label_2.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_2.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.gridLayout_2.addWidget(self.label_2, 0, 0, 1, 1)
@@ -651,92 +634,68 @@ class Ui_BarView(object):
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setContentsMargins(30, 10, 20, 10)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.tW_scontrino = QtWidgets.QTableWidget(self.centralwidget)
+        self.tableWidget_Scontrino = QtWidgets.QTableWidget(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tableWidget_Scontrino.sizePolicy().hasHeightForWidth())
+        self.tableWidget_Scontrino.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
-        self.tW_scontrino.setFont(font)
-        self.tW_scontrino.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tW_scontrino.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.tW_scontrino.setStyleSheet("background-image: url(:/resource_bar/tpg.png);\n"
+        font.setPointSize(15)
+        self.tableWidget_Scontrino.setFont(font)
+        self.tableWidget_Scontrino.setStyleSheet("background-image: url(:/resource_bar/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));")
-        self.tW_scontrino.setAutoScrollMargin(16)
-        self.tW_scontrino.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tW_scontrino.setAlternatingRowColors(True)
-        self.tW_scontrino.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
-        self.tW_scontrino.setShowGrid(True)
-        self.tW_scontrino.setRowCount(5)
-        self.tW_scontrino.setColumnCount(4)
-        self.tW_scontrino.setObjectName("tW_scontrino")
+        self.tableWidget_Scontrino.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
+        self.tableWidget_Scontrino.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_Scontrino.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
+        self.tableWidget_Scontrino.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.tableWidget_Scontrino.setGridStyle(QtCore.Qt.DashLine)
+        self.tableWidget_Scontrino.setRowCount(0)
+        self.tableWidget_Scontrino.setObjectName("tableWidget")
+        self.tableWidget_Scontrino.setColumnCount(4)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(10)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
-        self.tW_scontrino.setHorizontalHeaderItem(0, item)
+        self.tableWidget_Scontrino.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(10)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
-        self.tW_scontrino.setHorizontalHeaderItem(1, item)
+        self.tableWidget_Scontrino.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(10)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
-        self.tW_scontrino.setHorizontalHeaderItem(2, item)
+        self.tableWidget_Scontrino.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(10)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
-        self.tW_scontrino.setHorizontalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignCenter)
-        self.tW_scontrino.setItem(0, 0, item)
-        item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignCenter)
-        self.tW_scontrino.setItem(0, 1, item)
-        item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignCenter)
-        self.tW_scontrino.setItem(0, 2, item)
-        item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignCenter)
-        self.tW_scontrino.setItem(0, 3, item)
-        item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignCenter)
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        item.setFont(font)
-        self.tW_scontrino.setItem(3, 3, item)
-        self.tW_scontrino.horizontalHeader().setVisible(True)
-        self.tW_scontrino.horizontalHeader().setDefaultSectionSize(175)
-        self.tW_scontrino.horizontalHeader().setHighlightSections(True)
-        self.tW_scontrino.horizontalHeader().setMinimumSectionSize(40)
-        self.tW_scontrino.horizontalHeader().setSortIndicatorShown(False)
-        self.tW_scontrino.horizontalHeader().setStretchLastSection(True)
-        self.tW_scontrino.verticalHeader().setVisible(True)
-        self.tW_scontrino.verticalHeader().setCascadingSectionResizes(False)
-        self.tW_scontrino.verticalHeader().setDefaultSectionSize(24)
-        self.tW_scontrino.verticalHeader().setHighlightSections(True)
-        self.tW_scontrino.verticalHeader().setMinimumSectionSize(24)
-        self.tW_scontrino.verticalHeader().setSortIndicatorShown(False)
-        self.tW_scontrino.verticalHeader().setStretchLastSection(False)
-        self.verticalLayout_4.addWidget(self.tW_scontrino)
+        self.tableWidget_Scontrino.setHorizontalHeaderItem(3, item)
+        self.tableWidget_Scontrino.horizontalHeader().setVisible(True)
+        self.tableWidget_Scontrino.horizontalHeader().setCascadingSectionResizes(False)
+        self.tableWidget_Scontrino.horizontalHeader().setDefaultSectionSize(272)
+        self.tableWidget_Scontrino.horizontalHeader().setHighlightSections(False)
+        self.tableWidget_Scontrino.horizontalHeader().setMinimumSectionSize(250)
+        self.tableWidget_Scontrino.horizontalHeader().setSortIndicatorShown(False)
+        self.tableWidget_Scontrino.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_Scontrino.verticalHeader().setVisible(False)
+        self.tableWidget_Scontrino.verticalHeader().setHighlightSections(False)
+        self.verticalLayout_4.addWidget(self.tableWidget_Scontrino)
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setContentsMargins(25, 10, 32, 10)
         self.gridLayout.setHorizontalSpacing(58)
@@ -750,20 +709,36 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_11.setFont(font)
-        self.label_11.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_11.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_11.setAlignment(QtCore.Qt.AlignCenter)
         self.label_11.setObjectName("label_11")
-        self.gridLayout.addWidget(self.label_11, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.label_11, 1, 1, 1, 1)
+        self.lineE_totale = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineE_totale.setEnabled(True)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineE_totale.sizePolicy().hasHeightForWidth())
+        self.lineE_totale.setSizePolicy(sizePolicy)
+        self.lineE_totale.setMaximumSize(QtCore.QSize(150, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineE_totale.setFont(font)
+        self.lineE_totale.setCursor(QtGui.QCursor(QtCore.Qt.IBeamCursor))
+        self.lineE_totale.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+"background-image: url(:/resource_bar/tpg.png);")
+        self.lineE_totale.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineE_totale.setReadOnly(True)
+        self.lineE_totale.setObjectName("lineE_totale")
+        self.gridLayout.addWidget(self.lineE_totale, 2, 3, 1, 1)
         self.cB_metodopagamento = QtWidgets.QComboBox(self.centralwidget)
-        self.cB_metodopagamento.setEditable(True)
-        line_edit = self.cB_metodopagamento.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(18)
@@ -779,34 +754,11 @@ class Ui_BarView(object):
         self.cB_metodopagamento.addItem("")
         self.cB_metodopagamento.addItem("")
         self.cB_metodopagamento.addItem("")
-        self.gridLayout.addWidget(self.cB_metodopagamento, 1, 0, 1, 1)
-        self.LE_totaleconto = QtWidgets.QLineEdit(self.centralwidget)
-        self.LE_totaleconto.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.LE_totaleconto.sizePolicy().hasHeightForWidth())
-        self.LE_totaleconto.setSizePolicy(sizePolicy)
-        self.LE_totaleconto.setMaximumSize(QtCore.QSize(150, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
-        self.LE_totaleconto.setFont(font)
-        self.LE_totaleconto.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
-        self.LE_totaleconto.setAlignment(QtCore.Qt.AlignCenter)
-        self.LE_totaleconto.setReadOnly(True)
-        self.LE_totaleconto.setPlaceholderText("")
-        self.LE_totaleconto.setObjectName("LE_totaleconto")
-        self.gridLayout.addWidget(self.LE_totaleconto, 1, 3, 1, 1)
+        self.cB_metodopagamento.addItem("")
+        self.cB_aligment(self.cB_metodopagamento)
+        self.gridLayout.addWidget(self.cB_metodopagamento, 2, 0, 1, 1)
         self.cB_camera = QtWidgets.QComboBox(self.centralwidget)
-        self.cB_camera.setEnabled(True)
-        self.cB_camera.setEditable(True)
-        line_edit = self.cB_camera.lineEdit()
-        line_edit.setAlignment(QtCore.Qt.AlignCenter)
-        line_edit.setReadOnly(True)
+        self.cB_camera.setEnabled(False)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(18)
@@ -821,7 +773,8 @@ class Ui_BarView(object):
         self.cB_camera.setEditable(False)
         self.cB_camera.setObjectName("cB_camera")
         self.cB_camera.addItem("")
-        self.gridLayout.addWidget(self.cB_camera, 1, 1, 1, 1)
+        self.cB_aligment(self.cB_camera)
+        self.gridLayout.addWidget(self.cB_camera, 2, 1, 1, 1)
         self.label_12 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
         font.setFamily("Arial")
@@ -830,15 +783,14 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_12.setFont(font)
-        self.label_12.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_12.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_12.setAlignment(QtCore.Qt.AlignCenter)
         self.label_12.setObjectName("label_12")
-        self.gridLayout.addWidget(self.label_12, 0, 3, 1, 1)
+        self.gridLayout.addWidget(self.label_12, 1, 3, 1, 1)
         self.label_10 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
         font.setFamily("Arial")
@@ -847,15 +799,14 @@ class Ui_BarView(object):
         font.setItalic(False)
         font.setWeight(87)
         self.label_10.setFont(font)
-        self.label_10.setStyleSheet("border: 2px solid black;\n"
-"border-radius : 10px;\n"
-"color: solid black;\n"
-"font: 700 14pt \"Arial\";\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
-"background-image: url(:/resource_bar/tpg.png);")
+        self.label_10.setStyleSheet("border: 4px solid black;\n"
+                                   "border-radius: 10px;\n"
+                                    "font: 700 14pt \"Arial\";\n"
+                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+                                    "background-image: url(:/resource_bar/tpg.png);")
         self.label_10.setAlignment(QtCore.Qt.AlignCenter)
         self.label_10.setObjectName("label_10")
-        self.gridLayout.addWidget(self.label_10, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.label_10, 1, 0, 1, 1)
         self.verticalLayout_4.addLayout(self.gridLayout)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
@@ -885,6 +836,18 @@ class Ui_BarView(object):
 "background-image: url(:/resource_bar/tpg.png);")
         self.pB_elimina.setObjectName("pB_elimina")
         self.horizontalLayout_2.addWidget(self.pB_elimina)
+        self.pB_aggiorna_listino = QtWidgets.QPushButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pB_aggiorna_listino.setFont(font)
+        self.pB_aggiorna_listino.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pB_aggiorna_listino.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));\n"
+"background-image: url(:/resource_bar/tpg.png);")
+        self.pB_aggiorna_listino.setObjectName("pB_aggiorna_listino")
+        self.horizontalLayout_2.addWidget(self.pB_aggiorna_listino)
         self.verticalLayout_4.addLayout(self.horizontalLayout_2)
         self.gridLayout_3.addLayout(self.verticalLayout_4, 0, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -892,241 +855,47 @@ class Ui_BarView(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        # Funzione che aggiorna gli item nelle combo box
-
-    def update_data(self, MainWindow):
-            con = sqlite3.connect('database.db')
-            query = 'select * from Bar;'
-            bar = con.execute(query).fetchall()
-            self.alcolici = []
-            self.analcolici = []
-            self.bibite = []
-            self.caffetteria = []
-            self.aperitivi = []
-            self.vini = []
-            self.liquori = []
-            self.pasticceria = []
-
-            for categoria in bar:
-                    if categoria[2] == 'Alcolici':
-                            self.alcolici.append(categoria)
-                    if categoria[2] == 'Analcolici':
-                            self.analcolici.append(categoria)
-                    if categoria[2] == 'Aperitivi':
-                            self.aperitivi.append(categoria)
-                    if categoria[2] == 'Bibite':
-                            self.bibite.append(categoria)
-                    if categoria[2] == 'Caffetteria':
-                            self.caffetteria.append(categoria)
-                    if categoria[2] == 'Vini':
-                            self.vini.append(categoria)
-                    if categoria[2] == 'Liquori':
-                            self.liquori.append(categoria)
-                    if categoria[2] == 'Pasticceria':
-                            self.pasticceria.append(categoria)
-            self.cB_alcolici.clear()
-            for categoria in range(0, len(self.alcolici)):
-                    self.cB_alcolici.addItem(self.alcolici[categoria][1])
-            self.cB_analcolici.clear()
-            for categoria in range(0, len(self.analcolici)):
-                    self.cB_analcolici.addItem(self.analcolici[categoria][1])
-            self.cB_aperitivi.clear()
-            for categoria in range(0, len(self.aperitivi)):
-                    self.cB_aperitivi.addItem(self.aperitivi[categoria][1])
-            self.cB_bibite.clear()
-            for categoria in range(0, len(self.bibite)):
-                    self.cB_bibite.addItem(self.bibite[categoria][1])
-            self.cB_caffetteria.clear()
-            for categoria in range(0, len(self.caffetteria)):
-                    self.cB_caffetteria.addItem(self.caffetteria[categoria][1])
-            self.cB_liquori.clear()
-            for categoria in range(0, len(self.liquori)):
-                    self.cB_liquori.addItem(self.liquori[categoria][1])
-            self.cB_pasticceria.clear()
-            for categoria in range(0, len(self.pasticceria)):
-                    self.cB_pasticceria.addItem(self.pasticceria[categoria][1])
-            self.cB_vini.clear()
-            for categoria in range(0, len(self.vini)):
-                    self.cB_vini.addItem(self.vini[categoria][1])
+    def cB_aligment(self, cB):
+            cB.setEditable(True)
+            lE = cB.lineEdit()
+            lE.setAlignment(QtCore.Qt.AlignCenter)
+            lE.setReadOnly(True)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Bar"))
         self.label_8.setText(_translate("MainWindow", "Liquori"))
-        self.cB_pasticceria.setItemText(1, _translate("MainWindow", "Brioches"))
-        self.cB_pasticceria.setItemText(2, _translate("MainWindow", "Ciambellone"))
-        self.cB_pasticceria.setItemText(3, _translate("MainWindow", "Pasta grande"))
-        self.cB_pasticceria.setItemText(4, _translate("MainWindow", "Pasta piccola"))
-        self.cB_pasticceria.setItemText(5, _translate("MainWindow", "Torta della casa"))
-        self.cB_liquori.setItemText(1, _translate("MainWindow", "Amaretto"))
-        self.cB_liquori.setItemText(2, _translate("MainWindow", "Baileys"))
-        self.cB_liquori.setItemText(3, _translate("MainWindow", "Gin"))
-        self.cB_liquori.setItemText(4, _translate("MainWindow", "Ginger Ale"))
-        self.cB_liquori.setItemText(5, _translate("MainWindow", "Jack Daniel\'s"))
-        self.cB_liquori.setItemText(6, _translate("MainWindow", "Malibù"))
-        self.cB_liquori.setItemText(7, _translate("MainWindow", "Marsala"))
-        self.cB_liquori.setItemText(8, _translate("MainWindow", "Vodka"))
         self.label_9.setText(_translate("MainWindow", "Pasticceria"))
         self.label_7.setText(_translate("MainWindow", "Vini"))
-        self.cB_aperitivi.setItemText(1, _translate("MainWindow", "Aperitivo completo"))
-        self.cB_aperitivi.setItemText(2, _translate("MainWindow", "Aperol"))
-        self.cB_aperitivi.setItemText(3, _translate("MainWindow", "Campari"))
-        self.cB_aperitivi.setItemText(4, _translate("MainWindow", "Crodino"))
-        self.cB_aperitivi.setItemText(5, _translate("MainWindow", "Martini"))
-        self.cB_bibite.setItemText(1, _translate("MainWindow", "Bibita alla spina"))
-        self.cB_bibite.setItemText(2, _translate("MainWindow", "Bibita in lattina"))
-        self.cB_bibite.setItemText(3, _translate("MainWindow", "Birra piccola"))
-        self.cB_bibite.setItemText(4, _translate("MainWindow", "Birra media"))
-        self.cB_bibite.setItemText(5, _translate("MainWindow", "Birra grande"))
-        self.cB_bibite.setItemText(6, _translate("MainWindow", "Spremuta"))
-        self.cB_bibite.setItemText(7, _translate("MainWindow", "Succo di frutta"))
         self.pB_alcolici.setText(_translate("MainWindow", "Aggiungi"))
         self.pB_aperitivi.setText(_translate("MainWindow", "Aggiungi"))
         self.pB_liquori.setText(_translate("MainWindow", "Aggiungi"))
         self.label_3.setText(_translate("MainWindow", "Analcolici"))
         self.label_4.setText(_translate("MainWindow", "Bibite"))
-        self.cB_alcolici.setItemText(1, _translate("MainWindow", "Cuba Libre"))
-        self.cB_alcolici.setItemText(2, _translate("MainWindow", "Gin Lemon"))
-        self.cB_alcolici.setItemText(3, _translate("MainWindow", "Gin Tonic"))
-        self.cB_alcolici.setItemText(4, _translate("MainWindow", "London Mule"))
-        self.cB_alcolici.setItemText(5, _translate("MainWindow", "Mojito"))
-        self.cB_alcolici.setItemText(6, _translate("MainWindow", "Vodka Cola"))
-        self.cB_alcolici.setItemText(7, _translate("MainWindow", "Vodka Lemon"))
-        self.cB_alcolici.setItemText(8, _translate("MainWindow", "Moscow Mule"))
-        self.cB_alcolici.setItemText(9, _translate("MainWindow", "Vodka Redbull"))
-        self.cB_analcolici.setItemText(1, _translate("MainWindow", " All Shook Up"))
-        self.cB_analcolici.setItemText(2, _translate("MainWindow", "Anita"))
-        self.cB_analcolici.setItemText(3, _translate("MainWindow", "Banshee"))
-        self.cB_analcolici.setItemText(4, _translate("MainWindow", "Bar Vienna"))
-        self.cB_analcolici.setItemText(5, _translate("MainWindow", "Caffè Astoria"))
-        self.cB_analcolici.setItemText(6, _translate("MainWindow", "Carrot Cream"))
-        self.cB_analcolici.setItemText(7, _translate("MainWindow", "Cool Passion"))
-        self.cB_analcolici.setItemText(8, _translate("MainWindow", "Frozen Mela Kiwi"))
-        self.cB_analcolici.setItemText(9, _translate("MainWindow", "Iced Mint Tea"))
-        self.cB_caffetteria.setItemText(1, _translate("MainWindow", "Caffè corretto"))
-        self.cB_caffetteria.setItemText(2, _translate("MainWindow", "Caffè decaffeinato"))
-        self.cB_caffetteria.setItemText(3, _translate("MainWindow", "Caffè d\'orzo"))
-        self.cB_caffetteria.setItemText(4, _translate("MainWindow", "Caffè espresso"))
-        self.cB_caffetteria.setItemText(5, _translate("MainWindow", "Cappuccino"))
-        self.cB_caffetteria.setItemText(6, _translate("MainWindow", "Cappuccino decaffeinato"))
-        self.cB_caffetteria.setItemText(7, _translate("MainWindow", "Cioccolata calda"))
-        self.cB_caffetteria.setItemText(8, _translate("MainWindow", "Latte"))
-        self.cB_caffetteria.setItemText(9, _translate("MainWindow", "Latte macchiato"))
-        self.cB_caffetteria.setItemText(10, _translate("MainWindow", "Thè"))
-        self.cB_caffetteria.setItemText(11, _translate("MainWindow", "Thè caldo"))
         self.label_5.setText(_translate("MainWindow", "Caffetteria"))
         self.label_6.setText(_translate("MainWindow", "Aperitivi"))
-        self.cB_vini.setItemText(1, _translate("MainWindow", "Bottiglia bianco"))
-        self.cB_vini.setItemText(2, _translate("MainWindow", "Bottiglia prosecco"))
-        self.cB_vini.setItemText(3, _translate("MainWindow", "Bottiglia rosso"))
-        self.cB_vini.setItemText(4, _translate("MainWindow", "Calice bianco"))
-        self.cB_vini.setItemText(5, _translate("MainWindow", "Calice prosecco"))
-        self.cB_vini.setItemText(6, _translate("MainWindow", "Calice rosso"))
-        self.cB_vini.setItemText(7, _translate("MainWindow", "Champagne"))
         self.pB_analcolici.setText(_translate("MainWindow", "Aggiungi"))
         self.pB_vini.setText(_translate("MainWindow", "Aggiungi"))
         self.pB_bibite.setText(_translate("MainWindow", "Aggiungi"))
         self.pB_caffetteria.setText(_translate("MainWindow", "Aggiungi"))
         self.pB_pasticceria.setText(_translate("MainWindow", "Aggiungi"))
         self.label_2.setText(_translate("MainWindow", "Alcolici"))
-        self.lista = []
-        self.tW_scontrino.setSortingEnabled(False)
-        item = self.tW_scontrino.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "Consumazione"))
-        item = self.tW_scontrino.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Quantità"))
-        item = self.tW_scontrino.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "Importo"))
-        item = self.tW_scontrino.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "Importo TOT"))
-        __sortingEnabled = self.tW_scontrino.isSortingEnabled()
-        self.tW_scontrino.setSortingEnabled(False)
-        item = self.tW_scontrino.item(0, 0)
-        item.setText(_translate("MainWindow", "Vodka"))
-        item = self.tW_scontrino.item(0, 1)
-        item.setText(_translate("MainWindow", "3"))
-        item = self.tW_scontrino.item(0, 2)
-        item.setText(_translate("MainWindow", "5"))
-        item = self.tW_scontrino.item(0, 3)
-        item.setText(_translate("MainWindow", "15"))
-        self.tW_scontrino.setSortingEnabled(__sortingEnabled)
+        item = self.tableWidget_Scontrino.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "CONSUMAZIONE"))
+        item = self.tableWidget_Scontrino.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "QUANTITÀ"))
+        item = self.tableWidget_Scontrino.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "PREZZO UNITARIO"))
+        item = self.tableWidget_Scontrino.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "TOTALE SINGOLA CONSUMAZIONE"))
         self.label_11.setText(_translate("MainWindow", "Camera:"))
-        self.cB_metodopagamento.setItemText(0, _translate("MainWindow", "Contanti"))
-        self.cB_metodopagamento.setItemText(1, _translate("MainWindow", "Carta di debito o credito"))
-        self.cB_metodopagamento.setItemText(2, _translate("MainWindow", "Acconto"))
-        self.LE_totaleconto.setText(_translate("MainWindow", "18.00 €"))
+        self.cB_metodopagamento.setItemText(0, _translate("MainWindow", ""))
+        self.cB_metodopagamento.setItemText(1, _translate("MainWindow", "Contanti"))
+        self.cB_metodopagamento.setItemText(2, _translate("MainWindow", "Carta di debito o credito"))
+        self.cB_metodopagamento.setItemText(3, _translate("MainWindow", "Acconto"))
         self.cB_camera.setItemText(0, _translate("MainWindow", "Vuoto"))
         self.label_12.setText(_translate("MainWindow", "TOTALE:"))
         self.label_10.setText(_translate("MainWindow", "Metodo di pagamento:"))
         self.pB_salva.setText(_translate("MainWindow", "Salva"))
         self.pB_elimina.setText(_translate("MainWindow", "Elimina"))
-
-# metodo che aggiunge l'item alla tabella a destra
-    def update_table(self):
-        self.tW_scontrino.setRowCount(0)
-        for i in range(0, len(self.lista)):
-                self.tW_scontrino.insertRow(i)
-                self.tW_scontrino.setItem(i, 0, QtWidgets.QTableWidgetItem(str(self.lista[i][0])))
-                self.tW_scontrino.setItem(i, 1, QtWidgets.QTableWidgetItem(str(self.lista[i][1])))
-                self.tW_scontrino.setItem(i, 2, QtWidgets.QTableWidgetItem(str(self.lista[i][2])))
-                self.tW_scontrino.setItem(i, 3, QtWidgets.QTableWidgetItem(str(self.lista[i][3])))
-
-
-    '''def get_item(self, combo, category):
-        item = str(combo.currentText())'''
-
-    def get_item(self, combo, category):
-        item = str(combo.currentText())
-        if category == 'Alcolici':
-                qt = int(self.sB_alcolici.text())
-                for i in self.alcolici:
-                        if i[1] == item:
-                                return (i, qt)
-        if category == 'Analcolici':
-                qt = int(self.sB_analcolici.text())
-                for i in self.analcolici:
-                        if i[1] == item:
-                                return (i, qt)
-        if category == 'Aperitivi':
-                qt = int(self.sB_aperitivi.text())
-                for i in self.aperitivi:
-                        if i[1] == item:
-                                return (i, qt)
-        if category == 'Bibite':
-                qt = int(self.sB_bibite.text())
-                for i in self.bibite:
-                        if i[1] == item:
-                                return (i, qt)
-        if category == 'Caffetteria':
-                qt = int(self.sB_caffetteria.text())
-                for i in self.caffetteria:
-                        if i[1] == item:
-                                return (i, qt)
-        if category == 'Liquori':
-                qt = int(self.sB_liquori.text())
-                for i in self.liquori:
-                        if i[1] == item:
-                                return (i, qt)
-        if category == 'Pasticceria':
-                qt = int(self.sB_pasticceria.text())
-                for i in self.pasticceria:
-                        if i[1] == item:
-                                return (i, qt)
-        if category == 'Vini':
-                qt = int(self.sB_vini.text())
-                for i in self.vini:
-                        if i[1] == item:
-                                return (i, qt)
-
-    def action(self, combo, category):
-        item = self.get_item(combo, category)
-        self.list.append((item[0][2], item[1], item[0][3], int(item[1]) * int(item[0][3])))
-        self.update_table()
-
-    def update_tot(self):
-        tot = 0
-        if not len(self.lista) == 0:
-                for i in range(0, len(self.lista)):
-                        tot += float(self.lista[i][3])
-        self.LE_totaleconto.setText(str(tot) + ' €')
-
+        self.pB_aggiorna_listino.setText(_translate("MainWindow", "Aggiorna Listino"))

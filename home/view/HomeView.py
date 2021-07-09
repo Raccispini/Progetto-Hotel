@@ -14,44 +14,44 @@ class HomeView(QMainWindow, Ui_HomeView):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)
-        self.connectButton()
+        self.connect_button()
 
-    def openBar(self):
+    def open_bar(self):
        self.bar_window = BarView()
-       self.bar_window.show()
+       self.bar_window.showMaximized()
 
-    def openCamere(self):
+    def open_camere(self):
         self.camere_window = CamereView()
         self.camere_window.show()
 
-    def openAnagrafiche(self):
+    def open_anagrafiche(self):
         self.anagrafiche_window = AnagraficheView()
-        self.anagrafiche_window.show()
+        self.anagrafiche_window.showMaximized()
 
-    def openMagazzino(self):
+    def open_magazzino(self):
         self.magazzino_window = MagazzinoView()
         self.magazzino_window.show()
 
-    def openMeteo(self):
+    def open_meteo(self):
         self.meteo_window = MeteoView()
         self.meteo_window.show()
 
-    def openOmbrelloni(self):
+    def open_ombrelloni(self):
         self.ombrelloni_window = OmbrelloneView()
         self.ombrelloni_window.show()
 
-    def openRistorante(self):
+    def open_ristorante(self):
         self.ristorante_window = RistoranteView()
         self.ristorante_window.show()
 
-    def connectButton(self):
-        self.pB_Camere.clicked.connect(lambda: self.openCamere())
-        self.pB_Anagrafiche.clicked.connect(lambda: self.openAnagrafiche())
-        self.pB_Magazzino.clicked.connect(lambda: self.openMagazzino())
-        self.pB_Meteo.clicked.connect(lambda: self.openMeteo())
-        self.pB_Ombrelloni.clicked.connect(lambda: self.openOmbrelloni())
-        self.pB_Ristorante.clicked.connect(lambda: self.openRistorante())
-        self.pB_Bar.clicked.connect(lambda: self.openBar())
+    def connect_button(self):
+        self.pB_Camere.clicked.connect(lambda: self.open_camere())
+        self.pB_Anagrafiche.clicked.connect(lambda: self.open_anagrafiche())
+        self.pB_Magazzino.clicked.connect(lambda: self.open_magazzino())
+        self.pB_Meteo.clicked.connect(lambda: self.open_meteo())
+        self.pB_Ombrelloni.clicked.connect(lambda: self.open_ombrelloni())
+        self.pB_Ristorante.clicked.connect(lambda: self.open_ristorante())
+        self.pB_Bar.clicked.connect(lambda: self.open_bar())
         self.pB_Uscita.clicked.connect(lambda: self.close())
 
 

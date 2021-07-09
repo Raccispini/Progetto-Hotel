@@ -1,108 +1,174 @@
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
+from PyQt5 import QtGui, QtCore
+from GeneratoreScontrini import GeneratoreScontrini
+from bar.controller.BarController import BarController
+from bar.view.AggiornaListinoView import AggiornaListinoView
 from bar.view.Ui_BarView import Ui_BarView
-import sqlite3
-from Scontrini import Scontrini
 
 class BarView(QMainWindow, Ui_BarView):
     def __init__(self, parent=None):
         super(BarView, self).__init__(parent)
         self.setupUi(self)
-        self.update_data(QMainWindow)
-        self.update_table()
-        self.update_tot()
-        self.pB_alcolici.clicked.connect(lambda: self.button_add_action(self.cB_alcolici,"Alcolici"))
-        self.pB_analcolici.clicked.connect(lambda: self.button_add_action(self.cB_analcolici, "Analcolici"))
-        self.pB_aperitivi.clicked.connect(lambda: self.button_add_action(self.cB_aperitivi,"Aperitivi"))
-        self.pB_bibite.clicked.connect(lambda :self.button_add_action(self.cB_bibite,"Bibite"))
-        self.pB_caffetteria.clicked.connect(lambda: self.button_add_action(self.cB_caffetteria,"Caffetteria"))
-        self.pB_vini.clicked.connect(lambda: self.button_add_action(self.cB_vini,"Vini"))
-        self.pB_liquori.clicked.connect(lambda:self.button_add_action(self.cB_liquori,'Liquori'))
-        self.pB_pasticceria.clicked.connect(lambda :self.button_add_action(self.cB_pasticceria,"Pasticceria"))
-        self.cB_metodopagamento.currentTextChanged.connect(lambda: self.on_combobox_changed())
-        self.update_camere()
-        self.pB_salva.setEnabled(True)
-        self.pB_salva.clicked.connect(lambda : self.stampa())
-        self.tW_scontrino.itemSelectionChanged.connect(lambda : self.on_table_click())
-        self.tW_scontrino.clear()
+        self.controller = BarController()
+        self.lista_consumazioni = []
+        self.totale = 0
+        self.update_cB()
+        self.connect_all()
+        self.update_totale()
 
-        self.pB_elimina.clicked.connect(lambda : self.on_elimina_clicked())
-    
-    def stampa(self):
-        print("ciao")
-        lista = []
-        for i in self.lista:
-            print(i)
-            lista.append((i[0],i[1],i[3]))
-        print(lista)
-        tot = str(self.LE_totaleconto.text())
-        print(tot)
-        scontrini = Scontrini()
-        scontrini.stampa(lista,tot)
+    def update_cB(self):
+        self.controller.update_liste() #Aggiorno tutte le liste
+        nomi_alcolici = self.get_nomi(self.controller.get_lista_alcolici())
+        self.cB_alcolici.clear()
+        self.cB_alcolici.addItems(nomi_alcolici) #Aggiungo alla comboBox i nomi
+        nomi_analcolici = self.get_nomi(self.controller.get_lista_analcolici())
+        self.cB_analcolici.clear()
+        self.cB_analcolici.addItems(nomi_analcolici)  # Aggiungo alla comboBox i nomi
+        nomi_bibite = self.get_nomi(self.controller.get_lista_bibite())
+        self.cB_bibite.clear()
+        self.cB_bibite.addItems(nomi_bibite)  # Aggiungo alla comboBox i nomi
+        nomi_caffetteria = self.get_nomi(self.controller.get_lista_caffetteria())
+        self.cB_caffetteria
+        self.cB_caffetteria.addItems(nomi_caffetteria)  # Aggiungo alla comboBox i nomi
+        nomi_aperitivi = self.get_nomi(self.controller.get_lista_aperitivi())
+        self.cB_aperitivi.clear()
+        self.cB_aperitivi.addItems(nomi_aperitivi)  # Aggiungo alla comboBox i nomi
+        nomi_vini = self.get_nomi(self.controller.get_lista_vini())
+        self.cB_vini.clear()
+        self.cB_vini.addItems(nomi_vini)  # Aggiungo alla comboBox i nomi
+        nomi_liquori = self.get_nomi(self.controller.get_lista_liquori())
+        self.cB_liquori.clear()
+        self.cB_liquori.addItems(nomi_liquori)  # Aggiungo alla comboBox i nomi
+        nomi_pasticceria = self.get_nomi(self.controller.get_lista_pasticceria())
+        self.cB_pasticceria
+        self.cB_pasticceria.addItems(nomi_pasticceria)  # Aggiungo alla comboBox i nomi
 
+    def get_nomi(self, lista_bar):
+        lista_nomi = [""]
+        for elemento in lista_bar:
+            lista_nomi.append(elemento[0])  # salvo dentro una lista ogni nome di ogni elemento della lista bar passata
+        return lista_nomi
 
-    def on_elimina_clicked(self):
-        #cerca le righe selezionate
-        indexes = self.tW_scontrino.selectionModel().selectedRows()
-        selected_rows = []
-        for index in sorted(indexes):
-            selected_rows.append(index.row())
-            print(selected_rows)
-            #print('Row %d is selected' % index.row())
+    #Collego tutte le azioni da svolgere in caso di click con i bottoni
+    def connect_all(self):
+        self.pB_alcolici.clicked.connect(lambda: self.aggiungi_clicked(self.cB_alcolici.currentText(),self.sB_alcolici.value()))
+        self.pB_analcolici.clicked.connect(lambda: self.aggiungi_clicked(self.cB_analcolici.currentText(), self.sB_analcolici.value()))
+        self.pB_bibite.clicked.connect(lambda: self.aggiungi_clicked(self.cB_bibite.currentText(), self.sB_bibite.value()))
+        self.pB_caffetteria.clicked.connect(lambda: self.aggiungi_clicked(self.cB_caffetteria.currentText(), self.sB_caffetteria.value()))
+        self.pB_aperitivi.clicked.connect(lambda: self.aggiungi_clicked(self.cB_aperitivi.currentText(), self.sB_aperitivi.value()))
+        self.pB_vini.clicked.connect(lambda: self.aggiungi_clicked(self.cB_vini.currentText(), self.sB_vini.value()))
+        self.pB_liquori.clicked.connect(lambda: self.aggiungi_clicked(self.cB_liquori.currentText(), self.sB_liquori.value()))
+        self.pB_pasticceria.clicked.connect(lambda: self.aggiungi_clicked(self.cB_pasticceria.currentText(), self.sB_pasticceria.value()))
 
-        #elimina la riga
-        for i in range(len(selected_rows)):
-            try:
-                self.lista.remove(self.lista[selected_rows[i]])
-            except :
-                pass
-        self.update_table()
-        self.update_tot()
+        self.cB_metodopagamento.currentTextChanged.connect(lambda: self.comboBox_changed())
+        self.pB_elimina.clicked.connect(lambda: self.elimina_consumazione())
+        self.pB_salva.clicked.connect(lambda: self.get_scontrino())
+        self.pB_aggiorna_listino.clicked.connect(lambda: self.open_aggiornalistino())
+        self.tableWidget_Scontrino.itemSelectionChanged.connect(lambda : self.table_clicked())
 
-    def on_table_click(self):
-        if len(self.tW_scontrino.selectionModel().selectedRows()) > 0 :
-            self.pB_elimina.setEnabled(True)
-        else:
-            self.pB_elimina.setEnabled(False)
+    #Dato un nome e una quantità aggiorno la lista da aggiungere alla tableWidget
+    def aggiungi_clicked(self, nome_consumazione, quantita):
+        if quantita == 0 or nome_consumazione=="":
+            QMessageBox.warning(self,"Attenzione","Non hai inserito una quantità oppure un nome.\nPer favore ritenta inserendo correttamente i dati", QMessageBox.Ok, QMessageBox.Ok)
+            return
 
+        prezzo_singolo = self.controller.get_prezzo(nome_consumazione)
+        TOT = prezzo_singolo * quantita
+        info_consumazione = [nome_consumazione, quantita, prezzo_singolo, TOT]
 
-    def button_add_action(self,combo,category):
-        item = self.get_item(combo,category)
-        #print(self.cB_alcolici.currentText())
-        flag = False
-        #print(item)
-        for i in range(0, len(self.lista)):
-            #print(str(self.lista[i][0]) == str(item[0][1]))
-            if str(self.lista[i][0]) == str(item[0][1]):
-                x = list(self.lista[i])
-                x[1] += int(item[1])
-                #aggiornamento prezzo
-                
-                x[3] = int(x[1]) * float(x[2])
-                #print('Prezzo = '+ str(x[1])+' * '+str(x[2]))
-                self.lista[i] = tuple(x)
-                flag = True
-                break
-        if not flag:
-            self.lista.append((item[0][1], item[1], item[0][3], int(item[1])*float(item[0][3])))
-        #print(self.lista)
-        #Aggiorna solo se la quantità è diversa da 0
-        if int(item[1]) != 0:
+        if self.lista_consumazioni == []:
+            self.lista_consumazioni.append(info_consumazione)
+            self.pB_salva.setEnabled(True)
+            self.update_totale()
             self.update_table()
-            self.update_tot()
-        self.on_table_click()
+            return
+        else:
+            for index in range (0,len(self.lista_consumazioni)):
+                if self.lista_consumazioni[index][0] == info_consumazione[0]:
+                    self.lista_consumazioni[index][1] += info_consumazione[1]
+                    self.lista_consumazioni[index][3] += info_consumazione[3]
+                    self.pB_salva.setEnabled(True)
+                    self.update_totale()
+                    self.update_table()
+                    return
+
+        self.lista_consumazioni.append(info_consumazione)  # Se la lista non era inizialmente vuota e la consumazione non
+                                                           # era già presente nella lista allora l'aggiungo semplicemente
+        self.pB_salva.setEnabled(True)
+        self.update_totale()
+        self.update_table()
 
 
-    def on_combobox_changed(self):
-        #print(self.cB_metodopagamento.currentText())
-        if self.cB_metodopagamento.currentText()=="Acconto":
+    def update_table(self):
+        def get_item(info):
+            item = QTableWidgetItem(str(info))
+            font = QtGui.QFont()
+            font.setBold(False)
+            font.setFamily("Arial")
+            font.setPointSize(15)
+            item.setFont(font)
+            item.setTextAlignment(QtCore.Qt.AlignCenter)
+            return item
+        self.tableWidget_Scontrino.setRowCount(0)
+        i=0
+        for consumazione in self.lista_consumazioni:
+            self.tableWidget_Scontrino.insertRow(i)
+            j=0
+            for info in consumazione:
+                if j==2 or j==3:  #Se l'indice è su prezzo oppure su totale aggiungo alla stringa il simbolo €
+                     info = str(info) + " €"
+                self.tableWidget_Scontrino.setItem(i, j, get_item(info))
+                j+=1
+            i+=1
+
+    def comboBox_changed(self):
+        if self.cB_metodopagamento.currentText() == "Acconto":
             self.cB_camera.setEnabled(True)
         else:
             self.cB_camera.setEnabled(False)
 
-    def update_camere(self):
-        con = sqlite3.connect('database.db')
-        camere = con.execute('SELECT * FROM Camere ORDER BY Camere.numeroCamera;').fetchall()
-        #print(camere)
-        self.cB_camera.clear()
-        for camera in camere:
-            self.cB_camera.addItem(str(camera[0]) + str(camera[1]) + " " + camera[2])
+    def table_clicked(self):
+        if len(self.tableWidget_Scontrino.selectionModel().selectedRows()) > 0:
+            self.pB_elimina.setEnabled(True)
+        else:
+            self.pB_elimina.setEnabled(False)
+
+    def elimina_consumazione(self):
+        indexes = self.tableWidget_Scontrino.selectionModel().selectedRows()
+        i=0
+        for index in sorted(indexes):
+            self.lista_consumazioni.pop(index.row()-i) #-i perchè ogni volta che elimino una consumazione l'indice
+                                                       # dell'altra consumazione da eliminare diminuisce di uno
+            i+=1
+        if self.lista_consumazioni == []:
+            self.pB_salva.setEnabled(False)
+        self.update_totale()
+        self.update_table()
+
+    def update_totale(self):
+        self.totale = 0
+        for consumazione in self.lista_consumazioni:
+            self.totale += consumazione[3]
+        self.lineE_totale.setText(str(self.totale)+' €')
+
+    def get_scontrino(self):
+        scontrino = GeneratoreScontrini()
+        scontrino.stampa(self.lista_consumazioni, self.totale)
+
+    def open_aggiornalistino(self):
+        self.aggiornalistino_window = AggiornaListinoView(self.controller, self.update_cB, self)
+        self.aggiornalistino_window.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
