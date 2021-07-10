@@ -51,7 +51,116 @@
        </layout>
       </item>
       <item>
-       <widget class="QTableWidget" name="tableWidget"/>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="columnCount">
+         <number>21</number>
+        </property>
+        <column>
+         <property name="text">
+          <string>Nome</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Cognome</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Data di Nascita</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Luogo di Nascita</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Residenza</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Via</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>CAP</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>CF</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nazione</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Telefono</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Cellulare</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Email</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Documento</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Numero Documento</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Ente rilascio</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Data rilascio</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Data scadenza</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Modalità di pagamento</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>info_check_in</string>
+         </property>
+        </column>
+       </widget>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2"/>
