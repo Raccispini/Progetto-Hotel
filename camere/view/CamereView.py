@@ -1,7 +1,8 @@
 from PyQt5.QtWidgets import QMainWindow
-from camere.view.Ui_CamereView import Ui_CamereView
+from camere.Ui.Ui_CamereView import Ui_CamereView
 from camere.model.ModelCamere import ModelCamere
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtWidgets
+from camere.view.PrenotaCamereView import PrenotaCamereView
 
 
 class CamereView(QMainWindow, Ui_CamereView):
@@ -10,6 +11,7 @@ class CamereView(QMainWindow, Ui_CamereView):
         self.setupUi(self)
         self.update_tipo()
         self.update_table()
+        self.onTableClick()
         #letti
         self.spin_singoli.valueChanged.connect(lambda: self.update_table())
         self.spin_matrim.valueChanged.connect(lambda: self.update_table())
@@ -29,14 +31,29 @@ class CamereView(QMainWindow, Ui_CamereView):
         self.cb_minibar.clicked.connect(lambda: self.update_table())
         self.cb_cassaforte.clicked.connect(lambda: self.update_table())
         #bottoni laterali
-        self.pb_ricerca.clicked.connect(lambda: self.update_table())
+        #self.pb_ricerca.clicked.connect(lambda: self.update_table())
         self.pb_azzera.clicked.connect(lambda: self.azzera())
         self.pb_prenota.clicked.connect(lambda: self.prenota())
         self.pb_prenota_2.clicked.connect(lambda: self.checkout())
 
+        #Eventi
+        self.tabellaCamere.itemSelectionChanged.connect(lambda : self.onTableClick())
 
     def prenota(self):
-        print("Apri Finestra prenotazione")
+        prenotacamere = PrenotaCamereView(self,self.getSelectedRoom())
+        prenotacamere.show()
+
+    def getSelectedRoom(self):
+        items = self.tabellaCamere.selectedItems()
+        return int(items[1].text())
+    def onTableClick(self):
+        if len(self.tabellaCamere.selectedItems()) != 0:
+            self.pb_prenota.setEnabled(True)
+            self.pb_preventivo.setEnabled(True)
+        else:
+            self.pb_prenota.setEnabled(False)
+            self.pb_preventivo.setEnabled(False)
+
 
     def checkout(self):
         print("checkout")
