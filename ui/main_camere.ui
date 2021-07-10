@@ -190,6 +190,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
             </item>
             <item row="0" column="4">
              <widget class="QCheckBox" name="checkBox">
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/camere/tpg.png);
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.505682, fy:0.5, stop:0 rgba(255, 255, 255, 178), stop:1 rgba(255, 255, 255, 182));</string>
+              </property>
               <property name="text">
                <string>Attiva</string>
               </property>
