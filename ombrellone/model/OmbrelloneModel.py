@@ -11,7 +11,7 @@ class OmbrelloneModel():
     #Aggiorna in automatico il database eliminando dalle prenotazioni gli ombrelloni che erano stati prenotati ma ora sono liberi
     def update_database(self):
         giorno_corrente = datetime.now()
-        ore_14 = giorno_corrente.replace(hour=10, minute=0)
+        ore_14 = giorno_corrente.replace(hour=14, minute=0)
         #Elimino prima tutte le prenotazioni con una data anteriore a quella corrente
         query = "DELETE FROM Prenotazioni_ombrelloni WHERE data_prenotazione <\'" + giorno_corrente.strftime("%d/%m/%Y") + "\';"
         self.db.execute(query)
