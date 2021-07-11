@@ -1,5 +1,7 @@
 from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
+from threading import Timer
+from datetime import datetime, timedelta
 
 from ombrellone.view.ListaPrenotazioniView import ListaPrenotazioniView
 from ombrellone.view.PrenotaOmbrelloneView import PrenotaOmbrelloneView
@@ -13,6 +15,7 @@ class OmbrelloneView(QMainWindow, Ui_Ombrellone):
         self.controller = OmbrelloneController()
         self.setupUi(self)
         self.connect_all()
+        #self.tempo_alla_chiusura() #Funzione che mi permette di non far prenotare più nulla dopo le 20:00
         self.erase_all()
 
 
@@ -85,5 +88,21 @@ class OmbrelloneView(QMainWindow, Ui_Ombrellone):
                 if button.objectName() == ombrellone_prenotato[0]:
                     button.setStyleSheet("background-color: red")
                     button.setEnabled(False)
+
+    def beach_closed(self):
+        for button in self.pB_Ombrelloni:
+            button.setStyleSheet("background-color: red")
+            button.setEnabled(False)
+        self.pB_ricerca.setEnabled(False)
+        self.tempo_alla_chiusura()
+
+    def tempo_alla_chiusura(self):
+        today = datetime.today()
+        tomorrow = today.replace(day=today.day, hour=20, minute=00, second=00) + timedelta(days=1)
+        delta_t = tomorrow - today
+        delay = delta_t.total_seconds()
+        t = Timer(delay, self.beach_closed)
+        t.start()
+
 
 
