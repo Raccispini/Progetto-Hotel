@@ -26,7 +26,7 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
         for cliente in self.controller_cliente.get_listaclienti():
             info_cliente.append(f"{cliente.get_nome()} {cliente.get_cognome()} - {cliente.get_tipo_documento()}: {cliente.get_numero_documento()}")
         for camera_prenotata in self.controller_camere.get_lista_camere():
-            print(camera_prenotata)
+            info_prenotazione.append(f"{camera_prenotata[0]} - {camera_prenotata[1]}")
         self.cB_camera.addItems(info_prenotazione)
         self.cB_nominativo.addItems(info_cliente)
 
@@ -37,7 +37,7 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
 
 
     def cB_changed(self):
-        if self.cB_pagamento.currentText() == "Acconto":
+        if self.cB_pagamento.currentText() == "Addebito su conto camera":
             self.cB_camera.setEnabled(True)
         else:
             self.cB_camera.setEnabled(False)

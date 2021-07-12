@@ -93,7 +93,7 @@ class Ui_PrenotaOmbrellone(object):
         sizePolicy.setHeightForWidth(self.cB_camera.sizePolicy().hasHeightForWidth())
         self.cB_camera.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.cB_camera.setFont(font)
         self.cB_camera.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.cB_camera.setObjectName("cB_camera")
@@ -199,7 +199,7 @@ class Ui_PrenotaOmbrellone(object):
 
     def cB_font(self, cB):
         font = QtGui.QFont()
-        font.setPointSize(15)
+        font.setPointSize(13)
         font.setBold(True)
         font.setFamily("Arial")
         cB.setFont(font)
