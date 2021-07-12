@@ -57,5 +57,10 @@ class ModelCamere():
 		for i in range(len(tipi)):
 			allestimenti.append(tipi[i][0])
 		return allestimenti
+
+	def get_lista_camere_prenotate(self):
+		db = sqlite3.connect("database.db")
+		lista_prenotate = db.execute("SELECT id_camera FROM Prenotazioni_camere").fetchall()
+		return lista_prenotate
 	def __init__(self):
 		pass

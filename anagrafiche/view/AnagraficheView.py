@@ -1,21 +1,14 @@
 from PyQt5 import QtGui
 from PyQt5.QtCore import QDate, Qt
 from PyQt5.QtWidgets import QMainWindow, QMessageBox,  QTableWidgetItem
+
+from anagrafiche.view.RicercaAnagraficheView import RicercaAnagraficheView
 from anagrafiche.view.Ui_AnagraficheView import Ui_AnagraficheView
 from GeneratorePDF_Tabelle import GeneratorePDF_Tabelle
 from anagrafiche.controller.AnagraficheController import AnagraficheController
-from anagrafiche.view.Ui_RicercaAnagraficheView import Ui_RicercaAnagraficheView
 from cliente.controller.ClienteController import ClienteController
 from dipendente.controller.DipendenteController import DipendenteController
 from fornitore.controller.FornitoreController import FornitoreController
-
-
-
-
-class Ui_RicercaView(QMainWindow, Ui_RicercaAnagraficheView):
-    def __init__(self, parent=None):
-        super(Ui_RicercaView, self).__init__(parent)
-        self.setupUi(self)
 
 
 class AnagraficheView(QMainWindow, Ui_AnagraficheView):
@@ -144,43 +137,6 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             self.checkpB_to_enable()
 
 
-    def ricerca_cliente(self):
-        self.aggiornaTabelle(self.tableWidget_Clienti, [])
-        self.pB_ricerca_Cliente.setEnabled(False) #Evito che l'utente prema più volte il pulsante ricerca oppure apra altre finestre ricerca mentre sono già aperte in altre categorie
-        self.pB_ricerca_Dipendente.setEnabled(False)
-        self.pB_ricerca_Fornitore.setEnabled(False)
-        self.ricerca_window = Ui_RicercaView(self) #Passo il self in maniera tale che la finestra non si apra separatamente
-                                                   # e non possa essere chiusa in maniera incorretta dall'utente premendo la X dalla barra delle applicazioni
-        self.ricerca_window.show()
-        #Metodo che gestisce la visualizzazione dei clienti filtrati quando viene premuto il pulsante ricerca
-        def on_ricercaclicked():
-            lista_trovati = self.controller.ricerca_cliente([self.ricerca_window.cB_criterio_ricerca.currentText(), self.ricerca_window.lineE_parola.text()])
-            if len(lista_trovati)==0:
-                QMessageBox.information(self, 'Informazione', 'I criteri di ricerca non hanno prodotto nessun risultato.\nPer favore cambia i criteri e ritenta', QMessageBox.Ok, QMessageBox.Ok)
-            else:
-                self.aggiornaTabelle(self.tableWidget_Clienti, lista_trovati)
-                QMessageBox.information(self, 'Informazione', 'I risultati della ricerca vengono mostrati sulla tabella.\nPer farla tornare allo stato iniziale premere annulla', QMessageBox.Ok,QMessageBox.Ok)
-            self.ricerca_window.lineE_parola.clear()
-            self.ricerca_window.cB_criterio_ricerca.setCurrentIndex(0)
-        #Metodo che gestisce la chiusura dell'interfaccia di ricerca e il refresh della tabella
-        def on_annullaclicked():
-            self.aggiornaTabelle(self.tableWidget_Clienti, self.controller.get_listaclienti())
-            self.ricerca_window.lineE_parola.clear()
-            self.ricerca_window.cB_criterio_ricerca.setCurrentIndex(0)
-            self.ricerca_window.close()
-            self.pB_ricerca_Cliente.setEnabled(True)
-            self.pB_ricerca_Dipendente.setEnabled(True)
-            self.pB_ricerca_Fornitore.setEnabled(True)
-
-        cB_element = ["","ID","NOME","COGNOME","SESSO","DATA_NASCITA","LUOGO_NASCITA","RESIDENZA","PROVINCIA","VIA","CAP",
-                      "CF","NAZIONE","TELEFONO","CELLULARE","EMAIL","DOCUMENTO","NUMERO_DOCUMENTO","ENTE_RILASCIO",
-                      "DATA_RILASCIO","DATA_SCADENZA","MODALITA_PAGAMENTO","INFO_CHECKIN"]
-        self.ricerca_window.set_cB(cB_element)
-        self.ricerca_window.pB_ricerca.clicked.connect(lambda: on_ricercaclicked())
-        self.ricerca_window.pB_annulla.clicked.connect(lambda: on_annullaclicked())
-
-
-
     def salva_cliente(self):
         self.pB_aggiungi_Cliente.setEnabled(True)
         self.controller_cliente.set_info(self.get_info_cliente_from_view())
@@ -201,6 +157,10 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             self.annulla_cliente()
             QMessageBox.information(self, "Informazione", "La compilazione è stata annullata correttamente")
 
+    def ricerca_cliente(self):
+        buttons_ricerca = [self.pB_ricerca_Cliente, self.pB_ricerca_Dipendente, self.pB_ricerca_Fornitore]
+        self.ricerca_window = RicercaAnagraficheView(self.controller, self.aggiornaTabelle, self.tableWidget_Clienti, buttons_ricerca, "Cliente", self)
+        self.ricerca_window.show()
 
     def annulla_cliente(self):
             self.pB_salva_Cliente.setEnabled(False)
@@ -297,41 +257,10 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             self.checkpB_to_enable()
 
     def ricerca_dipendente(self):
-        self.aggiornaTabelle(self.tableWidget_Dipendente, [])
-        self.pB_ricerca_Cliente.setEnabled(False)  # Evito che l'utente prema più volte il pulsante ricerca oppure apra altre finestre ricerca mentre sono già aperte in altre categorie
-        self.pB_ricerca_Dipendente.setEnabled(False)
-        self.pB_ricerca_Fornitore.setEnabled(False)
-        self.ricerca_window = Ui_RicercaView(self)  # Passo il self in maniera tale che la finestra non si apra separatamente
-        # e non possa essere chiusa in maniera incorretta dall'utente premendo la X dalla barra delle applicazioni
+        buttons_ricerca = [self.pB_ricerca_Cliente, self.pB_ricerca_Dipendente, self.pB_ricerca_Fornitore]
+        self.ricerca_window = RicercaAnagraficheView(self.controller, self.aggiornaTabelle, self.tableWidget_Dipendente, buttons_ricerca, "Dipendente", self)
         self.ricerca_window.show()
 
-        # Metodo che gestisce la visualizzazione dei clienti filtrati quando viene premuto il pulsante ricerca
-        def on_ricercaclicked():
-            lista_trovati = self.controller.ricerca_dipendente([self.ricerca_window.cB_criterio_ricerca.currentText(), self.ricerca_window.lineE_parola.text()])
-            if len(lista_trovati) == 0:
-                QMessageBox.information(self, 'Informazione','I criteri di ricerca non hanno prodotto nessun risultato.\nPer favore cambia i criteri e ritenta',
-                                        QMessageBox.Ok, QMessageBox.Ok)
-            else:
-                self.aggiornaTabelle(self.tableWidget_Dipendente, lista_trovati)
-                QMessageBox.information(self, 'Informazione','I risultati della ricerca vengono mostrati sulla tabella.\nPer farla tornare allo stato iniziale premere annulla',
-                                        QMessageBox.Ok, QMessageBox.Ok)
-
-            self.ricerca_window.lineE_parola.clear()
-            self.ricerca_window.cB_criterio_ricerca.setCurrentIndex(0)
-
-        # Metodo che gestisce la chiusura dell'interfaccia di ricerca e il refresh della tabella
-        def on_annullaclicked():
-            self.aggiornaTabelle(self.tableWidget_Dipendente, self.controller.get_listadipendenti())
-            self.ricerca_window.close()
-            self.pB_ricerca_Dipendente.setEnabled(True)
-            self.pB_ricerca_Cliente.setEnabled(True)
-            self.pB_ricerca_Fornitore.setEnabled(True)
-
-        cB_element = ["","ID","USERNAME","PASSWORD","NOME","COGNOME","EMAIL","CELLULARE","DATA_NASCITA","AMBITO","PERMESSI"]
-
-        self.ricerca_window.set_cB(cB_element)
-        self.ricerca_window.pB_ricerca.clicked.connect(lambda: on_ricercaclicked())
-        self.ricerca_window.pB_annulla.clicked.connect(lambda: on_annullaclicked())
 
     def salva_dipendente(self):
         self.pB_aggiungi_Dipendente.setEnabled(True)
@@ -431,42 +360,10 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             self.checkpB_to_enable()
 
     def ricerca_fornitore(self):
-        self.aggiornaTabelle(self.tableWidget_Fornitore, [])
-        self.pB_ricerca_Cliente.setEnabled(False)  # Evito che l'utente prema più volte il pulsante ricerca oppure apra altre finestre ricerca mentre sono già aperte in altre categorie
-        self.pB_ricerca_Dipendente.setEnabled(False)
-        self.pB_ricerca_Fornitore.setEnabled(False)
-        self.ricerca_window = Ui_RicercaView(self)  # Passo il self in maniera tale che la finestra non si apra separatamente
-        # e non possa essere chiusa in maniera incorretta dall'utente premendo la X dalla barra delle applicazioni
+        buttons_ricerca = [self.pB_ricerca_Cliente, self.pB_ricerca_Dipendente, self.pB_ricerca_Fornitore]
+        self.ricerca_window = RicercaAnagraficheView(self.controller, self.aggiornaTabelle, self.tableWidget_Fornitore, buttons_ricerca, "Fornitore", self)
         self.ricerca_window.show()
 
-        # Metodo che gestisce la visualizzazione dei clienti filtrati quando viene premuto il pulsante ricerca
-        def on_ricercaclicked():
-            lista_trovati = self.controller.ricerca_fornitore([self.ricerca_window.cB_criterio_ricerca.currentText(), self.ricerca_window.lineE_parola.text()])
-            if len(lista_trovati) == 0:
-                QMessageBox.information(self, 'Informazione', 'I criteri di ricerca non hanno prodotto nessun risultato.\nPer favore cambia i criteri e ritenta',
-                                        QMessageBox.Ok, QMessageBox.Ok)
-            else:
-                self.aggiornaTabelle(self.tableWidget_Fornitore, lista_trovati)
-                QMessageBox.information(self, 'Informazione',  'I risultati della ricerca vengono mostrati sulla tabella.\nPer farla tornare allo stato iniziale premere annulla',
-                                        QMessageBox.Ok, QMessageBox.Ok)
-
-            self.ricerca_window.lineE_parola.clear()
-            self.ricerca_window.cB_criterio_ricerca.setCurrentIndex(0)
-
-        # Metodo che gestisce la chiusura dell'interfaccia di ricerca e il refresh della tabella
-        def on_annullaclicked():
-            self.aggiornaTabelle(self.tableWidget_Fornitore, self.controller.get_listafornitori())
-            self.ricerca_window.close()
-            self.pB_ricerca_Dipendente.setEnabled(True)
-            self.pB_ricerca_Cliente.setEnabled(True)
-            self.pB_ricerca_Fornitore.setEnabled(True)
-
-        cB_element = ["", "ID","NOME_FORNITORE", "FORNITURA1", "FORNITURA2", "IVA", "RIFERIMENTO", "CELLULARE_RIFERIMENTO",
-                      "INDIRIZZO", "TELEFONO", "EMAIL", "MODALITA_PAGAMENTO", "FAX"]
-
-        self.ricerca_window.set_cB(cB_element)
-        self.ricerca_window.pB_ricerca.clicked.connect(lambda: on_ricercaclicked())
-        self.ricerca_window.pB_annulla.clicked.connect(lambda: on_annullaclicked())
 
     def salva_fornitore(self):
         self.pB_aggiungi_Fornitore.setEnabled(True)

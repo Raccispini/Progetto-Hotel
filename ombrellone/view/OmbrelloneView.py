@@ -4,6 +4,7 @@ from threading import Timer
 from datetime import datetime, timedelta
 
 from ombrellone.view.ListaPrenotazioniView import ListaPrenotazioniView
+from ombrellone.view.ListinoPrezziView import ListinoPrezziView
 from ombrellone.view.PrenotaOmbrelloneView import PrenotaOmbrelloneView
 from ombrellone.view.Ui_Ombrellone import Ui_Ombrellone
 from ombrellone.controller.OmbrelloneController import OmbrelloneController
@@ -24,7 +25,7 @@ class OmbrelloneView(QMainWindow, Ui_Ombrellone):
             push_button.clicked.connect(lambda: self.prenota_ombrellone())
         self.pB_ricerca.clicked.connect(lambda: self.ricerca_ombrellone_disponibile())
         self.pB_lista_prenotazioni.clicked.connect(lambda: self.open_lista_prenotazioni())
-        self.pB_listino.clicked.connect(lambda: self.show_Prezzi())
+        self.pB_listino.clicked.connect(lambda: self.show_listino_prezzi())
         self.cB_tipo.currentIndexChanged.connect(lambda: self.cB_tipo_changed())
 
 
@@ -50,10 +51,9 @@ class OmbrelloneView(QMainWindow, Ui_Ombrellone):
             self.cB_orario.setCurrentIndex(0)
 
 
-    def show_Prezzi(self):
-        pass
-        #self.prezzi_window = ListinoPrezziView()
-        #self.prezzi_window.show()
+    def show_listino_prezzi(self):
+        self.prezzi_window = ListinoPrezziView(self.controller, self)
+        self.prezzi_window.show()
 
 
     def prenota_ombrellone(self):

@@ -1,4 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
+
+from camere.controller.CamereController import CamereController
 from ombrellone.view.Ui_PrenotaOmbrellone import Ui_PrenotaOmbrellone
 from anagrafiche.controller.AnagraficheController import AnagraficheController
 
@@ -18,9 +20,14 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
 
     def update_view(self):
         self.controller_cliente = AnagraficheController()
+        self.controller_camere = CamereController()
         info_cliente = [""]
+        info_prenotazione = [""]
         for cliente in self.controller_cliente.get_listaclienti():
             info_cliente.append(f"{cliente.get_nome()} {cliente.get_cognome()} - {cliente.get_tipo_documento()}: {cliente.get_numero_documento()}")
+        for camera_prenotata in self.controller_camere.get_lista_camere():
+            print(camera_prenotata)
+        self.cB_camera.addItems(info_prenotazione)
         self.cB_nominativo.addItems(info_cliente)
 
     def connect_action(self):
