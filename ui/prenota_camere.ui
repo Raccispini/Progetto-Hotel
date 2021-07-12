@@ -52,6 +52,12 @@
       </item>
       <item>
        <widget class="QTableWidget" name="tableWidget">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
         <property name="columnCount">
          <number>21</number>
         </property>
@@ -212,7 +218,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QTextBrowser" name="textBrowser_info_chec_in"/>
+       <widget class="QTextBrowser" name="textBrowser_info_chec_in">
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -230,14 +240,14 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="pB_annulla">
+         <widget class="QPushButton" name="pB_prenota">
           <property name="text">
            <string>Prenota</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pB_prenota">
+         <widget class="QPushButton" name="pB_annulla">
           <property name="text">
            <string>Annulla</string>
           </property>

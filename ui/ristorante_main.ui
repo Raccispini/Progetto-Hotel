@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1722</width>
-    <height>914</height>
+    <height>953</height>
    </rect>
   </property>
   <property name="font">
@@ -38,6 +38,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
       <property name="tabShape">
        <enum>QTabWidget::Triangular</enum>
       </property>
@@ -57,6 +60,9 @@
              <font>
               <pointsize>30</pointsize>
              </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
              <string notr="true">background-image: url(:/ristorante/8-85556_silver-mat-color.jpg);</string>
@@ -114,6 +120,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
               <pointsize>30</pointsize>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-image: url(:/ristorante/8-85556_silver-mat-color.jpg);</string>
             </property>
@@ -162,6 +171,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
             <bold>true</bold>
            </font>
           </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-image: url(:/ristorante/tpg.png);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
@@ -192,7 +204,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            <number>30</number>
           </property>
           <item row="1" column="1">
-           <widget class="QPushButton" name="button_t2">
+           <widget class="QPushButton" name="Tavolo_2">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -212,6 +224,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -219,8 +234,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_2{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_2:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>2</string>
@@ -238,7 +261,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="4" column="3">
-           <widget class="QPushButton" name="button_t16">
+           <widget class="QPushButton" name="Tavolo_16">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -258,6 +281,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -265,8 +291,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_16{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_16:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>16</string>
@@ -284,7 +318,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="1" column="3">
-           <widget class="QPushButton" name="button_t4">
+           <widget class="QPushButton" name="Tavolo_4">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -304,6 +338,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -311,8 +348,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_4{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_4:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>4</string>
@@ -330,7 +375,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="3" column="3">
-           <widget class="QPushButton" name="button_t12">
+           <widget class="QPushButton" name="Tavolo_12">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -350,6 +395,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -357,8 +405,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_12{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_12:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>12</string>
@@ -376,7 +432,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QPushButton" name="button_t5">
+           <widget class="QPushButton" name="Tavolo_5">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -396,6 +452,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -403,8 +462,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_5{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_5:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>5</string>
@@ -422,7 +489,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QPushButton" name="button_t1">
+           <widget class="QPushButton" name="Tavolo_1">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -443,6 +510,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <stylestrategy>NoAntialias</stylestrategy>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -450,8 +520,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_1{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_1:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>1</string>
@@ -478,7 +556,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="2" column="2">
-           <widget class="QPushButton" name="button_t7">
+           <widget class="QPushButton" name="Tavolo_7">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -498,6 +576,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -505,8 +586,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_7{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_7:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>7</string>
@@ -524,7 +613,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QPushButton" name="button_t6">
+           <widget class="QPushButton" name="Tavolo_6">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -544,6 +633,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -551,8 +643,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_6{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_6:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>6</string>
@@ -570,7 +670,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="4" column="2">
-           <widget class="QPushButton" name="button_t15">
+           <widget class="QPushButton" name="Tavolo_15">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -590,6 +690,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -597,8 +700,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_15{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_15:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>15</string>
@@ -616,7 +727,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="3" column="2">
-           <widget class="QPushButton" name="button_t11">
+           <widget class="QPushButton" name="Tavolo_11">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -636,6 +747,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -643,8 +757,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_11{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_11:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>11</string>
@@ -662,7 +784,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="2" column="3">
-           <widget class="QPushButton" name="button_t8">
+           <widget class="QPushButton" name="Tavolo_8">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -682,6 +804,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -689,8 +814,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_8{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_8:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>8</string>
@@ -708,7 +841,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QPushButton" name="button_t9">
+           <widget class="QPushButton" name="Tavolo_9">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -728,6 +861,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -735,8 +871,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_9{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_9:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>9</string>
@@ -754,7 +898,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="1" column="2">
-           <widget class="QPushButton" name="button_t3">
+           <widget class="QPushButton" name="Tavolo_3">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -774,6 +918,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -781,8 +928,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_3{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_3:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>3</string>
@@ -800,7 +955,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QPushButton" name="button_t10">
+           <widget class="QPushButton" name="Tavolo_10">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -820,6 +975,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -827,8 +985,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+             <string notr="true">#Tavolo_10{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_10:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>10</string>
@@ -846,7 +1012,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QPushButton" name="button_t14">
+           <widget class="QPushButton" name="Tavolo_14">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -866,6 +1032,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -873,8 +1042,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">#Tavolo_14{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_14:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>14</string>
@@ -892,7 +1069,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QPushButton" name="button_t13">
+           <widget class="QPushButton" name="Tavolo_13">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -912,6 +1089,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -919,8 +1099,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/ristorante/tpg.png);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));background-image: url(:/ristorante/tpg.png);</string>
+             <string notr="true">#Tavolo_13{background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));
+	border-radius:16px;
+	border-style: outset;
+	border: 5px solid black;
+	
+}
+
+#Tavolo_13:pressed{ border-style: inset;
+								border:4px solid grey;}</string>
             </property>
             <property name="text">
              <string>13</string>
@@ -945,8 +1133,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
        <attribute name="title">
         <string>Prenotazioni</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QLabel" name="label_5">
@@ -976,6 +1164,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <weight>50</weight>
               <bold>false</bold>
              </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
              <string notr="true">background-image: url(:/ristorante/8-85556_silver-mat-color.jpg);</string>
@@ -1106,6 +1297,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>false</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-image: url(:/ristorante/8-85556_silver-mat-color.jpg);</string>
             </property>
@@ -1153,6 +1347,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
               <bold>false</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-image: url(:/ristorante/8-85556_silver-mat-color.jpg);</string>
             </property>
@@ -1190,7 +1387,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
           </item>
          </layout>
         </item>
-        <item>
+        <item row="1" column="0">
          <widget class="Line" name="line_2">
           <property name="frameShadow">
            <enum>QFrame::Plain</enum>
@@ -1200,97 +1397,139 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QTableWidget" name="tabella_prenotazioni">
-          <property name="styleSheet">
-           <string notr="true">background-image: url(:/ristorante/tpg.png);
+        <item row="2" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QTableWidget" name="tabella_prenotazioni">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
 background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));</string>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Sunken</enum>
-          </property>
-          <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
-          </property>
-          <attribute name="horizontalHeaderDefaultSectionSize">
-           <number>280</number>
-          </attribute>
-          <attribute name="horizontalHeaderStretchLastSection">
-           <bool>true</bool>
-          </attribute>
-          <column>
-           <property name="text">
-            <string>Nominativo</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Camera</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Persone</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Data</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Ora</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Tavolo</string>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-          </column>
-         </widget>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SingleSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>280</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Tavolo</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Nominativo</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Persone</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Data</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Ora</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Camera</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>30</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
+            <property name="text">
+             <string>Elimina</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
