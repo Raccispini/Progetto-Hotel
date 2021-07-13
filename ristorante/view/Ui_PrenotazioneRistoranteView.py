@@ -8,7 +8,7 @@ class Ui_PrenotaRistoranteView(object):
         MainWindow.setMinimumSize(QtCore.QSize(648, 129))
         MainWindow.setMaximumSize(QtCore.QSize(648, 129))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")

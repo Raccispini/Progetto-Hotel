@@ -7,7 +7,7 @@ class Ui_OrdinazioniRistoranteView(object):
         MainWindow.resize(1397, 632)
         MainWindow.setMinimumSize(QtCore.QSize(1397, 632))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setStyleSheet(
             "#MainWindow_ordinazione{background-image: url(ui/resources/ristorante/50-504378_restaurant-hd-wallpaper-restaurant-hd.jpg);}")
         MainWindow.setWindowIcon(icon)
