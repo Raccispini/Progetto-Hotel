@@ -6,9 +6,9 @@ class Ui_ComingSoonView(object):
     def setupUi(self, Dialog_Error_Login):
         Dialog_Error_Login.setObjectName("Dialog_Error_Login")
         Dialog_Error_Login.setWindowModality(QtCore.Qt.NonModal)
-        Dialog_Error_Login.resize(421, 174)
-        Dialog_Error_Login.setMinimumSize(QtCore.QSize(421, 174))
-        Dialog_Error_Login.setMaximumSize(QtCore.QSize(421, 174))
+        Dialog_Error_Login.resize(450, 200)
+        Dialog_Error_Login.setMinimumSize(QtCore.QSize(450, 200))
+        Dialog_Error_Login.setMaximumSize(QtCore.QSize(450, 200))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog_Error_Login.setWindowIcon(icon)

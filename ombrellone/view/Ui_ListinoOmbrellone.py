@@ -4,9 +4,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ListinoPrezzi(object):
     def setupUi(self, MainWindow_listino):
         MainWindow_listino.setObjectName("MainWindow_listino")
-        MainWindow_listino.resize(640, 300)
-        self.setMaximumSize(640, 300)
-        self.setMinimumSize(640, 300)
+        MainWindow_listino.resize(670, 350)
+        self.setMaximumSize(670, 350)
+        self.setMinimumSize(670, 350)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow_listino.setWindowIcon(icon)
