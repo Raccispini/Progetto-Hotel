@@ -22,3 +22,6 @@ class RistoranteController():
 
     def get_menu(self, categoria):
         return self.model.get_menu(categoria)
+
+    def get_prezzo(self, nome_piatto):
+        return self.model.get_prezzo_piatto(nome_piatto)

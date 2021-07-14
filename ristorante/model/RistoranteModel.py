@@ -47,5 +47,12 @@ class RistoranteModel():
         return self.lista_filtrata
 
     def get_menu(self, categoria):
+        query = "SELECT * FROM Menu WHERE categoria = \'"+ categoria + "\';"
+        return list(self.db.execute(query).fetchall())
+
+    def get_prezzo_piatto(self, nome_piatto):
+        query = "SELECT prezzo FROM Menu WHERE nome_piatto = \'" + nome_piatto + "\';"
+        return self.db.execute(query).fetchone()[0]
+
 
 
