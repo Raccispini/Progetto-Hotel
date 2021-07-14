@@ -46,18 +46,6 @@ class RistoranteModel():
 
         return self.lista_filtrata
 
+    def get_menu(self, categoria):
 
 
-
-
-
-            # def get_lista_prenotazioni(self):
-
-
-
-  #  def get_menu(self):
-        
-        
-
- #   def elimina_prenotazione(self):
-    

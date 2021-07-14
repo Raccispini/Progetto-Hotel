@@ -19,3 +19,6 @@ class RistoranteController():
 
     def elimina_prenotazione(self, lista_id):
         self.model.elimina_prenotazione(lista_id)
+
+    def get_menu(self, categoria):
+        return self.model.get_menu(categoria)
