@@ -4,9 +4,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_PrenotaRistoranteView(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(648, 129)
-        MainWindow.setMinimumSize(QtCore.QSize(648, 129))
-        MainWindow.setMaximumSize(QtCore.QSize(648, 129))
+        MainWindow.resize(800, 200)
+        MainWindow.setMinimumSize(QtCore.QSize(800,200))
+        MainWindow.setMaximumSize(QtCore.QSize(800,200))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
