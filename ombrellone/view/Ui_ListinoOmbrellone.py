@@ -4,11 +4,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ListinoPrezzi(object):
     def setupUi(self, MainWindow_listino):
         MainWindow_listino.setObjectName("MainWindow_listino")
-        MainWindow_listino.resize(654, 353)
+        MainWindow_listino.resize(640, 300)
+        self.setMaximumSize(640, 300)
+        self.setMinimumSize(640, 300)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow_listino.setWindowIcon(icon)
-        MainWindow_listino.setStyleSheet("#MainWindow_listino{border-image: url(C:/Users/Msi/Documents/GitHub/Progetto-Hotel/ui/resources/Ombrelloni/thumb-1920-325895.jpg) 0 0 0 0 stretch stretch;}")
+        MainWindow_listino.setStyleSheet("#MainWindow_listino{border-image: url(ui/resources/Ombrelloni/thumb-1920-325895.jpg) 0 0 0 0 stretch stretch;}")
         self.centralwidget = QtWidgets.QWidget(MainWindow_listino)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
