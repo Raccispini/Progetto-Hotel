@@ -1,14 +1,14 @@
 import pdfkit
 from datetime import datetime
-class GeneratoreScontrini(object):
+class GeneratoreScontriniRistorante(object):
     def __init__(self):
         pass
 
-    def stampa(self, lista, totale):
+    def stampa(self, lista, totale, metodo):
         current_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         path_wkhtmltopdf = r'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'
         config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
-        Html_file = open("HTML/Scontrini/scontrino_bar.html", "r")
+        Html_file = open("HTML/Scontrini/scontrino_ristorante.html", "r")
         html = Html_file.read()
         for elemento in lista:
             html += f"<tr><td> {elemento[0]} X {elemento[1]}</td><td><p>10%</p></td><td><p>{elemento[3]} €</p></td></tr>"
@@ -17,7 +17,7 @@ class GeneratoreScontrini(object):
               f"TOTALE COMPLESSIVO</td><td style=\"font-size: 20px; font-weight: bold; text-align: right\">{totale} €</td></tr>" \
               f"<tr><td style=\"font-size: 20px; font-weight: bold;\">di cui IVA</td>" \
               f"<td style=\"font-size: 20px; font-weight: bold; text-align: right\">{(9*totale)/100} €</td></tr></table>" \
-              f"<p>{current_date}<br></p><p style=\"font-weight: bold\">ARRIVEDERCI E GRAZIE</p>"
+              f"<p>{current_date}<br></p><p>Metodo di Pagamento: {metodo}<br></p><p style=\"font-weight: bold\">ARRIVEDERCI E GRAZIE</p>"
 
         options = {
             'page-size': 'A5',
@@ -29,7 +29,7 @@ class GeneratoreScontrini(object):
             'encoding': "UTF-8",
         }
 
-        title = ("PDF/ScontriniBar/"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")+".pdf")
+        title = ("PDF/ScontriniRistorante/"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")+".pdf")
         pdfkit.from_string(html, title, configuration=config, options=options)
 
 

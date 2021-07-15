@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QTableWidgetItem
 from ristorante.view.Ui_OrdinazioniRistoranteView import Ui_OrdinazioniRistoranteView
+from GeneratoreScontriniRistorante import GeneratoreScontriniRistorante
 from PyQt5 import QtGui, QtCore
 
 class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
@@ -45,6 +46,8 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
         self.lineE_coperto.textChanged.connect(lambda: self.update_totale())
         self.tW_scontrino_tavolo.itemSelectionChanged.connect(lambda: self.table_clicked())
         self.pB_cancella.clicked.connect(lambda: self.delete_ordinazione())
+        self.pB_annulla.clicked.connect(lambda: self.annulla_clicked())
+        self.pB_conferma.clicked.connect(lambda: self.stampa_scontrino())
 
     def table_clicked(self):
         if len(self.tW_scontrino_tavolo.selectionModel().selectedRows()) > 0:
@@ -154,6 +157,33 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
             self.pB_conferma.setEnabled(False)
         self.update_totale()
         self.update_table()
+
+    def annulla_clicked(self):
+        scelta = QMessageBox.warning(self, "Attenzione", "Sei sicuro di voler annullare l'ordine?\nIn tal caso dovrai ricominciare la compilazione", QMessageBox.Yes, QMessageBox.No)
+        if scelta == QMessageBox.Yes:
+            self.cB_antipasti.setCurrentIndex(0)
+            self.cB_primi.setCurrentIndex(0)
+            self.cB_secondi.setCurrentIndex(0)
+            self.cB_contorni.setCurrentIndex(0)
+            self.cB_bevande.setCurrentIndex(0)
+            self.cB_dolci.setCurrentIndex(0)
+            self.cB_frutta.setCurrentIndex(0)
+            self.cB_pagamento.setCurrentIndex(0)
+            self.lista_ordini = []
+            self.update_table()
+            self.update_totale()
+
+
+    def stampa_scontrino(self):
+        scontrino = GeneratoreScontriniRistorante()
+        if self.cB_pagamento.currentText() != "" and self.cB_pagamento.currentText() != "Addebito su conto camera":
+            scontrino.stampa(self.lista_ordini, self.totale, self.cB_pagamento.currentText())
+        else:
+            QMessageBox.information(self, "Informazione","Seleziona un metodo di pagamento in maniera idonea prima di premere salva")
+
+
+
+
 
 
 

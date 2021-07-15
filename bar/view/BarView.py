@@ -1,15 +1,18 @@
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
 from PyQt5 import QtGui, QtCore
-from GeneratoreScontrini import GeneratoreScontrini
+from GeneratoreScontriniBar import GeneratoreScontriniBar
 from bar.controller.BarController import BarController
 from bar.view.AggiornaListinoView import AggiornaListinoView
 from bar.view.Ui_BarView import Ui_BarView
+from camere.controller.CamereController import CamereController
+
 
 class BarView(QMainWindow, Ui_BarView):
     def __init__(self, parent=None):
         super(BarView, self).__init__(parent)
         self.setupUi(self)
         self.controller = BarController()
+        self.camere_controller = CamereController()
         self.lista_consumazioni = []
         self.totale = 0
         self.update_cB()
@@ -42,6 +45,8 @@ class BarView(QMainWindow, Ui_BarView):
         nomi_pasticceria = self.get_nomi(self.controller.get_lista_pasticceria())
         self.cB_pasticceria
         self.cB_pasticceria.addItems(nomi_pasticceria)  # Aggiungo alla comboBox i nomi
+        for camera in self.camere_controller.get_lista_camere():
+            self.cB_camera.addItem(f"{camera[0]} - {camera[1]} {camera[2]}")
 
     def get_nomi(self, lista_bar):
         lista_nomi = [""]
@@ -122,9 +127,10 @@ class BarView(QMainWindow, Ui_BarView):
             i+=1
 
     def comboBox_changed(self):
-        if self.cB_metodopagamento.currentText() == "Acconto":
+        if self.cB_metodopagamento.currentText() == "Addebito su conto camera":
             self.cB_camera.setEnabled(True)
         else:
+            self.cB_camera.setCurrentIndex(0)
             self.cB_camera.setEnabled(False)
 
     def table_clicked(self):
@@ -152,8 +158,13 @@ class BarView(QMainWindow, Ui_BarView):
         self.lineE_totale.setText(str(self.totale)+' €')
 
     def get_scontrino(self):
-        scontrino = GeneratoreScontrini()
-        scontrino.stampa(self.lista_consumazioni, self.totale)
+        scontrino = GeneratoreScontriniBar()
+        if self.cB_metodopagamento.currentText() != "" and self.cB_metodopagamento.currentText() != "Addebito su conto camera":
+           scontrino.stampa(self.lista_consumazioni, self.totale, self.cB_metodopagamento.currentText())
+        elif self.cB_metodopagamento.currentText() == "Addebito su conto camera" and self.cB_camera.currentText() != "":
+            scontrino.stampa(self.lista_consumazioni, self.totale, f"{self.cB_metodopagamento.currentText()} ({self.cB_camera.currentText()})")
+        else:
+            QMessageBox.information(self,"Informazione","Seleziona un metodo di pagamento in maniera idonea prima di premere salva")
 
     def open_aggiornalistino(self):
         self.aggiornalistino_window = AggiornaListinoView(self.controller, self.update_cB, self)

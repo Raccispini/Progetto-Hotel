@@ -60,7 +60,7 @@ class ModelCamere():
 
 	def get_lista_camere_prenotate(self):
 		db = sqlite3.connect("database.db")
-		lista_prenotate = db.execute("SELECT * FROM Prenotazioni_camere").fetchall()
+		lista_prenotate = db.execute("SELECT Prenotazioni_camere.id_camere, Clienti.NOME, Clienti.COGNOME FROM Prenotazioni_camere, Clienti WHERE Prenotazioni_camere.cliente_id = Clienti.ID").fetchall()
 		return lista_prenotate
 	def __init__(self):
 		pass
