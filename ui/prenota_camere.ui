@@ -59,8 +59,13 @@
          <enum>QAbstractItemView::SelectRows</enum>
         </property>
         <property name="columnCount">
-         <number>21</number>
+         <number>22</number>
         </property>
+        <column>
+         <property name="text">
+          <string>Id</string>
+         </property>
+        </column>
         <column>
          <property name="text">
           <string>Nome</string>
@@ -73,7 +78,7 @@
         </column>
         <column>
          <property name="text">
-          <string>New Column</string>
+          <string>Sesso</string>
          </property>
         </column>
         <column>
@@ -93,7 +98,7 @@
         </column>
         <column>
          <property name="text">
-          <string>New Column</string>
+          <string>Provincia</string>
          </property>
         </column>
         <column>

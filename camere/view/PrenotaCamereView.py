@@ -6,6 +6,7 @@ from PyQt5 import QtWidgets
 class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 	def __init__(self,parent=None,camera_id=0,check_in=0,check_out=0):
 		super(PrenotaCamereView,self).__init__(parent)
+		#self.main_window = QMainWindow
 		self.setupUi(self)
 		self.camera = camera_id
 		self.check_in = check_in
@@ -15,6 +16,8 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 
 		self.tableWidget.itemSelectionChanged.connect(lambda: self.check_prenotable())
 		self.pB_prenota.clicked.connect(lambda: self.prenota())
+		self.pB_annulla.clicked.connect(lambda: self.close())
+
 	def update_clienti(self):
 		clienti = ModelPrenotaCamere.getClienti()
 		#print(clienti)
@@ -32,4 +35,11 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 	def prenota(self):
 		now = date.today()
 		print(now.strftime("%d/%m/%Y"))
-		ModelPrenotaCamere.prenota(self.check_in,self.check_out,now.strftime("%d/%m/%Y"),self.camera)
+		ModelPrenotaCamere.prenota(self.check_in,self.check_out,now.strftime("%d/%m/%Y"),self.camera,self.get_selected_cliente())
+		self.close()
+
+	def get_selected_cliente(self):
+		cliente = self.tableWidget.selectedItems()
+		return cliente[0].text()
+
+
