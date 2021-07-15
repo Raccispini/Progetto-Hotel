@@ -18,7 +18,7 @@ class Ui_CamereView     (object):
         MainWindow.resize(1558, 842)
         MainWindow.setMinimumSize(QtCore.QSize(1223, 665))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("#MainWindow_camere{background-image: url(:/camere/Grand-Hotel-Fleming-2.jpg);}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)

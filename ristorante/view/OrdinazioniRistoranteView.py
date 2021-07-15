@@ -9,8 +9,11 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
         self.item_selected = item
         self.controller = controller
         self.lista_ordini = []
+        self.sconto=0
+        self.coperto=1.5
         self.update_all()
         self.connect_all()
+        self.update_totale()
 
     def update_all(self):
         info_tavolo = []
@@ -38,6 +41,16 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
     def connect_all(self):
         for button in self.pB_Aggiungi:
             button.clicked.connect(lambda: self.aggiungi_clicked())
+        self.lineE_sconto.textChanged.connect(lambda: self.update_totale())
+        self.lineE_coperto.textChanged.connect(lambda: self.update_totale())
+        self.tW_scontrino_tavolo.itemSelectionChanged.connect(lambda: self.table_clicked())
+        self.pB_cancella.clicked.connect(lambda: self.delete_ordinazione())
+
+    def table_clicked(self):
+        if len(self.tW_scontrino_tavolo.selectionModel().selectedRows()) > 0:
+            self.pB_cancella.setEnabled(True)
+        else:
+            self.pB_cancella.setEnabled(False)
 
     def aggiungi_clicked(self):
         nome_bottone = self.sender().objectName()
@@ -57,8 +70,8 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
         elif nome_bottone == "pB_dolci":
             nome_piatto = self.cB_dolci.currentText()
 
-        if nome_bottone == "":
-            QMessageBox.warning(self,"Attenzione","Non hai inserito una quantità oppure un nome.\nPer favore ritenta inserendo correttamente i dati", QMessageBox.Ok, QMessageBox.Ok)
+        if nome_piatto == "":
+            QMessageBox.warning(self,"Attenzione","Non hai inserito il nome del piatto.\nPer favore ritenta inserendo correttamente i dati", QMessageBox.Ok, QMessageBox.Ok)
             return
 
         prezzo_singolo = self.controller.get_prezzo(nome_piatto)
@@ -82,15 +95,28 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
                     return
 
         self.lista_ordini.append(info_ordine)  # Se la lista non era inizialmente vuota e la consumazione non
-                                                           # era già presente nella lista allora l'aggiungo semplicemente
+                                               # era già presente nella lista allora l'aggiungo semplicemente
         self.pB_conferma.setEnabled(True)
         self.update_totale()
         self.update_table()
 
     def update_totale(self):
+        try:
+            self.sconto = int(self.lineE_sconto.text())
+            self.coperto = float(self.lineE_coperto.text())
+        except:
+            QMessageBox.information(self, "Informazione", "Inserisci solamente valori numerici non caratteri o lettere, non lasciare vuoti i campi sconto e coperto", QMessageBox.Ok, QMessageBox.Ok)
+            return
+
         self.totale = 0
         for ordine in self.lista_ordini:
             self.totale += ordine[3]
+        if self.sconto > 100 or self.sconto < 0:
+             QMessageBox.information(self, "Informazione", "\tSconto non valido,\nInserire un numero compreso tra 0 e 100", QMessageBox.Ok, QMessageBox.Ok)
+        else:
+            self.totale += self.coperto * int(self.lineE_persone.text())
+            self.totale -= (self.totale*(self.sconto/100))
+
         self.lineE_totale.setText(str(self.totale) + ' €')
         self.lineE_totale_per_persona.setText(str(self.totale/int(self.item_selected[3].text())) + " €")
 
@@ -116,6 +142,18 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
                 self.tW_scontrino_tavolo.setItem(i, j, get_item(info))
                 j += 1
             i += 1
+
+    def delete_ordinazione(self):
+        indexes = self.tW_scontrino_tavolo.selectionModel().selectedRows()
+        i = 0
+        for index in sorted(indexes):
+            self.lista_ordini.pop(index.row() - i)  # -i perchè ogni volta che elimino una consumazione l'indice
+                                                    # dell'altra consumazione da eliminare diminuisce di uno
+            i += 1
+        if self.lista_ordini == []:
+            self.pB_conferma.setEnabled(False)
+        self.update_totale()
+        self.update_table()
 
 
 

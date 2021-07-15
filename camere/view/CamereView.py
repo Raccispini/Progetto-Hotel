@@ -1,10 +1,11 @@
 from datetime import datetime
 
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from camere.Ui.Ui_CamereView import Ui_CamereView
 from camere.model.ModelCamere import ModelCamere
 from PyQt5 import QtWidgets
 from camere.view.PrenotaCamereView import PrenotaCamereView
+
 
 
 class CamereView(QMainWindow, Ui_CamereView):
@@ -37,10 +38,11 @@ class CamereView(QMainWindow, Ui_CamereView):
         self.pb_azzera.clicked.connect(lambda: self.azzera())
         self.pb_prenota.clicked.connect(lambda: self.prenota())
         self.pb_prenota_2.clicked.connect(lambda: self.checkout())
+        self.pb_preventivo.clicked.connect(lambda: self.preventivo())
 
         #Eventi
         self.tabellaCamere.itemSelectionChanged.connect(lambda : self.onTableClick())
-        self.tabellaCamere.horizontalHeader().clicked
+        #self.tabellaCamere.horizontalHeader().clicked
 
         #print(self.dateOffset(self.QdateToDate(self.date_dal.date().getDate())),self.QdateToDate(self.date_al.date().getDate()))
     def prenota(self):
@@ -127,7 +129,17 @@ class CamereView(QMainWindow, Ui_CamereView):
     def QdateToDate(self,qdate):
         print(qdate[0])
         return str(qdate[2])+"/"+str(qdate[1])+"/"+str(qdate[0])
+
+    def preventivo(self):
+        d1 = self.QdateToDate(self.date_dal.date().getDate())
+        d2 = self.QdateToDate(self.date_al.date().getDate())
+        #print(d1)
+        item = self.tabellaCamere.selectedItems()
+        msg = float(item[len(item)-1].text())*self.dateOffset(d1,d2)
+        QMessageBox.information(self,"Preventivo","Il preventivo della camera è "+str(msg))
+
+
     def dateOffset(self,d1,d2):
-        d1 = datetime.strptime(d1, "%Y-%m-%d")
-        d2 = datetime.strptime(d2, "%Y-%m-%d")
+        d1 = datetime.strptime(d1, "%d/%m/%Y")
+        d2 = datetime.strptime(d2, "%d/%m/%Y")
         return abs((d2 - d1).days)

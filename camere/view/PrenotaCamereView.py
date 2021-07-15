@@ -3,6 +3,7 @@ from camere.Ui.Ui_PrenotaCamere import  Ui_PrenotaCamere
 from camere.model.ModelPrenotaCamere import ModelPrenotaCamere
 from datetime import date
 from PyQt5 import QtWidgets
+from anagrafiche.view.AnagraficheView import AnagraficheView
 class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 	def __init__(self,parent=None,camera_id=0,check_in=0,check_out=0):
 		super(PrenotaCamereView,self).__init__(parent)
@@ -17,6 +18,11 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 		self.tableWidget.itemSelectionChanged.connect(lambda: self.check_prenotable())
 		self.pB_prenota.clicked.connect(lambda: self.prenota())
 		self.pB_annulla.clicked.connect(lambda: self.close())
+		self.pb_aggiungi_cliente.clicked.connect(lambda: self.aggiungi_cliente())
+
+	def aggiungi_cliente(self):
+		agg = AnagraficheView()
+		agg.showMaximized()
 
 	def update_clienti(self):
 		clienti = ModelPrenotaCamere.getClienti()
