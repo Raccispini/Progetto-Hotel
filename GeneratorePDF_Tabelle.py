@@ -1,12 +1,14 @@
+'''
+__author__: Federico Pretini
+'''
 import pdfkit
 from datetime import datetime
-
-from PyQt5.QtWidgets import QMessageBox
-
 from cliente.model.ClienteModel import ClienteModel
 from dipendente.model.DipendenteModel import DipendenteModel
 from fornitore.model.FornitoreModel import FornitoreModel
-
+'''
+__author__: Federico Pretini
+'''
 class GeneratorePDF_Tabelle(object):
     def __init__(self):
         pass

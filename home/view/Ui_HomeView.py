@@ -1,3 +1,7 @@
+'''
+__author__: Federico Pretini
+__author__: Alessandro Rongoni
+'''
 from PyQt5.QtGui import QCursor
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer, QTime

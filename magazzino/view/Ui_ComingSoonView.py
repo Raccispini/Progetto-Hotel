@@ -1,4 +1,6 @@
-
+'''
+__author__: Alessandro Rongoni
+'''
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 

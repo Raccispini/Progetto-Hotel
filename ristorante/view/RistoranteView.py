@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from datetime import datetime
 
 from ristorante.view.Ui_RistoranteView import Ui_RistoranteView

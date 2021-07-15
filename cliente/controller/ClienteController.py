@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from cliente.model.ClienteModel import ClienteModel
 
 

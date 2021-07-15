@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QTableWidgetItem
 from ristorante.view.Ui_OrdinazioniRistoranteView import Ui_OrdinazioniRistoranteView
 from GeneratoreScontriniRistorante import GeneratoreScontriniRistorante

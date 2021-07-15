@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 from PyQt5 import QtGui, QtCore
 

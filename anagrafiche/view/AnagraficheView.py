@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from PyQt5 import QtGui
 from PyQt5.QtCore import QDate, Qt
 from PyQt5.QtWidgets import QMainWindow, QMessageBox,  QTableWidgetItem

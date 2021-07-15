@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 class ModelUtente(object):
     def __init__(self, id, nome, cognome, email, cellulare, data_di_nascita):
         self.id = id

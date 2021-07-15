@@ -1,3 +1,7 @@
+'''
+__author__: Federico Pretini
+__author__: Alessandro Rongoni
+'''
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui.resources.Bar import resource_bar_rc
 

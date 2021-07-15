@@ -1,3 +1,7 @@
+'''
+__author__: Federico Pretini
+'''
+
 import sqlite3
 
 from cliente.controller.ClienteController import ClienteController

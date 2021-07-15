@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 import sys
 from PyQt5.QtWidgets import QApplication
 from login.view.LoginView import LoginView

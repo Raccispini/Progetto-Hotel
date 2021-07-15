@@ -1,3 +1,7 @@
+'''
+__author__: Federico Pretini
+__author__: Alessandro Rongoni
+'''
 import webbrowser
 from PyQt5.QtGui import QCursor
 from PyQt5.QtWidgets import QDialog, QLineEdit, QVBoxLayout, QLabel, QPushButton, QHBoxLayout

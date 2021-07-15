@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 
 from anagrafiche.view.Ui_RicercaAnagraficheView import Ui_RicercaAnagraficheView

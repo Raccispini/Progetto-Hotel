@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from ombrellone.model.OmbrelloneModel import OmbrelloneModel
 
 class OmbrelloneController():

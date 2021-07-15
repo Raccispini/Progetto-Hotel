@@ -1,3 +1,6 @@
+'''
+__author__: Alessandro Rongoni
+'''
 from PyQt5.QtWidgets import QMainWindow
 from magazzino.view.Ui_MagazzinoView import Ui_MagazzinoView
 from magazzino.view.ComingSoonView import ComingSoonView

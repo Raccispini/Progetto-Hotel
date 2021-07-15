@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 import pdfkit
 from datetime import datetime
 class GeneratoreScontriniRistorante(object):

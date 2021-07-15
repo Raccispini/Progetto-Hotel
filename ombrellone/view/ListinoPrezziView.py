@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from PyQt5.QtWidgets import QMainWindow
 from ombrellone.view.Ui_ListinoOmbrellone import Ui_ListinoPrezzi
 

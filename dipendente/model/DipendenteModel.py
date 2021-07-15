@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from utente.model.ModelUtente import ModelUtente
 
 class DipendenteModel(ModelUtente):

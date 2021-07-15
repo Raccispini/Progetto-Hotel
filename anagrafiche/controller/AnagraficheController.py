@@ -1,3 +1,8 @@
+
+'''
+__author__:  Federico Pretini
+'''
+
 from anagrafiche.model.AnagraficheModel import AnagraficheModel
 
 class AnagraficheController():

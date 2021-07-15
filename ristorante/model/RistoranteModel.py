@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 import sqlite3
 
 

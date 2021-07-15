@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 class FornitoreModel():
     def __init__(self, id=0, nome="", fornitura1="", fornitura2="", iva="", riferimento="", cellulare_rif="",
                  indirizzo="", telefono="", email="", mod_pagamento="", fax=""):

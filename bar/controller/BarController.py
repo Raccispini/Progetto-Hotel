@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from bar.model.BarModel import BarModel
 
 class BarController():

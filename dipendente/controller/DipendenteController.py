@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from dipendente.model.DipendenteModel import DipendenteModel
 
 

@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from fornitore.model.FornitoreModel import FornitoreModel
 
 

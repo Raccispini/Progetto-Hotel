@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from ristorante.model.RistoranteModel import RistoranteModel
 
 class RistoranteController():

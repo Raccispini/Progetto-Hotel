@@ -1,3 +1,6 @@
+'''
+__author__: Alessandro Rongoni
+'''
 from magazzino.view.Ui_ComingSoonView import Ui_ComingSoonView
 from PyQt5.QtWidgets import QDialog
 

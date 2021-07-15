@@ -1,4 +1,7 @@
-from PyQt5.QtWidgets import QMainWindow
+'''
+__author__: Federico Pretini
+'''
+from PyQt5.QtWidgets import QMainWindow, QMessageBox
 
 from anagrafiche.view.AnagraficheView import AnagraficheView
 from bar.view.BarView import BarView
@@ -11,48 +14,73 @@ from ristorante.view.RistoranteView import RistoranteView
 
 
 class HomeView(QMainWindow, Ui_HomeView):
-    def __init__(self, parent=None):
+    def __init__(self, dipendente, parent=None):
         super().__init__(parent)
         self.setupUi(self)
+        self.dipendente = dipendente
         self.connect_button()
 
     def open_bar(self):
-       self.bar_window = BarView()
-       self.bar_window.showMaximized()
+       if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Bar":
+          self.bar_window = BarView()
+          self.bar_window.showMaximized()
+       else:
+           QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_camere(self):
-        self.camere_window = CamereView()
-        self.camere_window.show()
+        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Camere":
+            self.camere_window = CamereView()
+            self.camere_window.show()
+        else:
+            QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_anagrafiche(self):
-        self.anagrafiche_window = AnagraficheView()
-        self.anagrafiche_window.showMaximized()
+        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Camere":
+            self.anagrafiche_window = AnagraficheView()
+            self.anagrafiche_window.showMaximized()
+        else:
+            QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_magazzino(self):
-        self.magazzino_window = MagazzinoView()
-        self.magazzino_window.show()
+        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Magazzino":
+           self.magazzino_window = MagazzinoView()
+           self.magazzino_window.show()
+        else:
+            QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_meteo(self):
         self.meteo_window = MeteoView()
         self.meteo_window.show()
 
     def open_ombrelloni(self):
-        self.ombrelloni_window = OmbrelloneView()
-        self.ombrelloni_window.show()
+        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Ombrelloni":
+           self.ombrelloni_window = OmbrelloneView()
+           self.ombrelloni_window.show()
+        else:
+            QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_ristorante(self):
-        self.ristorante_window = RistoranteView()
-        self.ristorante_window.show()
+        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Ristorante":
+           self.ristorante_window = RistoranteView()
+           self.ristorante_window.show()
+        else:
+            QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
+
+
+    def uscita_clicked(self):
+        scelta = QMessageBox.warning(self,"Attenzione","Si desidera veramente uscire dal gestionale?", QMessageBox.Yes, QMessageBox.No)
+        if scelta == QMessageBox.Yes:
+            self.close()
 
     def connect_button(self):
         self.pB_Camere.clicked.connect(lambda: self.open_camere())
         self.pB_Anagrafiche.clicked.connect(lambda: self.open_anagrafiche())
-        self.pB_Magazzino.clicked.connect(lambda: self.open_magazzino())
-        self.pB_Meteo.clicked.connect(lambda: self.open_meteo())
         self.pB_Ombrelloni.clicked.connect(lambda: self.open_ombrelloni())
+        self.pB_Magazzino.clicked.connect(lambda: self.open_magazzino())
         self.pB_Ristorante.clicked.connect(lambda: self.open_ristorante())
         self.pB_Bar.clicked.connect(lambda: self.open_bar())
-        self.pB_Uscita.clicked.connect(lambda: self.close())
+        self.pB_Meteo.clicked.connect(lambda: self.open_meteo())
+        self.pB_Uscita.clicked.connect(lambda: self.uscita_clicked())
 
 
 

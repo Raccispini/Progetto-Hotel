@@ -1,3 +1,6 @@
+'''
+__author__: Alessandro Rongoni
+'''
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui.resources.Ombrelloni import ombrellone_rc
 
