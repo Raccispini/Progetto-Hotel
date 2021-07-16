@@ -26,6 +26,7 @@ class Ui_HomeView(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowTitle("Hotel Management")
+        self.setWindowFlag(QtCore.Qt.WindowCloseButtonHint, False)
         MainWindow.setMinimumSize(1200, 650)
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(1279, 750)

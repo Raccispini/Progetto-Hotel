@@ -71,7 +71,6 @@ class HomeView(QMainWindow, Ui_HomeView):
 
     def uscita_clicked(self):
         self.logout_window = LogoutView(self.login_window, self)
-        self.close()
         self.logout_window.show()
 
 
@@ -86,6 +85,7 @@ class HomeView(QMainWindow, Ui_HomeView):
         self.pB_Bar.clicked.connect(lambda: self.open_bar())
         self.pB_Meteo.clicked.connect(lambda: self.open_meteo())
         self.pB_Uscita.clicked.connect(lambda: self.uscita_clicked())
+
 
 
 
