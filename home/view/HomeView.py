@@ -7,6 +7,7 @@ from anagrafiche.view.AnagraficheView import AnagraficheView
 from bar.view.BarView import BarView
 from camere.view.CamereView import CamereView
 from home.view.Ui_HomeView import Ui_HomeView
+from logout.view.LogoutView import LogoutView
 from magazzino.view.MagazzinoView import MagazzinoView
 from meteo.view.MeteoView import MeteoView
 from ombrellone.view.OmbrelloneView import OmbrelloneView
@@ -69,14 +70,12 @@ class HomeView(QMainWindow, Ui_HomeView):
 
 
     def uscita_clicked(self):
-        scelta = QMessageBox.warning(self,"Attenzione","Si desidera veramente uscire dal gestionale?\nPremere Yes se si vuole uscire\nPremere Close se si vuole effettuare il logout", QMessageBox.Yes, QMessageBox.Close)
-        if scelta == QMessageBox.Yes:
-            self.close()
-        else:
-            self.login_window.LE_Username.clear()
-            self.login_window.LE_Password.clear()
-            self.login_window.show()
-            self.close()
+        self.logout_window = LogoutView(self.login_window, self)
+        self.close()
+        self.logout_window.show()
+
+
+
 
     def connect_button(self):
         self.pB_Camere.clicked.connect(lambda: self.open_camere())
