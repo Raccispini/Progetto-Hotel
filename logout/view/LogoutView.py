@@ -1,3 +1,6 @@
+'''
+__author__: Federico Pretini
+'''
 from PyQt5.QtWidgets import QMainWindow
 from logout.view.Ui_LogoutView import Ui_LogoutView
 
