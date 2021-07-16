@@ -4,6 +4,8 @@ __author__: Federico Pretini
 
 import sqlite3
 
+from PyQt5.QtWidgets import QMessageBox
+
 from cliente.controller.ClienteController import ClienteController
 from dipendente.controller.DipendenteController import DipendenteController
 from dipendente.model.DipendenteModel import DipendenteModel

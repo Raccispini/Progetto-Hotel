@@ -75,15 +75,27 @@ class ModelCamere():
 		for i in range(len(tipi)):
 			allestimenti.append(tipi[i][0])
 		return allestimenti
-	@staticmethod
-	def get_lista_camere_prenotate():
+
+	def get_lista_camere_prenotate(self):
 		db = sqlite3.connect("database.db")
 		lista_prenotate = db.execute("SELECT Prenotazioni_camere.id_camere, Clienti.NOME, Clienti.COGNOME FROM Prenotazioni_camere, Clienti WHERE Prenotazioni_camere.cliente_id = Clienti.ID").fetchall()
 		return lista_prenotate
+
+	def update_extra(self, extra, numero_camera):
+		db = sqlite3.connect("database.db")
+		query = "SELECT extra FROM Camere WHERE numeroCamera=\'" + numero_camera + "\';"
+		old_extra = db.execute(query).fetchone()[0]
+		new_extra = old_extra + extra
+		query = "UPDATE Camere SET extra = (?)  WHERE numeroCamera = \'"+ numero_camera + "\';"
+		db.execute(query, new_extra)
+		db.commit()
 	@staticmethod
 	def get_camere_prenotate(data_inizio,data_fine):
 		db = sqlite3.connect("database.db")
 		query = "SELECT Camere.numeroCamera FROM Camere,Prenotazioni_camere WHERE Camere.numeroCamera IN (SELECT Prenotazioni_camere.id_camere from Prenotazioni_camere WHERE NOT(Prenotazioni_camere.check_out<'"+data_inizio+"' OR Prenotazioni_camere.check_in>'"+data_fine+"'))"
+
+
+
 
 	def __init__(self):
 		pass

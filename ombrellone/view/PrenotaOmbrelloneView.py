@@ -18,6 +18,7 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
         self.data = data
         self.tipo = tipo
         self.orario = orario
+        self.totale = 0
         self.update_view()
         self.connect_action()
 
@@ -70,8 +71,9 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
         info = [self.nome_ombrellone, nominativo[0], self.data, self.tipo, orario_inizio, orario_fine, n_sedie, n_sdraie, pagamento, totale]
         self.controller.prenota_ombrellone(info)
         self.callback()
+        if self.cB_pagamento.currentText() == "Addebito su conto camera":
+            self.update_extra(totale, self.cB_camera.currentText().split("-")[0])
         self.close()
-
 
     def elimina_prenotazione(self):
         button = QMessageBox.question(self, "Attenzione", "Sei sicuro di voler eliminare la prenotazione?\nIn tal caso dovrai ripetere la compilazione", QMessageBox.Yes, QMessageBox.No)
@@ -81,3 +83,6 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
             self.cB_nominativo.setCurrentIndex(0)
             self.sB_sedie.setValue(0)
             self.sB_sdraie.setValue(0)
+
+    def update_extra(self, extra, numero_camera):
+        self.controller_camere.update_extra(extra, numero_camera)
