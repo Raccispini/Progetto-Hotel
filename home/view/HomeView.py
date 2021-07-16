@@ -73,6 +73,8 @@ class HomeView(QMainWindow, Ui_HomeView):
         if scelta == QMessageBox.Yes:
             self.close()
         else:
+            self.login_window.LE_Username.clear()
+            self.login_window.LE_Password.clear()
             self.login_window.show()
             self.close()
 
