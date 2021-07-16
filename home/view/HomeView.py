@@ -14,15 +14,16 @@ from ristorante.view.RistoranteView import RistoranteView
 
 
 class HomeView(QMainWindow, Ui_HomeView):
-    def __init__(self, dipendente, parent=None):
+    def __init__(self, dipendente, login_window, parent=None):
         super().__init__(parent)
         self.setupUi(self)
         self.dipendente = dipendente
+        self.login_window = login_window
         self.connect_button()
 
     def open_bar(self):
        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Bar":
-          self.bar_window = BarView()
+          self.bar_window = BarView(self.dipendente)
           self.bar_window.showMaximized()
        else:
            QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
@@ -35,8 +36,8 @@ class HomeView(QMainWindow, Ui_HomeView):
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_anagrafiche(self):
-        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Camere":
-            self.anagrafiche_window = AnagraficheView()
+        if (self.dipendente.get_ambito() == "Camere" and self.dipendente.get_permessi() == "Dipendente") or self.dipendente.get_permessi() == "Responsabile":
+            self.anagrafiche_window = AnagraficheView(self.dipendente)
             self.anagrafiche_window.showMaximized()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
@@ -68,8 +69,11 @@ class HomeView(QMainWindow, Ui_HomeView):
 
 
     def uscita_clicked(self):
-        scelta = QMessageBox.warning(self,"Attenzione","Si desidera veramente uscire dal gestionale?", QMessageBox.Yes, QMessageBox.No)
+        scelta = QMessageBox.warning(self,"Attenzione","Si desidera veramente uscire dal gestionale?\nPremere Yes se si vuole uscire\nPremere Close se si vuole effettuare il logout", QMessageBox.Yes, QMessageBox.Close)
         if scelta == QMessageBox.Yes:
+            self.close()
+        else:
+            self.login_window.show()
             self.close()
 
     def connect_button(self):

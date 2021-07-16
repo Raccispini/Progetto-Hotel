@@ -19,6 +19,12 @@ class DipendenteModel(ModelUtente):
         else:
             return False
 
+    def is_responsabile(self):
+        if self.permessi == "Responsabile":
+            return True
+        else:
+            return False
+
     def get_info(self):
         return(self.id, self.nome, self.cognome, self.username, self.password,  self.email, self.cellulare,
                self.data_di_nascita, self.ambito, self.permessi)

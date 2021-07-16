@@ -15,10 +15,11 @@ from fornitore.controller.FornitoreController import FornitoreController
 
 
 class AnagraficheView(QMainWindow, Ui_AnagraficheView):
-    def __init__(self, parent=None):
+    def __init__(self,dipendente, parent=None):
         super(AnagraficheView, self).__init__(parent)
         self.setupUi(self)
         self.controller = AnagraficheController()
+        self.dipendente = dipendente
         self.controller_cliente = ClienteController()
         self.aggiornaTabelle(self.tableWidget_Clienti, self.controller.get_listaclienti())
         self.controller_fornitore = FornitoreController()
@@ -30,6 +31,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
         self.annulla_fornitore()
         self.connectAction()
         self.checkpB_to_enable()
+        self.check_dipendente()
 
 
 #========================================================================================================================
@@ -480,3 +482,15 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
         item.setFont(font)
         item.setTextAlignment(Qt.AlignCenter)
         return item
+
+    def check_dipendente(self):
+        if self.dipendente.get_ambito() != "ADMIN":
+            self.aggiornaTabelle(self.tableWidget_Dipendente, [])
+            self.tab_Anag_Dipendenti.setEnabled(False)
+
+        if self.dipendente.get_permessi() == "Dipendente":
+            self.aggiornaTabelle(self.tableWidget_Fornitore, [])
+            self.tab_Anag_Fornitori.setEnabled(False)
+
+
+

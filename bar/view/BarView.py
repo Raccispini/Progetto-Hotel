@@ -11,11 +11,12 @@ from camere.controller.CamereController import CamereController
 
 
 class BarView(QMainWindow, Ui_BarView):
-    def __init__(self, parent=None):
+    def __init__(self,dipendente, parent=None):
         super(BarView, self).__init__(parent)
         self.setupUi(self)
         self.controller = BarController()
         self.camere_controller = CamereController()
+        self.dipendente = dipendente
         self.lista_consumazioni = []
         self.totale = 0
         self.update_cB()
@@ -167,11 +168,16 @@ class BarView(QMainWindow, Ui_BarView):
         elif self.cB_metodopagamento.currentText() == "Addebito su conto camera" and self.cB_camera.currentText() != "":
             scontrino.stampa(self.lista_consumazioni, self.totale, f"{self.cB_metodopagamento.currentText()} ({self.cB_camera.currentText()})")
         else:
-            QMessageBox.information(self,"Informazione","Seleziona un metodo di pagamento in maniera idonea prima di premere salva")
+            QMessageBox.information(self,"Informazione","Seleziona un metodo di pagamento\nin maniera idonea prima di premere salva")
 
     def open_aggiornalistino(self):
-        self.aggiornalistino_window = AggiornaListinoView(self.controller, self.update_cB, self)
-        self.aggiornalistino_window.show()
+        if self.dipendente.is_responsabile():
+            self.aggiornalistino_window = AggiornaListinoView(self.controller, self.update_cB, self)
+            self.aggiornalistino_window.show()
+        else:
+            QMessageBox.critical(self, "Errore", "Non godi dei permessi necessari per poter accedere.\nSolo i responsabili possono accedere a questa funzione.",QMessageBox.Ok,QMessageBox.Ok)
+
+
 
 
 

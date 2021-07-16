@@ -10,9 +10,9 @@ class LoginController(object):
         super(LoginController, self).__init__()
         self.model = LoginModel()
 
-    def is_dipendente(self, username, password):
-        return self.model.is_dipedente(username, password)
+    def is_utente(self, username, password):
+        return self.model.is_utente(username, password)
 
-    def get_dipendente(self):
-        return self.model.get_dipendente()
+    def get_utente(self):
+        return self.model.get_utente()
 

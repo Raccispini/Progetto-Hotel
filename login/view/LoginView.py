@@ -14,8 +14,8 @@ class LoginView(QMainWindow, Ui_LoginView):
         self.pushButton_Login.clicked.connect(lambda: self.accesso())
 
     def accesso(self):
-        if self.controller.is_dipendente(self.LE_Username.text(), self.LE_Password.text()):
-            main_window = HomeView(self.controller.get_dipendente())
+        if self.controller.is_utente(self.LE_Username.text(), self.LE_Password.text()):
+            main_window = HomeView(self.controller.get_utente(),self)
             main_window.show()
             self.close()
         else:
