@@ -33,6 +33,8 @@ class CamereView(QMainWindow, Ui_CamereView):
         self.cb_culla_2.clicked.connect(lambda: self.update_table())
         self.cb_minibar.clicked.connect(lambda: self.update_table())
         self.cb_cassaforte.clicked.connect(lambda: self.update_table())
+
+        self.checkBox.clicked.connect(lambda : self.attiva())
         #bottoni laterali
         #self.pb_ricerca.clicked.connect(lambda: self.update_table())
         self.pb_azzera.clicked.connect(lambda: self.azzera())
@@ -49,6 +51,14 @@ class CamereView(QMainWindow, Ui_CamereView):
         prenotacamere = PrenotaCamereView(self,camera_id=self.getSelectedRoom(),check_in=self.QdateToDate(self.date_dal.date().getDate()),check_out=self.QdateToDate(self.date_al.date().getDate()))
         prenotacamere.show()
 
+    def attiva(self):
+        self.update_table()
+        if self.checkBox.isChecked():
+            self.date_al.setEnabled(False)
+            self.date_dal.setEnabled(False)
+        else:
+            self.date_al.setEnabled(True)
+            self.date_dal.setEnabled(True)
     def getSelectedRoom(self):
         items = self.tabellaCamere.selectedItems()
         return int(items[1].text())
@@ -109,8 +119,8 @@ class CamereView(QMainWindow, Ui_CamereView):
         options["letti_singoli"] = self.spin_singoli.value()
         options["letti_matrimoniali"] = self.spin_matrim.value()
         #date
-        options["check_in"] = self.QdateToDate(self.date_dal.date().getDate())
-        options["check_out"] = self.QdateToDate(self.date_al.date().getDate())
+        options["check_in"] = self.QdateToDate(self.date_dal.date().getDate()) if not self.checkBox.isChecked() else None
+        options["check_out"] = self.QdateToDate(self.date_al.date().getDate()) if not self.checkBox.isChecked() else None
         #allestimento
         options["allestimento"] = self.combo_tipo.currentText()
         #checkbox
