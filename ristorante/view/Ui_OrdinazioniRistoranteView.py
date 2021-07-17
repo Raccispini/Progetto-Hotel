@@ -1,5 +1,5 @@
 '''
-__author__: Alessandro Rongoni
+__author__: Alessandro Rongoni, Gregorio Vecchiola
 '''
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QCursor

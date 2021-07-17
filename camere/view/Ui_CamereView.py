@@ -1,6 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui.resources.Camere import camere_rc
-
+'''
+author: Gregorio Vecchiola
+'''
 class Ui_CamereView(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
