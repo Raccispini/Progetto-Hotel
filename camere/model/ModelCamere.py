@@ -1,5 +1,5 @@
 import sqlite3
-
+from datetime import date
 
 class ModelCamere():
 	#options è un dict che contiene i vecchi parametri di query
@@ -93,9 +93,38 @@ class ModelCamere():
 	def get_camere_prenotate(data_inizio,data_fine):
 		db = sqlite3.connect("database.db")
 		query = "SELECT Camere.numeroCamera FROM Camere,Prenotazioni_camere WHERE Camere.numeroCamera IN (SELECT Prenotazioni_camere.id_camere from Prenotazioni_camere WHERE NOT(Prenotazioni_camere.check_out<'"+data_inizio+"' OR Prenotazioni_camere.check_in>'"+data_fine+"'))"
+		return db.execute(query).fetchall()
 
 
-
+	@staticmethod
+	def add_extra(cliente_id,camera,prezzo,descrizione=""):
+		now = date.today().strftime("%d/%m/%Y")
+		db = sqlite3.connect("database.db")
+		if len(descrizione) >0:
+			query = "INSERT INTO Acconti(costo,data,id_cliente,id_camera,descrizione) VALUES (" + str(prezzo) + ",'" + str(
+				now) + "'," + str(cliente_id) + "," + str(camera) + ",'"+descrizione+"');"
+		else:
+			query = "INSERT INTO Acconti(costo,data,id_cliente,id_camera) VALUES ("+str(prezzo)+",'"+str(now)+"',"+str(cliente_id)+","+str(camera)+");"
+		print(query)
+		db.execute(query)
+		db.commit()
+	@staticmethod
+	def get_extra(camera):
+		db = sqlite3.connect("database.db")
+		query = "SELECT Acconti.id,Acconti.costo,Acconti.descrizione from Acconti WHERE Acconti.id_camera ="+str(camera)+" ORDER BY Acconti.data;"
+		return db.execute(query).fetchall()
+	@staticmethod
+	def remove_extra(camera):
+		db = sqlite3.connect("database.db")
+		query = "DELETE FROM Acconti WHERE Acconti.id_camera = "+str(camera)+";"
+		db.execute(query)
+		db.commit()
+	@staticmethod
+	def remove_single_extra(id):
+		db = sqlite3.connect("database.db")
+		query = "DELETE FROM Acconti WHERE Acconti.id = "+str(id)+";"
+		db.execute(query)
+		db.commit()
 
 	def __init__(self):
 		pass
