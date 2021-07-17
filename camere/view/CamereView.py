@@ -63,6 +63,19 @@ class CamereView(QMainWindow, Ui_CamereView):
         items = self.tabellaCamere.selectedItems()
         return int(items[1].text())
     def onTableClick(self):
+        prenotate = ModelCamere.get_camere_prenotate(self.date_dal.date().toString(),self.date_al.date().toString())
+        selected = self.tabellaCamere.selectedItems()
+        if len(selected)>0:
+            flag = False
+            for i in prenotate:
+                if int(selected[1].text()) == i[0]:
+                    flag = True
+            if flag:
+                self.pb_prenota_2.setEnabled(True)
+            else:
+                self.pb_prenota_2.setEnabled(False)
+        else:
+            self.pb_prenota_2.setEnabled(False)
         if len(self.tabellaCamere.selectedItems()) != 0:
             self.pb_prenota.setEnabled(True)
             self.pb_preventivo.setEnabled(True)

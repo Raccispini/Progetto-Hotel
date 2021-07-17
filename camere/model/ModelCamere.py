@@ -109,14 +109,14 @@ class ModelCamere():
 		db.execute(query)
 		db.commit()
 	@staticmethod
-	def get_extra(camera):
+	def get_extra(prenotazione):
 		db = sqlite3.connect("database.db")
-		query = "SELECT Acconti.id,Acconti.costo,Acconti.descrizione from Acconti WHERE Acconti.id_camera ="+str(camera)+" ORDER BY Acconti.data;"
+		query = "SELECT Acconti.id,Acconti.costo,Acconti.descrizione from Acconti WHERE Acconti.id_prenotazione ="+str(prenotazione)+" ORDER BY Acconti.data;"
 		return db.execute(query).fetchall()
 	@staticmethod
-	def remove_extra(camera):
+	def remove_extra(prenotazione):
 		db = sqlite3.connect("database.db")
-		query = "DELETE FROM Acconti WHERE Acconti.id_camera = "+str(camera)+";"
+		query = "DELETE FROM Acconti WHERE Acconti.id_prenotazione = "+str(prenotazione)+";"
 		db.execute(query)
 		db.commit()
 	@staticmethod
