@@ -2,6 +2,7 @@
 __author__: Federico Pretini
 '''
 from datetime import datetime
+from datetime import timedelta
 
 from ristorante.view.AggiornaMenuView import AggiornaMenuView
 from ristorante.view.Ui_Ristorante import Ui_RistoranteView
@@ -66,7 +67,7 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
         elif datetime.now() >= datetime.now().replace(hour=16, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=21, minute=0,second=0):
             self.cb_orario.setCurrentIndex(3) #comboBox ricerca tavolo disponibile
             self.cb_orario_2.setCurrentIndex(3) #comboBox filtraggio tavoli prenotati
-        elif datetime.now() > datetime.now().replace(hour=21, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=0, minute=0,second=0)+ datetime.timedelta(days=1):
+        elif datetime.now() > datetime.now().replace(hour=21, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=0, minute=0,second=0)+ timedelta(days=1):
             self.cb_orario.setCurrentIndex(4) #comboBox ricerca tavolo disponibile
             self.cb_orario_2.setCurrentIndex(4) #comboBox filtraggio tavoli prenotati
         self.de_data.setDate(QDate.currentDate()) #dateEdit ricerca tavolo dispobile

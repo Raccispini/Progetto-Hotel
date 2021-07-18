@@ -1,4 +1,4 @@
-from datetime import date,datetime
+from datetime import datetime
 
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from camere.view.Ui_CamereView import Ui_CamereView
@@ -51,36 +51,34 @@ class CamereView(QMainWindow, Ui_CamereView):
 
 		# Eventi
 		self.tabellaCamere.itemSelectionChanged.connect(lambda: self.onTableClick())
-		self.date_dal.dateChanged.connect(lambda: self.on_date_dal_changed())
-		self.date_al.dateChanged.connect(lambda: self.on_date_al_changed())
 		self.date_dal.setDate(QDate.currentDate())
 		self.date_al.setDate(QDate.currentDate())
 
-	def on_date_dal_changed(self):
+	def check_date_dal(self):
 		d1 = self.date_dal.date().getDate()
 		d_a = QDate.currentDate().getDate()
 
 		if d1 < d_a:
-			QMessageBox.critical(self,"Errore!","Selezionare un periodo di prenotazione valido.", QMessageBox.Ok, QMessageBox.Ok)
-			#self.date_dal.setDate(QDate.currentDate())
+			QMessageBox.critical(self,"Errore!","La data di check-in non può essere\n antecedente a quella odierna.", QMessageBox.Ok, QMessageBox.Ok)
+			return False
+		else:
+			return True
 
-		self.date_al.setDate(self.date_dal.date())
-		self.update_table()
-
-	def on_date_al_changed(self):
+	def check_date_al(self):
 		d1 = self.date_dal.date().getDate()
 		d2 = self.date_al.date().getDate()
-		# print(d1)
-		if d2 < d1:
-			#QMessageBox.critical(self, "Errore!", "Selezionare un periodo di prenotazione valido.", QMessageBox.Ok, QMessageBox.Ok)
-			self.date_al.setDate(self.date_dal.date())
 
-		self.update_table()
+		if d2 < d1:
+			QMessageBox.critical(self, "Errore!", "La data di check-out non può essere\nantecedetnte a quella di check-in.", QMessageBox.Ok, QMessageBox.Ok)
+			return False
+		else:
+			return True
 
 
 	def prenota(self):
-		prenotacamere = PrenotaCamereView(self, camera_id=self.getSelectedRoom(),check_in=self.QdateToDate(self.date_dal.date().getDate()),check_out=self.QdateToDate(self.date_al.date().getDate()))
-		prenotacamere.show()
+		if self.check_date_dal() and self.check_date_al():
+			prenotacamere = PrenotaCamereView(self, camera_id=self.getSelectedRoom(),check_in=self.QdateToDate(self.date_dal.date().getDate()),check_out=self.QdateToDate(self.date_al.date().getDate()))
+			prenotacamere.show()
 
 	def attiva(self):
 		self.update_table()
