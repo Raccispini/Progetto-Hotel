@@ -123,10 +123,10 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
             self.totale += self.coperto * int(self.lineE_persone.text())
             self.totale -= (self.totale*(self.sconto/100))
 
-        self.lineE_totale.setText(str(self.totale) + ' €')
-        totale_diviso=float(self.totale/int(self.item_selected[3].text()))
-        totale_diviso_arrotondato=f"{totale_diviso:.2f}"
-        self.lineE_totale_per_persona.setText(totale_diviso_arrotondato + " €")
+        self.lineE_totale.setText(f"{self.totale:.2f}" + ' €')
+        totale_diviso= self.totale/int(self.item_selected[3].text())
+        totale_diviso_troncamento=f"{totale_diviso:.2f}"
+        self.lineE_totale_per_persona.setText(totale_diviso_troncamento + " €")
 
     def update_table(self):
         def get_item(info):

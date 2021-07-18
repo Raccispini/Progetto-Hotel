@@ -1,5 +1,6 @@
 '''
 __author__: Federico Pretini
+__author__: Alessandro Rongoni
 '''
 from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
@@ -79,6 +80,7 @@ class OmbrelloneView(QMainWindow, Ui_Ombrellone):
         if QDate.currentDate() > data or tipo == "" or (tipo == "Mezza Giornata" and orario == ""):
             for button in self.pB_Ombrelloni:
                 button.setEnabled(False)
+                button.setStyleSheet("background-image: url(ui/resources/ombrelloni/tpg.png); background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
             QMessageBox.critical(self,"Errore","Compila prima correttamente tutti i campi, poi premi ricerca")
             return
 

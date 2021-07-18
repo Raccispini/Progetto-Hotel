@@ -1,9 +1,11 @@
 '''
 __author__: Federico Pretini
+__author__:Alessandro Rongoni
 '''
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 from PyQt5 import QtGui, QtCore
 
+from camere.controller.CamereController import CamereController
 from ombrellone.view.Ui_PrenotazioniOmbrellone import Ui_PrenotazioniOmbrellone
 
 
@@ -12,6 +14,7 @@ class ListaPrenotazioniView(QMainWindow, Ui_PrenotazioniOmbrellone):
         super(ListaPrenotazioniView, self).__init__(parent)
         self.setupUi(self)
         self.controller = controller
+        self.camere_controller = CamereController()
         self.lista_prenotazioni = []
         self.update_table()
         self.connect_all()

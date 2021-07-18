@@ -87,6 +87,7 @@ class Ui_PrenotaRistoranteView(object):
         self.cB_camera.setFont(font)
         self.cB_camera.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.cB_camera.setObjectName("cB_camera")
+        self.cB_camera.setEnabled(False)
         self.horizontalLayout_3.addWidget(self.cB_camera)
         self.gridLayout.addLayout(self.horizontalLayout_3, 1, 1, 1, 1)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
