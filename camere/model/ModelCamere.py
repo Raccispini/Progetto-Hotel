@@ -17,7 +17,7 @@ class ModelCamere():
 				query += "Camere.numeroSingoli >= " + str(options["letti_singoli"]) + " and "
 				flag = True
 			if options["allestimento"] != "Nessuno":
-				query += "Camere.allestimento = " + str(options["allestimento"]) + " and "
+				query += "Camere.allestimento = '" + str(options["allestimento"]) + "' and "
 				flag = True
 			if options["aria_condizionata"] :
 				query += "Camere.ariaCondizionata = " + str(options["aria_condizionata"]) + " and "

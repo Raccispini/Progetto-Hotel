@@ -15,7 +15,7 @@ from fornitore.controller.FornitoreController import FornitoreController
 
 
 class AnagraficheView(QMainWindow, Ui_AnagraficheView):
-    def __init__(self,dipendente, parent=None):
+    def __init__(self,dipendente=None, parent=None):
         super(AnagraficheView, self).__init__(parent)
         self.setupUi(self)
         self.controller = AnagraficheController()
