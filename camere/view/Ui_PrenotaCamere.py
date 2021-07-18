@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 '''
-author: Gregorio Vecchiola
+__author__: Gregorio Vecchiola
 '''
 
 class Ui_PrenotaCamere(object):
@@ -125,7 +125,7 @@ class Ui_PrenotaCamere(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Lista clienti"))
         self.label_2.setText(_translate("MainWindow", "Clienti:"))
         self.label.setText(_translate("MainWindow", "Orario di arrivo"))
         item = self.tableWidget.horizontalHeaderItem(0)

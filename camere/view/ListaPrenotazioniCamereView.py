@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QMainWindow
-from camere.Ui.Ui_ListaPrenotazioniCamereView import Ui_ListaPrenotazioniCamere
+from camere.view.Ui_ListaPrenotazioniCamereView import Ui_ListaPrenotazioniCamere
 from camere.controller.CamereController import CamereController
 from PyQt5 import QtWidgets
 from datetime import date
@@ -9,11 +9,20 @@ class ListaPrenotazioniCamereView(QMainWindow, Ui_ListaPrenotazioniCamere):
         self.setupUi(self)
         self.controller = CamereController()
         self.update_table()
+        self.onTableClick()
+        self.connect_all()
 
-
+    def connect_all(self):
         self.pB_elimina.clicked.connect(lambda: self.elimina())
         self.pB_checkout.clicked.connect(lambda: self.checkout())
 
+    def onTableClick(self):
+        if len(self.tW_lista_prenotazioni_camere.selectionModel().selectedRows()) > 0:
+            self.pB_elimina.setEnabled(True)
+            self.pB_checkout.setEnabled(True)
+        else:
+            self.pB_elimina.setEnabled(False)
+            self.pB_checkout.setEnabled(False)
 
     def update_table(self):
         self.tW_lista_prenotazioni_camere.setRowCount(0)

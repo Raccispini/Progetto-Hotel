@@ -1,5 +1,6 @@
 '''
 __author__: Federico Pretini
+__author__: Alessandro Rongoni
 '''
 from PyQt5.QtWidgets import QMainWindow
 from ombrellone.view.Ui_ListinoOmbrellone import Ui_ListinoPrezzi

@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import  QMainWindow
-from camere.Ui.Ui_PrenotaCamere import  Ui_PrenotaCamere
+from camere.view.Ui_PrenotaCamere import  Ui_PrenotaCamere
 from datetime import date
 from PyQt5 import QtWidgets
 from magazzino.view.ComingSoonView import ComingSoonView

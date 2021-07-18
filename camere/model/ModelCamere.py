@@ -2,9 +2,12 @@ import sqlite3
 from datetime import date
 
 class ModelCamere():
+	def __init__(self):
+		pass
 	#options è un dict che contiene i vecchi parametri di query
-	@staticmethod
-	def getCamere(options={}):
+
+	#@staticmethod
+	def getCamere(self, options={}):
 		con = sqlite3.connect("database.db")
 		query = "SELECT * FROM Camere "
 		flag = False
@@ -65,8 +68,8 @@ class ModelCamere():
 		query += " ORDER BY Camere.numeroCamera;"
 		print(query)
 		return con.execute(query).fetchall()
-	@staticmethod
-	def get_tipo():
+	#@staticmethod
+	def get_tipo(self):
 		con = sqlite3.connect("database.db")
 		query = "SELECT Camere.allestimento FROM Camere Group by Camere.allestimento "
 		tipi = con.execute(query).fetchall()
@@ -81,8 +84,8 @@ class ModelCamere():
 		lista_prenotate = db.execute("SELECT Prenotazioni_camere.id_camere, Clienti.NOME, Clienti.COGNOME FROM Prenotazioni_camere, Clienti WHERE Prenotazioni_camere.cliente_id = Clienti.ID").fetchall()
 		return lista_prenotate
 
-	@staticmethod
-	def get_camere_prenotate(data_inizio,data_fine):
+	#@staticmethod
+	def get_camere_prenotate(self,data_inizio,data_fine):
 		db = sqlite3.connect("database.db")
 		query = "SELECT Camere.numeroCamera FROM Camere,Prenotazioni_camere WHERE Camere.numeroCamera IN (SELECT Prenotazioni_camere.id_camere from Prenotazioni_camere WHERE NOT(Prenotazioni_camere.check_out<'"+data_inizio+"' OR Prenotazioni_camere.check_in>'"+data_fine+"'))"
 		return db.execute(query).fetchall()
@@ -110,15 +113,15 @@ class ModelCamere():
 		    db.execute(query)
 		    db.commit()
 
-	@staticmethod
-	def getClienti():
+	#@staticmethod
+	def getClienti(self):
 		con = sqlite3.connect("database.db")
 		query = "SELECT * FROM Clienti Order By Clienti.ID"
 		# con.close()
 		return con.execute(query).fetchall()
 
-	@staticmethod
-	def prenota(check_in, check_out, data, camera, cliente_id, note=""):
+	#@staticmethod
+	def prenota(self,check_in, check_out, data, camera, cliente_id, note=""):
 		con = sqlite3.connect("database.db")
 		query = "INSERT INTO Prenotazioni_camere(id_camere,check_in,check_out,data_prenotazione,cliente_id,note) VALUES (" + str(
 			camera) + ",'" + str(check_in) + "','" + str(check_out) + "','" + str(
@@ -126,25 +129,23 @@ class ModelCamere():
 		con.execute(query)
 		con.commit()
 
-	@staticmethod
-	def check_out(id, data):
+	#@staticmethod
+	def check_out(self,id, data):
 		db = sqlite3.connect("database.db")
 		query = "UPDATE Prenotazioni_camere SET check_out = '" + str(data) + "' WHERE id = " + str(id) + ";"
 		db.execute(query)
 		db.commit()
 
-	@staticmethod
-	def elimina_prenotazione(id):
+	#@staticmethod
+	def elimina_prenotazione(self,id):
 		db = sqlite3.connect("database.db")
 		query = "DELETE FROM Prenotazioni_camere  WHERE Prenotazioni_camere.id = " + id + ";"
 		db.execute(query)
 		db.commit()
 
-	@staticmethod
-	def get_prenotazioni():
+	#@staticmethod
+	def get_prenotazioni(self):
 		db = sqlite3.connect("database.db")
 		today = date.today().strftime("%d/%m/%Y")
 		query = "SELECT Prenotazioni_camere.id,Clienti.NOME,Clienti.COGNOME,Prenotazioni_camere.id_camere,Prenotazioni_camere.check_in,Prenotazioni_camere.check_out,Prenotazioni_camere.data_prenotazione,Prenotazioni_camere.costo,Prenotazioni_camere.pagamento,Prenotazioni_camere.dipendente FROM Prenotazioni_camere,Clienti WHERE Clienti.ID = Prenotazioni_camere.cliente_id AND Prenotazioni_camere.check_out > '" + today + "';"
 		return db.execute(query).fetchall()
-	def __init__(self):
-		pass
