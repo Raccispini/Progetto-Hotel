@@ -77,7 +77,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 
 
 	def prenota(self):
-		prenotacamere = PrenotaCamereView(self,dipendente=self.dipendente, camera_id=self.getSelectedRoom(),check_in=self.QdateToDate(self.date_dal.date().getDate()),check_out=self.QdateToDate(self.date_al.date().getDate()))
+		prenotacamere = PrenotaCamereView(self, camera_id=self.getSelectedRoom(),check_in=self.QdateToDate(self.date_dal.date().getDate()),check_out=self.QdateToDate(self.date_al.date().getDate()))
 		prenotacamere.show()
 
 	def attiva(self):
