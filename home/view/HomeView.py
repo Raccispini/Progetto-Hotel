@@ -63,7 +63,7 @@ class HomeView(QMainWindow, Ui_HomeView):
 
     def open_ristorante(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Ristorante":
-           self.ristorante_window = RistoranteView()
+           self.ristorante_window = RistoranteView(self.dipendente)
            self.ristorante_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
