@@ -61,8 +61,8 @@ class CamereView(QMainWindow, Ui_CamereView):
 		d_a = QDate.currentDate().getDate()
 
 		if d1 < d_a:
-			#QMessageBox.critical(self,"Errore!","Selezionare un periodo di prenotazione valido.", QMessageBox.Ok, QMessageBox.Ok)
-			self.date_dal.setDate(QDate.currentDate())
+			QMessageBox.critical(self,"Errore!","Selezionare un periodo di prenotazione valido.", QMessageBox.Ok, QMessageBox.Ok)
+			#self.date_dal.setDate(QDate.currentDate())
 
 		self.date_al.setDate(self.date_dal.date())
 		self.update_table()
