@@ -2,12 +2,11 @@ from datetime import date,datetime
 
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from camere.Ui.Ui_CamereView import Ui_CamereView
-from camere.model.ModelCamere import ModelCamere
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QDate
 from camere.view.PrenotaCamereView import PrenotaCamereView
 from camere.view.ListaPrenotazioniCamereView import ListaPrenotazioniCamereView
-
+from camere.controller.CamereController import CamereController
 
 
 class CamereView(QMainWindow, Ui_CamereView):
@@ -15,9 +14,11 @@ class CamereView(QMainWindow, Ui_CamereView):
 		super(CamereView, self).__init__(parent)
 		self.dipendente = dipendente
 		self.setupUi(self)
+		self.controller = CamereController()
 		self.update_tipo()
 		self.update_table()
 		self.onTableClick()
+
 		# letti
 		self.spin_singoli.valueChanged.connect(lambda: self.update_table())
 		self.spin_matrim.valueChanged.connect(lambda: self.update_table())
@@ -94,7 +95,8 @@ class CamereView(QMainWindow, Ui_CamereView):
 		return int(items[1].text())
 
 	def onTableClick(self):
-		prenotate = ModelCamere.get_camere_prenotate(self.date_dal.date().toString(), self.date_al.date().toString())
+
+		prenotate = self.controller.get_camere_prenotate(self.date_dal.date().toString(), self.date_al.date().toString())
 		selected = self.tabellaCamere.selectedItems()
 
 		if len(self.tabellaCamere.selectedItems()) != 0:
@@ -127,9 +129,9 @@ class CamereView(QMainWindow, Ui_CamereView):
 		camere = []
 		options = self.check_options()
 		if onstart:
-			camere = ModelCamere.getCamere()
+			camere = self.controller.getCamere()
 		else:
-			camere = ModelCamere.getCamere(options=options)
+			camere = self.controller.getCamere(options=options)
 		# print(options)
 		# print(len(camere[0]))
 		self.tabellaCamere.setRowCount(0)
@@ -142,7 +144,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 					self.tabellaCamere.setItem(i, j, QtWidgets.QTableWidgetItem(str(camere[i][j])))
 
 	def update_tipo(self):
-		allestimenti = ModelCamere.get_tipo()
+		allestimenti = self.controller.get_tipo()
 		self.combo_tipo.clear()
 		for i in range(len(allestimenti)):
 			self.combo_tipo.addItem(allestimenti[i])
