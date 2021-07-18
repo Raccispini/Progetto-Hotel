@@ -17,7 +17,7 @@ class ModelCamere():
 				query += "Camere.numeroSingoli >= " + str(options["letti_singoli"]) + " and "
 				flag = True
 			if options["allestimento"] != "Nessuno":
-				query += "Camere.allestimento = " + str(options["allestimento"]) + " and "
+				query += "Camere.allestimento = '" + str(options["allestimento"]) + "' and "
 				flag = True
 			if options["aria_condizionata"] :
 				query += "Camere.ariaCondizionata = " + str(options["aria_condizionata"]) + " and "
@@ -110,6 +110,41 @@ class ModelCamere():
 		    db.execute(query)
 		    db.commit()
 
+	@staticmethod
+	def getClienti():
+		con = sqlite3.connect("database.db")
+		query = "SELECT * FROM Clienti Order By Clienti.ID"
+		# con.close()
+		return con.execute(query).fetchall()
 
+	@staticmethod
+	def prenota(check_in, check_out, data, camera, cliente_id, note=""):
+		con = sqlite3.connect("database.db")
+		query = "INSERT INTO Prenotazioni_camere(id_camere,check_in,check_out,data_prenotazione,cliente_id,note) VALUES (" + str(
+			camera) + ",'" + str(check_in) + "','" + str(check_out) + "','" + str(
+			data) + "'," + cliente_id + ",'" + note + "');"
+		con.execute(query)
+		con.commit()
+
+	@staticmethod
+	def check_out(id, data):
+		db = sqlite3.connect("database.db")
+		query = "UPDATE Prenotazioni_camere SET check_out = '" + str(data) + "' WHERE id = " + str(id) + ";"
+		db.execute(query)
+		db.commit()
+
+	@staticmethod
+	def elimina_prenotazione(id):
+		db = sqlite3.connect("database.db")
+		query = "DELETE FROM Prenotazioni_camere  WHERE Prenotazioni_camere.id = " + id + ";"
+		db.execute(query)
+		db.commit()
+
+	@staticmethod
+	def get_prenotazioni():
+		db = sqlite3.connect("database.db")
+		today = date.today().strftime("%d/%m/%Y")
+		query = "SELECT Prenotazioni_camere.id,Clienti.NOME,Clienti.COGNOME,Prenotazioni_camere.id_camere,Prenotazioni_camere.check_in,Prenotazioni_camere.check_out,Prenotazioni_camere.data_prenotazione,Prenotazioni_camere.costo,Prenotazioni_camere.pagamento,Prenotazioni_camere.dipendente FROM Prenotazioni_camere,Clienti WHERE Clienti.ID = Prenotazioni_camere.cliente_id AND Prenotazioni_camere.check_out > '" + today + "';"
+		return db.execute(query).fetchall()
 	def __init__(self):
 		pass
