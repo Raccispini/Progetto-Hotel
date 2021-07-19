@@ -4,8 +4,7 @@ from datetime import date
 from PyQt5 import QtWidgets
 from magazzino.view.ComingSoonView import ComingSoonView
 from camere.controller.CamereController import CamereController
-from anagrafiche.view.AnagraficheView import AnagraficheView
-from dipendente.model import DipendenteModel
+
 class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 	def __init__(self,parent=None,camera_id=0,check_in=0,check_out=0):
 		super(PrenotaCamereView,self).__init__(parent)
@@ -47,8 +46,8 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 		self.controller.prenota(self.check_in,self.check_out,now.strftime("%d/%m/%Y"),self.camera,self.get_selected_cliente())
 		self.close()
 
+
 	def get_selected_cliente(self):
 		cliente = self.tableWidget.selectedItems()
 		return cliente[0].text()
-
 

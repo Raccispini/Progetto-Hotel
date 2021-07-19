@@ -35,7 +35,7 @@ class HomeView(QMainWindow, Ui_HomeView):
 
     def open_camere(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Camere":
-            self.camere_window = CamereView(self.dipendente)
+            self.camere_window = CamereView()
             self.camere_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")

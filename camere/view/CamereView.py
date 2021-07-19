@@ -10,9 +10,9 @@ from camere.controller.CamereController import CamereController
 
 
 class CamereView(QMainWindow, Ui_CamereView):
-	def __init__(self,dipendente, parent=None,):
+	def __init__(self, parent=None,):
 		super(CamereView, self).__init__(parent)
-		self.dipendente = dipendente
+		#self.dipendente = dipendente
 		self.setupUi(self)
 		self.controller = CamereController()
 		self.connect_all()
@@ -85,6 +85,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 	def prenota(self):
 		if self.check_date_dal() and self.check_date_al():
 			prenotacamere = PrenotaCamereView(self, camera_id=self.getSelectedRoom(),check_in=self.QdateToDate(self.date_dal.date().getDate()),check_out=self.QdateToDate(self.date_al.date().getDate()))
+			prenotacamere.exec_()
 			prenotacamere.show()
 
 	def attiva(self):
@@ -115,6 +116,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 	def prenotazioni(self):
 		prenotazioni_window = ListaPrenotazioniCamereView(self)
 		prenotazioni_window.show()
+		self.update_table()
 
 	def azzera(self):
 		self.spin_singoli.setValue(0)
@@ -196,3 +198,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 		d1 = datetime.strptime(d1, "%d/%m/%Y")
 		d2 = datetime.strptime(d2, "%d/%m/%Y")
 		return abs((d2 - d1).days)
+
+	@staticmethod
+	def update(self):
+		self.update_table()
