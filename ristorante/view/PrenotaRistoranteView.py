@@ -22,6 +22,7 @@ class PrenotaRistoranteView(QMainWindow, Ui_PrenotaRistoranteView):
 
     def connect_action(self):
         self.pB_prenota.clicked.connect(lambda: self.prenota_tavolo())
+        self.pB_annulla.clicked.connect(lambda: self.close())
 
     def update_view(self):
         self.controller_cliente = AnagraficheController()

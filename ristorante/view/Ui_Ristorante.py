@@ -8,7 +8,7 @@ from PyQt5.QtGui import QCursor
 
 class Ui_RistoranteView(object):
     def setupUi(self, mainWindow):
-        mainWindow.setObjectName("mainWindow")
+        mainWindow.setObjectName("mainWindow_ristorante")
         mainWindow.resize(1730, 925)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -18,7 +18,7 @@ class Ui_RistoranteView(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         mainWindow.setWindowIcon(icon)
-        mainWindow.setStyleSheet("background-image: url(ui/resources/ristorante/50-504378_restaurant-hd-wallpaper-restaurant-hd.jpg);")
+        mainWindow.setStyleSheet("#mainWindow_ristorante{background-image: url(ui/resources/ristorante/50-504378_restaurant-hd-wallpaper-restaurant-hd.jpg);}")
         self.centralwidget = QtWidgets.QWidget(mainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
