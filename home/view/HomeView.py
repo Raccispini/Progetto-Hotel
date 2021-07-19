@@ -1,14 +1,10 @@
 '''
 __author__: Federico Pretini
 '''
-from PyQt5 import QtGui, QtCore
-from PyQt5.QtCore import QDate
-from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 
 from anagrafiche.view.AnagraficheView import AnagraficheView
 from bar.view.BarView import BarView
-from camere.controller.CamereController import CamereController
 from camere.view.CamereView import CamereView
 from home.view.Ui_HomeView import Ui_HomeView
 from logout.view.LogoutView import LogoutView
@@ -24,7 +20,6 @@ class HomeView(QMainWindow, Ui_HomeView):
         self.setupUi(self)
         self.dipendente = dipendente
         self.login_window = login_window
-        self.camere_controller = CamereController()
         self.connect_button()
 
     def open_bar(self):
