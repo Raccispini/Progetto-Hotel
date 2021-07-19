@@ -46,6 +46,7 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 		now = date.today()
 		print(now.strftime("%d/%m/%Y"))
 		self.controller.prenota(self.check_in,self.check_out,now.strftime("%d/%m/%Y"),self.camera,self.get_selected_cliente())
+		#self.update_table()
 		self.close()
 
 
