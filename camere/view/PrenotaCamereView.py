@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets
 from magazzino.view.ComingSoonView import ComingSoonView
 from camere.controller.CamereController import CamereController
 
+
 class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 	def __init__(self,parent=None,camera_id=0,check_in=0,check_out=0):
 		super(PrenotaCamereView,self).__init__(parent)
@@ -34,6 +35,7 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 			self.tableWidget.insertRow(i)
 			for j in range(len(clienti[0])):
 				self.tableWidget.setItem(i,j,QtWidgets.QTableWidgetItem(str(clienti[i][j])))
+
 	def check_prenotabile(self):
 		if len(self.tableWidget.selectedItems())!=0:
 			self.pB_prenota.setEnabled(True)
@@ -50,4 +52,3 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 	def get_selected_cliente(self):
 		cliente = self.tableWidget.selectedItems()
 		return cliente[0].text()
-

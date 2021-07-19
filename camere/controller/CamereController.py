@@ -1,4 +1,6 @@
 from camere.model.ModelCamere import ModelCamere
+"__author__: Nicolò Raccichini"
+
 class CamereController():
     def __init__(self):
         self.model = ModelCamere()

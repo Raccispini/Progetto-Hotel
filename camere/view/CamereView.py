@@ -47,6 +47,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 		# self.pb_ricerca.clicked.connect(lambda: self.update_table())
 		self.pb_azzera.clicked.connect(lambda: self.azzera())
 		self.pb_prenota.clicked.connect(lambda: self.prenota())
+		self.pb_prenota.clicked.connect(lambda: self.update())
 		self.pb_prenotazioni.clicked.connect(lambda: self.prenotazioni())
 		self.pb_preventivo.clicked.connect(lambda: self.preventivo())
 
@@ -85,7 +86,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 	def prenota(self):
 		if self.check_date_dal() and self.check_date_al():
 			prenotacamere = PrenotaCamereView(self, camera_id=self.getSelectedRoom(),check_in=self.QdateToDate(self.date_dal.date().getDate()),check_out=self.QdateToDate(self.date_al.date().getDate()))
-			prenotacamere.exec_()
+
 			prenotacamere.show()
 
 	def attiva(self):
@@ -131,6 +132,8 @@ class CamereView(QMainWindow, Ui_CamereView):
 		self.cb_culla_2.setChecked(False)
 		self.cb_minibar.setChecked(False)
 		self.cb_cassaforte.setChecked(False)
+		self.date_dal.setDate(QDate.currentDate())
+		self.date_al.setDate(QDate.currentDate())
 		self.update_table()
 
 	def update_table(self, onstart=False):
@@ -198,7 +201,3 @@ class CamereView(QMainWindow, Ui_CamereView):
 		d1 = datetime.strptime(d1, "%d/%m/%Y")
 		d2 = datetime.strptime(d2, "%d/%m/%Y")
 		return abs((d2 - d1).days)
-
-	@staticmethod
-	def update(self):
-		self.update_table()
