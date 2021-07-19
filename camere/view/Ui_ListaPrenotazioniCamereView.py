@@ -106,6 +106,7 @@ class Ui_ListaPrenotazioniCamere(object):
         self.pB_checkout.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pB_checkout.setStyleSheet("background-image: url(:/ombrelloni/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
+        self.pB_checkout.setEnabled(False)
         self.pB_checkout.setObjectName("pB_checkout")
         self.horizontalLayout.addWidget(self.pB_checkout)
         self.pB_elimina = QtWidgets.QPushButton(self.centralwidget)
@@ -117,6 +118,7 @@ class Ui_ListaPrenotazioniCamere(object):
         self.pB_elimina.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pB_elimina.setStyleSheet("background-image: url(:/ombrelloni/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
+        self.pB_elimina.setEnabled(False)
         self.pB_elimina.setObjectName("pB_elimina")
         self.horizontalLayout.addWidget(self.pB_elimina)
         self.verticalLayout.addLayout(self.horizontalLayout)

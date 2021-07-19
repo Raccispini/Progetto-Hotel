@@ -9,12 +9,12 @@ class ListaPrenotazioniCamereView(QMainWindow, Ui_ListaPrenotazioniCamere):
         self.setupUi(self)
         self.controller = CamereController()
         self.update_table()
-        self.onTableClick()
         self.connect_all()
 
     def connect_all(self):
         self.pB_elimina.clicked.connect(lambda: self.elimina())
         self.pB_checkout.clicked.connect(lambda: self.checkout())
+        self.tW_lista_prenotazioni_camere.itemSelectionChanged.connect(lambda: self.onTableClick())
 
     def onTableClick(self):
         if len(self.tW_lista_prenotazioni_camere.selectionModel().selectedRows()) > 0:
