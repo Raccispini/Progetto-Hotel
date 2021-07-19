@@ -28,3 +28,9 @@ class RistoranteController():
 
     def get_prezzo(self, nome_piatto):
         return self.model.get_prezzo_piatto(nome_piatto)
+
+    def aggiungi_piatto(self, piatto):
+        self.model.aggiungi_piatto(piatto)
+
+    def elimina_piatto(self, lista_nomi):
+        self.model.elimina_piatto(lista_nomi)

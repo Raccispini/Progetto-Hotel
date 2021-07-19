@@ -2,8 +2,10 @@
 __author__: Federico Pretini
 '''
 from datetime import datetime
+from datetime import timedelta
 
-from ristorante.view.Ui_RistoranteView import Ui_RistoranteView
+from ristorante.view.AggiornaMenuView import AggiornaMenuView
+from ristorante.view.Ui_Ristorante import Ui_RistoranteView
 from ristorante.controller.RistoranteController import RistoranteController
 from ristorante.view.PrenotaRistoranteView import PrenotaRistoranteView
 from ristorante.view.OrdinazioniRistoranteView import OrdinazioniRistoranteView
@@ -13,11 +15,12 @@ from PyQt5 import QtCore, QtGui
 
 
 class RistoranteView(QMainWindow, Ui_RistoranteView):
-    def __init__(self, parent = None):
+    def __init__(self, dipendente, parent = None):
         super(RistoranteView, self).__init__(parent)
         self.setupUi(self)
         self.controller = RistoranteController()
         self.update_table(self.controller.get_lista_prenotazioni())
+        self.dipendente = dipendente
         self.erase_all()
         self.connect_all()
 
@@ -32,6 +35,7 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
         self.de_data_2.dateChanged.connect(lambda: self.filtraggio_tavoli())
         self.cb_tavolo.currentIndexChanged.connect(lambda: self.filtraggio_tavoli())
         self.cb_orario_2.currentIndexChanged.connect(lambda: self.filtraggio_tavoli())
+        self.pB_aggiorna_menu.clicked.connect(lambda: self.aggiorna_menu())
 
 
 
@@ -63,7 +67,7 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
         elif datetime.now() >= datetime.now().replace(hour=16, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=21, minute=0,second=0):
             self.cb_orario.setCurrentIndex(3) #comboBox ricerca tavolo disponibile
             self.cb_orario_2.setCurrentIndex(3) #comboBox filtraggio tavoli prenotati
-        elif datetime.now() > datetime.now().replace(hour=21, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=0, minute=0,second=0)+ datetime.timedelta(days=1):
+        elif datetime.now() > datetime.now().replace(hour=21, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=0, minute=0,second=0)+ timedelta(days=1):
             self.cb_orario.setCurrentIndex(4) #comboBox ricerca tavolo disponibile
             self.cb_orario_2.setCurrentIndex(4) #comboBox filtraggio tavoli prenotati
         self.de_data.setDate(QDate.currentDate()) #dateEdit ricerca tavolo dispobile
@@ -150,3 +154,10 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
         self.controller.elimina_prenotazione(lista_id)
         self.update_table(self.controller.get_lista_prenotazioni())
         self.ricerca_tavolo_disponibile()
+
+    def aggiorna_menu(self):
+        if self.dipendente.get_permessi() == "Responsabile":
+            self.aggiorna_menu_window = AggiornaMenuView(self.controller)
+            self.aggiorna_menu_window.show()
+        else:
+            QMessageBox.critical(self, "Errore", "Spiacente, non godi dei permessi necessari per poter accedere.\nSolo i responsabili possono accedere a quest'area")

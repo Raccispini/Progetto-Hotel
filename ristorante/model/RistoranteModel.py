@@ -57,5 +57,15 @@ class RistoranteModel():
         query = "SELECT prezzo FROM Menu WHERE nome_piatto = \'" + nome_piatto + "\';"
         return self.db.execute(query).fetchone()[0]
 
+    def aggiungi_piatto(self, piatto):
+        query = "INSERT INTO Menu(nome_piatto, categoria, prezzo) VALUES (?,?,?);"
+        self.db.execute(query, piatto)
+        self.db.commit()
+
+    def elimina_piatto(self, lista_nomi):
+        for nome in lista_nomi:
+            self.db.execute("DELETE FROM Menu WHERE nome_piatto=\'"+  nome + "\';")
+            self.db.commit()
+
 
 

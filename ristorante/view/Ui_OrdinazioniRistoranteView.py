@@ -514,7 +514,7 @@ class Ui_OrdinazioniRistoranteView(object):
         font.setWeight(75)
         item.setFont(font)
         self.tW_scontrino_tavolo.setHorizontalHeaderItem(3, item)
-        self.tW_scontrino_tavolo.horizontalHeader().setDefaultSectionSize(220)
+        self.tW_scontrino_tavolo.horizontalHeader().setDefaultSectionSize(280)
         self.tW_scontrino_tavolo.horizontalHeader().setStretchLastSection(True)
         self.horizontalLayout_7.addWidget(self.tW_scontrino_tavolo)
         self.gridLayout_2.addLayout(self.horizontalLayout_7, 1, 0, 1, 2)

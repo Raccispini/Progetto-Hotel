@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1722</width>
+    <width>1730</width>
     <height>925</height>
    </rect>
   </property>
@@ -163,25 +163,47 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgb
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pB_ricerca">
-          <property name="font">
-           <font>
-            <pointsize>35</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-image: url(:/ristorante/tpg.png);
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="pB_ricerca">
+            <property name="font">
+             <font>
+              <pointsize>35</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
-          </property>
-          <property name="text">
-           <string>Ricerca</string>
-          </property>
-         </widget>
+            </property>
+            <property name="text">
+             <string>Ricerca</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pB_aggiorna_menu">
+            <property name="font">
+             <font>
+              <pointsize>35</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image: url(:/ristorante/tpg.png);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));</string>
+            </property>
+            <property name="text">
+             <string>Aggiorna Menù</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item>
          <layout class="QGridLayout" name="gridLayout_2">

@@ -16,7 +16,7 @@ class LoginView(QMainWindow, Ui_LoginView):
     def accesso(self):
         if self.controller.is_utente(self.LE_Username.text(), self.LE_Password.text()):
             main_window = HomeView(self.controller.get_utente(),self)
-            main_window.show()
+            main_window.showMaximized()
             self.close()
         else:
             QMessageBox.critical(self, 'Errore', 'I dati inseriti non sono stati inseriti\nin maniera corretta, per favore ritenta.', QMessageBox.Ok, QMessageBox.Ok)

@@ -1,6 +1,9 @@
 '''
 __author__: Federico Pretini
 '''
+from PyQt5 import QtGui, QtCore
+from PyQt5.QtCore import QDate
+from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 
 from anagrafiche.view.AnagraficheView import AnagraficheView
@@ -21,6 +24,7 @@ class HomeView(QMainWindow, Ui_HomeView):
         self.dipendente = dipendente
         self.login_window = login_window
         self.connect_button()
+        self.add_to_calendar()
 
     def open_bar(self):
        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Bar":
@@ -63,7 +67,7 @@ class HomeView(QMainWindow, Ui_HomeView):
 
     def open_ristorante(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Ristorante":
-           self.ristorante_window = RistoranteView()
+           self.ristorante_window = RistoranteView(self.dipendente)
            self.ristorante_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
@@ -72,6 +76,16 @@ class HomeView(QMainWindow, Ui_HomeView):
     def uscita_clicked(self):
         self.logout_window = LogoutView(self.login_window, self)
         self.logout_window.show()
+
+    def add_to_calendar(self):
+        cell_format = QtGui.QTextCharFormat()
+        cell_format.setBackground(QtGui.QColor("green"))
+        font = QFont()
+        font.setPointSize(15)
+        font.setBold(True)
+        cell_format.setFont(font)
+        dt = QDate.currentDate()
+        self.calendarWidget.setDateTextFormat(dt, cell_format)
 
 
 

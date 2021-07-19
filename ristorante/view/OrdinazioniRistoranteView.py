@@ -28,19 +28,19 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
         self.lineE_nominativo.setText(info_tavolo[2])
         self.lineE_persone.setText(info_tavolo[3])
         for antipasti in self.controller.get_menu("Antipasti"):
-            self.cB_antipasti.addItem(antipasti[1])
+            self.cB_antipasti.addItem(antipasti[0])
         for primi in self.controller.get_menu("Primi"):
-            self.cB_primi.addItem(primi[1])
+            self.cB_primi.addItem(primi[0])
         for secondi in self.controller.get_menu("Secondi"):
-            self.cB_secondi.addItem(secondi[1])
+            self.cB_secondi.addItem(secondi[0])
         for contorni in self.controller.get_menu("Contorni"):
-            self.cB_contorni.addItem(contorni[1])
+            self.cB_contorni.addItem(contorni[0])
         for bevande in self.controller.get_menu("Bevande"):
-            self.cB_bevande.addItem(bevande[1])
+            self.cB_bevande.addItem(bevande[0])
         for frutta in self.controller.get_menu("Frutta"):
-            self.cB_frutta.addItem(frutta[1])
+            self.cB_frutta.addItem(frutta[0])
         for dolci in self.controller.get_menu("Dolci"):
-            self.cB_dolci.addItem(dolci[1])
+            self.cB_dolci.addItem(dolci[0])
 
     def connect_all(self):
         for button in self.pB_Aggiungi:
