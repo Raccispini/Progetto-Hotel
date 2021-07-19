@@ -28,8 +28,9 @@ class CamereView(QMainWindow, Ui_CamereView):
 		# tipo
 		self.combo_tipo.currentTextChanged.connect(lambda: self.update_table())
 		# date
-		#self.date_al.dateChanged.connect(lambda: self.update_table())
-		#self.date_dal.dateChanged.connect(lambda: self.update_table())
+		self.date_al.dateChanged.connect(lambda: self.update_table())
+		self.date_dal.dateChanged.connect(lambda: self.update_table())
+		self.date_dal.dateChanged.connect(lambda: self.set_date_al())
 		# checkbox
 		self.cb_ariaCondizionata.clicked.connect(lambda: self.update_table())
 		self.cb_animaledomestico.clicked.connect(lambda: self.update_table())
@@ -54,6 +55,12 @@ class CamereView(QMainWindow, Ui_CamereView):
 		self.date_dal.setDate(QDate.currentDate())
 		self.date_al.setDate(QDate.currentDate())
 
+
+
+
+	def set_date_al(self):
+		self.date_al.setDate(self.date_dal.date())
+
 	def check_date_dal(self):
 		d1 = self.date_dal.date().getDate()
 		d_a = QDate.currentDate().getDate()
@@ -69,7 +76,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 		d2 = self.date_al.date().getDate()
 
 		if d2 < d1:
-			QMessageBox.critical(self, "Errore!", "La data di check-out non può essere\nantecedetnte a quella di check-in.", QMessageBox.Ok, QMessageBox.Ok)
+			QMessageBox.critical(self, "Errore!", "La data di check-out non può essere\nantecedente a quella di check-in.", QMessageBox.Ok, QMessageBox.Ok)
 			return False
 		else:
 			return True
