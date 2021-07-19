@@ -2,9 +2,9 @@
 __author__: Federico Pretini
 __author__: Alessandro Rongoni
 '''
-from PyQt5.QtGui import QCursor
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QTimer, QTime
+from PyQt5.QtGui import QCursor, QTextCharFormat, QBrush, QColor
+from PyQt5 import QtCore, QtGui, QtWidgets, Qt
+from PyQt5.QtCore import QTimer, QTime, QDate
 
 #Setto manualmente alcune particolarità dell'interfaccia e le salvo in una variabile
 stylesheet = """#MainWindow{border-image: url(ui/resources/main/2690549.jpg) 0 0 0 0 stretch stretch;}
@@ -188,6 +188,10 @@ class Ui_HomeView(object):
         self.verticalLayout.addWidget(self.pB_Uscita)
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.calendarWidget = QtWidgets.QCalendarWidget(self.centralwidget)
+        weekendFormat = QTextCharFormat()
+        weekendFormat.setForeground(QBrush(QColor(255,0,0)))
+        self.calendarWidget.setWeekdayTextFormat(Qt:Saturday,weekendFormat)
+        self.calendarWidget.setWeekdayTextFormat("Sunday",weekendFormat)
         self.calendarWidget.setStyleSheet("font: 75 14pt \"Arial\";")
         self.calendarWidget.setMinimumDate(QtCore.QDate(2000, 5, 18))
         self.calendarWidget.setMaximumDate(QtCore.QDate(3000, 7, 6))
