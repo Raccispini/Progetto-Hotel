@@ -66,7 +66,6 @@ class ModelCamere():
 				else:
 					query = query[:-4]
 		query += " ORDER BY Camere.numeroCamera;"
-		print(query)
 		return con.execute(query).fetchall()
 	#@staticmethod
 	def get_tipo(self):
@@ -90,34 +89,10 @@ class ModelCamere():
 		query = "SELECT Camere.numeroCamera FROM Camere,Prenotazioni_camere WHERE Camere.numeroCamera IN (SELECT Prenotazioni_camere.id_camere from Prenotazioni_camere WHERE NOT(Prenotazioni_camere.check_out<'"+data_inizio+"' OR Prenotazioni_camere.check_in>'"+data_fine+"'))"
 		return db.execute(query).fetchall()
 
-
-
-	def add_extra(self, camera,prezzo,descrizione):
-		now = date.today().strftime("%d/%m/%Y")
-		db = sqlite3.connect("database.db")
-		query = "INSERT INTO Addebiti(costo,data,id_prenotazione,descrizione) VALUES (" + str(prezzo) + ",'" + now + "','" + str(camera) + "','"+descrizione+"');"
-		db.execute(query)
-		db.commit()
-
-
-	def get_extra(self, id_prenotazione):
-		db = sqlite3.connect("database.db")
-		query = "SELECT Addebiti.id,Addebiti.costo,Addebiti.descrizione from Addebiti WHERE Addebiti.id_prenotazione ="+str(id_prenotazione)+" ORDER BY Addebiti.data;"
-		return db.execute(query).fetchall()
-
-
-	def remove_extra(self, lista_id_prenotazione):
-		db = sqlite3.connect("database.db")
-		for id_prenotazione in lista_id_prenotazione:
-		    query = "DELETE FROM Addebiti WHERE Addebiti.id_prenotazione = "+str(id_prenotazione)+";"
-		    db.execute(query)
-		    db.commit()
-
 	#@staticmethod
 	def getClienti(self):
 		con = sqlite3.connect("database.db")
 		query = "SELECT * FROM Clienti Order By Clienti.ID"
-		# con.close()
 		return con.execute(query).fetchall()
 
 	#@staticmethod

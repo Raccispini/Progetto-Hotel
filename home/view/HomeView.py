@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QMainWindow, QMessageBox
 
 from anagrafiche.view.AnagraficheView import AnagraficheView
 from bar.view.BarView import BarView
+from camere.controller.CamereController import CamereController
 from camere.view.CamereView import CamereView
 from home.view.Ui_HomeView import Ui_HomeView
 from logout.view.LogoutView import LogoutView
@@ -23,8 +24,8 @@ class HomeView(QMainWindow, Ui_HomeView):
         self.setupUi(self)
         self.dipendente = dipendente
         self.login_window = login_window
+        self.camere_controller = CamereController()
         self.connect_button()
-        self.add_to_calendar()
 
     def open_bar(self):
        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Bar":
@@ -35,7 +36,7 @@ class HomeView(QMainWindow, Ui_HomeView):
 
     def open_camere(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Camere":
-            self.camere_window = CamereView()
+            self.camere_window = CamereView(self.dipendente)
             self.camere_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
@@ -76,18 +77,6 @@ class HomeView(QMainWindow, Ui_HomeView):
     def uscita_clicked(self):
         self.logout_window = LogoutView(self.login_window, self)
         self.logout_window.show()
-
-    def add_to_calendar(self):
-        cell_format = QtGui.QTextCharFormat()
-        cell_format.setBackground(QtGui.QColor("green"))
-        font = QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        cell_format.setFont(font)
-        dt = QDate.currentDate()
-        self.calendarWidget.setDateTextFormat(dt, cell_format)
-
-
 
 
     def connect_button(self):

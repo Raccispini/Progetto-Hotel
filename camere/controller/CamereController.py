@@ -8,14 +8,8 @@ class CamereController():
     def get_lista_camere(self):
         return self.model.get_lista_camere_prenotate()
 
-    def add_extra(self, camera, prezzo, descrizione):
-        self.model.add_extra(camera, prezzo, descrizione)
-
-    def remove_extra(self, lista_id_prenotazione):
-        self.model.remove_extra(lista_id_prenotazione)
-
-    def get_extra(self, id_prenotazione):
-        return self.model.get_extra(id_prenotazione)
+    def get_prenotazioni(self):
+        return self.model.get_prenotazioni()
 
     def getCamere(self,options={}):
        return self.model.getCamere(options=options)
@@ -28,15 +22,6 @@ class CamereController():
 
     def get_camere_prenotate(self,data_inizio,data_fine):
         return self.model.get_camere_prenotate(data_inizio,data_fine)
-
-    def add_extra(self,id):
-        self.model.add_extra(id)
-
-    def get_extra(self,id):
-        return self.model.get_extra(id)
-
-    def remove_extra(self,lista):
-        self.model.remove_extra(lista)
 
     def getClienti(self):
         return self.model.getClienti()

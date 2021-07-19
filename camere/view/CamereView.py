@@ -10,9 +10,9 @@ from camere.controller.CamereController import CamereController
 
 
 class CamereView(QMainWindow, Ui_CamereView):
-	def __init__(self, parent=None,):
+	def __init__(self, dipendente, parent=None):
 		super(CamereView, self).__init__(parent)
-		#self.dipendente = dipendente
+		self.dipendente = dipendente
 		self.setupUi(self)
 		self.controller = CamereController()
 		self.connect_all()
@@ -85,7 +85,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 
 	def prenota(self):
 		if self.check_date_dal() and self.check_date_al():
-			prenotacamere = PrenotaCamereView(self, camera_id=self.getSelectedRoom(),check_in=self.QdateToDate(self.date_dal.date().getDate()),check_out=self.QdateToDate(self.date_al.date().getDate()))
+			prenotacamere = PrenotaCamereView(self.dipendente, self.update_table, self.getSelectedRoom(),self.QdateToDate(self.date_dal.date().getDate()),self.QdateToDate(self.date_al.date().getDate()), self)
 			prenotacamere.show()
 
 
@@ -143,8 +143,6 @@ class CamereView(QMainWindow, Ui_CamereView):
 			camere = self.controller.getCamere()
 		else:
 			camere = self.controller.getCamere(options=options)
-		# print(options)
-		# print(len(camere[0]))
 		self.tabellaCamere.setRowCount(0)
 		for i in range(0, len(camere)):
 			self.tabellaCamere.insertRow(i)
@@ -182,17 +180,14 @@ class CamereView(QMainWindow, Ui_CamereView):
 		options["culla"] = True if self.cb_culla_2.isChecked() else False
 		options["minibar"] = True if self.cb_minibar.isChecked() else False
 		options["cassaforte"] = True if self.cb_cassaforte.isChecked() else False
-		# print(options)
 		return options
 
 	def QdateToDate(self, qdate):
-		print(qdate[0])
 		return str(qdate[2]) + "/" + str(qdate[1]) + "/" + str(qdate[0])
 
 	def preventivo(self):
 		d1 = self.QdateToDate(self.date_dal.date().getDate())
 		d2 = self.QdateToDate(self.date_al.date().getDate())
-		# print(d1)
 		item = self.tabellaCamere.selectedItems()
 		msg = float(item[len(item) - 1].text()) * self.dateOffset(d1, d2)
 		QMessageBox.information(self, "Preventivo", "Il preventivo della camera è " + str(msg))

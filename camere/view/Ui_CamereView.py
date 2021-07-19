@@ -9,7 +9,7 @@ class Ui_CamereView(object):
         MainWindow.resize(1558, 842)
         MainWindow.setMinimumSize(QtCore.QSize(1223, 665))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("#MainWindow_camere{background-image: url(ui/resources/camere/Grand-Hotel-Fleming-2.jpg);}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -20,7 +20,7 @@ class Ui_CamereView(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.logo = QtWidgets.QLabel(self.centralwidget)
         self.logo.setMaximumSize(QtCore.QSize(200, 260))
-        self.logo.setStyleSheet("background-image: url(:/camere/tpg.png);")
+        self.logo.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);")
         self.logo.setText("")
         self.logo.setPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_200x230.png"))
         self.logo.setObjectName("logo")
@@ -36,7 +36,7 @@ class Ui_CamereView(object):
         font.setFamily("Arial")
         font.setPointSize(13)
         self.date_dal.setFont(font)
-        self.date_dal.setStyleSheet("background-image: url(:/camere/8-85556_silver-mat-color.jpg);\n"
+        self.date_dal.setStyleSheet("background-image: url(ui/resources/camere/8-85556_silver-mat-color.jpg);\n"
 "")
         self.date_dal.setCalendarPopup(True)
         self.date_dal.setDate(QtCore.QDate(2021, 4, 15))
@@ -47,7 +47,7 @@ class Ui_CamereView(object):
         font.setFamily("Arial")
         font.setPointSize(13)
         self.date_al.setFont(font)
-        self.date_al.setStyleSheet("background-image: url(:/camere/8-85556_silver-mat-color.jpg);")
+        self.date_al.setStyleSheet("background-image: url(ui/resources/camere/8-85556_silver-mat-color.jpg);")
         self.date_al.setCalendarPopup(True)
         self.date_al.setDate(QtCore.QDate(2021, 4, 17))
         self.date_al.setObjectName("date_al")
@@ -59,7 +59,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_5.setFont(font)
-        self.label_5.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.label_5.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.label_5.setObjectName("label_5")
         self.gridLayout_7.addWidget(self.label_5, 2, 0, 1, 1)
@@ -70,7 +70,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_7.setFont(font)
-        self.label_7.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.label_7.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.label_7.setObjectName("label_7")
         self.gridLayout_7.addWidget(self.label_7, 0, 2, 1, 1)
@@ -81,7 +81,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_6.setFont(font)
-        self.label_6.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.label_6.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.label_6.setObjectName("label_6")
         self.gridLayout_7.addWidget(self.label_6, 0, 0, 1, 1)
@@ -90,7 +90,7 @@ class Ui_CamereView(object):
         font.setFamily("Arial")
         font.setPointSize(14)
         self.combo_tipo.setFont(font)
-        self.combo_tipo.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.combo_tipo.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.combo_tipo.setObjectName("combo_tipo")
         self.combo_tipo.addItem("")
@@ -98,7 +98,7 @@ class Ui_CamereView(object):
         self.combo_tipo.addItem("")
         self.gridLayout_7.addWidget(self.combo_tipo, 2, 1, 1, 3)
         self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.checkBox.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.505682, fy:0.5, stop:0 rgba(255, 255, 255, 178), stop:1 rgba(255, 255, 255, 182));")
         self.checkBox.setObjectName("checkBox")
         self.gridLayout_7.addWidget(self.checkBox, 0, 4, 1, 1)
@@ -118,7 +118,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_4.setFont(font)
-        self.label_4.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.label_4.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.label_4.setObjectName("label_4")
         self.gridLayout_6.addWidget(self.label_4, 0, 2, 1, 1)
@@ -129,7 +129,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_3.setFont(font)
-        self.label_3.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.label_3.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.label_3.setObjectName("label_3")
         self.gridLayout_6.addWidget(self.label_3, 0, 0, 1, 1)
@@ -151,7 +151,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_animaledomestico.setFont(font)
-        self.cb_animaledomestico.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_animaledomestico.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_animaledomestico.setObjectName("cb_animaledomestico")
         self.gridLayout_3.addWidget(self.cb_animaledomestico, 0, 1, 1, 1)
@@ -162,7 +162,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_fumatori.setFont(font)
-        self.cb_fumatori.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_fumatori.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_fumatori.setObjectName("cb_fumatori")
         self.gridLayout_3.addWidget(self.cb_fumatori, 1, 1, 1, 1)
@@ -173,7 +173,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_vascaidromassaggio.setFont(font)
-        self.cb_vascaidromassaggio.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_vascaidromassaggio.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_vascaidromassaggio.setObjectName("cb_vascaidromassaggio")
         self.gridLayout_3.addWidget(self.cb_vascaidromassaggio, 1, 0, 1, 1)
@@ -184,7 +184,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_vistapanoramica.setFont(font)
-        self.cb_vistapanoramica.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_vistapanoramica.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_vistapanoramica.setObjectName("cb_vistapanoramica")
         self.gridLayout_3.addWidget(self.cb_vistapanoramica, 1, 2, 1, 1)
@@ -195,7 +195,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_saunainterna.setFont(font)
-        self.cb_saunainterna.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_saunainterna.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_saunainterna.setObjectName("cb_saunainterna")
         self.gridLayout_3.addWidget(self.cb_saunainterna, 0, 2, 1, 1)
@@ -206,7 +206,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_ariaCondizionata.setFont(font)
-        self.cb_ariaCondizionata.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_ariaCondizionata.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_ariaCondizionata.setObjectName("cb_ariaCondizionata")
         self.gridLayout_3.addWidget(self.cb_ariaCondizionata, 0, 0, 1, 1)
@@ -217,7 +217,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_culla_2.setFont(font)
-        self.cb_culla_2.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_culla_2.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_culla_2.setObjectName("cb_culla_2")
         self.gridLayout_3.addWidget(self.cb_culla_2, 2, 0, 1, 1)
@@ -228,7 +228,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_cassaforte.setFont(font)
-        self.cb_cassaforte.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_cassaforte.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_cassaforte.setObjectName("cb_cassaforte")
         self.gridLayout_3.addWidget(self.cb_cassaforte, 2, 2, 1, 1)
@@ -239,7 +239,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.cb_minibar.setFont(font)
-        self.cb_minibar.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.cb_minibar.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.cb_minibar.setObjectName("cb_minibar")
         self.gridLayout_3.addWidget(self.cb_minibar, 2, 1, 1, 1)
@@ -256,7 +256,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.pb_azzera.setFont(font)
-        self.pb_azzera.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.pb_azzera.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pb_azzera.setObjectName("pb_azzera")
         self.verticalLayout.addWidget(self.pb_azzera)
@@ -267,7 +267,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.pb_preventivo.setFont(font)
-        self.pb_preventivo.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.pb_preventivo.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pb_preventivo.setObjectName("pb_preventivo")
         self.verticalLayout.addWidget(self.pb_preventivo)
@@ -278,7 +278,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.pb_prenota.setFont(font)
-        self.pb_prenota.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.pb_prenota.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pb_prenota.setObjectName("pb_prenota")
         self.verticalLayout.addWidget(self.pb_prenota)
@@ -289,7 +289,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.pb_prenotazioni.setFont(font)
-        self.pb_prenotazioni.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.pb_prenotazioni.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pb_prenotazioni.setObjectName("pb_prenotazioni")
         self.verticalLayout.addWidget(self.pb_prenotazioni)
@@ -305,7 +305,7 @@ class Ui_CamereView(object):
         font.setItalic(False)
         font.setWeight(75)
         self.labelCamere.setFont(font)
-        self.labelCamere.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.labelCamere.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.labelCamere.setAlignment(QtCore.Qt.AlignCenter)
         self.labelCamere.setObjectName("labelCamere")
@@ -318,7 +318,7 @@ class Ui_CamereView(object):
         font.setItalic(False)
         font.setWeight(50)
         self.tabellaCamere.setFont(font)
-        self.tabellaCamere.setStyleSheet("background-image: url(:/camere/tpg.png);\n"
+        self.tabellaCamere.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "font: 11pt \"Arial\";\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));")
         self.tabellaCamere.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)

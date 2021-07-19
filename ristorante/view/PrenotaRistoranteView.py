@@ -46,4 +46,8 @@ class PrenotaRistoranteView(QMainWindow, Ui_PrenotaRistoranteView):
             self.callback_2(self.controller.get_lista_prenotazioni())
             self.close()
 
+    def annulla(self):
+        self.sb_persone.setValue(1)
+        self.cB_nominativo.setCurrentIndex(0)
+
 

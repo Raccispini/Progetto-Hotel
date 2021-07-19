@@ -1,19 +1,22 @@
 from PyQt5.QtWidgets import  QMainWindow
+
+from anagrafiche.view.AnagraficheView import AnagraficheView
 from camere.view.Ui_PrenotaCamere import  Ui_PrenotaCamere
 from datetime import date
 from PyQt5 import QtWidgets
-from magazzino.view.ComingSoonView import ComingSoonView
 from camere.controller.CamereController import CamereController
 
 
 class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
-	def __init__(self,parent=None,camera_id=0,check_in=0,check_out=0):
+	def __init__(self, dipendente=None, callback=None, camera_id=0,check_in=0,check_out=0, parent=None):
 		super(PrenotaCamereView,self).__init__(parent)
 		self.setupUi(self)
 		self.controller = CamereController()
 		self.camera = camera_id
 		self.check_in = check_in
 		self.check_out = check_out
+		self.dipendente = dipendente
+		self.callback = callback
 		self.update_clienti()
 		self.check_prenotabile()
 
@@ -23,10 +26,8 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 		self.pb_aggiungi_cliente.clicked.connect(lambda: self.aggiungi_cliente())
 
 	def aggiungi_cliente(self):
-		c = ComingSoonView()
-		c.show()
-		#agg = AnagraficheView(dipendente=self.dipendente)
-		#agg.showMaximized()
+		agg = AnagraficheView(self.dipendente)
+		agg.showMaximized()
 
 	def update_clienti(self):
 		clienti = self.controller.getClienti()
@@ -44,9 +45,8 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 
 	def prenota(self):
 		now = date.today()
-		print(now.strftime("%d/%m/%Y"))
 		self.controller.prenota(self.check_in,self.check_out,now.strftime("%d/%m/%Y"),self.camera,self.get_selected_cliente())
-		#self.update_table()
+		self.callback()
 		self.close()
 
 
