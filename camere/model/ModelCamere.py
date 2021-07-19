@@ -123,9 +123,7 @@ class ModelCamere():
 	#@staticmethod
 	def prenota(self,check_in, check_out, data, camera, cliente_id, note=""):
 		con = sqlite3.connect("database.db")
-		query = "INSERT INTO Prenotazioni_camere(id_camere,check_in,check_out,data_prenotazione,cliente_id,note) VALUES (" + str(
-			camera) + ",'" + str(check_in) + "','" + str(check_out) + "','" + str(
-			data) + "'," + cliente_id + ",'" + note + "');"
+		query = "INSERT INTO Prenotazioni_camere(id_camere,check_in,check_out,data_prenotazione,cliente_id,note) VALUES (" + str(camera) + ",'" + str(check_in) + "','" + str(check_out) + "','" + str(data) + "'," + cliente_id + ",'" + note + "');"
 		con.execute(query)
 		con.commit()
 
