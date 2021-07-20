@@ -183,6 +183,7 @@ class OrdinazioniRistoranteView(QMainWindow, Ui_OrdinazioniRistoranteView):
         scontrino = GeneratoreScontriniRistorante()
         if self.cB_pagamento.currentText() != "" and self.cB_pagamento.currentText() != "Addebito su conto camera":
             scontrino.stampa(self.lista_ordini, self.totale, self.cB_pagamento.currentText())
+            QMessageBox.information(self, "Informazione","Nella cartella PDF/ScontriniRistorante è\nstato aggiunto un nuovo scontrino", QMessageBox.Ok, QMessageBox.Ok)
         else:
             QMessageBox.information(self, "Informazione","Seleziona un metodo di pagamento in maniera idonea prima di premere salva")
 
