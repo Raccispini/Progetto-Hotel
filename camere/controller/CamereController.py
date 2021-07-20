@@ -26,8 +26,8 @@ class CamereController():
     def getClienti(self):
         return self.model.getClienti()
 
-    def prenota(self,check_in, check_out, data, camera, cliente_id, note=""):
-        self.model.prenota(check_in, check_out, data, camera, cliente_id, note=note)
+    def prenota(self,check_in, check_out, data, camera, cliente_id, costo, dipendente, note=""):
+        self.model.prenota(check_in, check_out, data, camera, cliente_id, costo, dipendente, note=note)
 
     def check_out(self,id,data):
         self.model.check_out(id,data)

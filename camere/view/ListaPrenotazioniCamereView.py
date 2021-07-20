@@ -26,7 +26,6 @@ class ListaPrenotazioniCamereView(QMainWindow, Ui_ListaPrenotazioniCamere):
 
     def update_table(self):
         self.tW_lista_prenotazioni_camere.setRowCount(0)
-
         prenotazioni = self.controller.get_prenotazioni()
         for i in range(len(prenotazioni)):
             self.tW_lista_prenotazioni_camere.insertRow(i)
