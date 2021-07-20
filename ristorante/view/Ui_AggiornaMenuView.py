@@ -13,7 +13,7 @@ class Ui_AggiornaMenuView(object):
         MainWindow.setMinimumSize(QtCore.QSize(888, 425))
         MainWindow.setMaximumSize(QtCore.QSize(888, 425))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
