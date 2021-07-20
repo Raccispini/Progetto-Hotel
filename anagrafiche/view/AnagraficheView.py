@@ -416,11 +416,6 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
                 self.cB_modalitaPag_Fornitore.currentText(), self.lineE_fax_Fornitore.text())
         return info
 
-
-    def stampaPDF(self, lista, path):
-        gen = GeneratorePDF_Tabelle()
-        gen.stampa(lista, path)
-
 ######################################METODI GENERICI PER LE 3 TABLE####################################################
     def checkpB_to_enable(self):
         n_dipendenti = len(self.controller.get_listadipendenti())
@@ -492,5 +487,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             self.aggiornaTabelle(self.tableWidget_Fornitore, [])
             self.tab_Anag_Fornitori.setEnabled(False)
 
-
+    def stampaPDF(self, lista, path):
+        gen = GeneratorePDF_Tabelle()
+        gen.stampa(lista, path)
 

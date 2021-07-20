@@ -32,9 +32,10 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
         self.pB_prenota_ombrellone.clicked.connect(lambda: self.prenota_ombrellone())
         self.pB_elimina_ombrellone.clicked.connect(lambda: self.elimina_prenotazione())
         self.cB_nominativo.currentIndexChanged.connect(lambda: self.check_prenota())
+        self.cB_pagamento.currentIndexChanged.connect(lambda: self.check_prenota())
 
     def check_prenota(self):
-        if self.cB_nominativo.currentText() != "":
+        if self.cB_nominativo.currentText() != "" and self.cB_pagamento.currentText() != "":
             self.pB_prenota_ombrellone.setEnabled(True)
         else:
             self.pB_prenota_ombrellone.setEnabled(False)
