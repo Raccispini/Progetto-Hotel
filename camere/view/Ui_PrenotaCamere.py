@@ -27,9 +27,6 @@ class Ui_PrenotaCamere(object):
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label)
-        self.timeEdit_orario_arrivo = QtWidgets.QTimeEdit(self.centralwidget)
-        self.timeEdit_orario_arrivo.setObjectName("timeEdit_orario_arrivo")
-        self.horizontalLayout.addWidget(self.timeEdit_orario_arrivo)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
         self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
@@ -132,7 +129,6 @@ class Ui_PrenotaCamere(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Lista clienti"))
         self.label_2.setText(_translate("MainWindow", "Clienti:"))
-        self.label.setText(_translate("MainWindow", "Orario di arrivo"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Id"))
         item = self.tableWidget.horizontalHeaderItem(1)
