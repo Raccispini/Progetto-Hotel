@@ -195,7 +195,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 
 	def preventivo(self):
 		self.update_totale()
-		QMessageBox.information(self, "Preventivo", "Il preventivo della camera è " + self.totale)
+		QMessageBox.information(self, "Preventivo", "Il preventivo della camera è " + str(self.totale))
 
 	def dateOffset(self, d1, d2):
 		d1 = datetime.strptime(d1, "%d/%m/%Y")
