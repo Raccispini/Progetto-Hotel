@@ -59,16 +59,16 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
 
     def erase_all(self):
         if datetime.now() > datetime.now().replace(hour=0, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=14, minute=0,second=0):
-            self.cb_orario.setCurrentIndex(1) #comboBox ricerca tavolo disponibile
+            self.cb_orario.setCurrentIndex(0) #comboBox ricerca tavolo disponibile
             self.cb_orario_2.setCurrentIndex(1) #comboBox filtraggio tavoli prenotati
         elif datetime.now() >= datetime.now().replace(hour=14, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=16, minute=0,second=0):
-            self.cb_orario.setCurrentIndex(2)  # comboBox ricerca tavolo disponibile
+            self.cb_orario.setCurrentIndex(1)  # comboBox ricerca tavolo disponibile
             self.cb_orario_2.setCurrentIndex(2)  # comboBox filtraggio tavoli prenotati
         elif datetime.now() >= datetime.now().replace(hour=16, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=21, minute=0,second=0):
-            self.cb_orario.setCurrentIndex(3) #comboBox ricerca tavolo disponibile
+            self.cb_orario.setCurrentIndex(2) #comboBox ricerca tavolo disponibile
             self.cb_orario_2.setCurrentIndex(3) #comboBox filtraggio tavoli prenotati
         elif datetime.now() > datetime.now().replace(hour=21, minute=0, second=0) and datetime.now() < datetime.now().replace(hour=0, minute=0,second=0)+ timedelta(days=1):
-            self.cb_orario.setCurrentIndex(4) #comboBox ricerca tavolo disponibile
+            self.cb_orario.setCurrentIndex(3) #comboBox ricerca tavolo disponibile
             self.cb_orario_2.setCurrentIndex(4) #comboBox filtraggio tavoli prenotati
         self.de_data.setDate(QDate.currentDate()) #dateEdit ricerca tavolo dispobile
         self.de_data_2.setDate(QDate.currentDate()) #dateEdit filtraggio tavoli prenotati
