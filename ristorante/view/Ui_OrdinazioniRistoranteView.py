@@ -146,6 +146,7 @@ class Ui_OrdinazioniRistoranteView(object):
         self.cB_pagamento.addItem("")
         self.cB_pagamento.addItem("")
         self.cB_pagamento.addItem("")
+        self.set_combo(self.cB_pagamento, font)
         self.horizontalLayout_5.addWidget(self.cB_pagamento)
         self.horizontalLayout_6.addLayout(self.horizontalLayout_5)
         self.gridLayout_2.addLayout(self.horizontalLayout_6, 0, 0, 1, 2)
@@ -304,6 +305,7 @@ class Ui_OrdinazioniRistoranteView(object):
         self.cB_dolci.setFont(font)
         self.cB_dolci.setObjectName("cB_dolci")
         self.cB_dolci.addItem("")
+        self.set_combo(self.cB_dolci, font)
         self.gridLayout_3.addWidget(self.cB_dolci, 10, 1, 1, 1)
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -320,6 +322,7 @@ class Ui_OrdinazioniRistoranteView(object):
         self.cB_frutta.setFont(font)
         self.cB_frutta.setObjectName("cB_frutta")
         self.cB_frutta.addItem("")
+        self.set_combo(self.cB_frutta, font)
         self.gridLayout_3.addWidget(self.cB_frutta, 11, 1, 1, 1)
         self.cB_bevande = QtWidgets.QComboBox(self.centralwidget)
         font = QtGui.QFont()
@@ -327,6 +330,7 @@ class Ui_OrdinazioniRistoranteView(object):
         self.cB_bevande.setFont(font)
         self.cB_bevande.setObjectName("cB_bevande")
         self.cB_bevande.addItem("")
+        self.set_combo(self.cB_bevande, font)
         self.gridLayout_3.addWidget(self.cB_bevande, 12, 1, 1, 1)
         self.cB_antipasti = QtWidgets.QComboBox(self.centralwidget)
         self.cB_antipasti.setMinimumSize(QtCore.QSize(400, 0))
@@ -335,6 +339,7 @@ class Ui_OrdinazioniRistoranteView(object):
         self.cB_antipasti.setFont(font)
         self.cB_antipasti.setObjectName("cB_antipasti")
         self.cB_antipasti.addItem("")
+        self.set_combo(self.cB_antipasti, font)
         self.gridLayout_3.addWidget(self.cB_antipasti, 3, 1, 1, 1)
         self.pB_bevande = QtWidgets.QPushButton(self.centralwidget)
         font = QtGui.QFont()
@@ -423,6 +428,7 @@ class Ui_OrdinazioniRistoranteView(object):
         self.cB_contorni.setFont(font)
         self.cB_contorni.setObjectName("cB_contorni")
         self.cB_contorni.addItem("")
+        self.set_combo(self.cB_contorni, font)
         self.gridLayout_3.addWidget(self.cB_contorni, 9, 1, 1, 1)
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -439,6 +445,7 @@ class Ui_OrdinazioniRistoranteView(object):
         self.cB_secondi.setFont(font)
         self.cB_secondi.setObjectName("cB_secondi")
         self.cB_secondi.addItem("")
+        self.set_combo(self.cB_secondi, font)
         self.gridLayout_3.addWidget(self.cB_secondi, 7, 1, 1, 1)
         self.cB_primi = QtWidgets.QComboBox(self.centralwidget)
         font = QtGui.QFont()
@@ -446,6 +453,7 @@ class Ui_OrdinazioniRistoranteView(object):
         self.cB_primi.setFont(font)
         self.cB_primi.setObjectName("cB_primi")
         self.cB_primi.addItem("")
+        self.set_combo(self.cB_primi, font)
         self.gridLayout_3.addWidget(self.cB_primi, 5, 1, 1, 1)
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -556,6 +564,13 @@ class Ui_OrdinazioniRistoranteView(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def set_combo(self, combo, font):
+        combo.setEditable(True)
+        line_e = combo.lineEdit()
+        line_e.setAlignment(QtCore.Qt.AlignCenter)
+        line_e.setFont(font)
+        line_e.setReadOnly(True)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

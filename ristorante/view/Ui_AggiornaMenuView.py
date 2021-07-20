@@ -129,6 +129,7 @@ class Ui_AggiornaMenuView(object):
         self.cB_categoria.setFont(font)
         self.cB_categoria.setEditable(False)
         self.cB_categoria.setObjectName("cB_categoria")
+        self.set_combo(self.cB_categoria, font)
         self.cB_categoria.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.horizontalLayout_2.addWidget(self.cB_categoria)
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
@@ -155,6 +156,13 @@ class Ui_AggiornaMenuView(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def set_combo(self, combo, font):
+        combo.setEditable(True)
+        line_e = combo.lineEdit()
+        line_e.setAlignment(QtCore.Qt.AlignCenter)
+        line_e.setFont(font)
+        line_e.setReadOnly(True)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

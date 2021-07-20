@@ -1,13 +1,15 @@
 '''
 __author__: Alessandro Rongoni
+__author__:Federico Pretini
 '''
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QCursor
 
 
 class Ui_RistoranteView(object):
     def setupUi(self, mainWindow):
-        mainWindow.setObjectName("MainWindow_Ristorante")
-        mainWindow.resize(1722, 925)
+        mainWindow.setObjectName("mainWindow_ristorante")
+        mainWindow.resize(1730, 925)
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
@@ -16,7 +18,7 @@ class Ui_RistoranteView(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         mainWindow.setWindowIcon(icon)
-        mainWindow.setStyleSheet("#MainWindow_Ristorante{background-image: url(ui/resources/ristorante/50-504378_restaurant-hd-wallpaper-restaurant-hd.jpg);}")
+        mainWindow.setStyleSheet("#mainWindow_ristorante{background-image: url(ui/resources/ristorante/50-504378_restaurant-hd-wallpaper-restaurant-hd.jpg);}")
         self.centralwidget = QtWidgets.QWidget(mainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -45,6 +47,7 @@ class Ui_RistoranteView(object):
         self.de_data.setStyleSheet("background-image: url(ui/resources/ristorante/8-85556_silver-mat-color.jpg);")
         self.de_data.setCalendarPopup(True)
         self.de_data.setObjectName("de_data")
+        self.de_data.setAlignment(QtCore.Qt.AlignCenter)
         self.gridLayout_4.addWidget(self.de_data, 0, 1, 1, 1)
         self.label = QtWidgets.QLabel(self.tab)
         font = QtGui.QFont()
@@ -79,6 +82,7 @@ class Ui_RistoranteView(object):
         self.cb_orario.addItem("")
         self.cb_orario.addItem("")
         self.cb_orario.addItem("")
+        self.set_combo(self.cb_orario, font)
         self.gridLayout_4.addWidget(self.cb_orario, 0, 3, 1, 1)
         self.verticalLayout_3.addLayout(self.gridLayout_4)
         self.line = QtWidgets.QFrame(self.tab)
@@ -86,6 +90,8 @@ class Ui_RistoranteView(object):
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
         self.verticalLayout_3.addWidget(self.line)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.pB_ricerca = QtWidgets.QPushButton(self.tab)
         font = QtGui.QFont()
         font.setPointSize(35)
@@ -96,7 +102,19 @@ class Ui_RistoranteView(object):
         self.pB_ricerca.setStyleSheet("background-image: url(ui/resources/ristorante/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pB_ricerca.setObjectName("pB_ricerca")
-        self.verticalLayout_3.addWidget(self.pB_ricerca)
+        self.horizontalLayout_3.addWidget(self.pB_ricerca)
+        self.pB_aggiorna_menu = QtWidgets.QPushButton(self.tab)
+        font = QtGui.QFont()
+        font.setPointSize(35)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pB_aggiorna_menu.setFont(font)
+        self.pB_aggiorna_menu.setStyleSheet("background-image: url(ui/resources/ristorante/tpg.png);\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
+        self.pB_aggiorna_menu.setObjectName("pB_aggiorna_menu")
+        self.pB_aggiorna_menu.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
+        self.horizontalLayout_3.addWidget(self.pB_aggiorna_menu)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_3)
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setContentsMargins(10, 30, 10, 50)
         self.gridLayout_2.setHorizontalSpacing(20)
@@ -185,7 +203,8 @@ class Ui_RistoranteView(object):
 "    \n"
 "}\n"
 "\n"
-"#Tavolo_4:pressed{ border-style: inset;\n border:4px solid grey;}")
+"#Tavolo_4:pressed{ border-style: inset;\n"
+"                                border:4px solid grey;}")
         self.Tavolo_4.setIcon(icon1)
         self.Tavolo_4.setIconSize(QtCore.QSize(110, 120))
         self.Tavolo_4.setObjectName("Tavolo_4")
@@ -615,6 +634,7 @@ class Ui_RistoranteView(object):
         self.cb_tavolo.addItem("")
         self.cb_tavolo.addItem("")
         self.cb_tavolo.addItem("")
+        self.set_combo(self.cb_tavolo, font)
         self.horizontalLayout.addWidget(self.cb_tavolo)
         self.line_3 = QtWidgets.QFrame(self.mostra)
         self.line_3.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -637,6 +657,7 @@ class Ui_RistoranteView(object):
         font.setBold(False)
         font.setWeight(50)
         self.de_data_2.setFont(font)
+        self.de_data_2.setAlignment(QtCore.Qt.AlignCenter)
         self.de_data_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.de_data_2.setStyleSheet("background-image: url(ui/resources/ristorante/8-85556_silver-mat-color.jpg);")
         self.de_data_2.setCalendarPopup(True)
@@ -671,6 +692,8 @@ class Ui_RistoranteView(object):
         self.cb_orario_2.addItem("")
         self.cb_orario_2.addItem("")
         self.cb_orario_2.addItem("")
+        self.cb_orario_2.addItem("")
+        self.set_combo(self.cb_orario_2, font)
         self.horizontalLayout.addWidget(self.cb_orario_2)
         self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
         self.line_2 = QtWidgets.QFrame(self.mostra)
@@ -688,7 +711,7 @@ class Ui_RistoranteView(object):
 "background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 255, 255, 225), stop:1 rgba(255, 255, 255, 227));")
         self.tabella_prenotazioni.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.tabella_prenotazioni.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tabella_prenotazioni.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
+        self.tabella_prenotazioni.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         self.tabella_prenotazioni.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tabella_prenotazioni.setObjectName("tabella_prenotazioni")
         self.tabella_prenotazioni.setColumnCount(6)
@@ -750,8 +773,7 @@ class Ui_RistoranteView(object):
         self.pB_chiusura_conto.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pB_chiusura_conto.setStyleSheet("background-image: url(ui/resources/ristorante/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
-        self.pB_chiusura_conto.setObjectName("pB_chiusura_conto")
-        self.pB_chiusura_conto.setEnabled(False)
+        self.pB_chiusura_conto.setObjectName("pB_checkout")
         self.horizontalLayout_2.addWidget(self.pB_chiusura_conto)
         self.pB_elimina = QtWidgets.QPushButton(self.mostra)
         self.pB_elimina.setMinimumSize(QtCore.QSize(0, 50))
@@ -764,7 +786,6 @@ class Ui_RistoranteView(object):
         self.pB_elimina.setStyleSheet("background-image: url(ui/resources/ristorante/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pB_elimina.setObjectName("pB_elimina")
-        self.pB_elimina.setEnabled(False)
         self.horizontalLayout_2.addWidget(self.pB_elimina)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.gridLayout.addLayout(self.verticalLayout, 2, 0, 1, 1)
@@ -777,9 +798,17 @@ class Ui_RistoranteView(object):
                           self.Tavolo_16]
         for button in self.pB_Tavoli:
                 button.setEnabled(False)
+
         self.retranslateUi(mainWindow)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(mainWindow)
+
+    def set_combo(self, combo, font):
+        combo.setEditable(True)
+        line_e = combo.lineEdit()
+        line_e.setAlignment(QtCore.Qt.AlignCenter)
+        line_e.setFont(font)
+        line_e.setReadOnly(True)
 
     def retranslateUi(self, mainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -848,5 +877,5 @@ class Ui_RistoranteView(object):
         item.setText(_translate("mainWindow", "Fascia Oraria"))
         self.pB_chiusura_conto.setText(_translate("mainWindow", "Chiusura Conto"))
         self.pB_elimina.setText(_translate("mainWindow", "Elimina"))
+        self.pB_aggiorna_menu.setText(_translate("mainWindow", "Aggiorna Menù"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.mostra), _translate("mainWindow", "Prenotazioni"))
-

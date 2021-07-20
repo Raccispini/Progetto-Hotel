@@ -5,7 +5,7 @@ from datetime import datetime
 from datetime import timedelta
 
 from ristorante.view.AggiornaMenuView import AggiornaMenuView
-from ristorante.view.Ui_Ristorante import Ui_RistoranteView
+from ristorante.view.Ui_RistoranteView import Ui_RistoranteView
 from ristorante.controller.RistoranteController import RistoranteController
 from ristorante.view.PrenotaRistoranteView import PrenotaRistoranteView
 from ristorante.view.OrdinazioniRistoranteView import OrdinazioniRistoranteView

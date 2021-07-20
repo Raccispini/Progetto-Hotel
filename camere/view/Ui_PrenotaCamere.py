@@ -1,4 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QCursor
+
 '''
 __author__: Gregorio Vecchiola
 '''
@@ -90,6 +92,7 @@ class Ui_PrenotaCamere(object):
         self.pb_aggiungi_cliente = QtWidgets.QPushButton(self.centralwidget)
         self.pb_aggiungi_cliente.setMinimumSize(QtCore.QSize(20, 0))
         self.pb_aggiungi_cliente.setObjectName("pb_aggiungi_cliente")
+        self.pb_aggiungi_cliente.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.horizontalLayout_6.addWidget(self.pb_aggiungi_cliente)
         self.verticalLayout.addLayout(self.horizontalLayout_6)
         self.label_note = QtWidgets.QLabel(self.centralwidget)
@@ -112,9 +115,11 @@ class Ui_PrenotaCamere(object):
         self.horizontalLayout_2.addItem(spacerItem1)
         self.pB_prenota = QtWidgets.QPushButton(self.centralwidget)
         self.pB_prenota.setObjectName("pB_prenota")
+        self.pB_prenota.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.horizontalLayout_2.addWidget(self.pB_prenota)
         self.pB_annulla = QtWidgets.QPushButton(self.centralwidget)
         self.pB_annulla.setObjectName("pB_annulla")
+        self.pB_annulla.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.horizontalLayout_2.addWidget(self.pB_annulla)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)

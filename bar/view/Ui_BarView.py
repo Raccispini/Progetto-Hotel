@@ -11,7 +11,7 @@ class Ui_BarView(object):
         MainWindow.setObjectName("MainWindow_Bar")
         MainWindow.resize(1231, 970)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui/resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("#MainWindow_Bar{background-image: url(:/resource_bar/bar.jpg) 0 0 0 0 stretch stretch;}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
