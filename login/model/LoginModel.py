@@ -8,7 +8,6 @@ from dipendente.controller.DipendenteController import DipendenteController
 class LoginModel:
 
     def __init__(self):
-        super(LoginModel, self).__init__()
         self.dipendente_controller = DipendenteController()
         self.db = sqlite3.connect("database.db")
 
@@ -17,10 +16,9 @@ class LoginModel:
         if self.db.execute(query).fetchone() == None:
             return False
         else:
-            self.dipendente = self.dipendente_controller.get_dipendente()
-            self.dipendente.set_info(self.db.execute(query).fetchone())
+            self.dipendente_controller.set_info(self.db.execute(query).fetchone())
             return True
 
 
     def get_utente(self):
-        return self.dipendente
+        return self.dipendente_controller

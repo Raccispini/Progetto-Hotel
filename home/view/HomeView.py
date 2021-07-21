@@ -69,7 +69,7 @@ class HomeView(QMainWindow, Ui_HomeView):
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
 
-    def uscita_clicked(self):
+    def open_logout(self):
         self.logout_window = LogoutView(self.login_window, self)
         self.logout_window.show()
 
@@ -82,7 +82,7 @@ class HomeView(QMainWindow, Ui_HomeView):
         self.pB_Ristorante.clicked.connect(lambda: self.open_ristorante())
         self.pB_Bar.clicked.connect(lambda: self.open_bar())
         self.pB_Meteo.clicked.connect(lambda: self.open_meteo())
-        self.pB_Uscita.clicked.connect(lambda: self.uscita_clicked())
+        self.pB_Uscita.clicked.connect(lambda: self.open_logout())
 
 
 

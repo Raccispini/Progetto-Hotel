@@ -14,6 +14,7 @@ class RicercaAnagraficheView(QMainWindow, Ui_RicercaAnagraficheView):
         self.callback = callback
         self.table = table
         self.buttons = buttons
+        self.lineE_parola.textChanged.connect(lambda: self.on_text_changed())
         if tipo_ricerca == "Cliente":
             self.ricerca_cliente()
         elif tipo_ricerca == "Dipendente":
@@ -78,3 +79,7 @@ class RicercaAnagraficheView(QMainWindow, Ui_RicercaAnagraficheView):
         self.close()
         for button in self.buttons:
             button.setEnabled(True)
+
+        # Attiva il pulsante quando viene inserito qualcosa nelle lineEdit o comboBox
+    def on_text_changed(self):
+        self.pB_ricerca.setEnabled(bool(self.lineE_parola.text()) and bool(self.cB_criterio_ricerca.currentText()))

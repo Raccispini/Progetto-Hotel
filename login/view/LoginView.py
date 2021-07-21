@@ -15,7 +15,7 @@ class LoginView(QMainWindow, Ui_LoginView):
 
     def accesso(self):
         if self.controller.is_utente(self.LE_Username.text(), self.LE_Password.text()):
-            main_window = HomeView(self.controller.get_utente(),self)
+            main_window = HomeView(self.controller.get_utente().get_dipendente(),self)
             main_window.showMaximized()
             self.close()
         else:
