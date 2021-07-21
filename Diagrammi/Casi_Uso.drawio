@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-21T14:36:58.700Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="CX6-YpTYIufoem7Q12s3" version="14.9.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-21T15:16:56.693Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="Ztet9UE3hLlyU1ZDHGIP" version="14.9.0" type="github">
   <diagram id="NqPz3V7me-MqtQ7d7VtO" name="Page-1">
     <mxGraphModel dx="1007" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -93,7 +93,7 @@
             <mxPoint x="280" y="440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5VnEzYSrw6fhQEY2myun-27" value="Visualizza Camera" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="5VnEzYSrw6fhQEY2myun-27" value="Cerca Camera" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="280" y="420" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="5VnEzYSrw6fhQEY2myun-29" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=none;html=1;endArrow=open;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;" edge="1" parent="1">
