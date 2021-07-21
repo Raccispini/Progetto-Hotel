@@ -15,8 +15,9 @@ from ombrellone.controller.OmbrelloneController import OmbrelloneController
 
 
 class OmbrelloneView(QMainWindow, Ui_Ombrellone):
-    def __init__(self, parent = None):
+    def __init__(self, log,parent = None):
         super(OmbrelloneView, self).__init__(parent)
+        self.log = log
         self.controller = OmbrelloneController()
         self.setupUi(self)
         self.connect_all()
@@ -62,13 +63,13 @@ class OmbrelloneView(QMainWindow, Ui_Ombrellone):
 
     def prenota_ombrellone(self):
         nome_ombrellone = self.sender().objectName() #Restituisce il nome del pulsante che fa partire l'azione
-        self.prenota_window = PrenotaOmbrelloneView( self.controller, self.ricerca_ombrellone_disponibile, nome_ombrellone,
+        self.prenota_window = PrenotaOmbrelloneView( self.log,self.controller, self.ricerca_ombrellone_disponibile, nome_ombrellone,
                                                      self.dE_data.date().toString("dd/MM/yyyy") , self.cB_tipo.currentText(),
                                                      self.cB_orario.currentText(), self)
         self.prenota_window.show()
 
     def open_lista_prenotazioni(self):
-        self.prenotazioni_window = ListaPrenotazioniView(self.controller, self)
+        self.prenotazioni_window = ListaPrenotazioniView(self.controller,self.log, self)
         self.prenotazioni_window.show()
 
 

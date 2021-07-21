@@ -15,9 +15,10 @@ from fornitore.controller.FornitoreController import FornitoreController
 
 
 class AnagraficheView(QMainWindow, Ui_AnagraficheView):
-    def __init__(self,dipendente, parent=None):
+    def __init__(self,dipendente, log,parent=None):
         super(AnagraficheView, self).__init__(parent)
         self.setupUi(self)
+        self.log = log
         self.controller = AnagraficheController()
         self.dipendente = dipendente
         self.controller_cliente = ClienteController()
@@ -85,6 +86,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             QMessageBox.information(self, 'Informazione', 'Il cliente è stato registrato con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.checkpB_to_enable()
             self.annulla_cliente()
+            self.log.print_log_add("Aggiunto cliente")
         else:
             QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
 
@@ -140,6 +142,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
                 QMessageBox.information(self, 'Informazione', 'I clienti sono stati eliminati con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.pB_elimina_Cliente.setEnabled(False)
             self.checkpB_to_enable()
+            self.log.print_log_delete("eliminato cliente")
 
 
     def salva_cliente(self):
@@ -151,6 +154,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             self.pB_salva_Cliente.setEnabled(False)
             QMessageBox.information(self, 'Informazione', 'Il clienti è stato modificato con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.annulla_cliente()
+            self.log.print_log_delete("cliente modificato")
         else:
             QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
 
@@ -220,6 +224,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             QMessageBox.information(self, 'Informazione', 'Il dipendente è stato registrato con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.checkpB_to_enable()
             self.annulla_dipendente()
+            self.log.print_log_add("aggiunta dipendente")
         else:
             QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
 
@@ -260,6 +265,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
                 QMessageBox.information(self, 'Informazione', 'I dipendenti sono stati eliminati con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.pB_elimina_Dipendente.setEnabled(False)
             self.checkpB_to_enable()
+            self.log.print_log_delete("elimina dipendente")
 
     def ricerca_dipendente(self):
         buttons_ricerca = [self.pB_ricerca_Cliente, self.pB_ricerca_Dipendente, self.pB_ricerca_Fornitore]
@@ -276,6 +282,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             self.pB_salva_Dipendente.setEnabled(False)
             QMessageBox.information(self, 'Informazione', 'Il dipendente è stato modificato con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.annulla_dipendente()
+            self.log.print_log_delete("modifica dipendente")
         else:
             QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
 
@@ -321,6 +328,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             QMessageBox.information(self, 'Informazione', 'Il fornitore è stato registrato con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.checkpB_to_enable()
             self.annulla_fornitore()
+            self.log.print_log_add("aggiunto fornitore")
         else:
             QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
 
@@ -363,6 +371,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
                 QMessageBox.information(self, 'Informazione', 'I fornitori sono stati eliminati con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.pB_elimina_Fornitore.setEnabled(False)
             self.checkpB_to_enable()
+            self.log.print_log_delete("eliminazione fornitore")
 
     def ricerca_fornitore(self):
         buttons_ricerca = [self.pB_ricerca_Cliente, self.pB_ricerca_Dipendente, self.pB_ricerca_Fornitore]
@@ -379,6 +388,7 @@ class AnagraficheView(QMainWindow, Ui_AnagraficheView):
             self.pB_salva_Fornitore.setEnabled(False)
             QMessageBox.information(self, 'Informazione', 'Il fornitore è stato modificato con successo', QMessageBox.Ok, QMessageBox.Ok)
             self.annulla_fornitore()
+            self.log.print_log_delete("modifica fornitore")
         else:
             QMessageBox.critical(self, 'Errore', 'Per favore, inserisci tutte le informazioni richieste', QMessageBox.Ok, QMessageBox.Ok)
 

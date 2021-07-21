@@ -8,9 +8,10 @@ from ristorante.view.Ui_PrenotazioneRistoranteView import Ui_PrenotaRistoranteVi
 
 
 class PrenotaRistoranteView(QMainWindow, Ui_PrenotaRistoranteView):
-    def __init__(self, controller,callback_1,callback_2, nome_tavolo, data, ora, parent = None):
+    def __init__(self, log,controller,callback_1,callback_2, nome_tavolo, data, ora, parent = None):
         super(PrenotaRistoranteView, self).__init__(parent)
         self.setupUi(self)
+        self.log = log
         self.nome_tavolo = nome_tavolo
         self.data = data
         self.ora = ora
@@ -42,6 +43,7 @@ class PrenotaRistoranteView(QMainWindow, Ui_PrenotaRistoranteView):
             QMessageBox.critical(self, "Errore", "Inserisci prima correttamente tutti i dati necessari")
         else:
             self.controller.prenota_tavolo(info_prenotazione)
+            self.log.print_log_add("tavolo ristorante prenotato")
             self.callback_1()
             self.callback_2(self.controller.get_lista_prenotazioni())
             self.close()

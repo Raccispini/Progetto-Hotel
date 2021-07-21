@@ -10,9 +10,10 @@ from ombrellone.view.Ui_PrenotazioniOmbrellone import Ui_PrenotazioniOmbrellone
 
 
 class ListaPrenotazioniView(QMainWindow, Ui_PrenotazioniOmbrellone):
-    def __init__(self,controller, parent = None):
+    def __init__(self,controller, log,parent = None):
         super(ListaPrenotazioniView, self).__init__(parent)
         self.setupUi(self)
+        self.log = log
         self.controller = controller
         self.camere_controller = CamereController()
         self.lista_prenotazioni = []
@@ -62,6 +63,7 @@ class ListaPrenotazioniView(QMainWindow, Ui_PrenotazioniOmbrellone):
             contatore += 1
         self.controller.elimina_prenotazione(lista_numeri)
         self.update_table()
+        self.log.print_log_add("eliminata prenotazione ombrelloni")
 
 
 

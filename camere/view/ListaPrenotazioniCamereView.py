@@ -4,8 +4,9 @@ from camere.controller.CamereController import CamereController
 from PyQt5 import QtWidgets
 from datetime import date
 class ListaPrenotazioniCamereView(QMainWindow, Ui_ListaPrenotazioniCamere):
-    def __init__(self, parent = None):
+    def __init__(self, log,parent = None):
         super(ListaPrenotazioniCamereView, self).__init__(parent)
+        self.log = log
         self.setupUi(self)
         self.controller = CamereController()
         self.update_table()
@@ -44,9 +45,10 @@ class ListaPrenotazioniCamereView(QMainWindow, Ui_ListaPrenotazioniCamere):
         item = self.tW_lista_prenotazioni_camere.selectedItems()
         self.controller.elimina_prenotazione(item[0].text())
         self.update_table()
+        self.log.print_log_delete("eliminata prenotazione camere")
     def checkout(self):
         item = self.tW_lista_prenotazioni_camere.selectedItems()
         self.controller.check_out(item[0].text(),date.today().strftime("%d/%m/%Y"))
         self.update_table()
-
+        self.log.print_log_delete("effettuato il checkout camera")
 
