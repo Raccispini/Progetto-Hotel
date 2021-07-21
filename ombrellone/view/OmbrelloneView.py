@@ -15,8 +15,8 @@ from ombrellone.controller.OmbrelloneController import OmbrelloneController
 
 
 class OmbrelloneView(QMainWindow, Ui_Ombrellone):
-    def __init__(self, parent = None):
-        super(OmbrelloneView, self).__init__(parent)
+    def __init__(self):
+        super().__init__()
         self.controller = OmbrelloneController()
         self.setupUi(self)
         self.connect_all()

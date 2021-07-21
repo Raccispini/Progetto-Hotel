@@ -9,7 +9,7 @@ from bar.view.Ui_AggiornaListinoView import Ui_AggiornaListinoView
 
 class AggiornaListinoView(QMainWindow, Ui_AggiornaListinoView):
     def __init__(self,  controller, callback, parent=None):
-        super(AggiornaListinoView, self).__init__(parent)
+        super().__init__(parent)
         self.setupUi(self)
         self.controller = controller
         self.callback = callback

@@ -6,8 +6,8 @@ from logout.view.Ui_LogoutView import Ui_LogoutView
 
 
 class LogoutView(QMainWindow, Ui_LogoutView):
-    def __init__(self, login_window, home_window, parent=None):
-        super(LogoutView, self).__init__(parent)
+    def __init__(self, login_window, home_window):
+        super().__init__()
         self.setupUi(self)
         self.login_window = login_window
         self.home_window = home_window

@@ -8,7 +8,7 @@ from anagrafiche.view.Ui_RicercaAnagraficheView import Ui_RicercaAnagraficheView
 
 class RicercaAnagraficheView(QMainWindow, Ui_RicercaAnagraficheView):
     def __init__(self,controller, callback, table, buttons, tipo_ricerca, parent=None):
-        super(RicercaAnagraficheView, self).__init__(parent)
+        super().__init__(parent)
         self.setupUi(self)
         self.controller = controller
         self.callback = callback

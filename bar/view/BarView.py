@@ -10,8 +10,8 @@ from bar.view.Ui_BarView import Ui_BarView
 
 
 class BarView(QMainWindow, Ui_BarView):
-    def __init__(self,dipendente, parent=None):
-        super(BarView, self).__init__(parent)
+    def __init__(self, dipendente):
+        super().__init__()
         self.setupUi(self)
         self.controller = BarController()
         self.dipendente = dipendente

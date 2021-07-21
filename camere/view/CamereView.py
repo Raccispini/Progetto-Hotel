@@ -10,8 +10,8 @@ from camere.controller.CamereController import CamereController
 
 
 class CamereView(QMainWindow, Ui_CamereView):
-	def __init__(self, dipendente, parent=None):
-		super(CamereView, self).__init__(parent)
+	def __init__(self, dipendente):
+		super().__init__()
 		self.dipendente = dipendente
 		self.setupUi(self)
 		self.controller = CamereController()

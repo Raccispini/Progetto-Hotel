@@ -9,7 +9,7 @@ from PyQt5 import QtGui, QtCore
 
 class MeteoView(QDialog):
     def __init__(self):
-        super(MeteoView, self).__init__()
+        super().__init__()
 
         self.setObjectName("window_meteo")
         self.setStyleSheet("#window_meteo{border-image: url(ui/resources/meteo/meteo.jpg) 0 0 0 0 stretch stretch}")

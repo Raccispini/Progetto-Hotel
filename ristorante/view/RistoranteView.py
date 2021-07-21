@@ -15,8 +15,8 @@ from PyQt5 import QtCore, QtGui
 
 
 class RistoranteView(QMainWindow, Ui_RistoranteView):
-    def __init__(self, dipendente, parent = None):
-        super(RistoranteView, self).__init__(parent)
+    def __init__(self, dipendente):
+        super().__init__()
         self.setupUi(self)
         self.controller = RistoranteController()
         self.update_table(self.controller.get_lista_prenotazioni())
@@ -41,7 +41,7 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
 
     def open_chiusura_conto(self):
         item = self.tabella_prenotazioni.selectedItems()
-        self.chiusura_conto_window = OrdinazioniRistoranteView(self.controller, item)
+        self.chiusura_conto_window = OrdinazioniRistoranteView(self.controller, item, self)
         self.chiusura_conto_window.showMaximized()
 
     def table_click(self):
@@ -135,7 +135,7 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
         nome_tavolo = self.sender().objectName() #Restituisce il nome del pulsante che fa partire l'azione
         data = self.de_data.date()
         ora = self.cb_orario.currentText().split("-")
-        self.prenota_window = PrenotaRistoranteView(self.controller, self.ricerca_tavolo_disponibile, self.update_table, nome_tavolo, data, ora)
+        self.prenota_window = PrenotaRistoranteView(self.controller, self.ricerca_tavolo_disponibile, self.update_table, nome_tavolo, data, ora, self)
         self.prenota_window.show()
 
     def filtraggio_tavoli(self):
@@ -157,7 +157,7 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
 
     def aggiorna_menu(self):
         if self.dipendente.get_permessi() == "Responsabile":
-            self.aggiorna_menu_window = AggiornaMenuView(self.controller)
+            self.aggiorna_menu_window = AggiornaMenuView(self.controller, self)
             self.aggiorna_menu_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Spiacente, non godi dei permessi necessari per poter accedere.\nSolo i responsabili possono accedere a quest'area")

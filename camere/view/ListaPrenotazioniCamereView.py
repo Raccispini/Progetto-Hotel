@@ -5,7 +5,7 @@ from PyQt5 import QtWidgets
 from datetime import date
 class ListaPrenotazioniCamereView(QMainWindow, Ui_ListaPrenotazioniCamere):
     def __init__(self, parent = None):
-        super(ListaPrenotazioniCamereView, self).__init__(parent)
+        super().__init__(parent)
         self.setupUi(self)
         self.controller = CamereController()
         self.update_table()

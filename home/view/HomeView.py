@@ -15,8 +15,8 @@ from ristorante.view.RistoranteView import RistoranteView
 
 
 class HomeView(QMainWindow, Ui_HomeView):
-    def __init__(self, dipendente, login_window, parent=None):
-        super().__init__(parent)
+    def __init__(self, dipendente, login_window):
+        super().__init__()
         self.setupUi(self)
         self.dipendente = dipendente
         self.login_window = login_window
@@ -32,7 +32,7 @@ class HomeView(QMainWindow, Ui_HomeView):
     def open_camere(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Camere":
             self.camere_window = CamereView(self.dipendente)
-            self.camere_window.show()
+            self.camere_window.showMaximized()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
@@ -46,7 +46,7 @@ class HomeView(QMainWindow, Ui_HomeView):
     def open_magazzino(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Magazzino":
            self.magazzino_window = MagazzinoView()
-           self.magazzino_window.show()
+           self.magazzino_window.showMaximized()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
@@ -57,14 +57,14 @@ class HomeView(QMainWindow, Ui_HomeView):
     def open_ombrelloni(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Ombrelloni":
            self.ombrelloni_window = OmbrelloneView()
-           self.ombrelloni_window.show()
+           self.ombrelloni_window.showMaximized()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_ristorante(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Ristorante":
            self.ristorante_window = RistoranteView(self.dipendente)
-           self.ristorante_window.show()
+           self.ristorante_window.showMaximized()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 

@@ -7,8 +7,8 @@ from login.controller.LoginController import LoginController
 from login.view.Ui_LoginView import Ui_LoginView
 
 class LoginView(QMainWindow, Ui_LoginView):
-    def __init__(self, parent=None):
-        super(LoginView, self).__init__(parent)
+    def __init__(self):
+        super().__init__()
         self.setupUi(self)
         self.controller = LoginController()
         self.pushButton_Login.clicked.connect(lambda: self.accesso())
