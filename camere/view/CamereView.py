@@ -16,7 +16,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 		self.setupUi(self)
 		self.controller = CamereController()
 		self.connect_all()
-		self.totale=0
+		self.totale=0.0
 		self.update_tipo()
 		self.update_table()
 		self.onTableClick()
@@ -31,7 +31,6 @@ class CamereView(QMainWindow, Ui_CamereView):
 		# date
 		self.date_al.dateChanged.connect(lambda: self.update_table())
 		self.date_dal.dateChanged.connect(lambda: self.update_table())
-		self.date_dal.dateChanged.connect(lambda: self.set_date_al())
 		# checkbox
 		self.cb_ariaCondizionata.clicked.connect(lambda: self.update_table())
 		self.cb_animaledomestico.clicked.connect(lambda: self.update_table())
@@ -43,11 +42,10 @@ class CamereView(QMainWindow, Ui_CamereView):
 		self.cb_minibar.clicked.connect(lambda: self.update_table())
 		self.cb_cassaforte.clicked.connect(lambda: self.update_table())
 
-		self.checkBox.clicked.connect(lambda: self.attiva())
+		self.checkBox.clicked.connect(lambda: self.disattiva_date())
 		# bottoni laterali
-		# self.pb_ricerca.clicked.connect(lambda: self.update_table())
 		self.pb_azzera.clicked.connect(lambda: self.azzera())
-		self.pb_prenota.clicked.connect(lambda: self.prenota())
+		self.pb_prenota.clicked.connect(lambda: self.show_prenota())
 		self.pb_prenotazioni.clicked.connect(lambda: self.prenotazioni())
 		self.pb_preventivo.clicked.connect(lambda: self.preventivo())
 
@@ -57,10 +55,6 @@ class CamereView(QMainWindow, Ui_CamereView):
 		self.date_al.setDate(QDate.currentDate())
 
 
-
-
-	def set_date_al(self):
-		self.date_al.setDate(self.date_dal.date())
 
 	def check_date_dal(self):
 		d1 = self.date_dal.date().getDate()
@@ -83,14 +77,14 @@ class CamereView(QMainWindow, Ui_CamereView):
 			return True
 
 
-	def prenota(self):
+	def show_prenota(self):
 		self.update_totale()
 		if self.check_date_dal() and self.check_date_al():
-			prenotacamere = PrenotaCamereView(self.totale, self.dipendente, self.update_table, self.getSelectedRoom(),self.QdateToDate(self.date_dal.date().getDate()),self.QdateToDate(self.date_al.date().getDate()), self)
+			prenotacamere = PrenotaCamereView(self.totale, self.dipendente, self.update_table, self.getSelectedRoom(),self.date_dal.date().toString("dd/MM/yyyy"),self.date_al.date().toString("dd/MM/yyyy"), self)
 			prenotacamere.show()
 
 
-	def attiva(self):
+	def disattiva_date(self):
 		self.update_table()
 		if self.checkBox.isChecked():
 			self.date_al.setEnabled(False)
@@ -104,9 +98,6 @@ class CamereView(QMainWindow, Ui_CamereView):
 		return int(items[1].text())
 
 	def onTableClick(self):
-
-		#prenotate = self.controller.get_camere_prenotate(self.date_dal.date().toString(), self.date_al.date().toString())
-		#selected = self.tabellaCamere.selectedItems()
 
 		if len(self.tabellaCamere.selectedItems()) != 0 and not self.checkBox.isChecked():
 			self.pb_prenota.setEnabled(True)
@@ -165,10 +156,8 @@ class CamereView(QMainWindow, Ui_CamereView):
 		options["letti_singoli"] = self.spin_singoli.value()
 		options["letti_matrimoniali"] = self.spin_matrim.value()
 		# date
-		options["check_in"] = self.QdateToDate(
-			self.date_dal.date().getDate()) if not self.checkBox.isChecked() else None
-		options["check_out"] = self.QdateToDate(
-			self.date_al.date().getDate()) if not self.checkBox.isChecked() else None
+		options["check_in"] = self.date_dal.date().toString("dd/MM/yyyy") if not self.checkBox.isChecked() else None
+		options["check_out"] = self.date_al.date().toString("dd/MM/yyyy") if not self.checkBox.isChecked() else None
 		# allestimento
 		options["allestimento"] = self.combo_tipo.currentText()
 		# checkbox
@@ -183,12 +172,10 @@ class CamereView(QMainWindow, Ui_CamereView):
 		options["cassaforte"] = True if self.cb_cassaforte.isChecked() else False
 		return options
 
-	def QdateToDate(self, qdate):
-		return str(qdate[2]) + "/" + str(qdate[1]) + "/" + str(qdate[0])
 
 	def update_totale(self):
-		d1 = self.QdateToDate(self.date_dal.date().getDate())
-		d2 = self.QdateToDate(self.date_al.date().getDate())
+		d1 = self.date_dal.date().toString("dd/MM/yyyy")
+		d2 = self.date_al.date().toString("dd/MM/yyyy")
 		item = self.tabellaCamere.selectedItems()
 		self.totale = float(item[len(item)-1].text()) * self.dateOffset(d1, d2)
 

@@ -3,12 +3,9 @@ from datetime import date
 
 class ModelCamere():
 	def __init__(self):
-		pass
-	#options è un dict che contiene i vecchi parametri di query
+		self.db = sqlite3.connect("database.db")
 
-	#@staticmethod
 	def getCamere(self, options={}):
-		con = sqlite3.connect("database.db")
 		query = "SELECT * FROM Camere "
 		flag = False
 		if len(options) != 0:
@@ -66,59 +63,49 @@ class ModelCamere():
 				else:
 					query = query[:-4]
 		query += " ORDER BY Camere.numeroCamera;"
-		return con.execute(query).fetchall()
-	#@staticmethod
+		return self.db.execute(query).fetchall()
+
 	def get_tipo(self):
-		con = sqlite3.connect("database.db")
 		query = "SELECT Camere.allestimento FROM Camere Group by Camere.allestimento "
-		tipi = con.execute(query).fetchall()
+		tipi = self.db.execute(query).fetchall()
 		allestimenti = ["Nessuno"]
 
 		for i in range(len(tipi)):
 			allestimenti.append(tipi[i][0])
 		return allestimenti
 
-	def get_lista_camere_prenotate(self):
-		db = sqlite3.connect("database.db")
-		lista_prenotate = db.execute("SELECT Prenotazioni_camere.id_camere, Clienti.NOME, Clienti.COGNOME FROM Prenotazioni_camere, Clienti WHERE Prenotazioni_camere.cliente_id = Clienti.ID").fetchall()
+	def get_cliente_prenotazione(self):
+		lista_prenotate = self.db.execute("SELECT Prenotazioni_camere.id_camere, Clienti.NOME, Clienti.COGNOME FROM Prenotazioni_camere, Clienti WHERE Prenotazioni_camere.cliente_id = Clienti.ID").fetchall()
 		return lista_prenotate
 
-	#@staticmethod
-	def get_camere_prenotate(self,data_inizio,data_fine):
-		db = sqlite3.connect("database.db")
+
+	def get_camere_prenotate_by_date(self, data_inizio, data_fine):
 		query = "SELECT Camere.numeroCamera FROM Camere,Prenotazioni_camere WHERE Camere.numeroCamera IN (SELECT Prenotazioni_camere.id_camere from Prenotazioni_camere WHERE NOT(Prenotazioni_camere.check_out<'"+data_inizio+"' OR Prenotazioni_camere.check_in>'"+data_fine+"'))"
-		return db.execute(query).fetchall()
+		return self.db.execute(query).fetchall()
 
-	#@staticmethod
+
 	def getClienti(self):
-		con = sqlite3.connect("database.db")
 		query = "SELECT * FROM Clienti Order By Clienti.ID"
-		return con.execute(query).fetchall()
+		return self.db.execute(query).fetchall()
 
-	#@staticmethod
+
 	def prenota(self,check_in, check_out, data, camera, cliente_id, costo, dipendente, note=""):
-		con = sqlite3.connect("database.db")
-		query = "INSERT INTO Prenotazioni_camere(id_camere,check_in,check_out,data_prenotazione,cliente_id,note,costo,dipendente) VALUES (" + str(camera) + ",'" + str(check_in) + "','" + str(check_out) + "','" + str(data) + "'," + str(cliente_id) + ",'" + note + "'," + str(costo) + "," + str(dipendente) + ");"
-		con.execute(query)
-		con.commit()
+		query = "INSERT INTO Prenotazioni_camere(id_camere,check_in,check_out,data_prenotazione,cliente_id,note,costo,dipendente) VALUES (" + str(camera) + ",'" + check_in + "','" + check_out + "','" + data + "'," + cliente_id + ",'" + note + "'," + str(costo) + "," + str(dipendente) + ");"
+		self.db.execute(query)
+		self.db.commit()
 
-	#@staticmethod
+
 	def check_out(self,id, data):
-		db = sqlite3.connect("database.db")
-		query = "UPDATE Prenotazioni_camere SET check_out = '" + str(data) + "' WHERE id = " + str(id) + ";"
-		db.execute(query)
-		db.commit()
+		query = "UPDATE Prenotazioni_camere SET check_out = '" + data + "' WHERE id = " + id + ";"
+		self.db.execute(query)
+		self.db.commit()
 
-	#@staticmethod
 	def elimina_prenotazione(self,id):
-		db = sqlite3.connect("database.db")
 		query = "DELETE FROM Prenotazioni_camere  WHERE Prenotazioni_camere.id = " + id + ";"
-		db.execute(query)
-		db.commit()
+		self.db.execute(query)
+		self.db.commit()
 
-	#@staticmethod
-	def get_prenotazioni(self):
-		db = sqlite3.connect("database.db")
+	def get_info_prenotazione_da_oggi(self):
 		today = date.today().strftime("%d/%m/%Y")
 		query = "SELECT Prenotazioni_camere.id,Clienti.NOME,Clienti.COGNOME,Prenotazioni_camere.id_camere,Prenotazioni_camere.check_in,Prenotazioni_camere.check_out,Prenotazioni_camere.data_prenotazione,Prenotazioni_camere.costo, Prenotazioni_camere.dipendente FROM Prenotazioni_camere,Clienti WHERE Clienti.ID = Prenotazioni_camere.cliente_id AND Prenotazioni_camere.check_out > '" + today + "';"
-		return db.execute(query).fetchall()
+		return self.db.execute(query).fetchall()

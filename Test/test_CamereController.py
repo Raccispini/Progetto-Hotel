@@ -30,7 +30,7 @@ class TestCamereController(TestCase):
         d1 = "01/01/2000"
         d2 = "10/01/2000"
         controller = CamereController()
-        self.assertEqual(controller.get_camere_prenotate(d1,d2),[])
+        self.assertEqual(controller.get_camere_prenotate_by_date(d1, d2), [])
     def test_prenotazione(self):
         check_in = "01/01/2021"
         check_out = "01/02/2021"

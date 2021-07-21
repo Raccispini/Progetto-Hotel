@@ -1,15 +1,9 @@
-from camere.model.ModelCamere import ModelCamere
+from camere.model.CamereModel import ModelCamere
 "__author__: Nicolò Raccichini"
 
 class CamereController():
     def __init__(self):
         self.model = ModelCamere()
-
-    def get_lista_camere(self):
-        return self.model.get_lista_camere_prenotate()
-
-    def get_prenotazioni(self):
-        return self.model.get_prenotazioni()
 
     def getCamere(self,options={}):
        return self.model.getCamere(options=options)
@@ -17,11 +11,11 @@ class CamereController():
     def get_tipo(self):
        return self.model.get_tipo()
 
-    def get_lista_camere_prenotate(self):
-        return self.model.get_lista_camere_prenotate()
+    def get_cliente_prenotazione(self):
+        return self.model.get_cliente_prenotazione()
 
-    def get_camere_prenotate(self,data_inizio,data_fine):
-        return self.model.get_camere_prenotate(data_inizio,data_fine)
+    def get_camere_prenotate_by_date(self, data_inizio, data_fine):
+        return self.model.get_camere_prenotate_by_date(data_inizio, data_fine)
 
     def getClienti(self):
         return self.model.getClienti()
@@ -35,7 +29,7 @@ class CamereController():
     def elimina_prenotazione(self,id):
         self.model.elimina_prenotazione(id)
 
-    def get_prenotazioni(self):
-        return self.model.get_prenotazioni()
+    def get_info_prenotazioni_da_oggi(self):
+        return self.model.get_info_prenotazione_da_oggi()
 
 
