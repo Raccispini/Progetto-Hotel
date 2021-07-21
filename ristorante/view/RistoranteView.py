@@ -30,7 +30,7 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
         self.pB_ricerca.clicked.connect(lambda: self.ricerca_tavolo_disponibile())
         self.pB_elimina.clicked.connect(lambda: self.elimina_prenotazione())
         self.tabella_prenotazioni.itemSelectionChanged.connect(lambda: self.table_click())
-        self.tabella_prenotazioni.doubleClicked.connect(lambda: self.update_table(self.controller.get_lista_prenotazioni()))
+        self.pB_ripristina.clicked.connect(lambda: self.update_table(self.controller.get_lista_prenotazioni()))
         self.pB_chiusura_conto.clicked.connect(lambda: self.open_chiusura_conto())
         self.de_data_2.dateChanged.connect(lambda: self.filtraggio_tavoli())
         self.cb_tavolo.currentIndexChanged.connect(lambda: self.filtraggio_tavoli())
@@ -161,3 +161,4 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
             self.aggiorna_menu_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Spiacente, non godi dei permessi necessari per poter accedere.\nSolo i responsabili possono accedere a quest'area")
+

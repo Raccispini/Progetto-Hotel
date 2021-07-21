@@ -58,7 +58,6 @@ class Ui_BarView(object):
         self.cB_pasticceria.setCurrentText("")
         self.cB_pasticceria.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.cB_pasticceria.setObjectName("cB_pasticceria")
-        self.cB_pasticceria.addItem("")
         self.cB_pasticceria.setItemText(0, "")
         self.cB_aligment(self.cB_pasticceria)
         self.gridLayout_2.addWidget(self.cB_pasticceria, 29, 0, 1, 1)
