@@ -154,6 +154,7 @@ class BarView(QMainWindow, Ui_BarView):
         if self.cB_metodopagamento.currentText() != "":
             scontrino = GeneratoreScontriniBar()
             scontrino.stampa(self.lista_consumazioni, self.totale, self.cB_metodopagamento.currentText())
+            QMessageBox.information(self,"Informazione", "Nella cartella PDF/ScontriniBar è\nstato aggiunto un nuovo scontrino", QMessageBox.Ok, QMessageBox.Ok)
         else:
             QMessageBox.critical(self, "Errore", "Seleziona prima un metodo di pagamento idoneo", QMessageBox.Ok, QMessageBox.Ok)
 

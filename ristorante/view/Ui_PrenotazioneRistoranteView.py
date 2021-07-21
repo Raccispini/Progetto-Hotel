@@ -38,6 +38,7 @@ class Ui_PrenotaRistoranteView(object):
         self.cB_nominativo.setFont(font)
         self.cB_nominativo.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.cB_nominativo.setObjectName("cB_nominativo")
+        self.set_combo(self.cB_nominativo, font)
         self.horizontalLayout_4.addWidget(self.cB_nominativo)
         self.gridLayout.addLayout(self.horizontalLayout_4, 0, 0, 1, 2)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
@@ -88,6 +89,7 @@ class Ui_PrenotaRistoranteView(object):
         self.cB_camera.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.cB_camera.setObjectName("cB_camera")
         self.cB_camera.setEnabled(False)
+        self.set_combo(self.cB_camera, font)
         self.horizontalLayout_3.addWidget(self.cB_camera)
         self.gridLayout.addLayout(self.horizontalLayout_3, 1, 1, 1, 1)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -115,6 +117,13 @@ class Ui_PrenotaRistoranteView(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def set_combo(self, combo, font):
+        combo.setEditable(True)
+        line_e = combo.lineEdit()
+        line_e.setAlignment(QtCore.Qt.AlignCenter)
+        line_e.setFont(font)
+        line_e.setReadOnly(True)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

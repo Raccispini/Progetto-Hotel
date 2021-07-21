@@ -1,4 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QCursor
+
 '''
 __author__: Gregorio Vecchiola
 '''
@@ -25,9 +27,6 @@ class Ui_PrenotaCamere(object):
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label)
-        self.timeEdit_orario_arrivo = QtWidgets.QTimeEdit(self.centralwidget)
-        self.timeEdit_orario_arrivo.setObjectName("timeEdit_orario_arrivo")
-        self.horizontalLayout.addWidget(self.timeEdit_orario_arrivo)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
         self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
@@ -90,6 +89,7 @@ class Ui_PrenotaCamere(object):
         self.pb_aggiungi_cliente = QtWidgets.QPushButton(self.centralwidget)
         self.pb_aggiungi_cliente.setMinimumSize(QtCore.QSize(20, 0))
         self.pb_aggiungi_cliente.setObjectName("pb_aggiungi_cliente")
+        self.pb_aggiungi_cliente.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.horizontalLayout_6.addWidget(self.pb_aggiungi_cliente)
         self.verticalLayout.addLayout(self.horizontalLayout_6)
         self.label_note = QtWidgets.QLabel(self.centralwidget)
@@ -112,9 +112,11 @@ class Ui_PrenotaCamere(object):
         self.horizontalLayout_2.addItem(spacerItem1)
         self.pB_prenota = QtWidgets.QPushButton(self.centralwidget)
         self.pB_prenota.setObjectName("pB_prenota")
+        self.pB_prenota.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.horizontalLayout_2.addWidget(self.pB_prenota)
         self.pB_annulla = QtWidgets.QPushButton(self.centralwidget)
         self.pB_annulla.setObjectName("pB_annulla")
+        self.pB_annulla.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.horizontalLayout_2.addWidget(self.pB_annulla)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
@@ -127,7 +129,6 @@ class Ui_PrenotaCamere(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Lista clienti"))
         self.label_2.setText(_translate("MainWindow", "Clienti:"))
-        self.label.setText(_translate("MainWindow", "Orario di arrivo"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Id"))
         item = self.tableWidget.horizontalHeaderItem(1)

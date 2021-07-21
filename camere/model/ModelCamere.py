@@ -96,9 +96,9 @@ class ModelCamere():
 		return con.execute(query).fetchall()
 
 	#@staticmethod
-	def prenota(self,check_in, check_out, data, camera, cliente_id, note=""):
+	def prenota(self,check_in, check_out, data, camera, cliente_id, costo, dipendente, note=""):
 		con = sqlite3.connect("database.db")
-		query = "INSERT INTO Prenotazioni_camere(id_camere,check_in,check_out,data_prenotazione,cliente_id,note) VALUES (" + str(camera) + ",'" + str(check_in) + "','" + str(check_out) + "','" + str(data) + "'," + cliente_id + ",'" + note + "');"
+		query = "INSERT INTO Prenotazioni_camere(id_camere,check_in,check_out,data_prenotazione,cliente_id,note,costo,dipendente) VALUES (" + str(camera) + ",'" + str(check_in) + "','" + str(check_out) + "','" + str(data) + "'," + str(cliente_id) + ",'" + note + "'," + str(costo) + "," + str(dipendente) + ");"
 		con.execute(query)
 		con.commit()
 
@@ -120,5 +120,5 @@ class ModelCamere():
 	def get_prenotazioni(self):
 		db = sqlite3.connect("database.db")
 		today = date.today().strftime("%d/%m/%Y")
-		query = "SELECT Prenotazioni_camere.id,Clienti.NOME,Clienti.COGNOME,Prenotazioni_camere.id_camere,Prenotazioni_camere.check_in,Prenotazioni_camere.check_out,Prenotazioni_camere.data_prenotazione,Prenotazioni_camere.costo,Prenotazioni_camere.pagamento,Prenotazioni_camere.dipendente FROM Prenotazioni_camere,Clienti WHERE Clienti.ID = Prenotazioni_camere.cliente_id AND Prenotazioni_camere.check_out > '" + today + "';"
+		query = "SELECT Prenotazioni_camere.id,Clienti.NOME,Clienti.COGNOME,Prenotazioni_camere.id_camere,Prenotazioni_camere.check_in,Prenotazioni_camere.check_out,Prenotazioni_camere.data_prenotazione,Prenotazioni_camere.costo, Prenotazioni_camere.dipendente FROM Prenotazioni_camere,Clienti WHERE Clienti.ID = Prenotazioni_camere.cliente_id AND Prenotazioni_camere.check_out > '" + today + "';"
 		return db.execute(query).fetchall()

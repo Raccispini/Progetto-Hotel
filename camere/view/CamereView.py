@@ -16,6 +16,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 		self.setupUi(self)
 		self.controller = CamereController()
 		self.connect_all()
+		self.totale=0
 		self.update_tipo()
 		self.update_table()
 		self.onTableClick()
@@ -47,7 +48,6 @@ class CamereView(QMainWindow, Ui_CamereView):
 		# self.pb_ricerca.clicked.connect(lambda: self.update_table())
 		self.pb_azzera.clicked.connect(lambda: self.azzera())
 		self.pb_prenota.clicked.connect(lambda: self.prenota())
-		self.pb_prenota.clicked.connect(lambda: self.update())
 		self.pb_prenotazioni.clicked.connect(lambda: self.prenotazioni())
 		self.pb_preventivo.clicked.connect(lambda: self.preventivo())
 
@@ -84,8 +84,9 @@ class CamereView(QMainWindow, Ui_CamereView):
 
 
 	def prenota(self):
+		self.update_totale()
 		if self.check_date_dal() and self.check_date_al():
-			prenotacamere = PrenotaCamereView(self.dipendente, self.update_table, self.getSelectedRoom(),self.QdateToDate(self.date_dal.date().getDate()),self.QdateToDate(self.date_al.date().getDate()), self)
+			prenotacamere = PrenotaCamereView(self.totale, self.dipendente, self.update_table, self.getSelectedRoom(),self.QdateToDate(self.date_dal.date().getDate()),self.QdateToDate(self.date_al.date().getDate()), self)
 			prenotacamere.show()
 
 
@@ -185,12 +186,16 @@ class CamereView(QMainWindow, Ui_CamereView):
 	def QdateToDate(self, qdate):
 		return str(qdate[2]) + "/" + str(qdate[1]) + "/" + str(qdate[0])
 
-	def preventivo(self):
+	def update_totale(self):
 		d1 = self.QdateToDate(self.date_dal.date().getDate())
 		d2 = self.QdateToDate(self.date_al.date().getDate())
 		item = self.tabellaCamere.selectedItems()
-		msg = float(item[len(item) - 1].text()) * self.dateOffset(d1, d2)
-		QMessageBox.information(self, "Preventivo", "Il preventivo della camera è " + str(msg))
+		self.totale = float(item[len(item)-1].text()) * self.dateOffset(d1, d2)
+
+
+	def preventivo(self):
+		self.update_totale()
+		QMessageBox.information(self, "Preventivo", "Il preventivo della camera è " + str(self.totale))
 
 	def dateOffset(self, d1, d2):
 		d1 = datetime.strptime(d1, "%d/%m/%Y")

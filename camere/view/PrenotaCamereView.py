@@ -8,10 +8,11 @@ from camere.controller.CamereController import CamereController
 
 
 class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
-	def __init__(self, dipendente=None, callback=None, camera_id=0,check_in=0,check_out=0, parent=None):
+	def __init__(self, totale, dipendente=None, callback=None, camera_id=0,check_in=0,check_out=0, parent=None):
 		super(PrenotaCamereView,self).__init__(parent)
 		self.setupUi(self)
 		self.controller = CamereController()
+		self.totale = totale
 		self.camera = camera_id
 		self.check_in = check_in
 		self.check_out = check_out
@@ -37,6 +38,7 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 			for j in range(len(clienti[0])):
 				self.tableWidget.setItem(i,j,QtWidgets.QTableWidgetItem(str(clienti[i][j])))
 
+
 	def check_prenotabile(self):
 		if len(self.tableWidget.selectedItems())!=0:
 			self.pB_prenota.setEnabled(True)
@@ -45,7 +47,7 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 
 	def prenota(self):
 		now = date.today()
-		self.controller.prenota(self.check_in,self.check_out,now.strftime("%d/%m/%Y"),self.camera,self.get_selected_cliente())
+		self.controller.prenota(self.check_in,self.check_out,now.strftime("%d/%m/%Y"),self.camera,self.get_selected_cliente(),self.totale, self.dipendente.get_id(), self.label_note.text())
 		self.callback()
 		self.close()
 

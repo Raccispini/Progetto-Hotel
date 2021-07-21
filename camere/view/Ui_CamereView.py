@@ -1,4 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QCursor
+
 '''
 __author__: Gregorio Vecchiola
 '''
@@ -256,6 +258,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.pb_azzera.setFont(font)
+        self.pb_azzera.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.pb_azzera.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pb_azzera.setObjectName("pb_azzera")
@@ -267,6 +270,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.pb_preventivo.setFont(font)
+        self.pb_preventivo.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.pb_preventivo.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pb_preventivo.setObjectName("pb_preventivo")
@@ -278,6 +282,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.pb_prenota.setFont(font)
+        self.pb_prenota.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.pb_prenota.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pb_prenota.setObjectName("pb_prenota")
@@ -289,6 +294,7 @@ class Ui_CamereView(object):
         font.setBold(True)
         font.setWeight(75)
         self.pb_prenotazioni.setFont(font)
+        self.pb_prenotazioni.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
         self.pb_prenotazioni.setStyleSheet("background-image: url(ui/resources/camere/tpg.png);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 140), stop:1 rgba(255, 255, 255, 165));")
         self.pb_prenotazioni.setObjectName("pb_prenotazioni")

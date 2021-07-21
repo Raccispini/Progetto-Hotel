@@ -11,6 +11,8 @@ class MeteoView(QDialog):
     def __init__(self):
         super(MeteoView, self).__init__()
 
+        self.setObjectName("window_meteo")
+        self.setStyleSheet("#window_meteo{border-image: url(ui/resources/meteo/meteo.jpg) 0 0 0 0 stretch stretch}")
         v_layout = QVBoxLayout()
         h_layout = QHBoxLayout()
         lB_message = QLabel("Inserisci il nome della città da cercare:")
@@ -32,9 +34,9 @@ class MeteoView(QDialog):
         v_layout.addWidget(self.le_citta)
         v_layout.addLayout(h_layout)
         self.setLayout(v_layout)
-        self.setWindowTitle("Ricerca")
-        self.setMinimumSize((QtCore.QSize(550,120)))
-        self.setMaximumSize((QtCore.QSize(550, 120)))
+        self.setWindowTitle("Ricerca Meteo")
+        self.setMinimumSize((QtCore.QSize(550,150)))
+        self.setMaximumSize((QtCore.QSize(550,150)))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui\\resources/logo/logo_small_icon_only_inverted.png"), QtGui.QIcon.Normal)
         self.setWindowIcon(icon)
