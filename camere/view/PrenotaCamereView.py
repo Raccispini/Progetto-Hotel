@@ -7,15 +7,9 @@ from PyQt5 import QtWidgets
 from camere.controller.CamereController import CamereController
 
 
-<<<<<<< Updated upstream
 class PrenotaCamereView(QMainWindow, Ui_PrenotaCamere):
 	def __init__(self, log, totale, dipendente=None, callback=None, camera_id=0, check_in=0, check_out=0, parent=None):
 		super(PrenotaCamereView, self).__init__(parent)
-=======
-class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
-	def __init__(self,log, totale, dipendente=None, callback=None, camera_id=0,check_in=0,check_out=0, parent=None):
-		super(PrenotaCamereView,self).__init__(parent)
->>>>>>> Stashed changes
 		self.setupUi(self)
 		self.log = log
 		self.controller = CamereController()
