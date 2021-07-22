@@ -10,18 +10,17 @@ from camere.controller.CamereController import CamereController
 
 
 class CamereView(QMainWindow, Ui_CamereView):
-	def __init__(self, dipendente,log, parent=None):
-    		super(CamereView, self).__init__(parent)
+	def __init__(self, dipendente, log, parent=None):
+		super(CamereView, self).__init__(parent)
 		self.dipendente = dipendente
 		self.setupUi(self)
 		self.log = log
 		self.controller = CamereController()
 		self.connect_all()
-		self.totale=0.0
+		self.totale = 0.0
 		self.update_tipo()
 		self.update_table()
 		self.onTableClick()
-
 
 	def connect_all(self):
 		# letti
@@ -55,14 +54,13 @@ class CamereView(QMainWindow, Ui_CamereView):
 		self.date_dal.setDate(QDate.currentDate())
 		self.date_al.setDate(QDate.currentDate())
 
-
-
 	def check_date_dal(self):
 		d1 = self.date_dal.date().getDate()
 		d_a = QDate.currentDate().getDate()
 
 		if d1 < d_a:
-			QMessageBox.critical(self,"Errore!","La data di check-in non può essere\n antecedente a quella odierna.", QMessageBox.Ok, QMessageBox.Ok)
+			QMessageBox.critical(self, "Errore!", "La data di check-in non può essere\n antecedente a quella odierna.",
+								 QMessageBox.Ok, QMessageBox.Ok)
 			return False
 		else:
 			return True
@@ -72,18 +70,18 @@ class CamereView(QMainWindow, Ui_CamereView):
 		d2 = self.date_al.date().getDate()
 
 		if d2 < d1:
-			QMessageBox.critical(self, "Errore!", "La data di check-out non può essere\nantecedente a quella di check-in.", QMessageBox.Ok, QMessageBox.Ok)
+			QMessageBox.critical(self, "Errore!",
+								 "La data di check-out non può essere\nantecedente a quella di check-in.",
+								 QMessageBox.Ok, QMessageBox.Ok)
 			return False
 		else:
 			return True
 
-
 	def show_prenota(self):
 		self.update_totale()
 		if self.check_date_dal() and self.check_date_al():
-			prenotacamere = PrenotaCamereView(self.totale, self.dipendente, self.update_table, self.getSelectedRoom(),self.date_dal.date().toString("dd/MM/yyyy"),self.date_al.date().toString("dd/MM/yyyy"), self)
+			prenotacamere = PrenotaCamereView(self.log,self.totale, self.dipendente, self.update_table, self.getSelectedRoom(),self.date_dal.date().toString("dd/MM/yyyy"),self.date_al.date().toString("dd/MM/yyyy"), self)
 			prenotacamere.show()
-
 
 	def disattiva_date(self):
 		self.update_table()
@@ -108,7 +106,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 			self.pb_preventivo.setEnabled(False)
 
 	def prenotazioni(self):
-		prenotazioni_window = ListaPrenotazioniCamereView(self.log,self)
+		prenotazioni_window = ListaPrenotazioniCamereView(self.log, self)
 		prenotazioni_window.show()
 		self.update_table()
 
@@ -173,13 +171,11 @@ class CamereView(QMainWindow, Ui_CamereView):
 		options["cassaforte"] = True if self.cb_cassaforte.isChecked() else False
 		return options
 
-
 	def update_totale(self):
 		d1 = self.date_dal.date().toString("dd/MM/yyyy")
 		d2 = self.date_al.date().toString("dd/MM/yyyy")
 		item = self.tabellaCamere.selectedItems()
-		self.totale = float(item[len(item)-1].text()) * self.dateOffset(d1, d2)
-
+		self.totale = float(item[len(item) - 1].text()) * self.dateOffset(d1, d2)
 
 	def preventivo(self):
 		self.update_totale()
