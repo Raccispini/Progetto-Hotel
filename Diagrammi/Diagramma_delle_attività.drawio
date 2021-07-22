@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-22T14:05:45.126Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="LeUKXpQ6wvPfoUOhccYh" version="14.9.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-22T14:10:03.489Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="wDgiFCzbAhRF_0_ExcJR" version="14.9.1" type="github">
   <diagram id="MMWVp20vbc8uq2uRVW6l" name="Page-1">
     <mxGraphModel dx="6979" dy="2579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1111,7 +1111,7 @@
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-435" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-3820" y="1320" width="410" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="bJq6qHO7lRjsnfCfAAI0-436" value="Visualizza prenotazioni" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-436" value="Visualizza prenotazioni camere" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-3820" y="1320" width="210" height="50" as="geometry" />
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-437" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
@@ -1262,29 +1262,29 @@
           <mxGeometry x="-3530.5" y="-335" width="165.71" height="40" as="geometry" />
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-487" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-3721" y="1760" width="410" height="250" as="geometry" />
+          <mxGeometry x="-2150" y="1990" width="410" height="250" as="geometry" />
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-488" value="Mostra camera" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-3721" y="1760" width="210" height="50" as="geometry" />
+          <mxGeometry x="-2150" y="1990" width="210" height="50" as="geometry" />
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-489" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
-          <mxGeometry x="-3465.8199999999997" y="1770" width="54.34" height="48.97" as="geometry" />
+          <mxGeometry x="-1894.8199999999997" y="2000" width="54.34" height="48.97" as="geometry" />
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-490" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bJq6qHO7lRjsnfCfAAI0-489" target="bJq6qHO7lRjsnfCfAAI0-492">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-973.6505660377356" y="987.6923076923076" as="targetPoint" />
+            <mxPoint x="597.3494339622644" y="1217.6923076923076" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-491" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="bJq6qHO7lRjsnfCfAAI0-492" target="bJq6qHO7lRjsnfCfAAI0-493">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-3438.645" y="1910" as="targetPoint" />
+            <mxPoint x="-1867.645" y="2140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-492" value="&lt;span style=&quot;font-size: 15px&quot;&gt;Mostra lista camere&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-3526.44" y="1858.97" width="175.57" height="40" as="geometry" />
+          <mxGeometry x="-1955.44" y="2088.9700000000003" width="175.57" height="40" as="geometry" />
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-493" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
-          <mxGeometry x="-3465.82" y="1930" width="54.34" height="50" as="geometry" />
+          <mxGeometry x="-1894.8200000000002" y="2160" width="54.34" height="50" as="geometry" />
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-494" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-1790" y="-400" width="660" height="390" as="geometry" />
@@ -1457,6 +1457,56 @@
         </mxCell>
         <mxCell id="bJq6qHO7lRjsnfCfAAI0-553" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Rimuovi consumazione allo scontrino&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-340.49999999999994" y="-797.0799999999999" width="165.71" height="72.72" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-558" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-3190" y="1550" width="410" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-559" value="Visualizza prenotazioni ristorante" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-3190" y="1550" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-560" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="-2934.8199999999997" y="1560" width="54.34" height="48.97" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-561" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bJq6qHO7lRjsnfCfAAI0-560" target="bJq6qHO7lRjsnfCfAAI0-563">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-442.65056603773564" y="777.6923076923076" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-562" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="bJq6qHO7lRjsnfCfAAI0-563" target="bJq6qHO7lRjsnfCfAAI0-564">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-2907.645" y="1700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-563" value="&lt;span style=&quot;font-size: 15px&quot;&gt;Mostra lista prenotazioni&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2995.43" y="1648.97" width="175.57" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-564" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="-2934.82" y="1720" width="54.34" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-565" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-3840" y="1740" width="410" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-566" value="Visualizza prenotazioni ombrelloni" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-3840" y="1740" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-567" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="-3584.8199999999997" y="1750" width="54.34" height="48.97" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-568" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bJq6qHO7lRjsnfCfAAI0-567" target="bJq6qHO7lRjsnfCfAAI0-570">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1092.6505660377356" y="967.6923076923076" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-569" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="bJq6qHO7lRjsnfCfAAI0-570" target="bJq6qHO7lRjsnfCfAAI0-571">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-3557.645" y="1890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-570" value="&lt;span style=&quot;font-size: 15px&quot;&gt;Mostra lista prenotazioni&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-3645.43" y="1838.97" width="175.57" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bJq6qHO7lRjsnfCfAAI0-571" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="-3584.82" y="1910" width="54.34" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
