@@ -17,6 +17,7 @@
 21/07/2021-15:51:44 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
 21/07/2021-15:52:27 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
 21/07/2021-15:52:32 - Dipendente : 1, eliminata prenotazione ombrelloni id : 0
+<<<<<<< Updated upstream
 22/07/2021-16:20:35 - Dipendente : 1, tavolo ristorante prenotato id : 0
 22/07/2021-16:23:33 - Dipendente : 1, aggiunta prenotazione camere id : 0
 22/07/2021-16:27:45 - Dipendente : 1, aggiunta prenotazione camere id : 0
@@ -25,3 +26,6 @@
 22/07/2021-16:30:25 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
 22/07/2021-16:30:31 - Dipendente : 1, eliminata prenotazione ombrelloni id : 0
 22/07/2021-16:31:36 - Dipendente : 1, cliente modificato
+=======
+22/07/2021-16:15:24 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
+>>>>>>> Stashed changes

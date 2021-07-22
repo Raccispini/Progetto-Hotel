@@ -10,7 +10,11 @@ from camere.controller.CamereController import CamereController
 
 
 class CamereView(QMainWindow, Ui_CamereView):
+<<<<<<< Updated upstream
 	def __init__(self, dipendente, log, parent=None):
+=======
+	def __init__(self, dipendente,log, parent=None):
+>>>>>>> Stashed changes
 		super(CamereView, self).__init__(parent)
 		self.dipendente = dipendente
 		self.setupUi(self)
