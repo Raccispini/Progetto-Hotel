@@ -1,0 +1,19 @@
+21/07/2021-14:05:33 - Dipendente : 1, aggiunta consumazione id : 0
+21/07/2021-14:05:57 - Dipendente : 1, eliminata consumazione
+21/07/2021-14:09:32 - Dipendente : 1, aggiunta prenotazione id : 0
+21/07/2021-15:03:27 - Dipendente : 1, eliminata prenotazione camere
+21/07/2021-15:37:45 - Dipendente : 1, tavolo ristorante prenotato id : 0
+21/07/2021-15:43:03 - Dipendente : 1, eliminazione prenotazione tavolo ristorante
+21/07/2021-15:43:28 - Dipendente : 1, aggiunto piatto al menu del ristorante id : 0
+21/07/2021-15:44:33 - Dipendente : 1, eliminato piatto dal menu del ristorante
+21/07/2021-15:46:45 - Dipendente : 1, Aggiunto cliente id : 0
+21/07/2021-15:47:00 - Dipendente : 1, eliminato cliente
+21/07/2021-15:47:37 - Dipendente : 1, aggiunto fornitore id : 0
+21/07/2021-15:47:46 - Dipendente : 1, eliminazione fornitore
+21/07/2021-15:48:12 - Dipendente : 1, aggiunta dipendente id : 0
+21/07/2021-15:48:20 - Dipendente : 1, elimina dipendente
+21/07/2021-15:49:13 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
+21/07/2021-15:51:24 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
+21/07/2021-15:51:44 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
+21/07/2021-15:52:27 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
+21/07/2021-15:52:32 - Dipendente : 1, eliminata prenotazione ombrelloni id : 0

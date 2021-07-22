@@ -8,9 +8,10 @@ from camere.controller.CamereController import CamereController
 
 
 class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
-	def __init__(self, totale, dipendente=None, callback=None, camera_id=0,check_in=0,check_out=0, parent=None):
-		super().__init__(parent)
+	def __init__(self,log, totale, dipendente=None, callback=None, camera_id=0,check_in=0,check_out=0, parent=None):
+    		super(PrenotaCamereView,self).__init__(parent)
 		self.setupUi(self)
+		self.log = log
 		self.controller = CamereController()
 		self.totale = totale
 		self.camera = camera_id
@@ -48,6 +49,7 @@ class PrenotaCamereView(QMainWindow,Ui_PrenotaCamere):
 	def prenota(self):
 		now = date.today()
 		self.controller.prenota(self.check_in,self.check_out,now.strftime("%d/%m/%Y"),self.camera,self.get_selected_cliente(),self.totale, self.dipendente.get_id(), self.label_note.text())
+		self.log.print_log_add("aggiunta prenotazione camere")
 		self.callback()
 		self.close()
 

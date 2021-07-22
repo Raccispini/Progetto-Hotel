@@ -12,41 +12,43 @@ from magazzino.view.MagazzinoView import MagazzinoView
 from meteo.view.MeteoView import MeteoView
 from ombrellone.view.OmbrelloneView import OmbrelloneView
 from ristorante.view.RistoranteView import RistoranteView
-
+from Log.Log import Log
 
 class HomeView(QMainWindow, Ui_HomeView):
     def __init__(self, dipendente, login_window):
         super().__init__()
         self.setupUi(self)
+        self.log = Log(dipendente)
         self.dipendente = dipendente
+        #self.dipendente = dipendente
         self.login_window = login_window
         self.connect_button()
 
     def open_bar(self):
        if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Bar":
-          self.bar_window = BarView(self.dipendente)
+          self.bar_window = BarView(self.dipendente,self.log)
           self.bar_window.showMaximized()
        else:
            QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_camere(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Camere":
-            self.camere_window = CamereView(self.dipendente)
-            self.camere_window.showMaximized()
+            self.camere_window = CamereView(self.dipendente,self.log)
+            self.camere_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_anagrafiche(self):
         if (self.dipendente.get_ambito() == "Camere" and self.dipendente.get_permessi() == "Dipendente") or self.dipendente.get_permessi() == "Responsabile":
-            self.anagrafiche_window = AnagraficheView(self.dipendente)
+            self.anagrafiche_window = AnagraficheView(self.dipendente,self.log)
             self.anagrafiche_window.showMaximized()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_magazzino(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Magazzino":
-           self.magazzino_window = MagazzinoView()
-           self.magazzino_window.showMaximized()
+           self.magazzino_window = MagazzinoView(self.log)
+           self.magazzino_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
@@ -56,15 +58,15 @@ class HomeView(QMainWindow, Ui_HomeView):
 
     def open_ombrelloni(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Ombrelloni":
-           self.ombrelloni_window = OmbrelloneView()
-           self.ombrelloni_window.showMaximized()
+           self.ombrelloni_window = OmbrelloneView(self.log)
+           self.ombrelloni_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 
     def open_ristorante(self):
         if self.dipendente.get_ambito() == "ADMIN" or self.dipendente.get_ambito() == "Ristorante":
-           self.ristorante_window = RistoranteView(self.dipendente)
-           self.ristorante_window.showMaximized()
+           self.ristorante_window = RistoranteView(self.log,self.dipendente)
+           self.ristorante_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Le tue credenziali non permettono l'accesso a questo servizio")
 

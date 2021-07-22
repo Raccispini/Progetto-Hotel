@@ -8,9 +8,10 @@ from bar.view.Ui_AggiornaListinoView import Ui_AggiornaListinoView
 
 
 class AggiornaListinoView(QMainWindow, Ui_AggiornaListinoView):
-    def __init__(self,  controller, callback, parent=None):
-        super().__init__(parent)
+    def __init__(self, log, controller, callback, parent=None):
+        super(AggiornaListinoView, self).__init__(parent)
         self.setupUi(self)
+        self.log = log
         self.controller = controller
         self.callback = callback
         self.listino_bar=[]
@@ -76,6 +77,7 @@ class AggiornaListinoView(QMainWindow, Ui_AggiornaListinoView):
             QMessageBox.critical(self, "Errore", "Inserisci tutti i dati richiesti prima di premere aggiungi")
             return
         self.controller.aggiungi_consumazione([nome_consumazione, categoria, prezzo])
+        self.log.print_log_add("aggiunta consumazione bar")
         self.callback() #Aggiorna le comboBox sull'altra interfaccia
         self.update_tableBar() #Aggiorna la lista della mio listino bar
         self.annulla_consumazione()
@@ -90,6 +92,7 @@ class AggiornaListinoView(QMainWindow, Ui_AggiornaListinoView):
               lista_nomi.append(info.text())
             contatore+=1
         self.controller.elimina_consumazione(lista_nomi)
+        self.log.print_log_delete("eliminata consumazione bar")
         self.callback()
         self.update_tableBar()
 

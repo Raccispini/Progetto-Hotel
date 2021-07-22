@@ -8,9 +8,10 @@ from ristorante.view.Ui_AggiornaMenuView import Ui_AggiornaMenuView
 
 
 class AggiornaMenuView(QMainWindow, Ui_AggiornaMenuView):
-    def __init__(self,  controller, parent=None):
+    def __init__(self, log, controller, parent=None):
         super(AggiornaMenuView, self).__init__(parent)
         self.setupUi(self)
+        self.log = log
         self.controller = controller
         self.menu_ristorante = []
         self.update_tableRistorante()
@@ -75,6 +76,7 @@ class AggiornaMenuView(QMainWindow, Ui_AggiornaMenuView):
         self.controller.aggiungi_piatto([nome_piatto, categoria, prezzo])
         self.update_tableRistorante() #Aggiorna la lista della mio listino bar
         self.annulla_piatto()
+        self.log.print_log_add("aggiunto piatto al menu del ristorante")
 
 
     def elimina_piatto(self):
@@ -87,6 +89,7 @@ class AggiornaMenuView(QMainWindow, Ui_AggiornaMenuView):
             contatore+=1
         self.controller.elimina_piatto(lista_nomi)
         self.update_tableRistorante()
+        self.log.print_log_delete("eliminato piatto dal menu del ristorante")
 
 
     def annulla_piatto(self):

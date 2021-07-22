@@ -10,10 +10,11 @@ from bar.view.Ui_BarView import Ui_BarView
 
 
 class BarView(QMainWindow, Ui_BarView):
-    def __init__(self, dipendente):
-        super().__init__()
+    def __init__(self,dipendente,log, parent=None):
+        super(BarView, self).__init__(parent)
         self.setupUi(self)
         self.controller = BarController()
+        self.log = log
         self.dipendente = dipendente
         self.lista_consumazioni = []
         self.totale = 0
@@ -161,7 +162,7 @@ class BarView(QMainWindow, Ui_BarView):
 
     def open_aggiornalistino(self):
         if self.dipendente.is_responsabile():
-            self.aggiornalistino_window = AggiornaListinoView(self.controller, self.update_cB, self)
+            self.aggiornalistino_window = AggiornaListinoView(self.log,self.controller, self.update_cB, self)
             self.aggiornalistino_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Non godi dei permessi necessari per poter accedere.\nSolo i responsabili possono accedere a questa funzione.",QMessageBox.Ok,QMessageBox.Ok)

@@ -8,8 +8,9 @@ from magazzino.view.ComingSoonView import ComingSoonView
 
 
 class MagazzinoView(QMainWindow, Ui_MagazzinoView):
-    def __init__(self, parent = None):
+    def __init__(self,log, parent = None):
         super(MagazzinoView, self).__init__(parent)
+        self.log = log
         self.setupUi(self)
         self.connect_all()
 

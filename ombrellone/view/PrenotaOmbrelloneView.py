@@ -8,9 +8,10 @@ from anagrafiche.controller.AnagraficheController import AnagraficheController
 
 
 class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
-    def __init__(self,controller,callback, nome_ombrellone, data, tipo, orario =  "", parent = None):
+    def __init__(self,log,controller,callback, nome_ombrellone, data, tipo, orario =  "", parent = None):
         super(PrenotaOmbrelloneView, self).__init__(parent)
         self.setupUi(self)
+        self.log = log
         self.controller = controller
         self.callback = callback
         self.nome_ombrellone = nome_ombrellone
@@ -64,6 +65,7 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
             self.totale += float(listino_prezzi[4]) * n_sdraie
         info = [self.nome_ombrellone, nominativo[0], self.data, self.tipo, orario_inizio, orario_fine, n_sedie, n_sdraie, pagamento, self.totale]
         self.controller.prenota_ombrellone(info)
+        self.log .print_log_add("aggiunta prenotazione ombrelloni")
         self.callback()
         self.close()
 
@@ -74,3 +76,4 @@ class PrenotaOmbrelloneView(QMainWindow, Ui_PrenotaOmbrellone):
             self.cB_nominativo.setCurrentIndex(0)
             self.sB_sedie.setValue(0)
             self.sB_sdraie.setValue(0)
+            self.log.print_log_delete("eliminata prenotazione ombrelloni")

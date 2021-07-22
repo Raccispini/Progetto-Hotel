@@ -15,9 +15,10 @@ from PyQt5 import QtCore, QtGui
 
 
 class RistoranteView(QMainWindow, Ui_RistoranteView):
-    def __init__(self, dipendente):
-        super().__init__()
+    def __init__(self, log,dipendente, parent = None):
+        super(RistoranteView, self).__init__(parent)
         self.setupUi(self)
+        self.log = log
         self.controller = RistoranteController()
         self.update_table(self.controller.get_lista_prenotazioni())
         self.dipendente = dipendente
@@ -135,7 +136,7 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
         nome_tavolo = self.sender().objectName() #Restituisce il nome del pulsante che fa partire l'azione
         data = self.de_data.date()
         ora = self.cb_orario.currentText().split("-")
-        self.prenota_window = PrenotaRistoranteView(self.controller, self.ricerca_tavolo_disponibile, self.update_table, nome_tavolo, data, ora, self)
+        self.prenota_window = PrenotaRistoranteView(self.log,self.controller, self.ricerca_tavolo_disponibile, self.update_table, nome_tavolo, data, ora)
         self.prenota_window.show()
 
     def filtraggio_tavoli(self):
@@ -154,10 +155,11 @@ class RistoranteView(QMainWindow, Ui_RistoranteView):
         self.controller.elimina_prenotazione(lista_id)
         self.update_table(self.controller.get_lista_prenotazioni())
         self.ricerca_tavolo_disponibile()
+        self.log.print_log_delete("eliminazione prenotazione tavolo ristorante")
 
     def aggiorna_menu(self):
         if self.dipendente.get_permessi() == "Responsabile":
-            self.aggiorna_menu_window = AggiornaMenuView(self.controller, self)
+            self.aggiorna_menu_window = AggiornaMenuView(self.log, self.controller)
             self.aggiorna_menu_window.show()
         else:
             QMessageBox.critical(self, "Errore", "Spiacente, non godi dei permessi necessari per poter accedere.\nSolo i responsabili possono accedere a quest'area")

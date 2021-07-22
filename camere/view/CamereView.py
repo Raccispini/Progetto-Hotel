@@ -10,10 +10,11 @@ from camere.controller.CamereController import CamereController
 
 
 class CamereView(QMainWindow, Ui_CamereView):
-	def __init__(self, dipendente):
-		super().__init__()
+	def __init__(self, dipendente,log, parent=None):
+    		super(CamereView, self).__init__(parent)
 		self.dipendente = dipendente
 		self.setupUi(self)
+		self.log = log
 		self.controller = CamereController()
 		self.connect_all()
 		self.totale=0.0
@@ -107,7 +108,7 @@ class CamereView(QMainWindow, Ui_CamereView):
 			self.pb_preventivo.setEnabled(False)
 
 	def prenotazioni(self):
-		prenotazioni_window = ListaPrenotazioniCamereView(self)
+		prenotazioni_window = ListaPrenotazioniCamereView(self.log,self)
 		prenotazioni_window.show()
 		self.update_table()
 
