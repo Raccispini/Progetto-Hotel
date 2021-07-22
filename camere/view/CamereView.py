@@ -187,4 +187,5 @@ class CamereView(QMainWindow, Ui_CamereView):
 	def dateOffset(self, d1, d2):
 		d1 = datetime.strptime(d1, "%d/%m/%Y")
 		d2 = datetime.strptime(d2, "%d/%m/%Y")
+		print(type(abs((d2 - d1).days)))
 		return abs((d2 - d1).days)
