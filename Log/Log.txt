@@ -29,3 +29,4 @@
 =======
 22/07/2021-16:15:24 - Dipendente : 1, aggiunta prenotazione ombrelloni id : 0
 >>>>>>> Stashed changes
+23/07/2021-16:37:27 - Dipendente : 1, modifica fornitore
