@@ -17,9 +17,9 @@ class GeneratoreScontriniBar(object):
             html += f"<tr><td> {elemento[0]} X {elemento[1]}</td><td><p>10%</p></td><td><p>{elemento[3]} €</p></td></tr>"
 
         html+=f"</table><br> <table style=\"border: transparent\"><tr><td style=\"font-size: 20px; font-weight: bold;\">" \
-              f"TOTALE COMPLESSIVO</td><td style=\"font-size: 20px; font-weight: bold; text-align: right\">{totale} €</td></tr>" \
+              f"TOTALE COMPLESSIVO</td><td style=\"font-size: 20px; font-weight: bold; text-align: right\">{totale:.2f} €</td></tr>" \
               f"<tr><td style=\"font-size: 20px; font-weight: bold;\">di cui IVA</td>" \
-              f"<td style=\"font-size: 20px; font-weight: bold; text-align: right\">{(9*totale)/100} €</td></tr></table>" \
+              f"<td style=\"font-size: 20px; font-weight: bold; text-align: right\">{(9*totale)/100:.2f} €</td></tr></table>" \
               f"<p>{current_date}<br></p><p>Metodo di Pagamento: {metodo}<br></p><p style=\"font-weight: bold\">ARRIVEDERCI E GRAZIE</p>"
 
         options = {
